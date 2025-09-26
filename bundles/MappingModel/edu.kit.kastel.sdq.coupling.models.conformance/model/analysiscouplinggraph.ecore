@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="analysiscouplinggraph" nsURI="http://example.org/analysiscouplinggraph"
+    nsPrefix="acg">
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="#//RequiredInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
+        eType="#//ProvidedInterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uncertaintyLabels" upperBound="-1"
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.ecore#//UncertaintyLabel"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uncertaintyLabel" upperBound="-1"
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.ecore#//UncertaintyLabel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//AnalysisComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass InputReferenceMetamodel.ecore#//Annotation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingModel" lowerBound="1"
+        eType="ecore:EClass ../../mapping.model/model/Mapping.ecore#//MappingDefinition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uncertaintyLabel" upperBound="-1"
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.ecore#//UncertaintyLabel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//AnalysisComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass InputReferenceMetamodel.ecore#//Annotation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingModel" lowerBound="1"
+        eType="ecore:EClass ../../mapping.model/model/Mapping.ecore#//MappingDefinition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//ProvidedInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//RequiredInterface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalSource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
+        eType="#//ProvidedInterface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AnalysisGraph">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//AnalysisComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connections" upperBound="-1"
+        eType="#//Connection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="externalSources" upperBound="-1"
+        eType="#//ExternalSource" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="ReferenceMetamodel" nsURI="http://www.kit.edu/coupling/referencemetamodel"
+    nsPrefix="crm">
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityCharacteristic">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="ecore:EClass DataDictionaryCharacterized.ecore#//CharacteristicType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Annotation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotates" lowerBound="1"
+        eType="#//PCMSystemElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="characteristics" lowerBound="1"
+        upperBound="-1" eType="#//SecurityCharacteristic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PCMSystemElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="ecore:EClass pcm.ecore#//repository/RepositoryComponent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityPolicy" lowerBound="1"
+        eType="#//SecurityPolicy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityCharacteristics"
+        lowerBound="1" upperBound="-1" eType="#//SecurityCharacteristic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" lowerBound="1"
+        upperBound="-1" eType="#//Annotation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemElements" lowerBound="1"
+        upperBound="-1" eType="#//PCMSystemElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityPolicy">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityCharacteristics"
+        lowerBound="1" upperBound="-1" eType="#//SecurityCharacteristic"/>
+  </eClassifiers>
+</ecore:EPackage>

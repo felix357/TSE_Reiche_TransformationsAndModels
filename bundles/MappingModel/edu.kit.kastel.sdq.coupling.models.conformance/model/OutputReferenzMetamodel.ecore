@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="OutputReferenzMetamodell" nsURI="http://www.kit.edu/coupling/outputreferencemetamodel"
+    nsPrefix="orm">
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityCharacteristic"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResultEntryElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securityCharacteristic"
+        lowerBound="1" eType="#//SecurityCharacteristic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemElement" lowerBound="1"
+        eType="#//JavaSystemElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResultEntry">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
+        upperBound="-1" eType="#//ResultEntryElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
+        eType="#//Configuration"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JavaSystemElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration"/>
+</ecore:EPackage>

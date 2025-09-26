@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="uncertainty" nsURI="http://extendeddataflow.uncertainty/uncertainty"
+    nsPrefix="uncertainty">
+  <eClassifiers xsi:type="ecore:EClass" name="UncertaintyLabel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="#//UncertaintySource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="severity" eType="#//SeverityOfImpact"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resolutionTime" eType="#//ResolutionTime"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reducability" eType="#//ReducibilityByADD"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="originType" eType="#//OriginType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="manageability" eType="#//Manageability"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="#//Location"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//ImpactOnAccuracy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
+        eType="#//Relation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UncertaintySource">
+    <eLiterals name="INPUT_DATA_INDUCED"/>
+    <eLiterals name="SCENARIO_ASSUMPTION_INDUCED"/>
+    <eLiterals name="METHODOLOGY_INDUCED"/>
+    <eLiterals name="MODELING_INDUCED"/>
+    <eLiterals name="OUTPUT_DATA_INDUCED"/>
+    <eLiterals name="ORCHESTRATION_DECISION_INDUCED"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SeverityOfImpact">
+    <eLiterals name="NONE"/>
+    <eLiterals name="LOW"/>
+    <eLiterals name="HIGH"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ResolutionTime">
+    <eLiterals name="REQUIREMENTS_TIME"/>
+    <eLiterals name="DESIGN_TIME"/>
+    <eLiterals name="REALIZATION_TIME"/>
+    <eLiterals name="RUNTIME"/>
+    <eLiterals name="UNRESOLVABLE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ReducibilityByADD">
+    <eLiterals name="YES"/>
+    <eLiterals name="NO"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OriginType">
+    <eLiterals name="SINGLE_ANALYSIS"/>
+    <eLiterals name="COUPLING_INDUCED"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Manageability">
+    <eLiterals name="FULLY_REDUCIBLE"/>
+    <eLiterals name="PARTIALLY_REDUCIBLE"/>
+    <eLiterals name="IRREDUCIBLE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Location">
+    <eLiterals name="EXTERNAL_INPUT"/>
+    <eLiterals name="INTERNAL_ANALYSIS"/>
+    <eLiterals name="COUPLING_OUTPUT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ImpactOnAccuracy">
+    <eLiterals name="DIRECT"/>
+    <eLiterals name="INDIRECT"/>
+    <eLiterals name="NONE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//UncertaintySource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

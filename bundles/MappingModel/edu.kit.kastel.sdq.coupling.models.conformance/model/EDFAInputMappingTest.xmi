@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<map:MappingDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:map="http://www.example.org/mapping">
+
+  <!-- ParameterAnnotation -> Annotation -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation/model/parameterannotation.ecore#//ParameterAnnotation"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetaModel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- ParameterAnnotations -> Configuration -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation/model/parameterannotation.ecore#//ParameterAnnotations"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetaModel.ecore#//Configuration"/>
+  </classMappings>
+
+  <!-- GeneralOperationParameterIdentification -> SystemElement -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation/model/parameterannotation.ecore#//GeneralOperationParameterIdentification"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetaModel.ecore#//SystemElement"/>
+  </classMappings>
+
+  <!-- ProvidedOperationParameterIdentification (Spezialisierung) -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation/model/parameterannotation.ecore#//ProvidedOperationParameterIdentification"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetaModel.ecore#//SystemElement"/>
+  </classMappings>
+  
+  <!-- EnumCharacteristic -> SecurityCharacteristic -->
+  <classMappings>
+    <sourceClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/DataDictionaryCharacterized.ecore#//EnumCharacteristic"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetaModel.ecore#//SecurityCharacteristic"/>
+  </classMappings>
+  
+   <!-- Mock-Klasse für SecurityPolicy -> SecurityPolicy -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation/model/parameterannotation.ecore#//MockSecurityPolicy"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetaModel.ecore#//SecurityPolicy"/>
+  </classMappings>
+  
+</map:MappingDefinition>

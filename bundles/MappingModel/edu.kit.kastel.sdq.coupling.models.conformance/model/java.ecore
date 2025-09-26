@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="java" nsURI="http://www.example.org/java" nsPrefix="java">
+  <eClassifiers xsi:type="ecore:EClass" name="JavaRoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primitivetypes" upperBound="-1"
+        eType="#//types/PrimitiveType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="collectiontypes" upperBound="-1"
+        eType="#//types/CollectionType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="package" lowerBound="1"
+        eType="#//Package" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="identifier.ecore#//Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subpackage" upperBound="-1"
+        eType="#//Package" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classorinterface" upperBound="-1"
+        eType="#//types/ClassOrInterfaceType" containment="true"/>
+  </eClassifiers>
+  <eSubpackages name="types" nsURI="http://www.example.org/java/types" nsPrefix="types">
+    <eClassifiers xsi:type="ecore:EClass" name="ReferenceType" abstract="true" eSuperTypes="#//types/Type"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ClassOrInterfaceType" abstract="true"
+        eSuperTypes="#//types/ReferenceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="method" upperBound="-1"
+          eType="#//members/Method" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PrimitiveType" eSuperTypes="#//types/Type">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1"
+          eType="#//types/PrimitiveTypeKinds"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="PrimitiveTypeKinds">
+      <eLiterals name="BOOLEAN"/>
+      <eLiterals name="BYTE" value="1"/>
+      <eLiterals name="SHORT" value="2"/>
+      <eLiterals name="INT" value="3"/>
+      <eLiterals name="LONG" value="4"/>
+      <eLiterals name="CHAR" value="5"/>
+      <eLiterals name="FLOAT" value="6"/>
+      <eLiterals name="DOUBLE" value="7"/>
+      <eLiterals name="STRING" value="8"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CollectionType" eSuperTypes="#//types/Type #//types/TypedElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="identifier.ecore#//Entity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//types/ClassOrInterfaceType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="field" upperBound="-1"
+          eType="#//members/Field" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="implements" upperBound="-1"
+          eType="#//types/Interface"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//types/ClassOrInterfaceType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TypedElement" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1"
+          eType="#//types/Type"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="members" nsURI="http://www.example.org/java/members" nsPrefix="members">
+    <eClassifiers xsi:type="ecore:EClass" name="Field" eSuperTypes="#//types/TypedElement identifier.ecore#//Entity #//members/Annotatable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="identifier.ecore#//Entity #//members/Annotatable">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="returntype" eType="#//types/Type"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+          eType="#//members/Parameter" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="identifier.ecore#//Entity #//types/TypedElement #//members/Annotatable"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Annotatable" abstract="true"/>
+  </eSubpackages>
+</ecore:EPackage>

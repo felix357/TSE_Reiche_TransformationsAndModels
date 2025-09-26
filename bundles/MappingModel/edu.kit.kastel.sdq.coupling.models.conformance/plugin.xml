@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated analysiscouplinggraph -->
+      <package
+            uri="http://example.org/analysiscouplinggraph"
+            class="analysiscouplinggraph.AnalysiscouplinggraphPackage"
+            genModel="model/analysiscouplinggraph.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated analysiscouplinggraph -->
+      <package
+            uri="http://www.kit.edu/coupling/referencemetamodel"
+            class="ReferenceMetamodel.ReferenceMetamodelPackage"
+            genModel="model/analysiscouplinggraph.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Mapping -->
+      <package
+            uri="http://www.example.org/mapping"
+            class="mapping.MappingPackage"
+            genModel="model/Mapping.genmodel"/>
+   </extension>
+
+</plugin>

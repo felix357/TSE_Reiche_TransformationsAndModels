@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.kastel.sdq.coupling.models.conformance/src"
+    modelPluginID="edu.kit.kastel.sdq.coupling.models.conformance" modelName="Analysiscouplinggraph"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="17.0" copyrightFields="false" usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore ../../mapping.model/model/Mapping.genmodel#//mapping ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.genmodel#//uncertainty"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>analysiscouplinggraph.ecore</foreignModel>
+  <genPackages prefix="Analysiscouplinggraph" disposableProviderFactory="true" ecorePackage="analysiscouplinggraph.ecore#/">
+    <genClasses ecoreClass="analysiscouplinggraph.ecore#//AnalysisComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute analysiscouplinggraph.ecore#//AnalysisComponent/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//AnalysisComponent/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//AnalysisComponent/outputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//AnalysisComponent/uncertaintyLabels"/>
+    </genClasses>
+    <genClasses ecoreClass="analysiscouplinggraph.ecore#//RequiredInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//RequiredInterface/uncertaintyLabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//RequiredInterface/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//RequiredInterface/annotations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//RequiredInterface/mappingModel"/>
+    </genClasses>
+    <genClasses ecoreClass="analysiscouplinggraph.ecore#//ProvidedInterface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//ProvidedInterface/uncertaintyLabel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//ProvidedInterface/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//ProvidedInterface/annotations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//ProvidedInterface/mappingModel"/>
+    </genClasses>
+    <genClasses ecoreClass="analysiscouplinggraph.ecore#//Connection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//Connection/from"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//Connection/to"/>
+    </genClasses>
+    <genClasses ecoreClass="analysiscouplinggraph.ecore#//ExternalSource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute analysiscouplinggraph.ecore#//ExternalSource/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//ExternalSource/outputs"/>
+    </genClasses>
+    <genClasses ecoreClass="analysiscouplinggraph.ecore#//AnalysisGraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//AnalysisGraph/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//AnalysisGraph/connections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference analysiscouplinggraph.ecore#//AnalysisGraph/externalSources"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="ReferenceMetamodel" disposableProviderFactory="true" ecorePackage="InputReferenceMetamodel.ecore#/">
+    <genClasses ecoreClass="InputReferenceMetamodel.ecore#//SecurityCharacteristic"/>
+    <genClasses ecoreClass="InputReferenceMetamodel.ecore#//Annotation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//Annotation/annotates"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//Annotation/characteristics"/>
+    </genClasses>
+    <genClasses ecoreClass="InputReferenceMetamodel.ecore#//SystemElement"/>
+    <genClasses ecoreClass="InputReferenceMetamodel.ecore#//Configuration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//Configuration/securityPolicy"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//Configuration/securityCharacteristics"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//Configuration/annotations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//Configuration/systemElements"/>
+    </genClasses>
+    <genClasses ecoreClass="InputReferenceMetamodel.ecore#//SecurityPolicy">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference InputReferenceMetamodel.ecore#//SecurityPolicy/securityCharacteristics"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
