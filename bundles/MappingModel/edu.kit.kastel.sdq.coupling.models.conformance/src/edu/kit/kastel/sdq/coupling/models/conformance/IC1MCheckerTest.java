@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class IC1CheckerTest {
+public class IC1MCheckerTest {
 	
     @Test
     public void testJpmail() throws Exception {
@@ -14,10 +14,8 @@ public class IC1CheckerTest {
 		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
 		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 		
-		IC1Checker checker = new IC1Checker(basePath, architectureModelName, correspondenceName, sourceCodeAnalysisName);
+		IC1MChecker checker = new IC1MChecker(basePath, architectureModelName, correspondenceName, sourceCodeAnalysisName);
 		assertTrue(checker.runCheck());
-		
-        
     }
     
     @Test
@@ -27,7 +25,7 @@ public class IC1CheckerTest {
 		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
 		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 		
-		IC1Checker checker = new IC1Checker(basePath, architectureModelName, correspondenceName, sourceCodeAnalysisName);
+		IC1MChecker checker = new IC1MChecker(basePath, architectureModelName, correspondenceName, sourceCodeAnalysisName);
 		assertTrue(checker.runCheck());
     }
     
@@ -38,10 +36,8 @@ public class IC1CheckerTest {
 		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
 		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 		
-		IC1Checker checker = new IC1Checker(basePath, architectureModelName, correspondenceName, sourceCodeAnalysisName);
+		IC1MChecker checker = new IC1MChecker(basePath, architectureModelName, correspondenceName, sourceCodeAnalysisName);
 		assertTrue(checker.runCheck());
-		
-       
     }
 }
 
