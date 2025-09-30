@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edfacodeqlcorrespondences:Correspondences_EDFACodeQL xmlns:edfacodeqlcorrespondences="http://www.example.org/edfacodeqlcorrespondences">
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <configurationCorrespondences>
+    <configuration_CodeQL href="codeql4extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+  </configurationCorrespondences>
+</edfacodeqlcorrespondences:Correspondences_EDFACodeQL>

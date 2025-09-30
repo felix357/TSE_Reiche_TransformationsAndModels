@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edfacodeqlcorrespondences:Correspondences_EDFACodeQL xmlns:edfacodeqlcorrespondences="http://www.example.org/edfacodeqlcorrespondences">
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.14"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.12"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.13"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.11"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.6"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.7"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.9"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.10"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.8"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <configurationCorrespondences>
+    <configuration_CodeQL href="codeql4extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+  </configurationCorrespondences>
+</edfacodeqlcorrespondences:Correspondences_EDFACodeQL>

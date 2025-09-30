@@ -1,0 +1,22 @@
+dictionary id "_2uK2kICYEe-JPPCa891h3g"
+
+enum Role {
+	Customer
+	Cashier
+	Bank
+	ByStander
+	StoreManager
+	OtherStore
+}
+
+enum Location {
+	OtherStoreServers
+	CashDesk
+	Bank
+	Queue
+	CardReader
+	StoreMaintainance
+}
+
+enumCharacteristicType Role using Role
+enumCharacteristicType Location using Location

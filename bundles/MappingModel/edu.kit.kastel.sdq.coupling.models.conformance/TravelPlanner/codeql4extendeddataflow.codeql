@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tainttracking:TainttrackingRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tainttracking="http://www.example.org/codeql/tainttracking">
+  <queries id="_AsMkEHpFEe-t65qwUtSHiQ">
+    <appliedSecurityLevel id="_AsQOdnpFEe-t65qwUtSHiQ" name="Airline;Support;User"/>
+    <appliedSecurityLevel id="_AsQOe3pFEe-t65qwUtSHiQ" name="Airline"/>
+    <appliedSecurityLevel id="_AsQOfXpFEe-t65qwUtSHiQ" name="Airline;TravelAgency"/>
+    <appliedSecurityLevel id="_AsQOenpFEe-t65qwUtSHiQ" name="Airline;Support;TravelAgency"/>
+    <appliedSecurityLevel id="_AsPAUHpFEe-t65qwUtSHiQ" name="Airline;TravelAgency;User"/>
+    <appliedSecurityLevel id="_AsQOdXpFEe-t65qwUtSHiQ" name="Airline;User"/>
+    <appliedSecurityLevel id="_AsQOdHpFEe-t65qwUtSHiQ" name="Airline;Support"/>
+    <appliedSecurityLevel id="_AsQOd3pFEe-t65qwUtSHiQ" name="Support;TravelAgency"/>
+    <appliedSecurityLevel id="_AsQOfHpFEe-t65qwUtSHiQ" name="TravelAgency;User"/>
+    <appliedSecurityLevel id="_AsQOeHpFEe-t65qwUtSHiQ" name="Support;TravelAgency;User"/>
+    <appliedSecurityLevel id="_AsQOeXpFEe-t65qwUtSHiQ" name="Support;User"/>
+    <appliedSecurityLevel id="_AsQOc3pFEe-t65qwUtSHiQ" name="TravelAgency"/>
+    <appliedSecurityLevel id="_AsQOcXpFEe-t65qwUtSHiQ" name="Support"/>
+    <appliedSecurityLevel id="_AsQOcnpFEe-t65qwUtSHiQ" name="Airline;Support;TravelAgency;User"/>
+    <appliedSecurityLevel id="_AsQOcHpFEe-t65qwUtSHiQ" name="User"/>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsVG8HpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.6">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsVuAHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.12">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsWVEHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.4">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsWVEXpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.4">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsWVEnpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.4">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsWVE3pFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.14">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsW8IHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.14">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsW8IXpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.14">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsXjMHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.5">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsXjMXpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.5">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsXjMnpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.5">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsYKQHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.4">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsYKQXpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.2">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsYxUHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsYxUXpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsZYYHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.5">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsZYYXpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.5">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsZYYnpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_AsZ_cHpFEe-t65qwUtSHiQ" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+    </securityLevelAnnotations>
+    <allowedFlows>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.0" to="//@queries.0/@appliedSecurityLevel.5"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.0" to="//@queries.0/@appliedSecurityLevel.6"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.0" to="//@queries.0/@appliedSecurityLevel.10"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.2" to="//@queries.0/@appliedSecurityLevel.1"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.2" to="//@queries.0/@appliedSecurityLevel.11"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.3" to="//@queries.0/@appliedSecurityLevel.2"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.3" to="//@queries.0/@appliedSecurityLevel.6"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.3" to="//@queries.0/@appliedSecurityLevel.7"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.4" to="//@queries.0/@appliedSecurityLevel.2"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.4" to="//@queries.0/@appliedSecurityLevel.5"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.4" to="//@queries.0/@appliedSecurityLevel.8"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.5" to="//@queries.0/@appliedSecurityLevel.1"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.5" to="//@queries.0/@appliedSecurityLevel.14"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.6" to="//@queries.0/@appliedSecurityLevel.1"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.6" to="//@queries.0/@appliedSecurityLevel.12"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.7" to="//@queries.0/@appliedSecurityLevel.11"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.7" to="//@queries.0/@appliedSecurityLevel.12"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.8" to="//@queries.0/@appliedSecurityLevel.11"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.8" to="//@queries.0/@appliedSecurityLevel.14"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.9" to="//@queries.0/@appliedSecurityLevel.7"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.9" to="//@queries.0/@appliedSecurityLevel.8"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.9" to="//@queries.0/@appliedSecurityLevel.10"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.10" to="//@queries.0/@appliedSecurityLevel.12"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.10" to="//@queries.0/@appliedSecurityLevel.14"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.13" to="//@queries.0/@appliedSecurityLevel.0"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.13" to="//@queries.0/@appliedSecurityLevel.3"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.13" to="//@queries.0/@appliedSecurityLevel.4"/>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.13" to="//@queries.0/@appliedSecurityLevel.9"/>
+    </allowedFlows>
+  </queries>
+</tainttracking:TainttrackingRoot>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edfacodeqlcorrespondences:Correspondences_EDFACodeQL xmlns:edfacodeqlcorrespondences="http://www.example.org/edfacodeqlcorrespondences">
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.9"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.33"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.35"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.29"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.8"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.41"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.50"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.10"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.26"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.58"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.25"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.6"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.18"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.21"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.49"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.30"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.47"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.57"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.36"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.46"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.39"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.28"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.11"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.19"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.27"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.34"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.37"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.51"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.42"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.52"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.56"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.61"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.48"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.62"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.43"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.31"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.22"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.45"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.13"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.15"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.40"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.23"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.14"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.54"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.59"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.44"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.60"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.16"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.20"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.53"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.17"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.55"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.24"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.12"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.1"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.32"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.7"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+  </literalSecurityLevelCorrespondences>
+  <literalSecurityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.38"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+  </literalSecurityLevelCorrespondences>
+  <configurationCorrespondences>
+    <configuration_CodeQL href="codeql4extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+  </configurationCorrespondences>
+</edfacodeqlcorrespondences:Correspondences_EDFACodeQL>
