@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:FullyImplicitConfiguration" id="_hkdz0HiTEe-RYawRRhYWUA">
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.parameterannotation#/"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.pddc#_SIw9sNGFEe6e8_rNGeIvbg"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.repository#_p0uhMDyUEeufcY0HJdw_SQ"/>
+  </configurations>
+</configurationrepresentation:Configurations>
