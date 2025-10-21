@@ -22,7 +22,7 @@ import org.xml.sax.InputSource;
  * - Configurations cfgA (architecture) and cfgC (code),
  * - SystemElements δA (PCM) and δC (Java).
  */
-public class IC2MChecker {
+public class IC2MChecker implements IChecker {
 
     private final String correspondencePath;
     private final String codeqlConfigRepresentationPath;

@@ -12,7 +12,7 @@ import org.w3c.dom.NodeList;
  * Checker for IC1(T)(I):
  * Ensures that every CodeQL→RIV mapping can be resolved to a concrete RIV value.
  */
-public class IC1IChecker {
+public class IC1IChecker implements IChecker {
 
     private final String rivCorrespondencePath;
     private final String rivPath;

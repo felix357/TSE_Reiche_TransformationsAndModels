@@ -22,7 +22,7 @@ import edu.kit.kastel.sdq.coupling.models.conformance.ConformanceUtils.Mapping;
  * Checker for IC1(T)(M): ensures that each security characteristic in the
  * architectural model has a corresponding annotation in the source code.
  */
-public class IC1MChecker {
+public class IC1MChecker implements IChecker {
 
 	private static final List<Mapping> mappings = new ArrayList<>();
 	private static final Set<String> mappedEdfaLiterals = new HashSet<>();
@@ -54,7 +54,7 @@ public class IC1MChecker {
 	 * @return true if IC1(T)(M) is fulfilled, false otherwise
 	 * @throws Exception on parsing errors
 	 */
-	public boolean runCheck() throws Exception {
+	public boolean runCheck() {
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			dbf.setNamespaceAware(true);
