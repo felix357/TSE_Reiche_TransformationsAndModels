@@ -10,10 +10,10 @@ import java.util.regex.Pattern;
 /**
  * Implements the IC2.2(T)(M) Configuration Consistency Checker.
  *
- * This checker checks if necessary existence and correspondence of a 
- * security-relevant configuration defined in the architectural model 
- * (EDFA) with a corresponding configuration in the code model (CodeQL).
- * It ensures that the required analysis setup is mapped from architecture to code.
+ * This checker checks whether a correspondence exists between a security-
+ * relevant configuration in the architectural model and a configuration
+ * in the code model. The check starts with the correspondence file
+ * and iterates over all configuration blocks to verify their relevance.
  */
 public class IC2dot2MChecker implements IChecker {
 	
@@ -29,115 +29,110 @@ public class IC2dot2MChecker implements IChecker {
     
     /**
      * Executes the IC2.2(T)(M) consistency check.
+     * It iterates over all configuration correspondences and
+     * checks whether the referenced CFG_A uses the security annotations as input.
      *
-     * @return true if at least one corresponding code element exists for the
-     *         annotated architectural elements, false otherwise.
+     * @return true if at least one relevant and corresponding configuration is found.
      */
 	@Override
 	public boolean runCheck() {
-        String architecturalConfigId = identifyArchitecturalConfiguration(this.edfaConfigPath, this.annotationFile);
+        System.out.println("  [IC2.2] Start: Iteriere über Konfigurations-Korrespondenzen und prüfe Relevanz.");
 
-        if (architecturalConfigId == null || architecturalConfigId.isEmpty()) {
-            System.err.println("  [IC2.2] Fehler: Keine relevante Architektur-Konfiguration (CFG_A) gefunden.");
+        String correspondenceContent = readFileContent(this.edfacodeqlCorrespondencePath);
+        if (correspondenceContent == null || correspondenceContent.isEmpty()) {
+            System.err.println("  [IC2.2] Fehler: Korrespondenzdatei-Inhalt leer oder konnte nicht gelesen werden.");
             return false;
         }
 
-        String codeConfigUri = findCorrespondingCodeConfiguration(this.edfacodeqlCorrespondencePath, architecturalConfigId);
+        String configBlockRegex = "(<configurationCorrespondences.*?/configurationCorrespondences>)";
+        Pattern blockPattern = Pattern.compile(configBlockRegex, Pattern.DOTALL);
+        Matcher blockMatcher = blockPattern.matcher(correspondenceContent);
 
-        boolean isConsistent = codeConfigUri != null && !codeConfigUri.isEmpty();
-        
-        System.out.println("  [IC2.2] Abschluss: CFG_CS^C ist " + (isConsistent ? "nicht leer (KONSISTENT)." : "leer (INKONSISTENT)."));
-        
-        return isConsistent;
+        while (blockMatcher.find()) {
+            String fullCorrespondenceBlock = blockMatcher.group(1);
+            
+            String edfaHref = extractConfigurationEDFAHref(fullCorrespondenceBlock);
+            
+            if (edfaHref != null) {
+                System.out.println("\n  [SCHRITT A] Korrespondenz gefunden. EDFA Href: " + edfaHref);
+
+                if (isConfigurationRelevant(this.edfaConfigPath, edfaHref, this.annotationFile)) {
+                	
+                    String codeConfigUri = extractConfigurationCodeQLHref(fullCorrespondenceBlock);
+                    
+                    System.out.println("  [SCHRITT B] Relevanz bestätigt. CFG_CS^C gefunden (KONSISTENT). URI: " + codeConfigUri);
+                    return codeConfigUri != null;
+                } else {
+                    System.out.println("  [SCHRITT B] Relevanz verneint. Konfiguration nutzt die Sicherheits-Annotation NICHT.");
+                }
+            }
+        }
+
+        System.out.println("\n  [IC2.2] Abschluss: Keine relevante Konfigurations-Korrespondenz gefunden (INKONSISTENT).");
+        return false;
 	}
 	
 	/**
-	 * Verifies the existence of a corresponding CodeQL configuration
-	 * for the architectural configuration by searching the correspondence model.
-	 *
-	 * @param correspondencePath The file path to the EDFA-CodeQL correspondence model.
-	 * @param architecturalConfigId The ID of the architectural configuration.
-	 * @return The URI (href) of the CodeQL configuration, or {@code null} if the existence check fails.
-	 */
-	public String findCorrespondingCodeConfiguration(String correspondencePath, String architecturalConfigId) {
-	    String content = readFileContent(correspondencePath);
-	    System.out.println("  [SCHRITT 2] Finde CFG_CS^C: Suche korrespondierende Code-Konfiguration...");
-
-	    if (content == null || content.isEmpty()) {
-	        System.err.println("  [SCHRITT 2] Fehler: Korrespondenzdatei-Inhalt leer oder konnte nicht gelesen werden.");
-	        return null;
-	    }
-
-	    String regex = "<configurationCorrespondences[^>]*>\\s*" 
-	                   + ".*?<configuration_CodeQL\\s+href=\"([^\"]+)\"[^>]*>";
-	                   
-	    Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
-	    
-	    Matcher matcher = pattern.matcher(content);
-	    
-	    if (matcher.find()) {
-	        String codeConfigUri = matcher.group(1); 
-	        System.out.println("    -> CFG_CS^C gefunden: URI = " + codeConfigUri);
-
-	        return codeConfigUri;
-	    }
-	    
-	    System.out.println("    -> CFG_CS^C nicht gefunden: Keine Konfigurations-Korrespondenz vorhanden.");
-	    return null;
-	}
-	
-	/**
-	 * Identifies the unique ID of the relevant Architectural Configuration
-	 * from the EDFA configuration file.
-	 *
-	 * It filters configurations by matching the provided annotation file name in the input references.
+	 * Checks whether the architectural configuration referenced by 'edfaHref'
+	 * in the EDFA configuration file utilizes the 'annotationFileName' as an input.
 	 *
 	 * @param edfaConfigPath Path to the EDFA configuration file.
-	 * @param annotationFileName The file name of the annotation model used as input (e.g., '*.parameterannotation').
-	 * @return The ID of the matching, or {@code null} if not found.
+	 * @param edfaHref The positional reference (e.g., extendeddataflow.configurationrepresentation#//@configurations.0).
+	 * @param annotationFileName The file name of the annotation file (e.g., jpmail.parameterannotation).
+	 * @return true if the referenced CFG_A block uses the annotation as an input.
 	 */
-	public String identifyArchitecturalConfiguration(String edfaConfigPath, String annotationFileName) {
-	    String content = readFileContent(edfaConfigPath);
-	    System.out.println("  [SCHRITT 1] Suche CFG_A: Identifiziere Architektur-Konfiguration...");
-	    
-	    if (content == null || content.isEmpty()) {
-	        System.err.println("  [SCHRITT 1] Fehler: Konfigurationsdatei-Inhalt leer oder konnte nicht gelesen werden.");
-	        return null;
-	    }
-	   
-	    
-	    String regex = "<configurations[^>]*id=\"([^\"]+)\"[^>]*>\\s*"
-	                   + "(?:[^<]*<inputs[^>]*>)?\\s*"
-	                   + "<inputs[^>]*href=\"[^\"]*" + Pattern.quote(annotationFileName) + "[^>]*>";
-	    
-	    Pattern pattern = Pattern.compile(regex, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
+    private boolean isConfigurationRelevant(String edfaConfigPath, String edfaHref, String annotationFileName) {
+        String configContent = readFileContent(edfaConfigPath);
+        if (configContent == null || configContent.isEmpty()) {
+            return false;
+        }
 
-	    Matcher matcher = pattern.matcher(content);
-	    
-	    if (matcher.find()) {
-	        String configId = matcher.group(1);
-	        System.out.println("    -> CFG_A gefunden: ID = " + configId);
-	        return configId;
-	    }
-	    
-	    System.out.println("    -> CFG_A nicht gefunden: Keine Konfiguration referenziert '" + annotationFileName + "'.");
-	    return null;
-	}
+        Pattern posPattern = Pattern.compile("#/(.*)");
+        Matcher posMatcher = posPattern.matcher(edfaHref);
+        if (!posMatcher.find()) return false; 
+        String positionMarker = posMatcher.group(1); 
+        
+        String relevanceRegex = "<configurations[^>]*id=\"([^\"]+)\"[^>]*>\\s*"
+                                + ".*?"
+                                + "<inputs[^>]*href=\"[^\"]*" + Pattern.quote(annotationFileName) + "[^>]*>"
+                                + ".*?"
+                                + "</configurations>";
+        
+        Pattern pattern = Pattern.compile(relevanceRegex, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(configContent);
+        
+        return matcher.find();
+    }
+    
+    /**
+     * Extracts the positional reference (href) to the EDFA configuration from a correspondence block.
+     */
+    private String extractConfigurationEDFAHref(String correspondenceBlock) {
+        String regex = "<configuration_EDFA\\s+href=\"([^\"]+)\"[^>]*>";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(correspondenceBlock);
+        return matcher.find() ? matcher.group(1) : null;
+    }
 
-	private String readFileContent(String path) {
-	    System.out.println("  [IO] Attempting to read content from path: " + path);
-	    try {
-	        return Files.readString(Path.of(path), StandardCharsets.UTF_8);
+    /**
+     * Extracts the URI to the CodeQL configuration from a correspondence block.
+     */
+    private String extractConfigurationCodeQLHref(String correspondenceBlock) {
+        String regex = "<configuration_CodeQL\\s+href=\"([^\"]+)\"[^>]*>";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(correspondenceBlock);
+        return matcher.find() ? matcher.group(1) : null;
+    }
+    
+    private String readFileContent(String path) {
+        System.out.println("  [IO] Attempting to read content from path: " + path);
+        try {
+            return Files.readString(Path.of(path), StandardCharsets.UTF_8);
 
-	    } catch (IOException e) {
-	        System.err.println("ERROR: Could not read file content for path: " + path);
-	        System.err.println("Details: " + e.getMessage());
-	        return "";
-	    } catch (Exception e) {
-	        System.err.println("ERROR: An unexpected error occurred while processing path: " + path);
-	        return "";
-	    }
-	}
-	
-
+        } catch (IOException e) {
+            System.err.println("ERROR: Could not read file content for path: " + path);
+            System.err.println("Details: " + e.getMessage());
+            return "";
+        }
+    }
 }
