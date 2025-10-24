@@ -31,6 +31,7 @@ public class IC2MChecker implements IChecker {
 
     private final Set<String> configsA = new HashSet<>();
     private final Set<String> configsC = new HashSet<>();
+    private final Set<String> configsRefsC = new HashSet<>();
     private final Map<String, String> configCorr = new HashMap<>();
 
     private final Set<String> systemElemsA = new HashSet<>();
@@ -87,12 +88,13 @@ public class IC2MChecker implements IChecker {
             String codeqlHref = getHref(corr, "configuration_CodeQL");
             String edfaHref = getHref(corr, "configuration_EDFA");
             String codeqlValue = resolveCodeqlReference(codeqlHref, "codeql4extendeddataflow.configurationrepresentation", codeqlConfigRepresentationPath);
-            String edfaValue = resolveCodeqlReference(edfaHref, "extendeddataflow.configurationrepresentation", edfaConfigRepresentationPath);
-
+            String edfaValue = resolveCodeqlReference(edfaHref, "extendeddataflow.configurationrepresentation", edfaConfigRepresentationPath);      
+            
             if (edfaValue != null && codeqlValue != null) {
                 configCorr.put(edfaValue, codeqlValue);
                 configsA.add(edfaValue);
                 configsC.add(codeqlValue);
+                configsRefsC.add(codeqlHref);
             }
         }
     }
@@ -226,4 +228,21 @@ public class IC2MChecker implements IChecker {
 
         return ok;
     }
+    
+    public Set<String> getSystemElemsC() {
+        return systemElemsC;
+    }
+
+    public Set<String> getConfigsRefsC() {
+        return configsRefsC;
+    }
+
+    public Map<String, String> getSystemElemCorr() {
+        return systemElemCorr;
+    }
+
+    public Map<String, String> getConfigCorr() {
+        return configCorr;
+    }
+
 }
