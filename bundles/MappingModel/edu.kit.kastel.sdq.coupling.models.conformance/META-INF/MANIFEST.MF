@@ -8,11 +8,12 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Automatic-Module-Name: edu.kit.kastel.sdq.coupling.models.conformance
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ edu.kit.kastel.sdq.coupling.models.conformance;visibility:=reexport,
+ com.google.gson;visibility:=reexport,
  org.eclipse.emf.ecore;visibility:=reexport,
  edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation,
  edu.kit.kastel.sdq.coupling.models.identifier;visibility:=reexport,
  edu.kit.kastel.sdq.coupling.models.java;visibility:=reexport,
- edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql;visibility:=reexport,
  edu.kit.kastel.sdq.coupling.models.securitycharacteristicweaknessmapping;visibility:=reexport,
  org.eclipse.core.runtime,
  edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation,
@@ -28,5 +29,8 @@ Export-Package: ReferenceMetamodel,
  analysiscouplinggraph.util,
  mapping,
  mapping.impl,
- mapping.util
+ mapping.util,
+ uncertainty,
+ uncertainty.impl,
+ uncertainty.util
 Import-Package: junit.framework

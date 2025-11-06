@@ -2,6 +2,14 @@
  */
 package mapping.impl;
 
+import ReferenceMetamodel.ReferenceMetamodelPackage;
+
+import ReferenceMetamodel.impl.ReferenceMetamodelPackageImpl;
+
+import analysiscouplinggraph.AnalysiscouplinggraphPackage;
+
+import analysiscouplinggraph.impl.AnalysiscouplinggraphPackageImpl;
+
 import mapping.ClassMapping;
 import mapping.FeatureMapping;
 import mapping.MappingDefinition;
@@ -15,6 +23,10 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import uncertainty.UncertaintyPackage;
+
+import uncertainty.impl.UncertaintyPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,11 +105,25 @@ public class MappingPackageImpl extends EPackageImpl implements MappingPackage {
 		// Initialize simple dependencies
 		EcorePackage.eINSTANCE.eClass();
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(AnalysiscouplinggraphPackage.eNS_URI);
+		AnalysiscouplinggraphPackageImpl theAnalysiscouplinggraphPackage = (AnalysiscouplinggraphPackageImpl)(registeredPackage instanceof AnalysiscouplinggraphPackageImpl ? registeredPackage : AnalysiscouplinggraphPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(UncertaintyPackage.eNS_URI);
+		UncertaintyPackageImpl theUncertaintyPackage = (UncertaintyPackageImpl)(registeredPackage instanceof UncertaintyPackageImpl ? registeredPackage : UncertaintyPackage.eINSTANCE);
+		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ReferenceMetamodelPackage.eNS_URI);
+		ReferenceMetamodelPackageImpl theReferenceMetamodelPackage = (ReferenceMetamodelPackageImpl)(registeredPackage instanceof ReferenceMetamodelPackageImpl ? registeredPackage : ReferenceMetamodelPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theMappingPackage.createPackageContents();
+		theAnalysiscouplinggraphPackage.createPackageContents();
+		theUncertaintyPackage.createPackageContents();
+		theReferenceMetamodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theMappingPackage.initializePackageContents();
+		theAnalysiscouplinggraphPackage.initializePackageContents();
+		theUncertaintyPackage.initializePackageContents();
+		theReferenceMetamodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theMappingPackage.freeze();

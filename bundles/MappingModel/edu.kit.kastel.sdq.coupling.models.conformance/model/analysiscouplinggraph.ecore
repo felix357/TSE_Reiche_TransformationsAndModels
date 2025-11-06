@@ -9,28 +9,25 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" upperBound="-1"
         eType="#//ProvidedInterface" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="uncertaintyLabels" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.ecore#//UncertaintyLabel"
-        containment="true"/>
+        eType="ecore:EClass UncertaintyAnnotationModel.ecore#//UncertaintyLabel" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequiredInterface">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uncertaintyLabel" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.ecore#//UncertaintyLabel"
-        containment="true"/>
+        eType="ecore:EClass UncertaintyAnnotationModel.ecore#//UncertaintyLabel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//AnalysisComponent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" lowerBound="1"
         upperBound="-1" eType="ecore:EClass InputReferenceMetamodel.ecore#//Annotation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mappingModel" lowerBound="1"
-        eType="ecore:EClass ../../mapping.model/model/Mapping.ecore#//MappingDefinition"/>
+        eType="ecore:EClass Mapping.ecore#//MappingDefinition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProvidedInterface">
     <eStructuralFeatures xsi:type="ecore:EReference" name="uncertaintyLabel" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/UncertaintyAnnotationModel.ecore#//UncertaintyLabel"
-        containment="true"/>
+        eType="ecore:EClass UncertaintyAnnotationModel.ecore#//UncertaintyLabel" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owner" lowerBound="1" eType="#//AnalysisComponent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" lowerBound="1"
         upperBound="-1" eType="ecore:EClass InputReferenceMetamodel.ecore#//Annotation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mappingModel" lowerBound="1"
-        eType="ecore:EClass ../../mapping.model/model/Mapping.ecore#//MappingDefinition"/>
+        eType="ecore:EClass Mapping.ecore#//MappingDefinition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//ProvidedInterface"/>

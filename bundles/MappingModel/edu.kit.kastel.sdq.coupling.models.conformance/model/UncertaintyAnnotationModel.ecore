@@ -13,6 +13,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="impact" eType="#//ImpactOnAccuracy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
         eType="#//Relation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uncertaintyScenario" lowerBound="1"
+        eType="#//UncertaintyScenario"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="UncertaintySource">
     <eLiterals name="INPUT_DATA_INDUCED"/>
@@ -60,5 +62,26 @@
   <eClassifiers xsi:type="ecore:EClass" name="Relation">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="#//UncertaintySource"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UncertaintyScenario">
+    <eLiterals name="NON_CONFORMANCE_TO_INPUT_INTERFACE"/>
+    <eLiterals name="IMPRECISE_INPUT_DATA"/>
+    <eLiterals name="INCORRECT_INPUT_DATA"/>
+    <eLiterals name="CORRECT_INPUT_DATA"/>
+    <eLiterals name="SCENARIO_DEFINITION_INCORRECT"/>
+    <eLiterals name="SCENARIO_DEFINITION_CORRECT"/>
+    <eLiterals name="METHODOLOGY_ABSTRACTION"/>
+    <eLiterals name="METHODOLOGY_APPROXIMATION"/>
+    <eLiterals name="METHODOLOGY_OVER_SIMPLIFICATION"/>
+    <eLiterals name="METHODOLOGY_CORRECT"/>
+    <eLiterals name="MODEL_UNDER_SPECIFICATION"/>
+    <eLiterals name="MODEL_ABSTRACTION"/>
+    <eLiterals name="MODEL_DISCREPANCY"/>
+    <eLiterals name="MODEL_CORRECT"/>
+    <eLiterals name="OUTPUT_ERROR"/>
+    <eLiterals name="OUTPUT_IMPRECISION"/>
+    <eLiterals name="OUTPUT_CORRECT"/>
+    <eLiterals name="ORCHESTRATION_NOT_FINAL"/>
+    <eLiterals name="ORCHESTRATION_FINAL"/>
   </eClassifiers>
 </ecore:EPackage>

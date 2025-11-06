@@ -99,7 +99,7 @@ public class RoundRobinUncertaintyController {
 				if (u.getSource() == type) {
 					List<RequiredInterface> inputs = component.getInputs();
 					List<ProvidedInterface> outputs = component.getOutputs();
-
+					
 					for (RequiredInterface input : inputs) {
 						for (ProvidedInterface output : outputs) {
 							if (shouldPropagate(u, input, output)) {
