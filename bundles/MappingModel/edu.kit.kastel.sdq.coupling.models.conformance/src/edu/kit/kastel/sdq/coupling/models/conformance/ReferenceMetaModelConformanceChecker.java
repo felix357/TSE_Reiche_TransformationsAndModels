@@ -197,13 +197,19 @@ public class ReferenceMetaModelConformanceChecker {
 		for (EClass referenceClass : allReferenceClasses) {
 			String refName = referenceClass.getName();
 			System.out.println("Checking reference class: " + refName);
-
+			
 			List<EClass> mappingClassesForRef = mapping.getClassMappings().stream()
-					.filter(cm -> cm.getTargetClass() != null
-							&& cm.getTargetClass().getName().equals(referenceClass.getName())
-							&& cm.getTargetClass().getEPackage().getNsURI()
-									.equals(referenceClass.getEPackage().getNsURI()))
-					.map(cm -> cm.getSourceClass()).toList();
+				    .filter(cm -> {
+				        if (cm.getTargetClass() == null) return false;
+				        String targetName = cm.getTargetClass().getName();
+				        String targetNsUri = cm.getTargetClass().getEPackage() != null ? cm.getTargetClass().getEPackage().getNsURI() : null;
+				        return targetName != null
+				            && targetName.equals(referenceClass.getName())
+				            && referenceClass.getEPackage().getNsURI().equals(targetNsUri);
+				    })
+				    .map(cm -> cm.getSourceClass())
+				    .toList();
+
 
 			if (mappingClassesForRef.isEmpty()) {
 				System.err.println("No mapping class found for reference class " + refName);

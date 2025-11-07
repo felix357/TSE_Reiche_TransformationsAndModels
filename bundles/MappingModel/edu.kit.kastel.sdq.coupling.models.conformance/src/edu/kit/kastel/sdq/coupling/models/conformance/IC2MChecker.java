@@ -117,7 +117,7 @@ public class IC2MChecker implements IChecker {
             Element elem = (Element) nodes.item(i);
             String pcmHref = getHref(elem, "component");
             String javaHref = getHref(elem, "javaClass");
-            if (pcmHref != null && javaHref != null) {
+            if (pcmHref != null || javaHref != null) {
                 systemElemCorr.put(pcmHref, javaHref);
                 systemElemsA.add(pcmHref);
                 systemElemsC.add(javaHref);
@@ -207,6 +207,13 @@ public class IC2MChecker implements IChecker {
 
         // A → C
         for (String a : elemsA) {
+        	
+        	if (a == null || a.trim().isEmpty()) {
+                System.out.println("Fehler: " + kind + " im Code enthält eine leere oder ungültige Referenz.");
+                ok = false;
+                continue;
+            }
+        	
             if (!corr.containsKey(a)) {
                 System.out.println("Fehler: " + kind + " im Architekturmodell hat kein Mapping: " + a);
                 ok = false;
@@ -215,6 +222,13 @@ public class IC2MChecker implements IChecker {
 
         // C → A
         for (String c : elemsC) {
+        	
+        	if (c == null || c.trim().isEmpty()) {
+                System.out.println("Fehler: " + kind + " im Code enthält eine leere oder ungültige Referenz.");
+                ok = false;
+                continue;
+            }
+        	
             if (!corr.containsValue(c)) {
                 System.out.println("Fehler: " + kind + " im Code hat kein Mapping: " + c);
                 ok = false;

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<map:MappingDefinition xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:map="http://www.example.org/mapping">
+
+  <!-- Security Level -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeqlscar/model/codeqlscar.ecore#//SecurityLevel_SCAR"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//SecurityCharacteristic"/>
+  </classMappings>
+
+  <!-- ResultEntryElement -> ResultEntryElement -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeqlscar/model/codeqlscar.ecore#//ResultEntryElement"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//ResultEntryElement"/>
+  </classMappings>
+
+  <!-- Result -> ResultEntry -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeqlscar/model/codeqlscar.ecore#//Result"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//ResultEntry"/>
+  </classMappings>
+
+  <!-- Field_SCAR -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeqlscar/model/codeqlscar.ecore#//Field_SCAR"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//JavaSystemElement"/>
+  </classMappings>
+
+  <!-- SystemElement -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeqlscar/model/codeqlscar.ecore#//SystemElement"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//JavaSystemElement"/>
+  </classMappings>
+
+  <!-- Parameter_SCAR -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="../../../Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeqlscar/model/codeqlscar.ecore#//Parameter_SCAR"/>
+    <targetClass href="../../../git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//JavaSystemElement"/>
+  </classMappings>
+
+</map:MappingDefinition>
