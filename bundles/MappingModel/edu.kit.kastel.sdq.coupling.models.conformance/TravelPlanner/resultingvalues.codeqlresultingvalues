@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlresultingvalues:ResolvedImplementationValues xmlns:codeqlresultingvalues="http://www.example.org/codeqlresultingvalues">
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.0" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.1" parameter="//@systemElements.1" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.1" parameter="//@systemElements.2" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.1" parameter="//@systemElements.3" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.1" parameter="//@systemElements.4" ruleId="//@configurations.0"/>
+  <securityLevel id="_pulmkHpJEe-_NMpWHQ7pqQ" name="Airline;TravelAgency;User"/>
+  <securityLevel id="_pup4AHpJEe-_NMpWHQ7pqQ" name="User"/>
+  <systemElements ParameterName="entry" parameterType="Object" methodName="storeLog" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.LoggingDB"/>
+  <systemElements ParameterName="passengerDetails" parameterType="PassengerDetails" methodName="bookFlightOffer" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.Airline"/>
+  <systemElements ParameterName="entry" parameterType="Object" methodName="log" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.AirlineLogger"/>
+  <systemElements ParameterName="ccd_decl" parameterType="CreditCardDetails" methodName="bookFlightOffer" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.Airline"/>
+  <systemElements ParameterName="details" parameterType="PassengerDetails" methodName="addToFlight" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.FlightStorage"/>
+  <configurations id="_AsMkEHpFEe-t65qwUtSHiQ"/>
+</codeqlresultingvalues:ResolvedImplementationValues>

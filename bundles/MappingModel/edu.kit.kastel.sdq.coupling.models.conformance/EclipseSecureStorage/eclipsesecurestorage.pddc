@@ -1,0 +1,14 @@
+dictionary id "_SIw9sNGFEe6e8_rNGeIvbg"
+
+enum Level { 
+	high
+	low
+} 
+
+enum Trust {
+	attack
+	trusted
+}
+
+enumCharacteristicType DataClassification using Level
+enumCharacteristicType NodeClearance using Trust
