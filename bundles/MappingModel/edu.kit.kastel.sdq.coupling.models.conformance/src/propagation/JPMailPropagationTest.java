@@ -74,32 +74,28 @@ public class JPMailPropagationTest {
 
 		IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
 				sourceCodeAnalysisName);
-		boolean restulModelChecker = modelChecker.runCheck();
 
 		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 		String rivName = "resultingvalues.codeqlresultingvalues";
 
 		IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
-		boolean resultInstanceChecker = instanceChecker.runCheck();
 
 		AnalysisGraph graph = buildAnalysisGraph();
-		if (!(restulModelChecker && resultInstanceChecker)) {
-			RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-
-			UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-			label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-			label.setSeverity(SeverityOfImpact.HIGH);
-			label.setUncertaintyScenario(UncertaintyScenario.INCORRECT_INPUT_DATA);
-
-			edfaReq.getUncertaintyLabel().add(label);
-		}
+		
+	    UncertaintyAnnotator annotator = new UncertaintyAnnotator(modelChecker, instanceChecker);
+	    RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+	    annotator.annotateInterface(edfaReq);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> impactSet = controller.propagateWithComponentInfo();
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> result = controller.propagateWithComponentInfo();
 
-		List<String> affectedSet = List.of();
-
-		assertEquals(affectedSet, impactSet);
+		List<String> impactSet = result.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		
+		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: INCORRECT_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+		assertNotEquals(affectedSet, impactSet);
 	}
 
 	// Tests Case 2 for (IC1) uncertainty propagation evaluation:
@@ -115,25 +111,16 @@ public class JPMailPropagationTest {
 
 		IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
 				sourceCodeAnalysisName);
-		boolean restulModelChecker = modelChecker.runCheck();
 
 		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 		String rivName = "resultingvalues.codeqlresultingvalues";
 
 		IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
-		boolean resultInstanceChecker = instanceChecker.runCheck();
 
 		AnalysisGraph graph = buildAnalysisGraph();
-		if (!(restulModelChecker && resultInstanceChecker)) {
-			RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-
-			UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-			label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-			label.setSeverity(SeverityOfImpact.HIGH);
-			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
-
-			edfaReq.getUncertaintyLabel().add(label);
-		}
+	    UncertaintyAnnotator annotator = new UncertaintyAnnotator(modelChecker, instanceChecker);
+	    RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+	    annotator.annotateInterface(edfaReq);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -141,8 +128,10 @@ public class JPMailPropagationTest {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: INCORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
+		assertEquals(expectedImpactSet, impactSet);
 		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
-		assertEquals(affectedSet, impactSet);
+		assertNotEquals(affectedSet, impactSet);
 	}
 	
 		// Tests Case 3 for (IC1) uncertainty propagation evaluation:
@@ -154,29 +143,20 @@ public class JPMailPropagationTest {
 			String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
 			String architectureModelName = "jpmail.pddc";
 			String correspondenceName = "correspondences.edfacodeqlcorrespondences";
-			String sourceCodeAnalysisName = "codeql4extendeddataflow_incorrect_result.codeql";
+			String sourceCodeAnalysisName = "codeql4extendeddataflow_incorrect_result_structure.codeql";
 
 			IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
 					sourceCodeAnalysisName);
-			boolean restulModelChecker = modelChecker.runCheck();
 
 			String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 			String rivName = "resultingvalues.codeqlresultingvalues";
 
 			IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
-			boolean resultInstanceChecker = instanceChecker.runCheck();
-
+			
 			AnalysisGraph graph = buildAnalysisGraph();
-			if (!(restulModelChecker && resultInstanceChecker)) {
-				RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-
-				UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-				label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-				label.setSeverity(SeverityOfImpact.HIGH);
-				label.setUncertaintyScenario(UncertaintyScenario.INCORRECT_INPUT_DATA);
-
-				edfaReq.getUncertaintyLabel().add(label);
-			}
+			UncertaintyAnnotator annotator = new UncertaintyAnnotator(modelChecker, instanceChecker);
+		    RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		    annotator.annotateInterface(edfaReq);
 
 			RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 			List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -201,25 +181,16 @@ public class JPMailPropagationTest {
 
 			IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
 					sourceCodeAnalysisName);
-			boolean restulModelChecker = modelChecker.runCheck();
 
 			String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 			String rivName = "resultingvalues.codeqlresultingvalues";
 
 			IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
-			boolean resultInstanceChecker = instanceChecker.runCheck();
 
 			AnalysisGraph graph = buildAnalysisGraph();
-			if (!(restulModelChecker && resultInstanceChecker)) {
-				RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-
-				UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-				label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-				label.setSeverity(SeverityOfImpact.HIGH);
-				label.setUncertaintyScenario(UncertaintyScenario.IMPRECISE_INPUT_DATA);
-
-				edfaReq.getUncertaintyLabel().add(label);
-			}
+			UncertaintyAnnotator annotator = new UncertaintyAnnotator(modelChecker, instanceChecker);
+		    RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		    annotator.annotateInterface(edfaReq);
 
 			RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 			List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();

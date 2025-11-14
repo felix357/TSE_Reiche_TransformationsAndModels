@@ -2,7 +2,7 @@
 <edfacodeqlcorrespondences:Correspondences_EDFACodeQL xmlns:edfacodeqlcorrespondences="http://www.example.org/edfacodeqlcorrespondences">
   <literalSecurityLevelCorrespondences>
     <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.0"/>
-    <literals_EDFA href=""/>
+    <literals_EDFA href=""/> <!-- Invalid reference -->
   </literalSecurityLevelCorrespondences>
   <literalSecurityLevelCorrespondences>
     <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.1"/>
