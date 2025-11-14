@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_hkea4XiTEe-RYawRRhYWUA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <!-- INCORRECT INPUT DATA: mainConfigurationElement entfernt; IC2 wird leeres CFG_cs^C erkennen -->
+    <!-- <mainConfigurationElement href="codeql4extendeddataflow.codeql#//@queries.0"/> -->
+    <mainConfigurationElement href="codeql4extendeddataflow.codeql#//@queries.0"/>
+  </configurations>
+</configurationrepresentation:Configurations>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <tainttracking:TainttrackingRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tainttracking="http://www.example.org/codeql/tainttracking">
   <queries id="_hkea4HiTEe-RYawRRhYWUA">
-    <appliedSecurityLevel id="_hkfB8HiTEe-RYawRRhYWUA" name="high"/>
+     <!-- INCORRECT INPUT DATA: "high" security level removed; IC1 will detect missing security characteristic -->
+     <!-- <appliedSecurityLevel id="_hkfB8HiTEe-RYawRRhYWUA" name="high"/> -->
     <appliedSecurityLevel id="_hkfpAHiTEe-RYawRRhYWUA" name="low"/>
     <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_hkisUHiTEe-RYawRRhYWUA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
       <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
@@ -9,13 +10,6 @@
     <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_hkisUXiTEe-RYawRRhYWUA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
       <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
     </securityLevelAnnotations>
-    <securityLevelAnnotations
-    xsi:type="tainttracking:ParameterAnnotation"
-    id="_incorrectStructAnnotation"
-    securityLevel="//@queries.0/@appliedSecurityLevel.0">
-  <!-- should point to a parameter, but intentionally points to a method -->
-  <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
-</securityLevelAnnotations>
     <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_hkjTYHiTEe-RYawRRhYWUA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
       <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.2/@parameter.0"/>
     </securityLevelAnnotations>

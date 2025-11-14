@@ -3,7 +3,12 @@
   <queries id="_hkea4HiTEe-RYawRRhYWUA">
     <appliedSecurityLevel id="_hkfB8HiTEe-RYawRRhYWUA" name="high"/>
     <appliedSecurityLevel id="_hkfpAHiTEe-RYawRRhYWUA" name="low"/>
-    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_hkisUHiTEe-RYawRRhYWUA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
+    <!-- IMPRECISE INPUT DATA:
+         Two distinct CodeQL security levels but with identical meaning ("medium").
+         IC1 can match both to the architectural characteristic, but cannot decide which one is correct.
+         This creates ambiguity → imprecise input. -->
+    <appliedSecurityLevel id="L1" name="medium"/>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_hkisUHiTEe-RYawRRhYWUA" securityLevel="//@queries.0/@appliedSecurityLevel.2">
       <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
     </securityLevelAnnotations>
     <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_hkisUXiTEe-RYawRRhYWUA" securityLevel="//@queries.0/@appliedSecurityLevel.0">

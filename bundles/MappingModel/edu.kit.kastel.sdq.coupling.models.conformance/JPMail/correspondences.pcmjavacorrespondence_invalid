@@ -2,6 +2,7 @@
 <pcmjavacorrespondence:PCMJavaCorrespondenceRoot xmlns:pcmjavacorrespondence="http://www.example.org/pcmjavacorrespondence">
   <basiccomponent2class>
     <component href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.repository#_k4sPkDyVEeufcY0HJdw_SQ"/>
+  	<!-- Non-conformance to input interface basiccomponent2class correspondence is missing the required <javaClass> reference -->
   </basiccomponent2class>
   <basiccomponent2class>
     <component href="../edu.kit.kastel.sdq.coupling.casestudy.jpmail.model.extendeddataflow.codeql/models/jpmail.repository#_taKhYDyVEeufcY0HJdw_SQ"/>
