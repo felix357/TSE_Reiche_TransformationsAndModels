@@ -11,6 +11,8 @@ public class UncertaintyAnnotatorBuilder {
 	private IC1IChecker ic1InstanceChecker;
 	private IC2MChecker ic2ModelChecker;
 	private IC2IChecker ic2InstanceChecker;
+	private boolean inputReferenceConforms;
+	private boolean outputReferenceConforms;
 
 	public UncertaintyAnnotatorBuilder() {
 	}
@@ -35,7 +37,18 @@ public class UncertaintyAnnotatorBuilder {
 		return this;
 	}
 
+	public UncertaintyAnnotatorBuilder withInputReferenceConformance(boolean inputReferenceConforms) {
+		this.inputReferenceConforms = inputReferenceConforms;
+		return this;
+	}
+
+	public UncertaintyAnnotatorBuilder withOutputReferenceConformance(boolean outputReferenceConforms) {
+		this.outputReferenceConforms = outputReferenceConforms;
+		return this;
+	}
+
 	public UncertaintyAnnotator build() {
-		return new UncertaintyAnnotator(ic1ModelChecker, ic1InstanceChecker, ic2ModelChecker, ic2InstanceChecker);
+		return new UncertaintyAnnotator(ic1ModelChecker, ic1InstanceChecker, ic2ModelChecker, ic2InstanceChecker,
+				inputReferenceConforms, outputReferenceConforms);
 	}
 }

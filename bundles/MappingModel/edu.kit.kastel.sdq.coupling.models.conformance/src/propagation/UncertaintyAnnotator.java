@@ -17,26 +17,19 @@ public class UncertaintyAnnotator {
 	private final IC1IChecker ic1InstanceChecker;
 	private final IC2MChecker ic2ModelChecker;
 	private final IC2IChecker ic2InstanceChecker;
+	private boolean inputReferenceConforms;
+	private boolean outputReferenceConforms;
 
 	public UncertaintyAnnotator(IC1MChecker modelChecker, IC1IChecker instanceChecker, IC2MChecker ic2ModelChecker,
-			IC2IChecker ic2InstanceChecker) {
+			IC2IChecker ic2InstanceChecker,  boolean inputReferenceConforms, boolean outputReferenceConforms) {
 		this.ic1ModelChecker = modelChecker;
 		this.ic1InstanceChecker = instanceChecker;
 		this.ic2ModelChecker = ic2ModelChecker;
 		this.ic2InstanceChecker = ic2InstanceChecker;
+		this.inputReferenceConforms = inputReferenceConforms;
+		this.outputReferenceConforms = outputReferenceConforms;
+		
 	}
-
-//    /**
-//     * Annotates the specified interface with an uncertainty label based on IC1 results.
-//     */
-//    public void annotateInterface(RequiredInterface req) throws Exception {
-//        boolean modelResult = ic1ModelChecker.runCheck();
-//        boolean instanceResult = ic1InstanceChecker.runCheck();
-//        boolean ic2ModelResult = ic2ModelChecker.runCheck();
-//        boolean ic2InstanceResult = ic2InstanceChecker.runCheck();
-//
-//        assignUncertaintyLabel(req, modelResult, instanceResult, ic2ModelResult && ic2InstanceResult);
-//    }
 
 	public void annotateInterface(RequiredInterface req) throws Exception {
 		// IC1
@@ -51,17 +44,17 @@ public class UncertaintyAnnotator {
 			ic2Result &= ic2InstanceChecker.runCheck();
 		}
 
-		assignUncertaintyLabel(req, ic1Result, ic2Result);
+		assignUncertaintyLabel(req, ic1Result, ic2Result, outputReferenceConforms && inputReferenceConforms);
 	}
 
 	/**
 	 * Assigns an uncertainty label based on IC1 check results.
 	 */
-	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result) {
+	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean referenceMetamodelConformance) {
 		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
 
-		if (!ic1Result || !ic2Result) {
+		if (!ic1Result || !ic2Result || !referenceMetamodelConformance) {
 			// At least one checker failed → Non-conformance to input interface
 			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
 			label.setSeverity(SeverityOfImpact.HIGH);
@@ -73,7 +66,7 @@ public class UncertaintyAnnotator {
 			req.getUncertaintyLabel().add(incorrectDataLabel);
 
 		} else {
-			// Both checkers succeeded → correct input data
+			// All checks succeeded → correct input data
 			label.setUncertaintyScenario(UncertaintyScenario.CORRECT_INPUT_DATA);
 			label.setSeverity(SeverityOfImpact.NONE);
 		}
