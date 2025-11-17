@@ -13,27 +13,31 @@ import org.w3c.dom.NodeList;
  */
 public class IC2IChecker implements IChecker {
 
-	private static final String ANNOTATION_FILE = "jpmail.parameterannotation";
 	private static final String PCM_JAVA_CORR_FILE = "correspondences.pcmjavacorrespondence";
 	private static final String EDFA_CODEQL_CORR_FILE = "correspondences.edfacodeqlcorrespondences";
 	private static final String EDFA_CONFIG_FILE = "extendeddataflow.configurationrepresentation";
 
 	private final String annotationPath;
+	private String systemName;
+	private final String parameterAnnotationFile;
 	private final String pcmJavaCorrPath;
 	private final String edfaCodeqlCorrPath;
 	private final String edfaConfigPath;
-
+	
 	/**
-	 * Konstruiert einen Checker für IC2(T)(I).
+	 * Constructor for Checker of IC2(T)(I).
 	 *
 	 * @param basePath Basisverzeichnis-Pfad
 	 */
-	public IC2IChecker(String basePath) {
-		this.annotationPath = new File(basePath, ANNOTATION_FILE).toString();
+	public IC2IChecker(String basePath, String parameterAnnotationFile, String systemName) {
+		this.systemName = systemName;
+		this.parameterAnnotationFile = parameterAnnotationFile;
+		this.annotationPath = new File(basePath, parameterAnnotationFile).toString();
 		this.pcmJavaCorrPath = new File(basePath, PCM_JAVA_CORR_FILE).toString();
 		this.edfaCodeqlCorrPath = new File(basePath, EDFA_CODEQL_CORR_FILE).toString();
 		this.edfaConfigPath = new File(basePath, EDFA_CONFIG_FILE).toString();
 	}
+
 
 	@Override
 	public boolean runCheck() {
@@ -107,7 +111,7 @@ public class IC2IChecker implements IChecker {
 		if (annotatedPcmElements.isEmpty()) {
 			return false;
 		}
-
+		
 		Document doc = ConformanceUtils.parseXmlFile(pcmJavaCorrPath);
 
 		NodeList paramCorrs = doc.getElementsByTagName("pcmparameter2javaparameter");
@@ -119,7 +123,7 @@ public class IC2IChecker implements IChecker {
 				Element pcmElement = (Element) pcmId.getElementsByTagName("parameter").item(0);
 				String pcmHref = (pcmElement != null) ? pcmElement.getAttribute("href") : null;
 
-				String startMarker = "jpmail.repository#//";
+				String startMarker = this.systemName + ".repository#//";
 
 				String cutPcmHref = null;
 
@@ -202,7 +206,7 @@ public class IC2IChecker implements IChecker {
 			for (int j = 0; j < inputs.getLength(); j++) {
 				String inputHref = ((Element) inputs.item(j)).getAttribute("href");
 
-				if (inputHref != null && inputHref.contains(ANNOTATION_FILE)) {
+				if (inputHref != null && inputHref.contains(this.parameterAnnotationFile)) {
 					return "#//@configurations." + i;
 				}
 			}

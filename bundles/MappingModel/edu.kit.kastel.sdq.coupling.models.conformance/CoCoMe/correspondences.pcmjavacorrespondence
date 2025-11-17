@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pcmjavacorrespondence:PCMJavaCorrespondenceRoot xmlns:pcmjavacorrespondence="http://www.example.org/pcmjavacorrespondence">
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_TMMLQHtHEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_9FztgHtHEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_EB25oHtIEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Mhq-kHtIEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_WUoGYHtIEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_fcU_0HtKEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_C7mnUICaEe-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_C7mnUICaEe-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_ZUWOIICeEe-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.8"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_sGRxMICgEe-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.9"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#__tKgIIC_Ee-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_OyF34IDAEe-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_YsnnUIDAEe-JPPCa891h3g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.12"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_YA7WcJINEe-3KsaZGNEonw"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.13"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_oblgoPTqEe-opdqYCrXCvg"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14"/>
+  </basiccomponent2class>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_SxWTEHsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.0"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_WrwTIHsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.1"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Y-9E0HsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.2"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_cP6fQHsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.3"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_edPScHsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.4"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_tWj3IHsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.5"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_2OI70HsrEe-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.6"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_GjtwMHs5Ee-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.7"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_eac70Hs5Ee-TgfHuvfTPng"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.8"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_v501YHs8Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.9"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_6-hR4Hs8Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.10"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_GwlxwHs9Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.11"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_PiQbsHs9Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.12"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_l3uo4Hs9Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.13"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Q-D14Hs-Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.14"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_KvgzgHs_Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.15"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_XfBzEHs_Ee-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.16"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_8uEtgHtIEe-zmMrAyY-B0A"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.17"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_6BShJ_TsEe-opdqYCrXCvg"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.18"/>
+  </operationInterface2interface>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_03Q9kHstEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.0"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_YAE6YHsuEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.1"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_ip2VcHsuEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.2"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_ssSDsHsuEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.3"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_3E75kHsuEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.4"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_ZHotcHswEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.5"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_m-g9sHswEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.6"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_0vs1oHswEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.7"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Fu4TkHsxEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.8"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_TTu_sHsxEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.9"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_jn3VgHsxEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.10"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_L6CY0HsyEe-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.11"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_fBJsQHs1Ee-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.12"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_pzsBwHs1Ee-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.13"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_0J_HMHs1Ee-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.14"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_z58qoHs2Ee-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.15"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_P-GR4Hs3Ee-TgfHuvfTPng"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.16"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_luszQHs-Ee-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.17"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_vXBi8Hs_Ee-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.18"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_dnSVUHtAEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.19"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_RCJkUHtBEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.20"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_jCar0HtBEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.21"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_FbXR8HtCEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.22"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_TwaE4HtCEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.23"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_eV9uUHtCEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.24"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_XhdfMHtDEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.25"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_HoEvMHtEEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.26"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_p3CS4HtEEe-zmMrAyY-B0A"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.27"/>
+  </compositedatatype2class>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_nNHGcHtIEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_U65pcHs_Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qADJIHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_tIuxUHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_wvutMHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_zpOp4Hs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_3lBKAHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.4"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_7vY4sHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.5"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_AWtCEHs-Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.6"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_D9KLYHs-Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.7"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_qbTrUHtJEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_JX4usHs-Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.8"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_BpHOsHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_S_DdQHs-Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.9"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_BpHOsHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_E_GUEHs_Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.10"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Qdk60HtFEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_e2ResHtFEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_mMLVQHtFEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_sVEmIHtFEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_6Xf_EHtFEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.4"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_CJFFAHtGEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.5"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_G4CugHtGEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.6"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Mveb8HtGEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.7"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_SmJ7cHtGEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.8"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_J1UbIHtKEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Z_XksHtGEe-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.9"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_irgs4HsvEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_GOEs0Hs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_QpSugHs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_YWfqwHs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_gFzf0Hs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.4"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_llro4Hs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.5"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_oX-KUHs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.6"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_tQBeYHs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.7"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_1zM_IHviEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_7thpwHs4Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.8"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_29goYHvdEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_JUPaQHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_BPZu8HveEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_zr1HYHs8Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_FnyEcHveEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_9RbvsHs8Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_FnyEcHveEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_-XuCUHs8Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_FnyEcHveEe-zmMrAyY-B0A"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#__w9tMHs8Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.4"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Fa8XkICaEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_7WVIMHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Fa8XkICaEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_7WVIMHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_LCiN4IIpEe-uINvWgPUcJg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_kq-xoHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.8/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_LCiN4IIpEe-uINvWgPUcJg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_pIjJIHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.8/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_MkVAIIHOEe-9gMPylTAWog"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_uT8P8HssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.9/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_MkVAIIHOEe-9gMPylTAWog"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_wcl-gHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.9/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_MkVAIIHOEe-9gMPylTAWog"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_x7u2AHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.9/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_IF5FoIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_hZ36UHs5Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_IF5FoIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_mOYyMHs5Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_IF5FoIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_z3bawHs5Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_IF5FoIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_3d8OcHs5Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Tfh3YIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Tfh3YIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_ZzJcsHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Tfh3YIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_fTxMoHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_Tfh3YIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_iYs9QHs9Ee-zmMrAyY-B0A"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_bkiPoIDAEe-JPPCa891h3g"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_O2MkwHsuEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.12/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_g0CK0JINEe-3KsaZGNEonw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_M4YzQHs5Ee-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.13/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_rVtIYfTqEe-opdqYCrXCvg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_kq-xoHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_rVtIYfTqEe-opdqYCrXCvg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_pIjJIHssEe-TgfHuvfTPng"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_ocCFMfTtEe-opdqYCrXCvg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_-hA0wPTsEe-opdqYCrXCvg"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.5/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.4/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.4/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.6/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.5/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.5/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.7/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.6/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.6/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.8/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.7/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.7/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.9/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.8/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.8/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.10/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.14/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.9/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.11/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.14/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.10/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.12/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.12/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.13/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.13/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.2/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.15/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.3/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.3/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.15/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.3/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.3/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.16/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.4/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.4/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.16/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.4/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.4/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.17/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.5/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.5/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.17/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.5/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.5/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.18/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.6/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.6/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.18/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.6/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.6/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.19/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.7/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.7/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.19/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.7/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.7/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.20/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.8/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.8/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.20/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.8/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.8/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.21/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.9/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.21/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.9/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.21/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.9/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.26/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.5/@signatures__OperationInterface.4/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.4/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.27/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.5/@signatures__OperationInterface.5/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.5/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.28/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.5/@signatures__OperationInterface.6/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.6/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.29/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.5/@signatures__OperationInterface.7/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.7/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.30/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.5/@signatures__OperationInterface.8/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.8/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.31/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.11/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.32/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.9/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.32/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.9/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.35/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.10/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.4/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.36/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.37/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.38/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.8/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.39/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.2/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.8/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.42/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.4/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.9/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.43/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.43/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.44/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.45/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.46/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.3/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.3/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.46/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.3/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.10/@method.3/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.47/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.47/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.47/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.0/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.47/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.0/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.48/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.48/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.49/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.50/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.3/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.3/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.50/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.3/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.3/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.51/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.12/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.51/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.12/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.51/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.12/@method.0/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.52/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.13/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.52/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.13/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.52/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.13/@method.0/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.53/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.54/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.2/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.55/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.18/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.55/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#//@interfaces__Repository.18/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.2/@parameter.1"/>
+  </pcmparameter2javaparameter>
+</pcmjavacorrespondence:PCMJavaCorrespondenceRoot>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:FullyImplicitConfiguration" id="_kPtSEfUWEe-xz_jKIkr2Qg">
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.pddc#_2uK2kICYEe-JPPCa891h3g"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.parameterannotation#/"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.cocome.model.extendeddataflow.codeql/models/cocome.repository#_bd-W4HspEe-TgfHuvfTPng"/>
+  </configurations>
+</configurationrepresentation:Configurations>

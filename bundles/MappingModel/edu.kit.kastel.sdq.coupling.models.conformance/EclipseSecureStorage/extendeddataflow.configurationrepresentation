@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:FullyImplicitConfiguration" id="_mhU9cB05EfCn6vGa4mnYTA">
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.parameterannotation#/"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_xK4M8PgUEe-nHIm7Xm6fuA"/>
+  </configurations>
+</configurationrepresentation:Configurations>

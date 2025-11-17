@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:FullyImplicitConfiguration" id="_AsL9AHpFEe-t65qwUtSHiQ">
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.parameterannotation#/"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA"/>
+    <inputs href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_dqFLECHbEd6tG9VclJz3cw"/>
+  </configurations>
+</configurationrepresentation:Configurations>

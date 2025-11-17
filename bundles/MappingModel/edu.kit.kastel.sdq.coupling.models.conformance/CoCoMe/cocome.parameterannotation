@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameterannotation:ParameterAnnotations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://dataflowanalysis.org/pcm/extension/dictionary/characterized/1.0" xmlns:parameterannotation="http://www.example.org/parameterannotation" id="_A4QnwIZGEe-6Bp_R9FKCNA">
+  <annotations>
+    <characteristics id="_P8ka0IZOEe-tUMdg1HP9bg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_7WVIMHssEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_nm5cgIbaEe-4sreotxOacw">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_kq-xoHssEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.9/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_cDkGwIbbEe-4sreotxOacw">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_pIjJIHssEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.9/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_qb43MIbbEe-4sreotxOacw">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_x7u2AHssEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.1/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_AJYeYIbcEe-4sreotxOacw">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_gFzf0Hs4Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.4/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_5i_HQIbdEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_llro4Hs4Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.5/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_DD3AkIbeEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_oX-KUHs4Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.6/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Nl3mwIbeEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_D9KLYHs-Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.7/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_egLy0IbeEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_7thpwHs4Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.8/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_rtsV8IbeEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_O2MkwHsuEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_2jn9sIbeEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_O2MkwHsuEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="__O2ocIbeEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_O2MkwHsuEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_TiaoQIbfEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_AwdOkHstEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_eMdJEIbfEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_rUG70IbfEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_3EcWUIbfEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.3"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_AeOwMIbgEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Ln218HstEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Nq_scIbgEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_ZzJcsHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_uqcJAIbgEe-9ItK3X5HqmQ">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Wm-O4HstEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.3/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_DW8-4IbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Wm-O4HstEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.3/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_KW1iIIbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_RqDo8HstEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.0/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Ws9KQIbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_8QSEcHsrEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_c1oYsIbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_8QSEcHsrEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_k_T1kIbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_MWXXMHssEe-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.0/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_xd-VsIbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_M4YzQHs5Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_608FEIbiEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_M4YzQHs5Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_BTkVYIbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@5"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_M4YzQHs5Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_KyUHwIbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_hZ36UHs5Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_UuutkIbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_hZ36UHs5Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_f0AY4IbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_mOYyMHs5Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_ptdxUIbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_xaNakIbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_8Da08IbjEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_DODPoIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Rz2D0Hs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.0/@parameters__OperationSignature.3"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Lr6MwIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_ZzJcsHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_T4HZMIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_ZzJcsHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.1/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_gC6iIIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_iYs9QHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.8/@signatures__OperationInterface.3/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_oM0BcIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_iYs9QHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.1/@signatures__OperationInterface.2/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_vZfDgIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_fTxMoHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.12/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_8PqEsIbkEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_JUPaQHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.11/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_JktaQIblEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_zr1HYHs8Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_cs7oUIblEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@2"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_2517gHs8Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.9/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_j6kTsIblEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#__w9tMHs8Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.1/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_uWop8IblEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_E_GUEHs_Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.14/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_2HfXIIblEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@3"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@1"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_S_DdQHs-Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.14/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_EYLOgIbmEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_3lBKAHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.4/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_OEqh8IbmEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_7vY4sHs9Ee-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.5/@signatures__OperationInterface.5/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_W22wUIbmEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_oX-KUHs4Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.6/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_qsuHgIbmEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_7thpwHs4Ee-TgfHuvfTPng"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.13/@signatures__OperationInterface.8/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_2gtS8IbmEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Qdk60HtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_7HGPQIbmEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Qdk60HtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_G_n8cIbnEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_e2ResHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Zc9acIbnEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_e2ResHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.5/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_sMbxUIbnEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_mMLVQHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_38wkwIbnEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_mMLVQHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="__riOUIbnEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_sVEmIHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_GBr4EIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_sVEmIHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_MUZzUIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_6Xf_EHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Rjkm4IboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_6Xf_EHtFEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.5/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_cmYNAIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_CJFFAHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.5/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_imZOsIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_CJFFAHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.6/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_pkNVYIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_G4CugHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.6/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_vedtUIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_G4CugHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.7/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_8S1-wIboEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Mveb8HtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.7/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_CI-rsIbpEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Mveb8HtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.7/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_JQXlIIbpEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_SmJ7cHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_SLwLwIbpEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_SmJ7cHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.7/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_fQRyAIbpEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Z_XksHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_lM6vkIbpEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Z_XksHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_thspMIbpEe-_7JPtEiIwnA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicTypes@0"/>
+      <values href="cocome.pddc#_2uK2kICYEe-JPPCa891h3g-characteristicEnumerations@0.literals@4"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="cocome.repository#_Z_XksHtGEe-zmMrAyY-B0A"/>
+      <parameter href="cocome.repository#//@interfaces__Repository.16/@signatures__OperationInterface.9/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+</parameterannotation:ParameterAnnotations>

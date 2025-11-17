@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pcmjavacorrespondence:PCMJavaCorrespondenceRoot xmlns:pcmjavacorrespondence="http://www.example.org/pcmjavacorrespondence">
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_j3xt4MNzEeWPE-QAhbUzuQ"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_5EaVoMNxEeWPE-QAhbUzuQ"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__s82QMN5EeWPE-QAhbUzuQ"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_l3SqMO7sEeurfJm_5KAHmg"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_MKBSwAyQEey1YdsQNY8KdA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_IQOjkI0vEe6fP4H9xO-odw"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_9fAeQJnHEe64o_d9hBvmUg"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_4VLZwKpGEe6aj_SHkSg6ow"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7"/>
+  </basiccomponent2class>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_IR9L8MN0EeWPE-QAhbUzuQ"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.0"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_uUkncMN0EeWPE-QAhbUzuQ"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.1"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_sTp-SIqtEe65U8vWBC8HcA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.2"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_y_H88MNyEeWPE-QAhbUzuQ"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.3"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_CayVgMN6EeWPE-QAhbUzuQ"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.4"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_XQ1XUMN6EeWPE-QAhbUzuQ"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.5"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_NhhRMAyQEey1YdsQNY8KdA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.6"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_6aHF-KpGEe6aj_SHkSg6ow"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.7"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_7LgYh5KeEe6Q8r9ohmbDGg"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.8"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_nRkywJnHEe64o_d9hBvmUg"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.9"/>
+  </operationInterface2interface>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_0D_NYM5hEeWFJak7Wqvc0g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.0"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_WVGGLc5iEeWFJak7Wqvc0g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.1"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_QuDIrc5jEeWFJak7Wqvc0g"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.2"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_kJeE7Z5SEe6t9IPLxrlozg"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.3"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_OQivvZKfEe6Q8r9ohmbDGg"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.4"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_PqpkzZnHEe64o_d9hBvmUg"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.5"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_enRO83m8Ee-wsubUNQGQcA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.6"/>
+  </compositedatatype2class>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_U4nK8I0wEe6e08WJYE3hcQ"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_00dt8MNyEeWPE-QAhbUzuQ"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_rXuhQJKfEe6Q8r9ohmbDGg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__SHokJKeEe6Q8r9ohmbDGg"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__c2pcI0uEe6fP4H9xO-odw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_602gYM5lEeWFJak7Wqvc0g"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_HomGYI0wEe6e08WJYE3hcQ"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_wUdhQIqtEe65U8vWBC8HcA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_5cTm0I0vEe6e08WJYE3hcQ"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_JXJqsMN6EeWPE-QAhbUzuQ"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_ZYfsEI0vEe6fP4H9xO-odw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_602gYM5lEeWFJak7Wqvc0g"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_0baf0I0vEe6e08WJYE3hcQ"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_hAD1sMN6EeWPE-QAhbUzuQ"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_9XFaUI0vEe6e08WJYE3hcQ"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_wUdhQIqtEe65U8vWBC8HcA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_169ccI0uEe6fP4H9xO-odw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_gwavAAyQEey1YdsQNY8KdA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_VUaLkI0vEe6fP4H9xO-odw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_602gYM5lEeWFJak7Wqvc0g"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_aHgRsI0wEe6e08WJYE3hcQ"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_nXaBAMN0EeWPE-QAhbUzuQ"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__VCy0JnHEe64o_d9hBvmUg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_plvNwJnHEe64o_d9hBvmUg"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__VCy0JnHEe64o_d9hBvmUg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_z6Jc0JnHEe64o_d9hBvmUg"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__VCy0JnHEe64o_d9hBvmUg"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_RwWNcKlTEe6cBfxGxq9xmw"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#_2E91MKpHEe6aj_SHkSg6ow"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#__E7PQKpGEe6aj_SHkSg6ow"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.0/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.0/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.0/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.1/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.1/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.2/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.1/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.3/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.4/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.4/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.5/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.1/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.6/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.5/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.6/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.5/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.7/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.8/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.9/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.1/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.11/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.12/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.12/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.13/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.codeql/models/travelplanner.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+</pcmjavacorrespondence:PCMJavaCorrespondenceRoot>

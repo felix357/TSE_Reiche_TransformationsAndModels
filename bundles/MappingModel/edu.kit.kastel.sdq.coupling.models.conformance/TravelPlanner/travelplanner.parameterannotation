@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameterannotation:ParameterAnnotations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://dataflowanalysis.org/pcm/extension/dictionary/characterized/1.0" xmlns:parameterannotation="http://www.example.org/parameterannotation" id="_JG6nkMQwEe6ynLW0SQLHsQ">
+  <annotations>
+    <characteristics id="_JJryQMQxEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_gwavAAyQEey1YdsQNY8KdA"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.6/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_dLf6wMQxEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#__E7PQKpGEe6aj_SHkSg6ow"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.7/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_1xS54MQzEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_602gYM5lEeWFJak7Wqvc0g"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_DbWhAMQyEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_JXJqsMN6EeWPE-QAhbUzuQ"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.4/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_GcGfwMQzEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_hAD1sMN6EeWPE-QAhbUzuQ"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.5/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_Ju2C4MQzEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_hAD1sMN6EeWPE-QAhbUzuQ"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.5/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_UkxqoMQzEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_00dt8MNyEeWPE-QAhbUzuQ"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_hsypwMQzEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_00dt8MNyEeWPE-QAhbUzuQ"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_l67eIMQzEe6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_00dt8MNyEeWPE-QAhbUzuQ"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.3/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_BgqEAMQ0Ee6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#__SHokJKeEe6Q8r9ohmbDGg"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.1/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_ITYVAMQ0Ee6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#__SHokJKeEe6Q8r9ohmbDGg"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_PyLo4MQ0Ee6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_z6Jc0JnHEe64o_d9hBvmUg"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_abd7wMQ0Ee6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_z6Jc0JnHEe64o_d9hBvmUg"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_jZRkQMQ0Ee6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_wUdhQIqtEe65U8vWBC8HcA"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.2/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_zKOUgMQ0Ee6w9da_2YY3Yg">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_plvNwJnHEe64o_d9hBvmUg"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_rWaSIN-MEe66-P0VBFi7zw">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicTypes@0"/>
+      <values href="travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="travelplanner.repository#_RwWNcKlTEe6cBfxGxq9xmw"/>
+      <parameter href="travelplanner.repository#//@interfaces__Repository.9/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+</parameterannotation:ParameterAnnotations>

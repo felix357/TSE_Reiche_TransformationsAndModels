@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameterannotation:ParameterAnnotations xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:DataDictionaryCharacterized="http://dataflowanalysis.org/pcm/extension/dictionary/characterized/1.0" xmlns:parameterannotation="http://www.example.org/parameterannotation" id="_tpQd4P2GEe-uINy4x5iXuw">
+  <annotations>
+    <characteristics id="_gSK2EP2IEe-uINy4x5iXuw">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_xBkI0PgoEe-nHIm7Xm6fuA"/>
+      <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_yG3KQP2JEe-MjeAoIhtfqA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_wrqIEPgZEe-nHIm7Xm6fuA"/>
+      <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_50V94P2KEe-MjeAoIhtfqA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_wrqIEPgZEe-nHIm7Xm6fuA"/>
+      <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_HQOUMP2LEe-MjeAoIhtfqA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_wrqIEPgZEe-nHIm7Xm6fuA"/>
+      <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_5FYJoP2LEe-MjeAoIhtfqA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_wrqIEPgZEe-nHIm7Xm6fuA"/>
+      <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.3"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_-kYI8P2LEe-MjeAoIhtfqA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_WgKYoPgmEe-nHIm7Xm6fuA"/>
+      <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.26/@parameters__OperationSignature.0"/>
+    </parameterIdentification>
+  </annotations>
+  <annotations>
+    <characteristics id="_pDgMAP2MEe-MjeAoIhtfqA">
+      <type xsi:type="DataDictionaryCharacterized:EnumCharacteristicType" href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicTypes@0"/>
+      <values href="eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    </characteristics>
+    <parameterIdentification>
+      <operationSignature href="eclipsesecurestorage.repository#_WgKYoPgmEe-nHIm7Xm6fuA"/>
+        <parameter href="eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.26/@parameters__OperationSignature.1"/>
+    </parameterIdentification>
+  </annotations>
+</parameterannotation:ParameterAnnotations>

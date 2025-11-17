@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pcmjavacorrespondence:PCMJavaCorrespondenceRoot xmlns:pcmjavacorrespondence="http://www.example.org/pcmjavacorrespondence">
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_1RDYIPgUEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0"/>
+  </basiccomponent2class>
+  <basiccomponent2class>
+    <component href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_932O0PgUEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1"/>
+  </basiccomponent2class>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_F8IOUPgVEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.0"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_QwGRwPgWEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.1"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_cU3VcPgWEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.2"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_FAYs6PgXEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.3"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_fqHkmPgXEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.4"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_6eaGePgXEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.5"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_FXbeePgYEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.6"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_JnrLqPgYEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.7"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_vcs3GPgYEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.8"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_iF0NI_gmEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.9"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_lUJxaPgmEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.10"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_pw1_KPgmEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.11"/>
+  </operationInterface2interface>
+  <operationInterface2interface>
+    <pcmInterface href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_VwINaPgnEe-nHIm7Xm6fuA"/>
+    <javaInterface href="java4extendeddataflow.java#//@package/@subpackage.2/@classorinterface.12"/>
+  </operationInterface2interface>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_8nRQbvgXEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.0"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_xIKIzvgXEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.1"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_NXtuzfgYEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.2"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_IiNFffglEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.3"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_cCLfcPgVEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.4"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_Z-Ay0PgWEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.5"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_oN4K3fgWEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.6"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_Oe_8bfgXEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.7"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_iu91rfgXEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.8"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_rBFc3fgXEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.9"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_zAZ0HfgoEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.10"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_IrhCbfg5Ee-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.11"/>
+  </compositedatatype2class>
+  <compositedatatype2class>
+    <CompositeDataType href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_K9fKPfgnEe-nHIm7Xm6fuA"/>
+    <javaClass href="java4extendeddataflow.java#//@package/@subpackage.1/@classorinterface.12"/>
+  </compositedatatype2class>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_IEDI0fgwEe-nHIm7Xm6fuA"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_xBkI0PgoEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_wrqIEPgZEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_4lP6gPgZEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_8ahi8PgZEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.2"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#__nVdMPgZEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.3"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_cv8cAPgjEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.4"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_flaNQPgjEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.5"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#04gXcPgjEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.6"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_3uAk8PgjEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.7"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_79h5YPgjEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.8"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_Crm68PgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.9"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_EAGosPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.10"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_GEGgwPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.11"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_IugRgPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.12"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_Kf4vkPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_R5BgUPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_W-m6EPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_mEi-cPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_qt7kYPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_0WrnUPgkEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_Liu3MPglEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_6xM-QPglEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_oK-qAPglEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_0tH78PglEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_GCN_gPgmEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_Nj5BMPgmEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_TeWNcPgmEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.25"/>
+  </providedoperationsignature2javamethod>
+  <providedoperationsignature2javamethod>
+    <pcmMethod>
+      <providedRole href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_MO-NgP2IEe-uINy4x5iXuw"/>
+      <providedSignature href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#_WgKYoPgmEe-nHIm7Xm6fuA"/>
+    </pcmMethod>
+    <javaMethod href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.26"/>
+  </providedoperationsignature2javamethod>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.0/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.0/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.0/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.0/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.1/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.1/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.1/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.1/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.0/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.2/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.1/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.2/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.1/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.2/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.1/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.3/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.2/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.2/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.8/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.7/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.7/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.9/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.8/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.8/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.13/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.13/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.13/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.14/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.13/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.15/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.14/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.15/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.14/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.15/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.14/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.16/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.15/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.16/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.15/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.16/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.15/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.16/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.15/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.17/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.16/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.17/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.16/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.17/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.16/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.18/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.17/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.18/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.17/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.18/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.17/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.18/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.17/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.19/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.18/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.19/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.18/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.19/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.18/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.20/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.19/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.20/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.19/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.20/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.19/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.20/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.19/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.21/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.20/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.21/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.20/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.21/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.20/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.22/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.21/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.22/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.21/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.22/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.21/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.22/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.21/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.23/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.22/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.23/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.22/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.23/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.22/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.24/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.23/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.24/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.23/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.24/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.23/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.24/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.23/@parameters__OperationSignature.3"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.3"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.25/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.24/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.25/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.24/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24/@parameter.1"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.25/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.24/@parameters__OperationSignature.2"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24/@parameter.2"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.26/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.25/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.25/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.27/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.26/@parameters__OperationSignature.0"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.26/@parameter.0"/>
+  </pcmparameter2javaparameter>
+  <pcmparameter2javaparameter>
+    <pcmParameterIdentification providedSignature="//@providedoperationsignature2javamethod.27/@pcmMethod">
+      <parameter href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.codeql/models/eclipsesecurestorage.repository#//@interfaces__Repository.8/@signatures__OperationInterface.26/@parameters__OperationSignature.1"/>
+    </pcmParameterIdentification>
+    <javaParameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.26/@parameter.1"/>
+  </pcmparameter2javaparameter>
+</pcmjavacorrespondence:PCMJavaCorrespondenceRoot>
