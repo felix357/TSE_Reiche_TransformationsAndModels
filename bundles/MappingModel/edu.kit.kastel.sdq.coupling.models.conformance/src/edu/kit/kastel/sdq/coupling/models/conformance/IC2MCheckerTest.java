@@ -17,4 +17,40 @@ public class IC2MCheckerTest {
 		IC2MChecker checker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName, edfaConfigRepFileName, pcmJavaFileName);
 		assertTrue(checker.runCheck());
     }
+    
+    @Test
+    public void testTravelPlanner() throws Exception {
+    	String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/TravelPlanner";
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+		
+		IC2MChecker checker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName, edfaConfigRepFileName, pcmJavaFileName);
+		assertTrue(checker.runCheck());
+    }
+    
+    @Test
+    public void testEclipseSecureStorage() throws Exception {
+    	String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/EclipseSecureStorage";
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+		
+		IC2MChecker checker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName, edfaConfigRepFileName, pcmJavaFileName);
+		assertTrue(checker.runCheck());
+    }
+    
+    @Test
+    public void testCoCoMe() throws Exception {
+    	String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/CoCoMe";
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+		
+		IC2MChecker checker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName, edfaConfigRepFileName, pcmJavaFileName);
+		assertTrue(checker.runCheck());
+    }
 }

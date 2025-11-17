@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_mhWyoB05EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="codeql4extendeddataflow.codeql#//@queries.0"/>
+  </configurations>
+</configurationrepresentation:Configurations>

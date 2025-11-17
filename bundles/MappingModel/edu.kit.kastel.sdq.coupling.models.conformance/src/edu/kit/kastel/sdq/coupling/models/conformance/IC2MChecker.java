@@ -36,7 +36,7 @@ public class IC2MChecker implements IChecker {
 
     private final Set<String> systemElemsA = new HashSet<>();
     private final Set<String> systemElemsC = new HashSet<>();
-    private final Map<String, String> systemElemCorr = new HashMap<>();
+    private final Map<String, Set<String>> systemElemCorr = new HashMap<>();
 
     public IC2MChecker(String basePath, String correspondenceFile, String codeqlConfigRepFile, String edfaConfigRepFile, String pcmJavaFileName) {
         this.correspondencePath = basePath + File.separator + correspondenceFile;
@@ -111,40 +111,20 @@ public class IC2MChecker implements IChecker {
         DocumentBuilder db = dbf.newDocumentBuilder();
         Document doc = db.parse(new InputSource(new FileInputStream(file)));
 
-        // basiccomponent2class
-        NodeList nodes = doc.getElementsByTagName("basiccomponent2class");
-        for (int i = 0; i < nodes.getLength(); i++) {
-            Element elem = (Element) nodes.item(i);
-            String pcmHref = getHref(elem, "component");
-            String javaHref = getHref(elem, "javaClass");
-            if (pcmHref != null || javaHref != null) {
-                systemElemCorr.put(pcmHref, javaHref);
-                systemElemsA.add(pcmHref);
-                systemElemsC.add(javaHref);
-            }
-        }
+        // Alle Typen laden
+        loadSysElements(doc, "basiccomponent2class", "component", "javaClass");
+        loadSysElements(doc, "operationInterface2interface", "pcmInterface", "javaInterface");
+        loadSysElements(doc, "compositedatatype2class", "CompositeDataType", "javaClass");
+    }
 
-        // operationInterface2interface
-        nodes = doc.getElementsByTagName("operationInterface2interface");
+    private void loadSysElements(Document doc, String tagName, String pcmTag, String javaTag) {
+        NodeList nodes = doc.getElementsByTagName(tagName);
         for (int i = 0; i < nodes.getLength(); i++) {
             Element elem = (Element) nodes.item(i);
-            String pcmHref = getHref(elem, "pcmInterface");
-            String javaHref = getHref(elem, "javaInterface");
+            String pcmHref = getHref(elem, pcmTag);
+            String javaHref = getHref(elem, javaTag);
             if (pcmHref != null && javaHref != null) {
-                systemElemCorr.put(pcmHref, javaHref);
-                systemElemsA.add(pcmHref);
-                systemElemsC.add(javaHref);
-            }
-        }
-
-        // compositedatatype2class
-        nodes = doc.getElementsByTagName("compositedatatype2class");
-        for (int i = 0; i < nodes.getLength(); i++) {
-            Element elem = (Element) nodes.item(i);
-            String pcmHref = getHref(elem, "CompositeDataType");
-            String javaHref = getHref(elem, "javaClass");
-            if (pcmHref != null && javaHref != null) {
-                systemElemCorr.put(pcmHref, javaHref);
+                systemElemCorr.computeIfAbsent(pcmHref, k -> new HashSet<>()).add(javaHref);
                 systemElemsA.add(pcmHref);
                 systemElemsC.add(javaHref);
             }
@@ -202,18 +182,17 @@ public class IC2MChecker implements IChecker {
         return null;
     }
 
-    private boolean checkBidirectional(String kind, Set<String> elemsA, Set<String> elemsC, Map<String, String> corr) {
+    private boolean checkBidirectional(String kind, Set<String> elemsA, Set<String> elemsC, Map<String, ?> corr) {
         boolean ok = true;
 
         // A → C
         for (String a : elemsA) {
-        	
-        	if (a == null || a.trim().isEmpty()) {
-                System.out.println("Fehler: " + kind + " im Code enthält eine leere oder ungültige Referenz.");
+            if (a == null || a.trim().isEmpty()) {
+                System.out.println("Fehler: " + kind + " im Architekturmodell enthält eine leere oder ungültige Referenz.");
                 ok = false;
                 continue;
             }
-        	
+
             if (!corr.containsKey(a)) {
                 System.out.println("Fehler: " + kind + " im Architekturmodell hat kein Mapping: " + a);
                 ok = false;
@@ -222,14 +201,21 @@ public class IC2MChecker implements IChecker {
 
         // C → A
         for (String c : elemsC) {
-        	
-        	if (c == null || c.trim().isEmpty()) {
+            if (c == null || c.trim().isEmpty()) {
                 System.out.println("Fehler: " + kind + " im Code enthält eine leere oder ungültige Referenz.");
                 ok = false;
                 continue;
             }
-        	
-            if (!corr.containsValue(c)) {
+
+            boolean found;
+            if (corr.values().iterator().next() instanceof Set) {
+                found = ((Map<String, Set<String>>) corr).values().stream()
+                        .anyMatch(set -> set.contains(c));
+            } else {
+                found = ((Map<String, String>) corr).containsValue(c);
+            }
+
+            if (!found) {
                 System.out.println("Fehler: " + kind + " im Code hat kein Mapping: " + c);
                 ok = false;
             }
@@ -242,7 +228,7 @@ public class IC2MChecker implements IChecker {
 
         return ok;
     }
-    
+
     public Set<String> getSystemElemsC() {
         return systemElemsC;
     }
@@ -251,7 +237,7 @@ public class IC2MChecker implements IChecker {
         return configsRefsC;
     }
 
-    public Map<String, String> getSystemElemCorr() {
+    public Map<String, Set<String>> getSystemElemCorr() {
         return systemElemCorr;
     }
 
