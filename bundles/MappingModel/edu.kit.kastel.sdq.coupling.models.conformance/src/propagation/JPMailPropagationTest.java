@@ -235,7 +235,7 @@ public class JPMailPropagationTest {
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath);
+		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
@@ -274,7 +274,7 @@ public class JPMailPropagationTest {
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath);
+		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
@@ -312,7 +312,7 @@ public class JPMailPropagationTest {
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath);
+		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
@@ -350,7 +350,7 @@ public class JPMailPropagationTest {
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath);
+		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
