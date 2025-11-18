@@ -189,7 +189,7 @@ public class IC4MChecker implements IChecker {
                 .map(Mapping::getCodeqlValue)
                 .collect(Collectors.toSet());
 
-            // Step 4: Check IC4(C)(M) per configuration (Strict Formal Check)
+            // Step 4: Check IC4(C)(M) per configuration
 
             // Identify all configurations (CFG_C)
             List<String> configurationIDs = getAllConfigurationIDs(configurationRepresentationPath);

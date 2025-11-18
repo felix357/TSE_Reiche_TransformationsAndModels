@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -28,6 +29,8 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC1IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC1MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC2IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC2MChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC4IChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.ReferenceMetaModelConformanceChecker;
 import mapping.MappingDefinition;
 import mapping.MappingPackage;
@@ -372,6 +375,175 @@ public class JPMailPropagationTest {
 		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for (IC4) uncertainty propagation evaluation:
+	// (IC4) Uncertainty if linkages between security policies and security
+	// characteristics are incorrect or missing.
+	@Test
+	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsValidInputDataTest()
+			throws Exception {
+		// first case valid -> Uncertainty Scenario: correct input data
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+
+		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
+				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> rivValuesMap = c1.getRivValuesMap();
+
+		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
+				codeqlRivMap, rivValuesMap);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
+				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for (IC4) uncertainty propagation evaluation:
+	// (IC4) Uncertainty if linkages between security policies and security
+	// characteristics are incorrect or missing.
+	@Test
+	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValidInputDataTest()
+			throws Exception {
+		// first case valid -> Uncertainty Scenario: Non-conformance to input interface
+		// (LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValid)
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+
+		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
+				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues_incorrect");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> rivValuesMap = c1.getRivValuesMap();
+
+		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
+				codeqlRivMap, rivValuesMap);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
+				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: INCORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 3 for (IC4) uncertainty propagation evaluation:
+	// (IC4) Uncertainty if linkages between security policies and security
+	// characteristics are incorrect or missing.
+	@Test
+	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInCorrectInputDataTest()
+			throws Exception {
+		// first case valid -> Uncertainty Scenario: Incorrect input data
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+
+		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
+				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences_incorrect_data",
+				"resultingvalues.codeqlresultingvalues_incorrect");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> rivValuesMap = c1.getRivValuesMap();
+
+		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
+				codeqlRivMap, rivValuesMap);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
+				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: INCORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 4 for (IC4) uncertainty propagation evaluation:
+	// (IC4) Uncertainty if linkages between security policies and security
+	// characteristics are incorrect or missing.
+	@Test
+	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsImpreciseInputDataTest()
+			throws Exception {
+		// first case valid -> Uncertainty Scenario: Imprecise input data
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+
+		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
+				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues_imprecise");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> rivValuesMap = c1.getRivValuesMap();
+
+		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
+				codeqlRivMap, rivValuesMap);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
+				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
 	@Test
 	public void graphWithLossOfAccuracyDueToAbstractionInCodeQlTest() throws Exception {
 
@@ -588,10 +760,11 @@ public class JPMailPropagationTest {
 		List<String> expectedImpactSet = List.of("CodeQL: IMPRECISE_INPUT_DATA", "CodeQL: CORRECT_INPUT_DATA",
 				"CodeQL: OUTPUT_IMPRECISION", "CodeQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
-		
+
 		assertEquals(expectedImpactSet, impactSet);
-		
-		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+
+		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
 
@@ -602,7 +775,8 @@ public class JPMailPropagationTest {
 	public void graphWithIncompleteReferenceMetamodelMappingCodeQlInputTest() throws Exception {
 
 		// Case 2: CodeQL input incomplete mapping to reference metamodel.
-		// second case mapping invalid -> Uncertainty Scenario:  Non-conformance to input interface
+		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
+		// interface
 		ResourceSet resSet = createResourceSet();
 
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
@@ -634,7 +808,7 @@ public class JPMailPropagationTest {
 				inputRefMeta);
 
 		AnalysisGraph graph = buildAnalysisGraph();
-		
+
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
 				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
 				.build();
@@ -653,9 +827,12 @@ public class JPMailPropagationTest {
 
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
-		
-		List<String> expectedImpactSet = List.of("CodeQL: INCORRECT_INPUT_DATA", "CodeQL: IMPRECISE_INPUT_DATA", "CodeQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CodeQL: OUTPUT_ERROR", "CodeQL: OUTPUT_IMPRECISION", "EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: INCORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
-		
+
+		List<String> expectedImpactSet = List.of("CodeQL: INCORRECT_INPUT_DATA", "CodeQL: IMPRECISE_INPUT_DATA",
+				"CodeQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CodeQL: OUTPUT_ERROR", "CodeQL: OUTPUT_IMPRECISION",
+				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: INCORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
+
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("CodeQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CodeQL: OUTPUT_ERROR",
@@ -671,7 +848,8 @@ public class JPMailPropagationTest {
 
 		// Case 3: CodeQL output and EDFA input have incomplete mapping to reference
 		// metamodel.
-		// third case mapping incomplete -> Uncertainty Scenario:  Non-conformance to input interface
+		// third case mapping incomplete -> Uncertainty Scenario: Non-conformance to
+		// input interface
 		ResourceSet resSet = createResourceSet();
 
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
@@ -721,8 +899,9 @@ public class JPMailPropagationTest {
 
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
-		
-		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+
+		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertTrue(codeqlInputConforms);
 		assertFalse(codeqlOutputConforms);
 		assertFalse(edfaInputConforms);
