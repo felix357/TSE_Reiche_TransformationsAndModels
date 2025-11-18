@@ -13,204 +13,165 @@ import org.w3c.dom.NodeList;
  */
 public class IC2IChecker implements IChecker {
 
-	private static final String PCM_JAVA_CORR_FILE = "correspondences.pcmjavacorrespondence";
-	private static final String EDFA_CODEQL_CORR_FILE = "correspondences.edfacodeqlcorrespondences";
-	private static final String EDFA_CONFIG_FILE = "extendeddataflow.configurationrepresentation";
+    private static final String PCM_JAVA_CORR_FILE = "correspondences.pcmjavacorrespondence";
+    private static final String EDFA_CODEQL_CORR_FILE = "correspondences.edfacodeqlcorrespondences";
+    private static final String EDFA_CONFIG_FILE = "extendeddataflow.configurationrepresentation";
 
-	private final String annotationPath;
-	private String systemName;
-	private final String parameterAnnotationFile;
-	private final String pcmJavaCorrPath;
-	private final String edfaCodeqlCorrPath;
-	private final String edfaConfigPath;
-	
-	/**
-	 * Constructor for Checker of IC2(T)(I).
-	 *
-	 * @param basePath Basisverzeichnis-Pfad
-	 */
-	public IC2IChecker(String basePath, String parameterAnnotationFile, String systemName) {
-		this.systemName = systemName;
-		this.parameterAnnotationFile = parameterAnnotationFile;
-		this.annotationPath = new File(basePath, parameterAnnotationFile).toString();
-		this.pcmJavaCorrPath = new File(basePath, PCM_JAVA_CORR_FILE).toString();
-		this.edfaCodeqlCorrPath = new File(basePath, EDFA_CODEQL_CORR_FILE).toString();
-		this.edfaConfigPath = new File(basePath, EDFA_CONFIG_FILE).toString();
-	}
+    private final String annotationPath;
+    private String systemName;
+    private final String parameterAnnotationFile;
+    private final String pcmJavaCorrPath;
+    private final String edfaCodeqlCorrPath;
+    private final String edfaConfigPath;
 
+    // Sets to store all relevant system elements and configurations for IC3
+    private final Set<String> systemElementsFromIC2 = new HashSet<>();
+    private final Set<String> configurationsFromIC2 = new HashSet<>();
 
-	@Override
-	public boolean runCheck() {
-		try {
-			Set<String> annotatedPcmElements = getAnnotatedPcmElements();
+    public IC2IChecker(String basePath, String parameterAnnotationFile, String systemName) {
+        this.systemName = systemName;
+        this.parameterAnnotationFile = parameterAnnotationFile;
+        this.annotationPath = new File(basePath, parameterAnnotationFile).toString();
+        this.pcmJavaCorrPath = new File(basePath, PCM_JAVA_CORR_FILE).toString();
+        this.edfaCodeqlCorrPath = new File(basePath, EDFA_CODEQL_CORR_FILE).toString();
+        this.edfaConfigPath = new File(basePath, EDFA_CONFIG_FILE).toString();
+    }
 
-			boolean deltaCsCNonEmpty = isSystemElementSetNonEmpty(annotatedPcmElements);
+    @Override
+    public boolean runCheck() {
+        try {
+            Set<String> annotatedPcmElements = getAnnotatedPcmElements();
 
-			boolean cfgCsCNonEmpty = isConfigurationSetNonEmpty();
+            boolean deltaCsCNonEmpty = isSystemElementSetNonEmpty(annotatedPcmElements);
+            boolean cfgCsCNonEmpty = isConfigurationSetNonEmpty();
 
-			System.out.println("IC2(T)(I) Check:");
-			System.out.println("  Delta_cs^C (Systemelemente) ≠ ∅: " + (deltaCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
-			System.out.println("  CFG_cs^C (Konfigurationen) ≠ ∅: " + (cfgCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
+            System.out.println("IC2(T)(I) Check:");
+            System.out.println("  Delta_cs^C (Systemelemente) ≠ ∅: " + (deltaCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
+            System.out.println("  CFG_cs^C (Konfigurationen) ≠ ∅: " + (cfgCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
 
-			boolean result = deltaCsCNonEmpty && cfgCsCNonEmpty;
+            boolean result = deltaCsCNonEmpty && cfgCsCNonEmpty;
 
-			if (result) {
-				System.out.println("Die Bedingung IC2(T)(I) ist ERFÜLLT. (Robustheit des Mappings ist nachgewiesen)");
-			} else {
-				System.out.println("Die Bedingung IC2(T)(I) ist NICHT ERFÜLLT.");
-			}
-			return result;
+            if (result) {
+                System.out.println("Die Bedingung IC2(T)(I) ist ERFÜLLT. (Robustheit des Mappings ist nachgewiesen)");
+            } else {
+                System.out.println("Die Bedingung IC2(T)(I) ist NICHT ERFÜLLT.");
+            }
+            return result;
 
-		} catch (Exception e) {
-			System.err.println("Fehler während der Prüfung:");
-			e.printStackTrace();
-			return false;
-		}
-	}
+        } catch (Exception e) {
+            System.err.println("Fehler während der Prüfung:");
+            e.printStackTrace();
+            return false;
+        }
+    }
 
-	/**
-	 * Collects the URIs of all security-annotated PCM parameters. This set serves
-	 * as the primary filter to check the IC2.1(T)(I). The method parses the
-	 * annotation file to extract {@code <parameter> href} values.
-	 * 
-	 * @return A {@code Set<String>} containing the full URIs of annotated PCM
-	 *         parameters.
-	 * @throws Exception if the XML file cannot be parsed or accessed.
-	 */
-	private Set<String> getAnnotatedPcmElements() throws Exception {
-		Set<String> annotatedPcmElements = new HashSet<>();
-		Document doc = ConformanceUtils.parseXmlFile(annotationPath);
-		NodeList annotations = doc.getElementsByTagName("annotations");
+    private Set<String> getAnnotatedPcmElements() throws Exception {
+        Set<String> annotatedPcmElements = new HashSet<>();
+        Document doc = ConformanceUtils.parseXmlFile(annotationPath);
+        NodeList annotations = doc.getElementsByTagName("annotations");
 
-		for (int i = 0; i < annotations.getLength(); i++) {
-			Element annotation = (Element) annotations.item(i);
-			Element paramId = (Element) annotation.getElementsByTagName("parameterIdentification").item(0);
-			if (paramId != null) {
-				Element parameter = (Element) paramId.getElementsByTagName("parameter").item(0);
-				String paramHref = (parameter != null) ? parameter.getAttribute("href") : null;
+        for (int i = 0; i < annotations.getLength(); i++) {
+            Element annotation = (Element) annotations.item(i);
+            Element paramId = (Element) annotation.getElementsByTagName("parameterIdentification").item(0);
+            if (paramId != null) {
+                Element parameter = (Element) paramId.getElementsByTagName("parameter").item(0);
+                String paramHref = (parameter != null) ? parameter.getAttribute("href") : null;
+                if (paramHref != null) {
+                    annotatedPcmElements.add(paramHref);
+                }
+            }
+        }
+        return annotatedPcmElements;
+    }
 
-				if (paramHref != null) {
-					annotatedPcmElements.add(paramHref);
-				}
-			}
-		}
-		return annotatedPcmElements;
-	}
+    private boolean isSystemElementSetNonEmpty(Set<String> annotatedPcmElements) throws Exception {
+        if (annotatedPcmElements.isEmpty()) {
+            return false;
+        }
 
-	/**
-	 * This method iterates through the PCM-Java
-	 * correspondence file and verifies if any $\delta_A$ URI is contained in the
-	 * provided filter set.
-	 * 
-	 * @param annotatedPcmElements The set of URIs of all annotated PCM elements.
-	 * @return true if at least one correspondence is found for an annotated
-	 *         element, false otherwise.
-	 * @throws Exception if the PCM-Java correspondence file cannot be parsed.
-	 */
-	private boolean isSystemElementSetNonEmpty(Set<String> annotatedPcmElements) throws Exception {
-		if (annotatedPcmElements.isEmpty()) {
-			return false;
-		}
-		
-		Document doc = ConformanceUtils.parseXmlFile(pcmJavaCorrPath);
+        Document doc = ConformanceUtils.parseXmlFile(pcmJavaCorrPath);
+        NodeList paramCorrs = doc.getElementsByTagName("pcmparameter2javaparameter");
 
-		NodeList paramCorrs = doc.getElementsByTagName("pcmparameter2javaparameter");
-		for (int i = 0; i < paramCorrs.getLength(); i++) {
-			Element corr = (Element) paramCorrs.item(i);
-			Element pcmId = (Element) corr.getElementsByTagName("pcmParameterIdentification").item(0);
+        boolean found = false;
 
-			if (pcmId != null) {
-				Element pcmElement = (Element) pcmId.getElementsByTagName("parameter").item(0);
-				String pcmHref = (pcmElement != null) ? pcmElement.getAttribute("href") : null;
+        for (int i = 0; i < paramCorrs.getLength(); i++) {
+            Element corr = (Element) paramCorrs.item(i);
+            Element pcmId = (Element) corr.getElementsByTagName("pcmParameterIdentification").item(0);
 
-				String startMarker = this.systemName + ".repository#//";
+            if (pcmId != null) {
+                Element pcmElement = (Element) pcmId.getElementsByTagName("parameter").item(0);
+                String pcmHref = (pcmElement != null) ? pcmElement.getAttribute("href") : null;
 
-				String cutPcmHref = null;
+                String startMarker = this.systemName + ".repository#//";
 
-				if (pcmHref != null) {
-					int startIndex = pcmHref.indexOf(startMarker);
+                if (pcmHref != null) {
+                    int startIndex = pcmHref.indexOf(startMarker);
+                    if (startIndex != -1) {
+                        pcmHref = pcmHref.substring(startIndex);
+                    }
+                }
 
-					if (startIndex != -1) {
-						cutPcmHref = pcmHref.substring(startIndex);
-					} else {
+                if (pcmHref != null && annotatedPcmElements.contains(pcmHref)) {
+                    systemElementsFromIC2.add(pcmHref); // collect all matches
+                    found = true;
+                }
+            }
+        }
 
-					}
-				}
+        return found;
+    }
 
-				if (pcmHref != null) {
-					int startIndex = pcmHref.indexOf(startMarker);
-					if (startIndex != -1) {
-						pcmHref = pcmHref.substring(startIndex);
-					}
-				}
+    private boolean isConfigurationSetNonEmpty() throws Exception {
+        String relevantConfigUriSuffix = getRelevantArchitecturalConfigUriSuffix();
 
-				if (pcmHref != null && annotatedPcmElements.contains(pcmHref)) {
-					return true;
-				}
-			}
-		}
+        if (relevantConfigUriSuffix == null) {
+            System.out.println(
+                    "  [Detail] Keine Architektur-Konfiguration (cfg^A) gefunden, die die Annotation-Datei verwendet.");
+            return false;
+        }
 
-		return false;
-	}
+        Document doc = ConformanceUtils.parseXmlFile(edfaCodeqlCorrPath);
+        NodeList correspondences = doc.getElementsByTagName("configurationCorrespondences");
 
+        boolean found = false;
 
-	/**
-	 * Checks if the relevant architectural configuration, 
-	 * which references the annotation file, has a corresponding configuration in the 
-	 * code model.
-	 * The method first determines the URI of the relevant and then checks 
-	 * for a matching {@code <configurationCorrespondences>} entry in the EDFA-CodeQL 
-	 * correspondence file.
-	 * @return true if a corresponding code configuration is found, false otherwise.
-	 * @throws Exception if file parsing fails (e.g., the correspondence file is missing).
-	 */
-	private boolean isConfigurationSetNonEmpty() throws Exception {
-		String relevantConfigUriSuffix = getRelevantArchitecturalConfigUriSuffix();
+        for (int i = 0; i < correspondences.getLength(); i++) {
+            Element corr = (Element) correspondences.item(i);
+            String cfgEdfaHref = ConformanceUtils.getAttributeFromElement(corr, "configuration_EDFA", "href");
 
-		if (relevantConfigUriSuffix == null) {
-			System.out.println(
-					"  [Detail] Keine Architektur-Konfiguration (cfg^A) gefunden, die die Annotation-Datei verwendet.");
-			return false;
-		}
-		Document doc = ConformanceUtils.parseXmlFile(edfaCodeqlCorrPath);
-		NodeList correspondences = doc.getElementsByTagName("configurationCorrespondences");
+            if (cfgEdfaHref != null && cfgEdfaHref.endsWith(relevantConfigUriSuffix)) {
+                configurationsFromIC2.add(cfgEdfaHref); // collect all matches
+                found = true;
+            }
+        }
 
-		for (int i = 0; i < correspondences.getLength(); i++) {
-			Element corr = (Element) correspondences.item(i);
-			String cfgEdfaHref = ConformanceUtils.getAttributeFromElement(corr, "configuration_EDFA", "href");
+        return found;
+    }
 
-			if (cfgEdfaHref != null && cfgEdfaHref.endsWith(relevantConfigUriSuffix)) {
-				return true;
-			}
-		}
+    private String getRelevantArchitecturalConfigUriSuffix() throws Exception {
+        Document doc = ConformanceUtils.parseXmlFile(edfaConfigPath);
+        NodeList configs = doc.getElementsByTagName("configurations");
 
-		return false;
-	}
+        for (int i = 0; i < configs.getLength(); i++) {
+            Element config = (Element) configs.item(i);
+            NodeList inputs = config.getElementsByTagName("inputs");
 
-	/**
-	 * Finds the URI suffix of the architectural configuration
-	 * that lists the security annotation file as an input. 
-	 * This configuration is relevant for the IC2.2(T)(I) check.
-	 * * @return The URI suffix (e.g., "#//@configurations.0") of the relevant $\text{cfg}^A$, 
-	 * or {@code null} if the annotation file is not used by any configuration.
-	 * @throws Exception if the EDFA configuration file cannot be parsed.
-	 */
-	private String getRelevantArchitecturalConfigUriSuffix() throws Exception {
-		Document doc = ConformanceUtils.parseXmlFile(edfaConfigPath);
-		NodeList configs = doc.getElementsByTagName("configurations");
+            for (int j = 0; j < inputs.getLength(); j++) {
+                String inputHref = ((Element) inputs.item(j)).getAttribute("href");
 
-		for (int i = 0; i < configs.getLength(); i++) {
-			Element config = (Element) configs.item(i);
-			NodeList inputs = config.getElementsByTagName("inputs");
+                if (inputHref != null && inputHref.contains(this.parameterAnnotationFile)) {
+                    return "#//@configurations." + i;
+                }
+            }
+        }
+        return null;
+    }
 
-			for (int j = 0; j < inputs.getLength(); j++) {
-				String inputHref = ((Element) inputs.item(j)).getAttribute("href");
+    public Set<String> getSystemElementsFromIC2() {
+        return systemElementsFromIC2;
+    }
 
-				if (inputHref != null && inputHref.contains(this.parameterAnnotationFile)) {
-					return "#//@configurations." + i;
-				}
-			}
-		}
-		return null;
-	}
+    public Set<String> getConfigurationsFromIC2() {
+        return configurationsFromIC2;
+    }
 }
