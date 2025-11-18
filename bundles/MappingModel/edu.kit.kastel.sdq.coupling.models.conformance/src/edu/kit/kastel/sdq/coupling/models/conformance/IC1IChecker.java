@@ -84,4 +84,13 @@ public class IC1IChecker implements IChecker {
         }
         return allResolvable;
     }
+    
+    public Map<String, String> getCodeqlRivMap() {
+        return codeqlRivMap;
+    }
+
+    public Map<String, String> getRivValuesMap() {
+        return rivValuesMap;
+    }
+
 }
