@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -29,6 +30,8 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC1IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC1MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC2IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC2MChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC3IChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC3MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.ReferenceMetaModelConformanceChecker;
@@ -375,6 +378,278 @@ public class JPMailPropagationTest {
 		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for (IC3) uncertainty propagation evaluation:
+	// (IC3) Uncertainty about the existence and consistency of security annotations
+	// in the annotated source code model.
+	@Test
+	public void graphWithIC3SecurityAnnoationsConsistetInputDataTest() throws Exception {
+
+		// First case security annoations consistet -> Uncertainty Scenario: correct
+		// input data
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+		String architectureModelName = "jpmail.pddc";
+		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
+		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
+
+		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
+				sourceCodeAnalysisName);
+		checker1.runCheck();
+
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+
+		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
+				edfaConfigRepFileName, pcmJavaFileName);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker modelChecker = new IC3MChecker(basePath,
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
+				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow.codeql", codeqlRivMap,
+				sysElements, configs);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
+				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for (IC3) uncertainty propagation evaluation:
+	// (IC3) Uncertainty about the existence and consistency of security annotations
+	// in the annotated source code model.
+	@Test
+	public void graphWithIC3SecurityAnnoationsInConsistetInputDataTest() throws Exception {
+
+		// Second case security annoations inconsistet -> Uncertainty Scenario:
+		// Non-conformance to input interface
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+		String architectureModelName = "jpmail.pddc";
+		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
+		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
+
+		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
+				sourceCodeAnalysisName);
+		checker1.runCheck();
+
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+
+		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
+				edfaConfigRepFileName, pcmJavaFileName);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker modelChecker = new IC3MChecker(basePath,
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
+				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow_invalidSecurityLevels.codeql",
+				codeqlRivMap, sysElements, configs);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
+				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		List<String> expectedImpactSet = List.of("EDFA: INCORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 3 for (IC3) uncertainty propagation evaluation:
+	// (IC3) Uncertainty about the existence and consistency of security annotations
+	// in the annotated source code model.
+	@Test
+	public void graphWithIC3SecurityAnnoationsWrongInputDataTest() throws Exception {
+
+		// Third case security annoations inconsistet -> Uncertainty Scenario:
+		// Incorrect input data
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+		String architectureModelName = "jpmail.pddc";
+		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
+		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
+
+		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
+				sourceCodeAnalysisName);
+		checker1.runCheck();
+
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+
+		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
+				edfaConfigRepFileName, pcmJavaFileName);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker modelChecker = new IC3MChecker(basePath,
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
+				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow_invalidSecurityLevels.codeql",
+				codeqlRivMap, sysElements, configs);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
+				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		List<String> expectedImpactSet = List.of("EDFA: INCORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: INCORRECT_INPUT_DATA", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 4 for (IC3) uncertainty propagation evaluation:
+	// (IC3) Uncertainty about the existence and consistency of security annotations
+	// in the annotated source code model.
+	@Test
+	public void graphWithIC3SecurityAnnoationsimpreciseInputDataTest() throws Exception {
+
+		// 4. case security annoations imprecise -> Uncertainty Scenario:
+		// Imprecise input data
+		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
+		String architectureModelName = "jpmail.pddc";
+		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
+		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
+
+		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
+				sourceCodeAnalysisName);
+		checker1.runCheck();
+
+		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
+		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
+		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
+		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
+
+		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
+				edfaConfigRepFileName, pcmJavaFileName);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker modelChecker = new IC3MChecker(basePath,
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
+				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
+				"resultingvalues.codeqlresultingvalues");
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow_impre.codeql", codeqlRivMap,
+				sysElements, configs);
+
+		AnalysisGraph graph = buildAnalysisGraph();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
+				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
 	// Tests Case 1 for (IC4) uncertainty propagation evaluation:
 	// (IC4) Uncertainty if linkages between security policies and security
 	// characteristics are incorrect or missing.
@@ -459,7 +734,7 @@ public class JPMailPropagationTest {
 		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 3 for (IC4) uncertainty propagation evaluation:
 	// (IC4) Uncertainty if linkages between security policies and security
 	// characteristics are incorrect or missing.
@@ -472,7 +747,8 @@ public class JPMailPropagationTest {
 		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
 				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
 
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences_incorrect_data",
+		IC1IChecker c1 = new IC1IChecker(basePath,
+				"correspondences.codeqlresultingvaluescorrespondences_incorrect_data",
 				"resultingvalues.codeqlresultingvalues_incorrect");
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();

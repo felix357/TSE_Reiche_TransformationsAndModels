@@ -62,7 +62,7 @@ public class IC3IChecker implements IChecker {
                 String annotationId = annotationElem.getAttribute("id");
                 String securityLevelRef = annotationElem.getAttribute("securityLevel");
 
-                String fullKey = codeqlFilePathName + "#" + securityLevelRef;
+                String fullKey = "codeql4extendeddataflow.codeql" + "#" + securityLevelRef;
 
                 // IC1 check
                 String resolvedValue = codeqlRivMap.get(fullKey);
