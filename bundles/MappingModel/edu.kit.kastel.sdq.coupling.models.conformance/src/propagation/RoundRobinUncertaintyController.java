@@ -43,7 +43,6 @@ public class RoundRobinUncertaintyController {
         // U1 → U5
         scenarioPropagationMap.put(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE, EnumSet.of(UncertaintyScenario.OUTPUT_ERROR));
         scenarioPropagationMap.put(UncertaintyScenario.IMPRECISE_INPUT_DATA, EnumSet.of(UncertaintyScenario.OUTPUT_IMPRECISION));
-        scenarioPropagationMap.put(UncertaintyScenario.INCORRECT_INPUT_DATA, EnumSet.of(UncertaintyScenario.OUTPUT_ERROR));
         scenarioPropagationMap.put(UncertaintyScenario.CORRECT_INPUT_DATA, EnumSet.of(UncertaintyScenario.OUTPUT_CORRECT));
 
         // U2 → U5
@@ -63,7 +62,7 @@ public class RoundRobinUncertaintyController {
         scenarioPropagationMap.put(UncertaintyScenario.MODEL_CORRECT, EnumSet.of(UncertaintyScenario.OUTPUT_CORRECT));
 
         // U5 → U1
-        scenarioPropagationMap.put(UncertaintyScenario.OUTPUT_ERROR, EnumSet.of(UncertaintyScenario.INCORRECT_INPUT_DATA));
+        scenarioPropagationMap.put(UncertaintyScenario.OUTPUT_ERROR, EnumSet.of(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE));
         scenarioPropagationMap.put(UncertaintyScenario.OUTPUT_IMPRECISION, EnumSet.of(UncertaintyScenario.IMPRECISE_INPUT_DATA));
         scenarioPropagationMap.put(UncertaintyScenario.OUTPUT_CORRECT, EnumSet.of(UncertaintyScenario.CORRECT_INPUT_DATA));
 

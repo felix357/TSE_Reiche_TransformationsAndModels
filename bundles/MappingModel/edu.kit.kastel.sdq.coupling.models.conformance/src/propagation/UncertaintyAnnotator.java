@@ -86,11 +86,11 @@ public class UncertaintyAnnotator {
 			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
 			label.setSeverity(SeverityOfImpact.HIGH);
 
-			UncertaintyLabel incorrectDataLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-			incorrectDataLabel.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-			incorrectDataLabel.setUncertaintyScenario(UncertaintyScenario.INCORRECT_INPUT_DATA);
-			incorrectDataLabel.setSeverity(SeverityOfImpact.HIGH);
-			req.getUncertaintyLabel().add(incorrectDataLabel);
+//			UncertaintyLabel incorrectDataLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+//			incorrectDataLabel.setSource(UncertaintySource.INPUT_DATA_INDUCED);
+//			incorrectDataLabel.setUncertaintyScenario(UncertaintyScenario.INCORRECT_INPUT_DATA);
+//			incorrectDataLabel.setSeverity(SeverityOfImpact.HIGH);
+//			req.getUncertaintyLabel().add(incorrectDataLabel);
 
 		} else {
 			// All checks succeeded → correct input data

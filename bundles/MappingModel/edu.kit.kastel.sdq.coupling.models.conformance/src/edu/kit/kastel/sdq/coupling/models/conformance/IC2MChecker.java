@@ -123,7 +123,7 @@ public class IC2MChecker implements IChecker {
             Element elem = (Element) nodes.item(i);
             String pcmHref = getHref(elem, pcmTag);
             String javaHref = getHref(elem, javaTag);
-            if (pcmHref != null && javaHref != null) {
+            if (pcmHref != null || javaHref != null) {
                 systemElemCorr.computeIfAbsent(pcmHref, k -> new HashSet<>()).add(javaHref);
                 systemElemsA.add(pcmHref);
                 systemElemsC.add(javaHref);
