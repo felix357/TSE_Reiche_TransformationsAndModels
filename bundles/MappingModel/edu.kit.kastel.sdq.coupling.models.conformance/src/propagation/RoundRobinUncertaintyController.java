@@ -50,7 +50,6 @@ public class RoundRobinUncertaintyController {
         scenarioPropagationMap.put(UncertaintyScenario.SCENARIO_DEFINITION_CORRECT, EnumSet.of(UncertaintyScenario.OUTPUT_CORRECT));
 
         // U3 → U5
-        scenarioPropagationMap.put(UncertaintyScenario.METHODOLOGY_ABSTRACTION, EnumSet.of(UncertaintyScenario.OUTPUT_IMPRECISION));
         scenarioPropagationMap.put(UncertaintyScenario.METHODOLOGY_APPROXIMATION, EnumSet.of(UncertaintyScenario.OUTPUT_IMPRECISION));
         scenarioPropagationMap.put(UncertaintyScenario.METHODOLOGY_OVER_SIMPLIFICATION, EnumSet.of(UncertaintyScenario.OUTPUT_ERROR));
         scenarioPropagationMap.put(UncertaintyScenario.METHODOLOGY_CORRECT, EnumSet.of(UncertaintyScenario.OUTPUT_CORRECT));

@@ -1,5 +1,6 @@
 package propagation;
 
+import analysiscouplinggraph.AnalysisComponent;
 import analysiscouplinggraph.RequiredInterface;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC1IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC1MChecker;
@@ -45,6 +46,10 @@ public class UncertaintyAnnotator {
 
 	}
 
+	public void annotateAnalysisComponent(AnalysisComponent analysisComponent, UncertaintySource uncertaitySource) {
+		assignUncertaintyLabel(analysisComponent, uncertaitySource);
+	}
+
 	public void annotateInterface(RequiredInterface req) throws Exception {
 		// IC1
 		boolean ic1Result = ic1ModelChecker == null || ic1ModelChecker.runCheck();
@@ -57,7 +62,7 @@ public class UncertaintyAnnotator {
 		if (ic2InstanceChecker != null) {
 			ic2Result &= ic2InstanceChecker.runCheck();
 		}
-		
+
 		// IC3
 		boolean ic3Result = ic3ModelChecker == null || ic3ModelChecker.runCheck();
 		if (ic3InstanceChecker != null) {
@@ -70,14 +75,15 @@ public class UncertaintyAnnotator {
 			ic4Result &= ic4InstanceChecker.runCheck();
 		}
 
-		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result, outputReferenceConforms && inputReferenceConforms);
+		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result,
+				outputReferenceConforms && inputReferenceConforms);
 	}
 
 	/**
 	 * Assigns an uncertainty label based on IC1 check results.
 	 */
-	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean ic3Result, boolean ic4Result,
-			boolean referenceMetamodelConformance) {
+	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean ic3Result,
+			boolean ic4Result, boolean referenceMetamodelConformance) {
 		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
 
@@ -85,12 +91,6 @@ public class UncertaintyAnnotator {
 			// At least one checker failed → Non-conformance to input interface
 			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
 			label.setSeverity(SeverityOfImpact.HIGH);
-
-//			UncertaintyLabel incorrectDataLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-//			incorrectDataLabel.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-//			incorrectDataLabel.setUncertaintyScenario(UncertaintyScenario.INCORRECT_INPUT_DATA);
-//			incorrectDataLabel.setSeverity(SeverityOfImpact.HIGH);
-//			req.getUncertaintyLabel().add(incorrectDataLabel);
 
 		} else {
 			// All checks succeeded → correct input data
@@ -106,5 +106,31 @@ public class UncertaintyAnnotator {
 		req.getUncertaintyLabel().add(impreciseLabel);
 
 		req.getUncertaintyLabel().add(label);
+	}
+
+	private void assignUncertaintyLabel(AnalysisComponent analysisComponent, UncertaintySource uncertaitySource) {
+		// since we can not reduce the uncertainty scenarios we have to apply all
+		// uncertainty scenarios to the coupled analysis graph.
+		if (uncertaitySource == UncertaintySource.SCENARIO_ASSUMPTION_INDUCED) {
+
+		} else if (uncertaitySource == UncertaintySource.METHODOLOGY_INDUCED) {			
+			UncertaintyLabel approximationLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			approximationLabel.setSource(uncertaitySource);
+			approximationLabel.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_APPROXIMATION);
+			
+			UncertaintyLabel overSimplifiedLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			overSimplifiedLabel.setSource(uncertaitySource);
+			overSimplifiedLabel.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_OVER_SIMPLIFICATION);
+			
+			UncertaintyLabel correctAnalysisLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			correctAnalysisLabel.setSource(uncertaitySource);
+			correctAnalysisLabel.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_CORRECT);
+			
+			analysisComponent.getUncertaintyLabels().add(approximationLabel);
+			analysisComponent.getUncertaintyLabels().add(overSimplifiedLabel);
+			analysisComponent.getUncertaintyLabels().add(correctAnalysisLabel);
+		} else if (uncertaitySource == UncertaintySource.MODELING_INDUCED) {
+
+		}
 	}
 }

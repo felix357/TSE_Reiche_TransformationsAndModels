@@ -557,7 +557,7 @@ public class JPMailPropagationTest {
 	@Test
 	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValidInputDataTest()
 			throws Exception {
-		// first case valid -> Uncertainty Scenario: Non-conformance to input interface
+		// second case valid -> Uncertainty Scenario: Non-conformance to input interface
 		// (LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValid)
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
 
@@ -600,7 +600,7 @@ public class JPMailPropagationTest {
 	@Test
 	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsImpreciseInputDataTest()
 			throws Exception {
-		// first case valid -> Uncertainty Scenario: Imprecise input data
+		// third case valid -> Uncertainty Scenario: Imprecise input data
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
 
 		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
@@ -636,19 +636,20 @@ public class JPMailPropagationTest {
 		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// methodology-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithLossOfAccuracyDueToAbstractionInCodeQlTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToApproximationInCodeQlTest() throws Exception {
+		// first case -> Uncertainty Scenario: correct analysis
 
 		AnalysisGraph graph = buildAnalysisGraph();
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		label.setSource(UncertaintySource.METHODOLOGY_INDUCED);
-		label.setSeverity(SeverityOfImpact.HIGH);
-		label.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_ABSTRACTION);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
 
-		codeQlAnalysis.getUncertaintyLabels().add(label);
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -657,9 +658,84 @@ public class JPMailPropagationTest {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_ABSTRACTION", "CodeQL: OUTPUT_IMPRECISION",
+		List<String> expectedImpactSet = List.of("CodeQL: METHODOLOGY_APPROXIMATION",
+				"CodeQL: METHODOLOGY_OVER_SIMPLIFICATION", "CodeQL: METHODOLOGY_CORRECT", "CodeQL: OUTPUT_IMPRECISION",
+				"CodeQL: OUTPUT_ERROR", "CodeQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_CORRECT", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// methodology-induced uncertainty in Source Code Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToApproximationInCodeQlTest() throws Exception {
+		// Second case -> Uncertainty Scenario: approximation in analysis
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("CodeQL: METHODOLOGY_APPROXIMATION",
+				"CodeQL: METHODOLOGY_OVER_SIMPLIFICATION", "CodeQL: METHODOLOGY_CORRECT", "CodeQL: OUTPUT_IMPRECISION",
+				"CodeQL: OUTPUT_ERROR", "CodeQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_APPROXIMATION", "CodeQL: OUTPUT_IMPRECISION",
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
-		assertEquals(affectedSet, impactSet);
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
+	// methodology-induced uncertainty in Source Code Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToOverSimplificationInCodeQlTest() throws Exception {
+		// Third case -> Uncertainty Scenario: over simplification in analysis
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("CodeQL: METHODOLOGY_APPROXIMATION",
+				"CodeQL: METHODOLOGY_OVER_SIMPLIFICATION", "CodeQL: METHODOLOGY_CORRECT", "CodeQL: OUTPUT_IMPRECISION",
+				"CodeQL: OUTPUT_ERROR", "CodeQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_OVER_SIMPLIFICATION", "CodeQL: OUTPUT_ERROR",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
 	}
 
 	@Test
