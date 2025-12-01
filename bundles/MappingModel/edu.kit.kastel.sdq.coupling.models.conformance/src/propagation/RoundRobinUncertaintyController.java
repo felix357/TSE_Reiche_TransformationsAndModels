@@ -31,7 +31,8 @@ public class RoundRobinUncertaintyController {
             UncertaintySource.SCENARIO_ASSUMPTION_INDUCED,
             UncertaintySource.METHODOLOGY_INDUCED,
             UncertaintySource.MODELING_INDUCED,
-            UncertaintySource.OUTPUT_DATA_INDUCED
+            UncertaintySource.OUTPUT_DATA_INDUCED,
+            UncertaintySource.ORCHESTRATION_DECISION_INDUCED
     };
 
     /**
@@ -65,9 +66,9 @@ public class RoundRobinUncertaintyController {
         scenarioPropagationMap.put(UncertaintyScenario.OUTPUT_IMPRECISION, EnumSet.of(UncertaintyScenario.IMPRECISE_INPUT_DATA));
         scenarioPropagationMap.put(UncertaintyScenario.OUTPUT_CORRECT, EnumSet.of(UncertaintyScenario.CORRECT_INPUT_DATA));
 
-        // U6 → no propagation
-        scenarioPropagationMap.put(UncertaintyScenario.ORCHESTRATION_NOT_FINAL, EnumSet.noneOf(UncertaintyScenario.class));
-        scenarioPropagationMap.put(UncertaintyScenario.ORCHESTRATION_FINAL, EnumSet.noneOf(UncertaintyScenario.class));
+        // U6 → U6
+        scenarioPropagationMap.put(UncertaintyScenario.ORCHESTRATION_NOT_FINAL, EnumSet.of(UncertaintyScenario.ORCHESTRATION_NOT_FINAL));
+        scenarioPropagationMap.put(UncertaintyScenario.ORCHESTRATION_FINAL, EnumSet.of(UncertaintyScenario.ORCHESTRATION_FINAL));
     }
 
     public RoundRobinUncertaintyController(AnalysisGraph graph) {
@@ -130,6 +131,9 @@ public class RoundRobinUncertaintyController {
                     case OUTPUT_DATA_INDUCED:
                         propagateOutputDataIntroducedUncertainty();
                         break;
+                    case ORCHESTRATION_DECISION_INDUCED:
+                    	propagateOrchestrationInducedUncertainty();
+                    	break;
                 }
             }
 
@@ -151,12 +155,21 @@ public class RoundRobinUncertaintyController {
             }
             for (RequiredInterface ri : c.getInputs()) {
                 for (UncertaintyLabel u : ri.getUncertaintyLabel()) {
-                    list.add(new ScenarioWithComponent(c.getName(), u.getUncertaintyScenario()));
+//                    list.add(new ScenarioWithComponent(c.getName(), u.getUncertaintyScenario()));
+                    if (u.getSource() == UncertaintySource.ORCHESTRATION_DECISION_INDUCED) {
+                		list.add(new ScenarioWithComponent(c.getName() + " input", u.getUncertaintyScenario()));
+                	} else {
+                		list.add(new ScenarioWithComponent(c.getName(), u.getUncertaintyScenario()));
+                	}
                 }
             }
             for (ProvidedInterface pi : c.getOutputs()) {
                 for (UncertaintyLabel u : pi.getUncertaintyLabel()) {
-                    list.add(new ScenarioWithComponent(c.getName(), u.getUncertaintyScenario()));
+                	if (u.getSource() == UncertaintySource.ORCHESTRATION_DECISION_INDUCED) {
+                		list.add(new ScenarioWithComponent(c.getName() + " output", u.getUncertaintyScenario()));
+                	} else {
+                		list.add(new ScenarioWithComponent(c.getName(), u.getUncertaintyScenario()));
+                	}
                 }
             }
         }
@@ -208,6 +221,39 @@ public class RoundRobinUncertaintyController {
             }
         }
     }
+    
+    private void propagateOrchestrationInducedUncertainty() {
+        for (AnalysisComponent comp : graph.getComponents()) {
+
+            // propagate from input interfaces to local outputs (component-local)
+            for (RequiredInterface input : comp.getInputs()) {
+                for (UncertaintyLabel label : input.getUncertaintyLabel()) {
+                    if (label.getSource() == UncertaintySource.ORCHESTRATION_DECISION_INDUCED) {
+                        for (ProvidedInterface output : comp.getOutputs()) {
+                            addPropagatedLabels(output, label, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+                        }
+                    }
+                }
+            }
+
+            // propagate from outputs along connections to the next component's inputs
+            for (ProvidedInterface output : comp.getOutputs()) {
+                for (UncertaintyLabel label : output.getUncertaintyLabel()) {
+                    if (label.getSource() == UncertaintySource.ORCHESTRATION_DECISION_INDUCED) {
+                        for (Connection conn : graph.getConnections()) {
+                            if (conn.getFrom().equals(output)) { // use .equals() or IDs
+                                RequiredInterface nextInput = conn.getTo();
+                                addPropagatedLabels(nextInput, label, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
 
     /**
      * Adds propagated uncertainty labels to a destination interface based on the mapping.

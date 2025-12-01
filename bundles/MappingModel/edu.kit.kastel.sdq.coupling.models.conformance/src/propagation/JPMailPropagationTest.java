@@ -1096,7 +1096,7 @@ public class JPMailPropagationTest {
 		List<String> affectedSet = List.of("EDFA: MODEL_CORRECT", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
 	// Modeling-induced uncertainty in Architectural Analysis
 	@Test
@@ -1127,12 +1127,13 @@ public class JPMailPropagationTest {
 		List<String> affectedSet = List.of("EDFA: MODEL_UNDER_SPECIFICATION", "EDFA: OUTPUT_IMPRECISION");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
 	// Modeling-induced uncertainty in Architectural Analysis
 	@Test
 	public void graphWithLossOfAccuracyDueToModelingDiscrapancyInEDFATest() throws Exception {
-		// third case -> Uncertainty Scenario: discrapencies between model and implementation
+		// third case -> Uncertainty Scenario: discrapencies between model and
+		// implementation
 
 		AnalysisGraph graph = buildAnalysisGraph();
 
@@ -1156,6 +1157,70 @@ public class JPMailPropagationTest {
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA: MODEL_DISCREPANCY", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// Orchestration-decision-induced uncertainty in Coupling graph.
+	@Test
+	public void graphWithNoLossOfAccuracyDueToOrchestrationTest() throws Exception {
+		// first case -> Uncertainty scenario: final analysis orchestration
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
+				"EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL",
+				"EDFA output: ORCHESTRATION_FINAL");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_FINAL");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// Orchestration-decision-induced uncertainty in Coupling graph.
+	@Test
+	public void graphWithLossOfAccuracyDueToOrchestrationTest() throws Exception {
+		// second case -> Uncertainty scenario: Not final analysis orchestration
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
+				"EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL",
+				"EDFA output: ORCHESTRATION_FINAL");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL");
 		assertNotEquals(affectedSet, impactSet);
 	}
 

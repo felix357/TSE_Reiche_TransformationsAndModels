@@ -78,6 +78,20 @@ public class UncertaintyAnnotator {
 		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result,
 				outputReferenceConforms && inputReferenceConforms);
 	}
+	
+	public void annotateInterfaceWithUncertaintyAnnoation(RequiredInterface req, UncertaintySource uncertaitySource) {
+		UncertaintyLabel labelNotFinal = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+		UncertaintyLabel labelFinal = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+		if (uncertaitySource.equals(UncertaintySource.ORCHESTRATION_DECISION_INDUCED)) {
+			labelNotFinal.setSource(UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+			labelNotFinal.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_NOT_FINAL);
+			
+			labelFinal.setSource(UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+			labelFinal.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_FINAL);
+		}
+		req.getUncertaintyLabel().add(labelNotFinal);
+		req.getUncertaintyLabel().add(labelFinal);
+	}
 
 	/**
 	 * Assigns an uncertainty label based on IC1 check results.
