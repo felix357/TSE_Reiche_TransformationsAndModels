@@ -112,7 +112,16 @@ public class UncertaintyAnnotator {
 		// since we can not reduce the uncertainty scenarios we have to apply all
 		// uncertainty scenarios to the coupled analysis graph.
 		if (uncertaitySource == UncertaintySource.SCENARIO_ASSUMPTION_INDUCED) {
+			UncertaintyLabel scenarioCorrect = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			scenarioCorrect.setSource(uncertaitySource);
+			scenarioCorrect.setUncertaintyScenario(UncertaintyScenario.SCENARIO_DEFINITION_CORRECT);
+			
+			UncertaintyLabel scenarioInCorrect = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			scenarioInCorrect.setSource(uncertaitySource);
+			scenarioInCorrect.setUncertaintyScenario(UncertaintyScenario.SCENARIO_DEFINITION_INCORRECT);
 
+			analysisComponent.getUncertaintyLabels().add(scenarioCorrect);
+			analysisComponent.getUncertaintyLabels().add(scenarioInCorrect);
 		} else if (uncertaitySource == UncertaintySource.METHODOLOGY_INDUCED) {			
 			UncertaintyLabel approximationLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			approximationLabel.setSource(uncertaitySource);
@@ -130,7 +139,21 @@ public class UncertaintyAnnotator {
 			analysisComponent.getUncertaintyLabels().add(overSimplifiedLabel);
 			analysisComponent.getUncertaintyLabels().add(correctAnalysisLabel);
 		} else if (uncertaitySource == UncertaintySource.MODELING_INDUCED) {
-
+			UncertaintyLabel modelCorrectLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			modelCorrectLabel.setSource(uncertaitySource);
+			modelCorrectLabel.setUncertaintyScenario(UncertaintyScenario.MODEL_CORRECT);
+			
+			UncertaintyLabel modelUnderSpecificationLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			modelUnderSpecificationLabel.setSource(uncertaitySource);
+			modelUnderSpecificationLabel.setUncertaintyScenario(UncertaintyScenario.MODEL_UNDER_SPECIFICATION);
+			
+			UncertaintyLabel modelDiscrapencyLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			modelDiscrapencyLabel.setSource(uncertaitySource);
+			modelDiscrapencyLabel.setUncertaintyScenario(UncertaintyScenario.MODEL_DISCREPANCY);
+			
+			analysisComponent.getUncertaintyLabels().add(modelCorrectLabel);
+			analysisComponent.getUncertaintyLabels().add(modelUnderSpecificationLabel);
+			analysisComponent.getUncertaintyLabels().add(modelDiscrapencyLabel);
 		}
 	}
 }

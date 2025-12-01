@@ -74,11 +74,6 @@ public class UncertaintyAnnotatorBuilder {
 		this.outputReferenceConforms = outputReferenceConforms;
 		return this;
 	}
-	
-	public UncertaintyAnnotatorBuilder withOutputReferenceConformance(boolean outputReferenceConforms) {
-		this.outputReferenceConforms = outputReferenceConforms;
-		return this;
-	}
 
 	public UncertaintyAnnotator build() {
 		return new UncertaintyAnnotator(ic1ModelChecker, ic1InstanceChecker, ic2ModelChecker, ic2InstanceChecker,

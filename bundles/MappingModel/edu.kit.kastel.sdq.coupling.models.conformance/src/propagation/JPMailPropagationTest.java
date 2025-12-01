@@ -37,10 +37,6 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.ReferenceMetaModelConformanceChecker;
 import mapping.MappingDefinition;
 import mapping.MappingPackage;
-import uncertainty.SeverityOfImpact;
-import uncertainty.UncertaintyFactory;
-import uncertainty.UncertaintyLabel;
-import uncertainty.UncertaintyScenario;
 import uncertainty.UncertaintySource;
 
 /**
@@ -669,7 +665,7 @@ public class JPMailPropagationTest {
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
 	// methodology-induced uncertainty in Source Code Analysis
 	@Test
@@ -703,7 +699,7 @@ public class JPMailPropagationTest {
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
 	// methodology-induced uncertainty in Source Code Analysis
 	@Test
@@ -738,21 +734,20 @@ public class JPMailPropagationTest {
 		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// Scenario-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithInaccuracyInCodeQlOutputDataTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToScenarioInCodeQlTest() throws Exception {
+		// first case -> Uncertainty Scenario: Scenario definition of analysis correct
 
 		AnalysisGraph graph = buildAnalysisGraph();
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		ProvidedInterface provInterface = codeQlAnalysis.getOutputs().get(0);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
 
-		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		label.setSource(UncertaintySource.OUTPUT_DATA_INDUCED);
-		label.setSeverity(SeverityOfImpact.HIGH);
-		label.setUncertaintyScenario(UncertaintyScenario.OUTPUT_IMPRECISION);
-
-		provInterface.getUncertaintyLabel().add(label);
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -761,24 +756,32 @@ public class JPMailPropagationTest {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> affectedSet = List.of("CodeQL: OUTPUT_IMPRECISION", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: OUTPUT_IMPRECISION");
-		assertEquals(affectedSet, impactSet);
+		List<String> expectedImpactSet = List.of("CodeQL: SCENARIO_DEFINITION_CORRECT",
+				"CodeQL: SCENARIO_DEFINITION_INCORRECT", "CodeQL: OUTPUT_CORRECT", "CodeQL: OUTPUT_ERROR",
+				"CodeQL: OUTPUT_IMPRECISION", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: SCENARIO_DEFINITION_CORRECT", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// Scenario-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithcodeQLUncertaintyDueToIncompleteScenarioCoverageTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToScenarioInCodeQlTest() throws Exception {
+		// second case -> Uncertainty Scenario: Scenario definition of analysis correct
 
 		AnalysisGraph graph = buildAnalysisGraph();
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		label.setSource(UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
-		label.setSeverity(SeverityOfImpact.HIGH);
-		label.setUncertaintyScenario(UncertaintyScenario.SCENARIO_DEFINITION_INCORRECT);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
 
-		codeQlAnalysis.getUncertaintyLabels().add(label);
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -786,25 +789,33 @@ public class JPMailPropagationTest {
 
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
+
+		List<String> expectedImpactSet = List.of("CodeQL: SCENARIO_DEFINITION_CORRECT",
+				"CodeQL: SCENARIO_DEFINITION_INCORRECT", "CodeQL: OUTPUT_CORRECT", "CodeQL: OUTPUT_ERROR",
+				"CodeQL: OUTPUT_IMPRECISION", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
+
+		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("CodeQL: SCENARIO_DEFINITION_INCORRECT", "CodeQL: OUTPUT_ERROR",
-				"CodeQL: OUTPUT_IMPRECISION", "EDFA: INCORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
-		assertEquals(affectedSet, impactSet);
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// Modeling-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithedfaRiskInaccuracyDueToSimplificationsTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToModelingInCodeQlTest() throws Exception {
+		// first case -> Uncertainty Scenario: correct model
+
 		AnalysisGraph graph = buildAnalysisGraph();
 
-		AnalysisComponent edfaAnalysis = graph.getComponents().get(1);
+		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		label.setSource(UncertaintySource.METHODOLOGY_INDUCED);
-		label.setSeverity(SeverityOfImpact.HIGH);
-		label.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_OVER_SIMPLIFICATION);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
 
-		edfaAnalysis.getUncertaintyLabels().add(label);
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -812,24 +823,198 @@ public class JPMailPropagationTest {
 
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
+
+		List<String> expectedImpactSet = List.of("CodeQL: MODEL_CORRECT", "CodeQL: MODEL_UNDER_SPECIFICATION",
+				"CodeQL: MODEL_DISCREPANCY", "CodeQL: OUTPUT_CORRECT", "CodeQL: OUTPUT_IMPRECISION",
+				"CodeQL: OUTPUT_ERROR", "EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: MODEL_CORRECT", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// Modeling-induced uncertainty in Source Code Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToModelingInCodeQlTest() throws Exception {
+		// second case -> Uncertainty Scenario: model under specification
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("CodeQL: MODEL_CORRECT", "CodeQL: MODEL_UNDER_SPECIFICATION",
+				"CodeQL: MODEL_DISCREPANCY", "CodeQL: OUTPUT_CORRECT", "CodeQL: OUTPUT_IMPRECISION",
+				"CodeQL: OUTPUT_ERROR", "EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: MODEL_UNDER_SPECIFICATION", "CodeQL: OUTPUT_IMPRECISION",
+				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
+	// Modeling-induced uncertainty in Source Code Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToModelingDiscInCodeQlTest() throws Exception {
+		// third case -> Uncertainty Scenario: discrapencies between model and
+		// implementation
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("CodeQL: MODEL_CORRECT", "CodeQL: MODEL_UNDER_SPECIFICATION",
+				"CodeQL: MODEL_DISCREPANCY", "CodeQL: OUTPUT_CORRECT", "CodeQL: OUTPUT_IMPRECISION",
+				"CodeQL: OUTPUT_ERROR", "EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: MODEL_DISCREPANCY", "CodeQL: OUTPUT_ERROR",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// methodology-induced uncertainty in Architectural Analysis
+	@Test
+	public void graphWithNoLossOfAccuracyDueToApproximationInEDFATest() throws Exception {
+		// first case -> Uncertainty Scenario: correct analysis
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: METHODOLOGY_APPROXIMATION",
+				"EDFA: METHODOLOGY_OVER_SIMPLIFICATION", "EDFA: METHODOLOGY_CORRECT", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: METHODOLOGY_CORRECT", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// methodology-induced uncertainty in Architectural Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToApproximationInEDFATest() throws Exception {
+		// second case -> Uncertainty Scenario: approximation in analysis
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: METHODOLOGY_APPROXIMATION",
+				"EDFA: METHODOLOGY_OVER_SIMPLIFICATION", "EDFA: METHODOLOGY_CORRECT", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: METHODOLOGY_APPROXIMATION", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
+	// methodology-induced uncertainty in Architectural Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToOverSimplificationInEDFATest() throws Exception {
+		// third case -> Uncertainty Scenario: over simplification in analysis
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: METHODOLOGY_APPROXIMATION",
+				"EDFA: METHODOLOGY_OVER_SIMPLIFICATION", "EDFA: METHODOLOGY_CORRECT", "EDFA: OUTPUT_IMPRECISION",
+				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA: METHODOLOGY_OVER_SIMPLIFICATION", "EDFA: OUTPUT_ERROR");
-		assertEquals(affectedSet, impactSet);
+		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// Scenario-induced uncertainty in Architectural Analysis
 	@Test
-	public void graphWithEdfaOutputAccuracyUncertaintyTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToScenarioInEDFATest() throws Exception {
+		// first case -> Uncertainty Scenario: Scenario definition of analysis correct
+
 		AnalysisGraph graph = buildAnalysisGraph();
 
-		AnalysisComponent edfaAnalysis = graph.getComponents().get(1);
-		ProvidedInterface provInterface = edfaAnalysis.getOutputs().get(0);
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		label.setSource(UncertaintySource.OUTPUT_DATA_INDUCED);
-		label.setSeverity(SeverityOfImpact.HIGH);
-		label.setUncertaintyScenario(UncertaintyScenario.OUTPUT_IMPRECISION);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
 
-		provInterface.getUncertaintyLabel().add(label);
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -838,22 +1023,31 @@ public class JPMailPropagationTest {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> affectedSet = List.of("EDFA: OUTPUT_IMPRECISION");
-		assertEquals(affectedSet, impactSet);
+		List<String> expectedImpactSet = List.of("EDFA: SCENARIO_DEFINITION_CORRECT",
+				"EDFA: SCENARIO_DEFINITION_INCORRECT", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR",
+				"EDFA: OUTPUT_IMPRECISION");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: SCENARIO_DEFINITION_CORRECT", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// Scenario-induced uncertainty in Architectural Analysis
 	@Test
-	public void graphWithEdfaUncertaintyDueToIncompleteAssumptionsAndScenariosTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToScenarioInEDFATest() throws Exception {
+		// second case -> Uncertainty Scenario: Scenario definition of analysis
+		// incorrect
+
 		AnalysisGraph graph = buildAnalysisGraph();
 
-		AnalysisComponent edfaAnalysis = graph.getComponents().get(1);
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		label.setSource(UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
-		label.setSeverity(SeverityOfImpact.HIGH);
-		label.setUncertaintyScenario(UncertaintyScenario.SCENARIO_DEFINITION_INCORRECT);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
 
-		edfaAnalysis.getUncertaintyLabels().add(label);
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -862,7 +1056,106 @@ public class JPMailPropagationTest {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> affectedSet = List.of("EDFA: METHODOLOGY_OVER_SIMPLIFICATION", "EDFA: OUTPUT_IMPRECISION");
+		List<String> expectedImpactSet = List.of("EDFA: SCENARIO_DEFINITION_CORRECT",
+				"EDFA: SCENARIO_DEFINITION_INCORRECT", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR",
+				"EDFA: OUTPUT_IMPRECISION");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: SCENARIO_DEFINITION_INCORRECT", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
+	// Modeling-induced uncertainty in Architectural Analysis
+	@Test
+	public void graphWithNoLossOfAccuracyDueToModelingInEDFATest() throws Exception {
+		// first case -> Uncertainty Scenario: correct model
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: MODEL_CORRECT", "EDFA: MODEL_UNDER_SPECIFICATION",
+				"EDFA: MODEL_DISCREPANCY", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: MODEL_CORRECT", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
+	// Modeling-induced uncertainty in Architectural Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToModelingUnderSpecInEDFATest() throws Exception {
+		// second case -> Uncertainty Scenario: model under specification
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: MODEL_CORRECT", "EDFA: MODEL_UNDER_SPECIFICATION",
+				"EDFA: MODEL_DISCREPANCY", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: MODEL_UNDER_SPECIFICATION", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
+	// Modeling-induced uncertainty in Architectural Analysis
+	@Test
+	public void graphWithLossOfAccuracyDueToModelingDiscrapancyInEDFATest() throws Exception {
+		// third case -> Uncertainty Scenario: discrapencies between model and implementation
+
+		AnalysisGraph graph = buildAnalysisGraph();
+
+		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
+				.withOutputReferenceConformance(true).build();
+
+		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: MODEL_CORRECT", "EDFA: MODEL_UNDER_SPECIFICATION",
+				"EDFA: MODEL_DISCREPANCY", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: MODEL_DISCREPANCY", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
 
