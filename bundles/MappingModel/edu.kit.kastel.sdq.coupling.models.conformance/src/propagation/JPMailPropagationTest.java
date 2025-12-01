@@ -35,6 +35,8 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC3MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.ReferenceMetaModelConformanceChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig;
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemUnderEval;
 import mapping.MappingDefinition;
 import mapping.MappingPackage;
 import uncertainty.UncertaintySource;
@@ -70,12 +72,12 @@ public class JPMailPropagationTest {
 
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String architectureModelName = "jpmail.pddc";
-		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
-		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 
-		IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
-				sourceCodeAnalysisName);
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		IC1MChecker modelChecker = new IC1MChecker(cfg);
 
 		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 		String rivName = "resultingvalues.codeqlresultingvalues";
@@ -112,12 +114,14 @@ public class JPMailPropagationTest {
 		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
 		// interface
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String architectureModelName = "jpmail.pddc";
-		String correspondenceName = "correspondences.edfacodeqlcorrespondences_invalid_structure";
-		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 
-		IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
-				sourceCodeAnalysisName);
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
+
+		IC1MChecker modelChecker = new IC1MChecker(cfg);
 
 		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 		String rivName = "resultingvalues.codeqlresultingvalues";
@@ -151,12 +155,14 @@ public class JPMailPropagationTest {
 		// third case imprecise input data represented in codeqlresults -> Uncertainty
 		// Scenario: imprecise input data
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String architectureModelName = "jpmail.pddc";
-		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
-		String sourceCodeAnalysisName = "codeql4extendeddataflow_impre.codeql";
 
-		IC1MChecker modelChecker = new IC1MChecker(basePath, architectureModelName, correspondenceName,
-				sourceCodeAnalysisName);
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
+
+		IC1MChecker modelChecker = new IC1MChecker(cfg);
 
 		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
 		String rivName = "resultingvalues.codeqlresultingvalues";
@@ -310,12 +316,13 @@ public class JPMailPropagationTest {
 		// First case security annoations consistet -> Uncertainty Scenario: correct
 		// input data
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String architectureModelName = "jpmail.pddc";
-		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
-		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 
-		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
-				sourceCodeAnalysisName);
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+
 		checker1.runCheck();
 
 		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
@@ -378,12 +385,13 @@ public class JPMailPropagationTest {
 		// Second case security annoations inconsistet -> Uncertainty Scenario:
 		// Non-conformance to input interface
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String architectureModelName = "jpmail.pddc";
-		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
-		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 
-		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
-				sourceCodeAnalysisName);
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+
 		checker1.runCheck();
 
 		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
@@ -446,12 +454,13 @@ public class JPMailPropagationTest {
 		// 3. case security annoations imprecise -> Uncertainty Scenario:
 		// Imprecise input data
 		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String architectureModelName = "jpmail.pddc";
-		String correspondenceName = "correspondences.edfacodeqlcorrespondences";
-		String sourceCodeAnalysisName = "codeql4extendeddataflow.codeql";
 
-		IC1MChecker checker1 = new IC1MChecker(basePath, architectureModelName, correspondenceName,
-				sourceCodeAnalysisName);
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+
 		checker1.runCheck();
 
 		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
@@ -1220,7 +1229,8 @@ public class JPMailPropagationTest {
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL");
+		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
+				"EDFA output: ORCHESTRATION_NOT_FINAL");
 		assertNotEquals(affectedSet, impactSet);
 	}
 

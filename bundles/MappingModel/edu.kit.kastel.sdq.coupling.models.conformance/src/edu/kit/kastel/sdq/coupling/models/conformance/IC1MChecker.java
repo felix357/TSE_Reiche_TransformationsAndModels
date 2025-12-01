@@ -35,17 +35,11 @@ public class IC1MChecker implements IChecker {
 
 	/**
 	 * Constructs a checker for IC1(T)(M) using the given model and analysis paths.
-	 *
-	 * @param basePath               Base directory path
-	 * @param architectureModelName  PDDC file name
-	 * @param correspondenceName     Correspondence file name
-	 * @param sourceCodeAnalysisName CodeQL source analysis file name
-	 */
-	public IC1MChecker(String basePath, String architectureModelName, String correspondenceName,
-			String sourceCodeAnalysisName) {
-		this.architecturalModelPath = basePath + File.separator + architectureModelName;
-		this.correspondencePath = basePath + File.separator + correspondenceName;
-		this.sourceCodeAnalysisPath = basePath + File.separator + sourceCodeAnalysisName;
+	 */	
+	public IC1MChecker(SystemConfig cfg) {
+	    this.architecturalModelPath = cfg.basePath + "/" + cfg.pddc;
+	    this.correspondencePath = cfg.basePath + "/" + cfg.modelCorrespondence;
+	    this.sourceCodeAnalysisPath = cfg.basePath + "/" + cfg.codeql;
 	}
 
 	/**
