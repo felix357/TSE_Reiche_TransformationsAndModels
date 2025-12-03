@@ -190,7 +190,11 @@ public class JPMailPropagationTest {
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		IC2IChecker instanceChecker = new IC2IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
@@ -229,8 +233,13 @@ public class JPMailPropagationTest {
 
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
+		
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		IC2IChecker instanceChecker = new IC2IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
@@ -269,7 +278,11 @@ public class JPMailPropagationTest {
 		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
 				edfaConfigRepFileName, pcmJavaFileName);
 
-		IC2IChecker instanceChecker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		IC2IChecker instanceChecker = new IC2IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
@@ -331,7 +344,7 @@ public class JPMailPropagationTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
@@ -399,7 +412,7 @@ public class JPMailPropagationTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
@@ -467,7 +480,7 @@ public class JPMailPropagationTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();

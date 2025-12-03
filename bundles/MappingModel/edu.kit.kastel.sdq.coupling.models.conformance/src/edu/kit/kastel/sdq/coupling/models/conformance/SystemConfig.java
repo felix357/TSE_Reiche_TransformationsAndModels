@@ -8,14 +8,33 @@ public class SystemConfig {
 	public String codeql;
 	public String rivCorrespondence;
 	public String riv;
+	
+    // Explicit IC2I required artifacts
+    public String systemName;
+    public String parameterAnnotationFile;
+    public String pcmJavaCorrespondence;
+    public String edfaCodeqlCorrespondence;
+    public String edfaConfiguration;   
+	
+    public SystemConfig(String root, SystemUnderEval sue) {
+        this.basePath = root + "/" + sue.folder;
+        
+        this.pddc = sue.pddc;
+        this.modelCorrespondence = sue.modelCorrespondence;
+        this.codeql = sue.codeql;
+        this.rivCorrespondence = sue.rivCorrespondence;
+        this.riv = sue.riv;
 
-	public SystemConfig(String root, SystemUnderEval sue) {
-		this.basePath = root + "/" + sue.folder;
-		this.pddc = sue.pddc;
-		this.modelCorrespondence = sue.modelCorrespondence;
-		this.codeql = sue.codeql;
-		this.rivCorrespondence = sue.rivCorrespondence;
-		this.riv = sue.riv;
+        this.systemName                 = sue.systemName;
+        this.parameterAnnotationFile    = sue.parameterAnnotationFile;
+        this.pcmJavaCorrespondence      = sue.pcmJavaCorrespondence;
+        this.edfaCodeqlCorrespondence   = sue.edfaCodeqlCorrespondence;
+        this.edfaConfiguration          = sue.edfaConfiguration;
+    }
+    
+    public SystemConfig overridePCMJavaCorrespondence(String pcmJavaCorrespondence) {
+		this.pcmJavaCorrespondence = pcmJavaCorrespondence;
+		return this;
 	}
 
 	public SystemConfig overridePDDC(String newName) {

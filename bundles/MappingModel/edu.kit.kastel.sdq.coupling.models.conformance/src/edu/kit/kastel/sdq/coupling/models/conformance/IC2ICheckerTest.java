@@ -8,29 +8,40 @@ public class IC2ICheckerTest {
 
 	@Test
 	public void testJpmail() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		IC2IChecker checker = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		IC2IChecker checker = new IC2IChecker(cfg);
 		assertTrue(checker.runCheck());
 	}
-	
+
 	@Test
 	public void testTravelPlanner() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/TravelPlanner";
-		IC2IChecker checker = new IC2IChecker(basePath, "travelplanner.parameterannotation", "travelplanner");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.TRAVEL_PLANNER);
+
+		IC2IChecker checker = new IC2IChecker(cfg);
 		assertTrue(checker.runCheck());
 	}
-	
+
 	@Test
 	public void testEclipseSecureStorage() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/EclipseSecureStorage";
-		IC2IChecker checker = new IC2IChecker(basePath, "eclipsesecurestorage.parameterannotation", "eclipsesecurestorage");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.ECLIPSE_SECURE_STORAGE);
+
+		IC2IChecker checker = new IC2IChecker(cfg);
 		assertTrue(checker.runCheck());
 	}
-	
+
 	@Test
 	public void testCoCoMe() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/CoCoMe";
-		IC2IChecker checker = new IC2IChecker(basePath, "cocome.parameterannotation", "cocome");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.COCOME);
+
+		IC2IChecker checker = new IC2IChecker(cfg);
 		assertTrue(checker.runCheck());
 	}
 }

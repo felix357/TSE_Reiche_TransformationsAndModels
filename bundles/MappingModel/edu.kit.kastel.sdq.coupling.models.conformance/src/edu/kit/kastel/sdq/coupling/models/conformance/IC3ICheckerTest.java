@@ -21,7 +21,7 @@ public class IC3ICheckerTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "jpmail.parameterannotation", "jpmail");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
@@ -44,7 +44,7 @@ public class IC3ICheckerTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "cocome.parameterannotation", "cocome");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
@@ -67,7 +67,7 @@ public class IC3ICheckerTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "travelplanner.parameterannotation", "travelplanner");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
@@ -89,7 +89,7 @@ public class IC3ICheckerTest {
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
-		IC2IChecker c2 = new IC2IChecker(basePath, "eclipsesecurestorage.parameterannotation", "eclipsesecurestorage");
+		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
 
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
