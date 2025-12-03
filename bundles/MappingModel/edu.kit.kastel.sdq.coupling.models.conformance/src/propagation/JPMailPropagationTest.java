@@ -71,18 +71,13 @@ public class JPMailPropagationTest {
 	public void graphWithIC1MappingValidTest() throws Exception {
 
 		// first case mapping valid -> Uncertainty Scenario: correct input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
 		IC1MChecker modelChecker = new IC1MChecker(cfg);
 
-		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
-		String rivName = "resultingvalues.codeqlresultingvalues";
-
-		IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
+		IC1IChecker instanceChecker = new IC1IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 
@@ -113,8 +108,6 @@ public class JPMailPropagationTest {
 	public void graphWithIC1MappingInValidTest() throws Exception {
 		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
 		// interface
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
@@ -123,10 +116,7 @@ public class JPMailPropagationTest {
 
 		IC1MChecker modelChecker = new IC1MChecker(cfg);
 
-		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
-		String rivName = "resultingvalues.codeqlresultingvalues";
-
-		IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
+		IC1IChecker instanceChecker = new IC1IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC1ModelChecker(modelChecker)
@@ -154,8 +144,6 @@ public class JPMailPropagationTest {
 	public void graphWithIC1ImpreciseInputDataTest() throws Exception {
 		// third case imprecise input data represented in codeqlresults -> Uncertainty
 		// Scenario: imprecise input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
@@ -164,10 +152,7 @@ public class JPMailPropagationTest {
 
 		IC1MChecker modelChecker = new IC1MChecker(cfg);
 
-		String rivCorrespondenceName = "correspondences.codeqlresultingvaluescorrespondences";
-		String rivName = "resultingvalues.codeqlresultingvalues";
-
-		IC1IChecker instanceChecker = new IC1IChecker(basePath, rivCorrespondenceName, rivName);
+		IC1IChecker instanceChecker = new IC1IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC1ModelChecker(modelChecker)
@@ -342,8 +327,7 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
 				secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
-				"resultingvalues.codeqlresultingvalues");
+		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
@@ -411,8 +395,7 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
 				secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
-				"resultingvalues.codeqlresultingvalues");
+		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
@@ -480,8 +463,7 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
 				secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
-				"resultingvalues.codeqlresultingvalues");
+		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 
@@ -526,8 +508,11 @@ public class JPMailPropagationTest {
 		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
 				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
 
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
-				"resultingvalues.codeqlresultingvalues");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
@@ -569,8 +554,13 @@ public class JPMailPropagationTest {
 		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
 				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
 
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
-				"resultingvalues.codeqlresultingvalues_incorrect");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
+		
+		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
@@ -610,9 +600,15 @@ public class JPMailPropagationTest {
 
 		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
 				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
-
-		IC1IChecker c1 = new IC1IChecker(basePath, "correspondences.codeqlresultingvaluescorrespondences",
-				"resultingvalues.codeqlresultingvalues_imprecise");
+		
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
+		
+		IC1IChecker c1 = new IC1IChecker(cfg);
+		
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();

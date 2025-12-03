@@ -20,9 +20,14 @@ public class IC1IChecker implements IChecker {
     private final Map<String, String> codeqlRivMap = new HashMap<>();
     private final Map<String, String> rivValuesMap = new HashMap<>();
 
-    public IC1IChecker(String basePath, String rivCorrespondenceName, String rivName) {
-        this.rivCorrespondencePath = new File(basePath, rivCorrespondenceName).toString();
-        this.rivPath = new File(basePath, rivName).toString();
+//    public IC1IChecker(String basePath, String rivCorrespondenceName, String rivName) {
+//        this.rivCorrespondencePath = new File(basePath, rivCorrespondenceName).toString();
+//        this.rivPath = new File(basePath, rivName).toString();
+//    }
+    
+    public IC1IChecker(SystemConfig cfg) {
+        this.rivCorrespondencePath = cfg.basePath + "/" + cfg.rivCorrespondence;
+        this.rivPath = cfg.basePath + "/" + cfg.riv;
     }
 
     public boolean runCheck() {
