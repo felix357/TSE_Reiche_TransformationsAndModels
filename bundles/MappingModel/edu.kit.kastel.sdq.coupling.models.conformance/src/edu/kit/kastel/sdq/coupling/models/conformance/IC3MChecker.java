@@ -38,15 +38,6 @@ public class IC3MChecker implements IChecker {
 	private Map<String, Set<String>> levelToAnnotations = new HashMap<>();
 	private Map<String, Set<String>> levelToConfigurations = new HashMap<>();
 
-//	public IC3MChecker(String basePath, String codeqlFilePath, Set<String> securityLiterals,
-//			Set<String> systemElementsFromIC2, Set<String> configurationsFromIC2) {
-//		this.basePath = basePath;
-//		this.codeqlFilePath = codeqlFilePath;
-//		this.securityLiterals = securityLiterals;
-//		this.systemElementsFromIC2 = systemElementsFromIC2;
-//		this.configurationsFromIC2 = configurationsFromIC2;
-//	}
-
 	public IC3MChecker(SystemConfig cfg, Set<String> securityLiterals, Set<String> systemElementsFromIC2,
 			Set<String> configurationsFromIC2) {
 		this.basePath = cfg.basePath;

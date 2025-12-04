@@ -68,21 +68,13 @@ public class JPMailPropagationTest {
 	// EDFA.
 	@Test
 	public void graphWithIC1MappingValidTest() throws Exception {
-
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-
-		IC1MChecker modelChecker = new IC1MChecker(cfg);
-
-		IC1IChecker instanceChecker = new IC1IChecker(cfg);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC1ModelChecker(modelChecker)
-				.withIC1InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -113,14 +105,9 @@ public class JPMailPropagationTest {
 
 		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
 
-		IC1MChecker modelChecker = new IC1MChecker(cfg);
-
-		IC1IChecker instanceChecker = new IC1IChecker(cfg);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC1ModelChecker(modelChecker)
-				.withIC1InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -149,14 +136,8 @@ public class JPMailPropagationTest {
 
 		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
 
-		IC1MChecker modelChecker = new IC1MChecker(cfg);
-
-		IC1IChecker instanceChecker = new IC1IChecker(cfg);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC1ModelChecker(modelChecker)
-				.withIC1InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -184,14 +165,8 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
-		IC2MChecker modelChecker = new IC2MChecker(cfg);
-
-		IC2IChecker instanceChecker = new IC2IChecker(cfg);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
-				.withIC2InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -222,14 +197,10 @@ public class JPMailPropagationTest {
 				SystemUnderEval.JPMAIL);
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
-		IC2MChecker modelChecker = new IC2MChecker(cfg);
-
-		IC2IChecker instanceChecker = new IC2IChecker(cfg);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
-				.withIC2InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -260,14 +231,8 @@ public class JPMailPropagationTest {
 
 		cfg.overrideEdfaCodeqlCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
 
-		IC2MChecker modelChecker = new IC2MChecker(cfg);
-
-		IC2IChecker instanceChecker = new IC2IChecker(cfg);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC2ModelChecker(modelChecker)
-				.withIC2InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -296,36 +261,8 @@ public class JPMailPropagationTest {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-
-		IC1MChecker checker1 = new IC1MChecker(cfg);
-
-		checker1.runCheck();
-
-		IC2MChecker checker2 = new IC2MChecker(cfg);
-		checker2.runCheck();
-
-		Set<String> secLiterals = checker1.getAllSecurityLiterals();
-		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
-		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
-
-		IC3MChecker modelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
-
-		IC1IChecker c1 = new IC1IChecker(cfg);
-		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
-
-		IC2IChecker c2 = new IC2IChecker(cfg);
-		assertTrue(c2.runCheck());
-
-		Set<String> sysElements = c2.getSystemElementsFromIC2();
-		Set<String> configs = c2.getConfigurationsFromIC2();
-
-		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
-				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -353,35 +290,8 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
-		IC1MChecker checker1 = new IC1MChecker(cfg);
-
-		checker1.runCheck();
-
-		IC2MChecker checker2 = new IC2MChecker(cfg);
-		checker2.runCheck();
-
-		Set<String> secLiterals = checker1.getAllSecurityLiterals();
-		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
-		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
-
-		IC3MChecker modelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
-
-		IC1IChecker c1 = new IC1IChecker(cfg);
-		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
-
-		IC2IChecker c2 = new IC2IChecker(cfg);
-		assertTrue(c2.runCheck());
-
-		Set<String> sysElements = c2.getSystemElementsFromIC2();
-		Set<String> configs = c2.getConfigurationsFromIC2();
-
-		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
-				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -410,35 +320,9 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
-		IC1MChecker checker1 = new IC1MChecker(cfg);
-
-		checker1.runCheck();
-
-		IC2MChecker checker2 = new IC2MChecker(cfg);
-		checker2.runCheck();
-
-		Set<String> secLiterals = checker1.getAllSecurityLiterals();
-		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
-		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
-
-		IC3MChecker modelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
-
-		IC1IChecker c1 = new IC1IChecker(cfg);
-		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
-
-		IC2IChecker c2 = new IC2IChecker(cfg);
-		assertTrue(c2.runCheck());
-
-		Set<String> sysElements = c2.getSystemElementsFromIC2();
-		Set<String> configs = c2.getConfigurationsFromIC2();
-
-		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
-				.withIC3InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -467,19 +351,8 @@ public class JPMailPropagationTest {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
-		IC4MChecker modelChecker = new IC4MChecker(cfg);
-
-		IC1IChecker c1 = new IC1IChecker(cfg);
-		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
-		Map<String, String> rivValuesMap = c1.getRivValuesMap();
-
-		IC4IChecker instanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
-				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -511,19 +384,8 @@ public class JPMailPropagationTest {
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
 
-		IC4MChecker modelChecker = new IC4MChecker(cfg);
-
-		IC1IChecker c1 = new IC1IChecker(cfg);
-		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
-		Map<String, String> rivValuesMap = c1.getRivValuesMap();
-
-		IC4IChecker instanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
-				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -555,20 +417,8 @@ public class JPMailPropagationTest {
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
 
-		IC4MChecker modelChecker = new IC4MChecker(cfg);
-
-		IC1IChecker c1 = new IC1IChecker(cfg);
-
-		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
-		Map<String, String> rivValuesMap = c1.getRivValuesMap();
-
-		IC4IChecker instanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
-
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
-				.withIC4InstanceChecker(instanceChecker).withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq);
 
@@ -595,10 +445,12 @@ public class JPMailPropagationTest {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
-
+		
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
@@ -630,8 +482,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
@@ -664,8 +518,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
@@ -698,8 +554,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
@@ -732,8 +590,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
@@ -766,8 +626,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
 
@@ -801,8 +663,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
 
@@ -837,8 +701,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
 
@@ -872,8 +738,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
@@ -903,8 +771,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
@@ -934,8 +804,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
@@ -965,8 +837,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
@@ -998,8 +872,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
@@ -1029,9 +905,11 @@ public class JPMailPropagationTest {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
 
@@ -1061,8 +939,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
 
@@ -1093,8 +973,10 @@ public class JPMailPropagationTest {
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
 
@@ -1124,8 +1006,10 @@ public class JPMailPropagationTest {
 
 		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
 
@@ -1156,8 +1040,10 @@ public class JPMailPropagationTest {
 
 		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
 
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withInputReferenceConformance(true)
-				.withOutputReferenceConformance(true).build();
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
 

@@ -1,5 +1,8 @@
 package propagation;
 
+import java.util.Map;
+import java.util.Set;
+
 import analysiscouplinggraph.AnalysisComponent;
 import analysiscouplinggraph.RequiredInterface;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC1IChecker;
@@ -10,6 +13,7 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC3IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC3MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig;
 import uncertainty.SeverityOfImpact;
 import uncertainty.UncertaintyFactory;
 import uncertainty.UncertaintyLabel;
@@ -43,7 +47,32 @@ public class UncertaintyAnnotator {
 		this.ic4InstanceChecker = ic4InstanceChecker;
 		this.inputReferenceConforms = inputReferenceConforms;
 		this.outputReferenceConforms = outputReferenceConforms;
+	}
+	
+	public UncertaintyAnnotator(SystemConfig cfg) {
+		this.ic1ModelChecker = new IC1MChecker(cfg);
+        this.ic1InstanceChecker = new IC1IChecker(cfg);
+        this.ic2ModelChecker = new IC2MChecker(cfg);
+        this.ic2InstanceChecker = new IC2IChecker(cfg);
+        
+		ic1ModelChecker.runCheck();
+		ic2ModelChecker.runCheck();
+		Set<String> secLiterals = ic1ModelChecker.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = ic2ModelChecker.getSystemElemsC();
+		Set<String> configurationsFromIC2 = ic2ModelChecker.getConfigsRefsC();
+        this.ic3ModelChecker = new IC3MChecker(cfg,secLiterals, systemElementsFromIC2, configurationsFromIC2);
+        
+        
+		ic1InstanceChecker.runCheck();
+		Map<String, String> codeqlRivMap = ic1InstanceChecker.getCodeqlRivMap();
+		ic2InstanceChecker.runCheck();
+		Set<String> sysElements = ic2InstanceChecker.getSystemElementsFromIC2();
+		Set<String> configs = ic2InstanceChecker.getConfigurationsFromIC2();
 
+		this.ic3InstanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
+		Map<String, String> rivValuesMap = ic1InstanceChecker.getRivValuesMap();
+        this.ic4ModelChecker = new IC4MChecker(cfg);
+        this.ic4InstanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
 	}
 
 	public void annotateAnalysisComponent(AnalysisComponent analysisComponent, UncertaintySource uncertaitySource) {
@@ -78,14 +107,14 @@ public class UncertaintyAnnotator {
 		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result,
 				outputReferenceConforms && inputReferenceConforms);
 	}
-	
+
 	public void annotateInterfaceWithUncertaintyAnnoation(RequiredInterface req, UncertaintySource uncertaitySource) {
 		UncertaintyLabel labelNotFinal = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		UncertaintyLabel labelFinal = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		if (uncertaitySource.equals(UncertaintySource.ORCHESTRATION_DECISION_INDUCED)) {
 			labelNotFinal.setSource(UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
 			labelNotFinal.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_NOT_FINAL);
-			
+
 			labelFinal.setSource(UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
 			labelFinal.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_FINAL);
 		}
@@ -129,26 +158,26 @@ public class UncertaintyAnnotator {
 			UncertaintyLabel scenarioCorrect = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			scenarioCorrect.setSource(uncertaitySource);
 			scenarioCorrect.setUncertaintyScenario(UncertaintyScenario.SCENARIO_DEFINITION_CORRECT);
-			
+
 			UncertaintyLabel scenarioInCorrect = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			scenarioInCorrect.setSource(uncertaitySource);
 			scenarioInCorrect.setUncertaintyScenario(UncertaintyScenario.SCENARIO_DEFINITION_INCORRECT);
 
 			analysisComponent.getUncertaintyLabels().add(scenarioCorrect);
 			analysisComponent.getUncertaintyLabels().add(scenarioInCorrect);
-		} else if (uncertaitySource == UncertaintySource.METHODOLOGY_INDUCED) {			
+		} else if (uncertaitySource == UncertaintySource.METHODOLOGY_INDUCED) {
 			UncertaintyLabel approximationLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			approximationLabel.setSource(uncertaitySource);
 			approximationLabel.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_APPROXIMATION);
-			
+
 			UncertaintyLabel overSimplifiedLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			overSimplifiedLabel.setSource(uncertaitySource);
 			overSimplifiedLabel.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_OVER_SIMPLIFICATION);
-			
+
 			UncertaintyLabel correctAnalysisLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			correctAnalysisLabel.setSource(uncertaitySource);
 			correctAnalysisLabel.setUncertaintyScenario(UncertaintyScenario.METHODOLOGY_CORRECT);
-			
+
 			analysisComponent.getUncertaintyLabels().add(approximationLabel);
 			analysisComponent.getUncertaintyLabels().add(overSimplifiedLabel);
 			analysisComponent.getUncertaintyLabels().add(correctAnalysisLabel);
@@ -156,15 +185,15 @@ public class UncertaintyAnnotator {
 			UncertaintyLabel modelCorrectLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			modelCorrectLabel.setSource(uncertaitySource);
 			modelCorrectLabel.setUncertaintyScenario(UncertaintyScenario.MODEL_CORRECT);
-			
+
 			UncertaintyLabel modelUnderSpecificationLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			modelUnderSpecificationLabel.setSource(uncertaitySource);
 			modelUnderSpecificationLabel.setUncertaintyScenario(UncertaintyScenario.MODEL_UNDER_SPECIFICATION);
-			
+
 			UncertaintyLabel modelDiscrapencyLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 			modelDiscrapencyLabel.setSource(uncertaitySource);
 			modelDiscrapencyLabel.setUncertaintyScenario(UncertaintyScenario.MODEL_DISCREPANCY);
-			
+
 			analysisComponent.getUncertaintyLabels().add(modelCorrectLabel);
 			analysisComponent.getUncertaintyLabels().add(modelUnderSpecificationLabel);
 			analysisComponent.getUncertaintyLabels().add(modelDiscrapencyLabel);
