@@ -1,6 +1,5 @@
 package edu.kit.kastel.sdq.coupling.models.conformance;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 

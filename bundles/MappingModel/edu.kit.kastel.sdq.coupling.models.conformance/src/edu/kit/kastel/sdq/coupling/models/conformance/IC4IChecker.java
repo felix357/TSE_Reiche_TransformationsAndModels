@@ -21,69 +21,66 @@ public class IC4IChecker implements IChecker {
 	private final Map<String, String> codeqlRivMap;
 	private final Map<String, String> rivValuesMap;
 
-	public IC4IChecker(String basePath, String configurationRepresentationName, Map<String, String> codeqlRivMap,
-			Map<String, String> rivValuesMap) {
-		this.basePath = basePath;
-		this.configurationRepresentationPath = basePath + File.separator + configurationRepresentationName;
+	public IC4IChecker(SystemConfig cfg, Map<String, String> codeqlRivMap, Map<String, String> rivValuesMap) {
+		this.basePath = cfg.basePath;
+		this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.codeqlConfigurationRepresentation;
 		this.codeqlRivMap = codeqlRivMap;
 		this.rivValuesMap = rivValuesMap;
 	}
 
 	@Override
 	public boolean runCheck() {
-	    try {
-	        // Step 1: Load configuration
-	        Configuration cfg = loadConfigurationRepresentation();
+		try {
+			// Step 1: Load configuration
+			Configuration cfg = loadConfigurationRepresentation();
 
-	        // Step 2: Extract policies from CodeQL query
-	        List<Policy> policies = extractPoliciesFromQuery(
-	                this.basePath + File.separator + cfg.getMainElementFile(),
-	                cfg.getMainElementFragment()
-	        );
+			// Step 2: Extract policies from CodeQL query
+			List<Policy> policies = extractPoliciesFromQuery(this.basePath + File.separator + cfg.getMainElementFile(),
+					cfg.getMainElementFragment());
 
-	        boolean allOk = true; // assume everything is OK initially
+			boolean allOk = true; // assume everything is OK initially
 
-	        // Step 3: Check each policy
-	        for (Policy policy : policies) {
-	            String codeqlRef = policy.securityLevelRef;
-	            if (!codeqlRef.startsWith(cfg.getMainElementFile() + "#")) {
-	                codeqlRef = cfg.getMainElementFile() + "#" + codeqlRef;
-	            }
+			// Step 3: Check each policy
+			for (Policy policy : policies) {
+				String codeqlRef = policy.securityLevelRef;
+				if (!codeqlRef.startsWith(cfg.getMainElementFile() + "#")) {
+					codeqlRef = cfg.getMainElementFile() + "#" + codeqlRef;
+				}
 
-	            // Check whether the policy has an applied security characteristic
-	            if (!codeqlRivMap.containsKey(codeqlRef)) {
-	                System.out.println("Policy " + policy.id + " has no applied security characteristic. Skipping check.");
-	                continue;
-	            }
+				// Check whether the policy has an applied security characteristic
+				if (!codeqlRivMap.containsKey(codeqlRef)) {
+					System.out.println(
+							"Policy " + policy.id + " has no applied security characteristic. Skipping check.");
+					continue;
+				}
 
-	            String rivId = codeqlRivMap.get(codeqlRef);
+				String rivId = codeqlRivMap.get(codeqlRef);
 
-	            // Extract key after '#' for lookup in rivValuesMap
-	            String resolvedLevelKey = rivId;
-	            int idx = rivId.indexOf('#');
-	            if (idx != -1) {
-	                resolvedLevelKey = rivId.substring(idx + 1);
-	            }
+				// Extract key after '#' for lookup in rivValuesMap
+				String resolvedLevelKey = rivId;
+				int idx = rivId.indexOf('#');
+				if (idx != -1) {
+					resolvedLevelKey = rivId.substring(idx + 1);
+				}
 
-	            // Retrieve the resolved security characteristic value
-	            String resolvedLevel = rivValuesMap.get(resolvedLevelKey);
-	            if (resolvedLevel == null) {
-	                System.out.println("IC4 Violation: Policy " + policy.id +
-	                                   " has no resolved security level for RIV id " + rivId);
-	                allOk = false; // mark violation
-	            } else {
-	                System.out.println("Policy " + policy.id + " resolved to security level: " + resolvedLevel);
-	            }
-	        }
+				// Retrieve the resolved security characteristic value
+				String resolvedLevel = rivValuesMap.get(resolvedLevelKey);
+				if (resolvedLevel == null) {
+					System.out.println("IC4 Violation: Policy " + policy.id
+							+ " has no resolved security level for RIV id " + rivId);
+					allOk = false; // mark violation
+				} else {
+					System.out.println("Policy " + policy.id + " resolved to security level: " + resolvedLevel);
+				}
+			}
 
-	        return allOk;
+			return allOk;
 
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	        return false;
-	    }
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
-
 
 	/**
 	 * Loads the main configuration from the XML representation.

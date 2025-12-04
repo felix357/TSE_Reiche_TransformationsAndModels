@@ -406,7 +406,7 @@ public class JPMailPropagationTest {
 	public void graphWithIC3SecurityAnnoationsimpreciseInputDataTest() throws Exception {
 		// 3. case security annoations imprecise -> Uncertainty Scenario:
 		// Imprecise input data
-		
+
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
@@ -477,8 +477,7 @@ public class JPMailPropagationTest {
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
-		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
-				codeqlRivMap, rivValuesMap);
+		IC4IChecker instanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
@@ -525,8 +524,7 @@ public class JPMailPropagationTest {
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
-		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
-				codeqlRivMap, rivValuesMap);
+		IC4IChecker instanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
@@ -573,8 +571,7 @@ public class JPMailPropagationTest {
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
-		IC4IChecker instanceChecker = new IC4IChecker(basePath, "codeql4extendeddataflow.configurationrepresentation",
-				codeqlRivMap, rivValuesMap);
+		IC4IChecker instanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC4ModelChecker(modelChecker)
