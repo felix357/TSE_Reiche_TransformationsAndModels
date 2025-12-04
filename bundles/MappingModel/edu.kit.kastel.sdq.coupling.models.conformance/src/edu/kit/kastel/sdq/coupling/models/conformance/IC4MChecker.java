@@ -43,16 +43,12 @@ public class IC4MChecker implements IChecker {
 
         String getCodeqlValue() { return codeqlValue; }
     }
-
-    /**
-     * Updated Constructor to include the configuration representation path.
-     */
-    public IC4MChecker(String basePath, String architectureModelName, String correspondenceName,
-                       String sourceCodeAnalysisName, String configurationRepresentationName) {
-        this.architecturalModelPath = basePath + File.separator + architectureModelName;
-        this.correspondencePath = basePath + File.separator + correspondenceName;
-        this.sourceCodeAnalysisPath = basePath + File.separator + sourceCodeAnalysisName;
-        this.configurationRepresentationPath = basePath + File.separator + configurationRepresentationName;
+    
+    public IC4MChecker(SystemConfig cfg) {
+        this.architecturalModelPath = cfg.basePath + File.separator + cfg.pddc;
+        this.correspondencePath = cfg.basePath + File.separator + cfg.modelCorrespondence;
+        this.sourceCodeAnalysisPath = cfg.basePath + File.separator + cfg.codeql;
+        this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.codeqlConfigurationRepresentation;
     }
 
     private Set<String> getAllCodeqlLevels(String filePath) throws Exception {

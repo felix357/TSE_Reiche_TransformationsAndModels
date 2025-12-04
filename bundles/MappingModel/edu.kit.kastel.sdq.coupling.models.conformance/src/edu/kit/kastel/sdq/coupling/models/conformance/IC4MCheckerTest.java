@@ -8,40 +8,44 @@ public class IC4MCheckerTest {
 
 	@Test
 	public void testJpmail() throws Exception {
-		IC4MChecker checker = new IC4MChecker(
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail",
-				"jpmail.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-				"codeql4extendeddataflow.configurationrepresentation");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		IC4MChecker checker = new IC4MChecker(cfg);
 
 		assertTrue(checker.runCheck());
 	}
 
 	@Test
 	public void testCoCoMe() throws Exception {
-		IC4MChecker checker = new IC4MChecker(
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/CoCoMe",
-				"cocome.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-				"codeql4extendeddataflow.configurationrepresentation");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.COCOME);
+
+		IC4MChecker checker = new IC4MChecker(cfg);
 
 		assertTrue(checker.runCheck());
 	}
 
 	@Test
 	public void testEclipseSecureStorage() throws Exception {
-		IC4MChecker checker = new IC4MChecker(
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/EclipseSecureStorage",
-				"eclipsesecurestorage.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-				"codeql4extendeddataflow.configurationrepresentation");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.ECLIPSE_SECURE_STORAGE);
+
+		IC4MChecker checker = new IC4MChecker(cfg);
 
 		assertTrue(checker.runCheck());
 	}
 
 	@Test
 	public void testTravelPlanner() throws Exception {
-		IC4MChecker checker = new IC4MChecker(
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/TravelPlanner",
-				"travelplanner.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-				"codeql4extendeddataflow.configurationrepresentation");
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.TRAVEL_PLANNER);
+
+		IC4MChecker checker = new IC4MChecker(cfg);
 
 		assertTrue(checker.runCheck());
 	}

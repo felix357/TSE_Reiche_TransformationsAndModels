@@ -463,14 +463,12 @@ public class JPMailPropagationTest {
 	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsValidInputDataTest()
 			throws Exception {
 		// first case valid -> Uncertainty Scenario: correct input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
-		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
-				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
+
+		IC4MChecker modelChecker = new IC4MChecker(cfg);
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
@@ -508,16 +506,13 @@ public class JPMailPropagationTest {
 			throws Exception {
 		// second case valid -> Uncertainty Scenario: Non-conformance to input interface
 		// (LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValid)
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
-		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
-				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
-
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
+
+		IC4MChecker modelChecker = new IC4MChecker(cfg);
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
@@ -554,16 +549,14 @@ public class JPMailPropagationTest {
 	public void graphWithIC4LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsImpreciseInputDataTest()
 			throws Exception {
 		// third case valid -> Uncertainty Scenario: Imprecise input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
-		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
-				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
+
+		IC4MChecker modelChecker = new IC4MChecker(cfg);
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 
