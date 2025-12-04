@@ -217,12 +217,12 @@ public class JPMailPropagationTest {
 	public void graphWithIC2CodeArchcorrespondencesInValidTest() throws Exception {
 		// second case correspondences invalid -> Uncertainty Scenario: Non-conformance
 		// to input interface
-		
+
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
-		
+
 		IC2MChecker modelChecker = new IC2MChecker(cfg);
 
 		IC2IChecker instanceChecker = new IC2IChecker(cfg);
@@ -258,9 +258,9 @@ public class JPMailPropagationTest {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-		
+
 		cfg.overrideEdfaCodeqlCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
-		
+
 		IC2MChecker modelChecker = new IC2MChecker(cfg);
 
 		IC2IChecker instanceChecker = new IC2IChecker(cfg);
@@ -291,10 +291,8 @@ public class JPMailPropagationTest {
 	// in the annotated source code model.
 	@Test
 	public void graphWithIC3SecurityAnnoationsConsistetInputDataTest() throws Exception {
-
 		// First case security annoations consistet -> Uncertainty Scenario: correct
 		// input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
@@ -311,9 +309,7 @@ public class JPMailPropagationTest {
 		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
 		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
 
-		IC3MChecker modelChecker = new IC3MChecker(basePath,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
-				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+		IC3MChecker modelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
@@ -325,8 +321,7 @@ public class JPMailPropagationTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap,
-				sysElements, configs);
+		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
@@ -353,11 +348,8 @@ public class JPMailPropagationTest {
 	// in the annotated source code model.
 	@Test
 	public void graphWithIC3SecurityAnnoationsInConsistetInputDataTest() throws Exception {
-
 		// Second case security annoations inconsistet -> Uncertainty Scenario:
 		// Non-conformance to input interface
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
@@ -373,9 +365,7 @@ public class JPMailPropagationTest {
 		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
 		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
 
-		IC3MChecker modelChecker = new IC3MChecker(basePath,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
-				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+		IC3MChecker modelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
@@ -387,8 +377,7 @@ public class JPMailPropagationTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker instanceChecker = new IC3IChecker(cfg,
-				codeqlRivMap, sysElements, configs);
+		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
@@ -415,11 +404,9 @@ public class JPMailPropagationTest {
 	// in the annotated source code model.
 	@Test
 	public void graphWithIC3SecurityAnnoationsimpreciseInputDataTest() throws Exception {
-
 		// 3. case security annoations imprecise -> Uncertainty Scenario:
 		// Imprecise input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-
+		
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
@@ -435,9 +422,7 @@ public class JPMailPropagationTest {
 		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
 		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
 
-		IC3MChecker modelChecker = new IC3MChecker(basePath,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail/codeql4extendeddataflow.codeql",
-				secLiterals, systemElementsFromIC2, configurationsFromIC2);
+		IC3MChecker modelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
@@ -449,8 +434,7 @@ public class JPMailPropagationTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap,
-				sysElements, configs);
+		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph();
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder().withIC3ModelChecker(modelChecker)
