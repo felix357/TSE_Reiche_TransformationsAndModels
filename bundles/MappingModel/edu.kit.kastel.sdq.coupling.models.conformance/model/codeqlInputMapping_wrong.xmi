@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<map:MappingDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:map="http://www.example.org/mapping">
+
+  <!-- Incorrect Security Level Mapping: this security level is incorrectly associated with the annotation, violating the reference model check -->  
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/SecurityLevel"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- ParameterAnnotation -> Annotation -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/ParameterAnnotation"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- FieldAnnotation -> Annotation -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/FieldAnnotation"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- Generic SecurityLevelAnnotation -> Annotation -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/SecurityLevelAnnotation"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- Field -> SystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/java.ecore#//members/Field"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//SystemElement"/>
+  </classMappings>
+
+  <!-- Parameter -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/java.ecore#//members/Parameter"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//SystemElement"/>
+  </classMappings>
+
+  <!-- Query -> SecurityPolicy + Configuration -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/Query"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//SecurityPolicy"/>
+  </classMappings>
+
+  <!-- AllowedFlows -> SecurityPolicy -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/AllowedFlow"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//SecurityPolicy"/>
+  </classMappings>
+
+  <!-- Root -> Configuration -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore#//tainttracking/TainttrackingRoot"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/InputReferenceMetamodel.ecore#//Configuration"/>
+  </classMappings>
+
+</map:MappingDefinition>
