@@ -179,21 +179,14 @@ public class JPMailPropagationTest {
 	// (IC2) Missing or inconsistent code–architecture correspondences.
 	@Test
 	public void graphWithIC2CodeArchcorrespondencesValidTest() throws Exception {
-
 		// first case correspondences valid -> Uncertainty Scenario: correct input data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-		
+
+		IC2MChecker modelChecker = new IC2MChecker(cfg);
+
 		IC2IChecker instanceChecker = new IC2IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
@@ -222,22 +215,15 @@ public class JPMailPropagationTest {
 	// (IC2) Missing or inconsistent code–architecture correspondences.
 	@Test
 	public void graphWithIC2CodeArchcorrespondencesInValidTest() throws Exception {
-
 		// second case correspondences invalid -> Uncertainty Scenario: Non-conformance
 		// to input interface
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence_invalid";
-
-		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
 		
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
+		
+		IC2MChecker modelChecker = new IC2MChecker(cfg);
 
 		IC2IChecker instanceChecker = new IC2IChecker(cfg);
 
@@ -266,22 +252,17 @@ public class JPMailPropagationTest {
 	// (IC2) Missing or inconsistent code–architecture correspondences.
 	@Test
 	public void graphWithIC2CodeArchcorrespondencesImPreciseInputDataTest() throws Exception {
-
 		// Third case correspondences invalid -> Uncertainty Scenario: Imprecise input
 		// data
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
-		String correspondencesFileName = "correspondences_imprecise.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker modelChecker = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 		
+		cfg.overrideEdfaCodeqlCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
+		
+		IC2MChecker modelChecker = new IC2MChecker(cfg);
+
 		IC2IChecker instanceChecker = new IC2IChecker(cfg);
 
 		AnalysisGraph graph = buildAnalysisGraph();
@@ -323,13 +304,7 @@ public class JPMailPropagationTest {
 
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();
@@ -391,13 +366,7 @@ public class JPMailPropagationTest {
 
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();
@@ -459,13 +428,7 @@ public class JPMailPropagationTest {
 
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();
@@ -524,7 +487,7 @@ public class JPMailPropagationTest {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-		
+
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
@@ -570,9 +533,9 @@ public class JPMailPropagationTest {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-		
+
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
-		
+
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
@@ -613,15 +576,15 @@ public class JPMailPropagationTest {
 
 		IC4MChecker modelChecker = new IC4MChecker(basePath, "jpmail.pddc", "correspondences.edfacodeqlcorrespondences",
 				"codeql4extendeddataflow.codeql", "codeql4extendeddataflow.configurationrepresentation");
-		
+
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
-		
+
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
-		
+
 		IC1IChecker c1 = new IC1IChecker(cfg);
-		
+
 		c1.runCheck();
 		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();

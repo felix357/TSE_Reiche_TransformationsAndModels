@@ -19,13 +19,7 @@ public class IC3MCheckerTest {
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();
@@ -50,13 +44,7 @@ public class IC3MCheckerTest {
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();
@@ -81,13 +69,7 @@ public class IC3MCheckerTest {
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();
@@ -112,13 +94,7 @@ public class IC3MCheckerTest {
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
 
-		String correspondencesFileName = "correspondences.edfacodeqlcorrespondences";
-		String codeqlConfigurationRepFileName = "codeql4extendeddataflow.configurationrepresentation";
-		String edfaConfigRepFileName = "extendeddataflow.configurationrepresentation";
-		String pcmJavaFileName = "correspondences.pcmjavacorrespondence";
-
-		IC2MChecker checker2 = new IC2MChecker(basePath, correspondencesFileName, codeqlConfigurationRepFileName,
-				edfaConfigRepFileName, pcmJavaFileName);
+		IC2MChecker checker2 = new IC2MChecker(cfg);
 		checker2.runCheck();
 
 		Set<String> secLiterals = checker1.getAllSecurityLiterals();

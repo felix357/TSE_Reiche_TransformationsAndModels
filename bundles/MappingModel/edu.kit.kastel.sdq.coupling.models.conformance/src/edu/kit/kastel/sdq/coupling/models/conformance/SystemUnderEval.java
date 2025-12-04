@@ -5,26 +5,30 @@ public enum SystemUnderEval {
 	JPMAIL("JPMail", "jpmail", "jpmail.parameterannotation", "correspondences.pcmjavacorrespondence",
 			"correspondences.edfacodeqlcorrespondences", "extendeddataflow.configurationrepresentation", "jpmail.pddc",
 			"correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues"),
+			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation"),
 
 	COCOME("CoCoMe", "cocome", "cocome.parameterannotation", "correspondences.pcmjavacorrespondence",
 			"correspondences.edfacodeqlcorrespondences", "extendeddataflow.configurationrepresentation",
 
 			"cocome.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues"),
+			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation"),
 
 	ECLIPSE_SECURE_STORAGE("EclipseSecureStorage", "eclipsesecurestorage", "eclipsesecurestorage.parameterannotation",
 			"correspondences.pcmjavacorrespondence", "correspondences.edfacodeqlcorrespondences",
 			"extendeddataflow.configurationrepresentation",
 
 			"eclipsesecurestorage.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues"),
+			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation"),
 
 	TRAVEL_PLANNER("TravelPlanner", "travelplanner", "travelplanner.parameterannotation",
 			"correspondences.pcmjavacorrespondence", "correspondences.edfacodeqlcorrespondences",
 			"extendeddataflow.configurationrepresentation", "travelplanner.pddc",
 			"correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
-			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues");
+			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation");
 
 	public final String folder;
 
@@ -40,10 +44,13 @@ public enum SystemUnderEval {
 	public final String rivCorrespondence;
 	public final String riv;
 
-	SystemUnderEval(String folder, String systemName, String parameterAnnotationFile, String pcmJavaCorrespondence,
-			String edfaCodeqlCorrespondence, String edfaConfiguration,
+	public final String codeqlConfigurationRepresentation;
+	public final String edfaConfigurationRepresentation;
 
-			String pddc, String modelCorrespondence, String codeql, String rivCorrespondence, String riv) {
+	SystemUnderEval(String folder, String systemName, String parameterAnnotationFile, String pcmJavaCorrespondence,
+			String edfaCodeqlCorrespondence, String edfaConfiguration, String pddc, String modelCorrespondence,
+			String codeql, String rivCorrespondence, String riv, String codeqlConfigurationRepresentation,
+			String edfaConfigurationRepresentation) {
 		this.folder = folder;
 		this.systemName = systemName;
 		this.parameterAnnotationFile = parameterAnnotationFile;
@@ -56,5 +63,8 @@ public enum SystemUnderEval {
 		this.codeql = codeql;
 		this.rivCorrespondence = rivCorrespondence;
 		this.riv = riv;
+
+		this.codeqlConfigurationRepresentation = codeqlConfigurationRepresentation;
+		this.edfaConfigurationRepresentation = edfaConfigurationRepresentation;
 	}
 }

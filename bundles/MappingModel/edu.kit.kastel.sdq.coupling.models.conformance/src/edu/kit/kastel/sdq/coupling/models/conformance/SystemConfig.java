@@ -14,7 +14,11 @@ public class SystemConfig {
     public String parameterAnnotationFile;
     public String pcmJavaCorrespondence;
     public String edfaCodeqlCorrespondence;
-    public String edfaConfiguration;   
+    public String edfaConfiguration;
+    
+    // Needed for IC2M
+    public String codeqlConfigurationRepresentation;
+    public String edfaConfigurationRepresentation;
 	
     public SystemConfig(String root, SystemUnderEval sue) {
         this.basePath = root + "/" + sue.folder;
@@ -30,7 +34,15 @@ public class SystemConfig {
         this.pcmJavaCorrespondence      = sue.pcmJavaCorrespondence;
         this.edfaCodeqlCorrespondence   = sue.edfaCodeqlCorrespondence;
         this.edfaConfiguration          = sue.edfaConfiguration;
+        
+        this.codeqlConfigurationRepresentation = sue.codeqlConfigurationRepresentation;
+        this.edfaConfigurationRepresentation = sue.edfaConfigurationRepresentation;
     }
+    
+    public SystemConfig overrideEdfaCodeqlCorrespondence(String edfaCodeqlCorrespondence) {
+		this.edfaCodeqlCorrespondence = edfaCodeqlCorrespondence;
+		return this;
+	}
     
     public SystemConfig overridePCMJavaCorrespondence(String pcmJavaCorrespondence) {
 		this.pcmJavaCorrespondence = pcmJavaCorrespondence;

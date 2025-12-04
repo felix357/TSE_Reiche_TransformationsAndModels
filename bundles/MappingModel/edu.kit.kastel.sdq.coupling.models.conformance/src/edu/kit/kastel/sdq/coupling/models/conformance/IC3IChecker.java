@@ -3,7 +3,6 @@ package edu.kit.kastel.sdq.coupling.models.conformance;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
