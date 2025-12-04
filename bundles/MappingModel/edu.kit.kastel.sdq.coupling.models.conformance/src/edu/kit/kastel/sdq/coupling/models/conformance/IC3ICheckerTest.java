@@ -11,7 +11,6 @@ public class IC3ICheckerTest {
 
 	@Test
 	public void testJpmail() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/JPMail";
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
@@ -27,15 +26,12 @@ public class IC3ICheckerTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker checker = new IC3IChecker(basePath, "codeql4extendeddataflow.codeql", codeqlRivMap, sysElements,
-				configs);
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 		assertTrue(checker.runCheck());
 	}
 
 	@Test
 	public void testCoCoMe() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/CoCoMe";
-
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.COCOME);
@@ -50,14 +46,12 @@ public class IC3ICheckerTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker checker = new IC3IChecker(basePath, "codeql4extendeddataflow.codeql", codeqlRivMap, sysElements,
-				configs);
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 		assertTrue(checker.runCheck());
 	}
 
 	@Test
 	public void testTravelPlanner() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/TravelPlanner";
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER);
@@ -73,14 +67,13 @@ public class IC3ICheckerTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker checker = new IC3IChecker(basePath, "codeql4extendeddataflow.codeql", codeqlRivMap, sysElements,
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements,
 				configs);
 		assertTrue(checker.runCheck());
 	}
 
 	@Test
 	public void testEclipseSecureStorage() throws Exception {
-		String basePath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/EclipseSecureStorage";
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.ECLIPSE_SECURE_STORAGE);
@@ -95,7 +88,7 @@ public class IC3ICheckerTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker checker = new IC3IChecker(basePath, "codeql4extendeddataflow.codeql", codeqlRivMap, sysElements,
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements,
 				configs);
 		assertTrue(checker.runCheck());
 	}

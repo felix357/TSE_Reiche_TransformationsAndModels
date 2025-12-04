@@ -325,7 +325,7 @@ public class JPMailPropagationTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow.codeql", codeqlRivMap,
+		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap,
 				sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph();
@@ -387,7 +387,7 @@ public class JPMailPropagationTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow_invalidSecurityLevels.codeql",
+		IC3IChecker instanceChecker = new IC3IChecker(cfg,
 				codeqlRivMap, sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph();
@@ -449,7 +449,7 @@ public class JPMailPropagationTest {
 		Set<String> sysElements = c2.getSystemElementsFromIC2();
 		Set<String> configs = c2.getConfigurationsFromIC2();
 
-		IC3IChecker instanceChecker = new IC3IChecker(basePath, "codeql4extendeddataflow_impre.codeql", codeqlRivMap,
+		IC3IChecker instanceChecker = new IC3IChecker(cfg, codeqlRivMap,
 				sysElements, configs);
 
 		AnalysisGraph graph = buildAnalysisGraph();

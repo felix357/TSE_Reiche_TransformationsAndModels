@@ -25,16 +25,17 @@ public class IC3IChecker implements IChecker {
     private final Set<String> configurations;         // From IC2 CFG ids
 
     private final Map<String, String> pcmToJavaMap = new HashMap<>();
+    
+    public IC3IChecker(
+            SystemConfig cfg,
+            Map<String, String> codeqlRivMap,
+            Set<String> systemElements,
+            Set<String> configurations) {
 
-    public IC3IChecker(String basePath,
-                       String codeqlFilePath,
-                       Map<String, String> codeqlRivMap,
-                       Set<String> systemElements,
-                       Set<String> configurations) {
+        this.basePath = cfg.basePath;
+        this.codeqlFilePathName = cfg.codeql;
+        this.codeqlFilePath = cfg.basePath + File.separator + cfg.codeql;
 
-        this.basePath = basePath;
-        this.codeqlFilePathName = codeqlFilePath;
-        this.codeqlFilePath = basePath + File.separator + codeqlFilePath;
         this.codeqlRivMap = codeqlRivMap;
         this.systemElements = systemElements;
         this.configurations = configurations;
