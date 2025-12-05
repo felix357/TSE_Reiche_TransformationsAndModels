@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
@@ -25,14 +23,6 @@ import analysiscouplinggraph.AnalysiscouplinggraphFactory;
 import analysiscouplinggraph.Connection;
 import analysiscouplinggraph.ProvidedInterface;
 import analysiscouplinggraph.RequiredInterface;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC1IChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC1MChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC2IChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC2MChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC3IChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC3MChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC4IChecker;
-import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.ReferenceMetaModelConformanceChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemUnderEval;

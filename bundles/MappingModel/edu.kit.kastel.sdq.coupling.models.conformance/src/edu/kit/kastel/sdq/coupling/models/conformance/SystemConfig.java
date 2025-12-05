@@ -19,6 +19,10 @@ public class SystemConfig {
     // Needed for IC2M
     public String codeqlConfigurationRepresentation;
     public String edfaConfigurationRepresentation;
+    
+    // Needed for IC5M
+    public String codeqlScarModel;
+    public String javaModel;
 	
     public SystemConfig(String root, SystemUnderEval sue) {
         this.basePath = root + "/" + sue.folder;
@@ -37,6 +41,9 @@ public class SystemConfig {
         
         this.codeqlConfigurationRepresentation = sue.codeqlConfigurationRepresentation;
         this.edfaConfigurationRepresentation = sue.edfaConfigurationRepresentation;
+        
+        this.codeqlScarModel = sue.codeqlScarModel;
+        this.javaModel = sue.javaModelFile;
     }
     
     public SystemConfig overrideEdfaCodeqlCorrespondence(String edfaCodeqlCorrespondence) {
