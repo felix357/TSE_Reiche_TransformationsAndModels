@@ -302,4 +302,12 @@ public class IC5IandMChecker implements IChecker {
 		}
 		return name;
 	}
+	
+	public Set<String> getMappedSystemElementsR() {
+		return mappedSystemElementsR;
+	}
+	
+	public Set<String> getMappedSecurityCharacteristicsR() {
+		return mappedSecurityCharacteristicsR;
+	}
 }
