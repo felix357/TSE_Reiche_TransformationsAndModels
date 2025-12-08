@@ -14,6 +14,7 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC3MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC4MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC5IandMChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC6IandMChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig;
 import uncertainty.SeverityOfImpact;
 import uncertainty.UncertaintyFactory;
@@ -32,13 +33,14 @@ public class UncertaintyAnnotator {
 	private final IC4MChecker ic4ModelChecker;
 	private final IC4IChecker ic4InstanceChecker;
 	private final IC5IandMChecker iC5IandMChecker;
+	private final IC6IandMChecker iC6IandMChecker;
 	private boolean inputReferenceConforms = true;
 	private boolean outputReferenceConforms = true;
 
 	public UncertaintyAnnotator(IC1MChecker modelChecker, IC1IChecker instanceChecker, IC2MChecker ic2ModelChecker,
 			IC2IChecker ic2InstanceChecker, IC3MChecker ic3ModelChecker, IC3IChecker ic3InstanceChecker,
 			IC4MChecker ic4ModelChecker, IC4IChecker ic4InstanceChecker, IC5IandMChecker iC5IandMChecker,
-			boolean inputReferenceConforms, boolean outputReferenceConforms) {
+			IC6IandMChecker ic6IandMChecker, boolean inputReferenceConforms, boolean outputReferenceConforms) {
 		this.ic1ModelChecker = modelChecker;
 		this.ic1InstanceChecker = instanceChecker;
 		this.ic2ModelChecker = ic2ModelChecker;
@@ -48,6 +50,7 @@ public class UncertaintyAnnotator {
 		this.ic4ModelChecker = ic4ModelChecker;
 		this.ic4InstanceChecker = ic4InstanceChecker;
 		this.iC5IandMChecker = iC5IandMChecker;
+		this.iC6IandMChecker = ic6IandMChecker;
 		this.inputReferenceConforms = inputReferenceConforms;
 		this.outputReferenceConforms = outputReferenceConforms;
 	}
@@ -75,8 +78,9 @@ public class UncertaintyAnnotator {
 		Map<String, String> rivValuesMap = ic1InstanceChecker.getRivValuesMap();
 		this.ic4ModelChecker = new IC4MChecker(cfg);
 		this.ic4InstanceChecker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
-		
+
 		this.iC5IandMChecker = new IC5IandMChecker(cfg, secLiterals, systemElementsFromIC2);
+		this.iC6IandMChecker = new IC6IandMChecker(cfg, iC5IandMChecker);
 	}
 
 	public void annotateAnalysisComponent(AnalysisComponent analysisComponent, UncertaintySource uncertaitySource) {
@@ -107,11 +111,14 @@ public class UncertaintyAnnotator {
 		if (ic4InstanceChecker != null) {
 			ic4Result &= ic4InstanceChecker.runCheck();
 		}
-		
+
 		// IC5
 		boolean ic5Result = iC5IandMChecker == null || iC5IandMChecker.runCheck();
 
-		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result, ic5Result,
+		// IC6
+		boolean ic6Result = iC6IandMChecker == null || iC6IandMChecker.runCheck();
+
+		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result, ic5Result, ic6Result,
 				outputReferenceConforms && inputReferenceConforms);
 	}
 
@@ -133,11 +140,12 @@ public class UncertaintyAnnotator {
 	 * Assigns an uncertainty label based on IC1 check results.
 	 */
 	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean ic3Result,
-			boolean ic4Result, boolean ic5Result, boolean referenceMetamodelConformance) {
+			boolean ic4Result, boolean ic5Result, boolean ic6Result, boolean referenceMetamodelConformance) {
 		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
 
-		if (!ic1Result || !ic2Result || !ic3Result || !ic4Result || !ic5Result || !referenceMetamodelConformance) {
+		if (!ic1Result || !ic2Result || !ic3Result || !ic4Result || !ic5Result || !ic6Result
+				|| !referenceMetamodelConformance) {
 			// At least one checker failed → Non-conformance to input interface
 			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
 			label.setSeverity(SeverityOfImpact.HIGH);
