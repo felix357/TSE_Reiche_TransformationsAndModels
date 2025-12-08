@@ -46,6 +46,11 @@ public class SystemConfig {
         this.javaModel = sue.javaModelFile;
     }
     
+    public SystemConfig overrideCodeqlScarModel(String codeqlScarModel) {
+		this.codeqlScarModel = codeqlScarModel;
+		return this;
+	}
+    
     public SystemConfig overrideEdfaCodeqlCorrespondence(String edfaCodeqlCorrespondence) {
 		this.edfaCodeqlCorrespondence = edfaCodeqlCorrespondence;
 		return this;
