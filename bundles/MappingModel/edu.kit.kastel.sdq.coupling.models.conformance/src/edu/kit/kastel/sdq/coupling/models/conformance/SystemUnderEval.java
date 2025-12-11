@@ -6,14 +6,16 @@ public enum SystemUnderEval {
 			"correspondences.edfacodeqlcorrespondences", "extendeddataflow.configurationrepresentation", "jpmail.pddc",
 			"correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
 			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
-			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation", "scar.codeqlscar", "java4extendeddataflow.java"),
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation",
+			"scar.codeqlscar", "java4extendeddataflow.java", "correspondences.codeqlscarcorrespondences"),
 
 	COCOME("CoCoMe", "cocome", "cocome.parameterannotation", "correspondences.pcmjavacorrespondence",
 			"correspondences.edfacodeqlcorrespondences", "extendeddataflow.configurationrepresentation",
 
 			"cocome.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
 			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
-			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation", "scar.codeqlscar", "java4extendeddataflow.java"),
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation",
+			"scar.codeqlscar", "java4extendeddataflow.java", "correspondences.codeqlscarcorrespondences"),
 
 	ECLIPSE_SECURE_STORAGE("EclipseSecureStorage", "eclipsesecurestorage", "eclipsesecurestorage.parameterannotation",
 			"correspondences.pcmjavacorrespondence", "correspondences.edfacodeqlcorrespondences",
@@ -21,14 +23,16 @@ public enum SystemUnderEval {
 
 			"eclipsesecurestorage.pddc", "correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
 			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
-			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation", "scar.codeqlscar", "java4extendeddataflow.java"),
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation",
+			"scar.codeqlscar", "java4extendeddataflow.java", "correspondences.codeqlscarcorrespondences"),
 
 	TRAVEL_PLANNER("TravelPlanner", "travelplanner", "travelplanner.parameterannotation",
 			"correspondences.pcmjavacorrespondence", "correspondences.edfacodeqlcorrespondences",
 			"extendeddataflow.configurationrepresentation", "travelplanner.pddc",
 			"correspondences.edfacodeqlcorrespondences", "codeql4extendeddataflow.codeql",
 			"correspondences.codeqlresultingvaluescorrespondences", "resultingvalues.codeqlresultingvalues",
-			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation", "scar.codeqlscar", "java4extendeddataflow.java");
+			"codeql4extendeddataflow.configurationrepresentation", "extendeddataflow.configurationrepresentation",
+			"scar.codeqlscar", "java4extendeddataflow.java", "correspondences.codeqlscarcorrespondences");
 
 	public final String folder;
 
@@ -46,14 +50,17 @@ public enum SystemUnderEval {
 
 	public final String codeqlConfigurationRepresentation;
 	public final String edfaConfigurationRepresentation;
-	
+
 	public final String codeqlScarModel;
 	public final String javaModelFile;
+	
+	public final String correspondencesCodeqlScar;
 
 	SystemUnderEval(String folder, String systemName, String parameterAnnotationFile, String pcmJavaCorrespondence,
 			String edfaCodeqlCorrespondence, String edfaConfiguration, String pddc, String modelCorrespondence,
 			String codeql, String rivCorrespondence, String riv, String codeqlConfigurationRepresentation,
-			String edfaConfigurationRepresentation, String codeqlScarModel, String javaModelFile) {
+			String edfaConfigurationRepresentation, String codeqlScarModel, String javaModelFile,
+			String correspondencesCodeqlScar) {
 		this.folder = folder;
 		this.systemName = systemName;
 		this.parameterAnnotationFile = parameterAnnotationFile;
@@ -69,8 +76,10 @@ public enum SystemUnderEval {
 
 		this.codeqlConfigurationRepresentation = codeqlConfigurationRepresentation;
 		this.edfaConfigurationRepresentation = edfaConfigurationRepresentation;
-		
+
 		this.codeqlScarModel = codeqlScarModel;
 		this.javaModelFile = javaModelFile;
+
+		this.correspondencesCodeqlScar = correspondencesCodeqlScar;
 	}
 }

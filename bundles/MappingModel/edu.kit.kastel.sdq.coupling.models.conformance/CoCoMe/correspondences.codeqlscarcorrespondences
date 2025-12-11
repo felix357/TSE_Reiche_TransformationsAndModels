@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlscarcorrespondences:Correspondences_CodeQLScar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:codeqlscarcorrespondences="http://www.example.org/codeqlscarcorrespondences">
+  <systemElementCorrespondences xsi:type="codeqlscarcorrespondences:ParameterCorrespondence">
+    <parameter_Java href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.14/@method.0/@parameter.0"/>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.0"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="codeqlscarcorrespondences:ParameterCorrespondence">
+    <parameter_Java href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.1/@parameter.0"/>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.1"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="codeqlscarcorrespondences:ParameterCorrespondence">
+    <parameter_Java href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.8/@method.0/@parameter.0"/>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.2"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="codeqlscarcorrespondences:ParameterCorrespondence">
+    <parameter_Java href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.11/@method.2/@parameter.0"/>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.3"/>
+  </systemElementCorrespondences>
+  <securityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.36"/>
+    <securityLevel_SCAR href="scar.codeqlscar#//@securityLevels.0"/>
+  </securityLevelCorrespondences>
+  <securityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.39"/>
+    <securityLevel_SCAR href="scar.codeqlscar#//@securityLevels.1"/>
+  </securityLevelCorrespondences>
+  <configurationCorrespondences>
+    <configuration_CodeQL href="codeql4extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_SCAR href="scar.codeqlscar#//@ruleIds.0"/>
+  </configurationCorrespondences>
+</codeqlscarcorrespondences:Correspondences_CodeQLScar>

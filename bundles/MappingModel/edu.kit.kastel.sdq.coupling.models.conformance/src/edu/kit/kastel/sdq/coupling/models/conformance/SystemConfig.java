@@ -23,6 +23,9 @@ public class SystemConfig {
     // Needed for IC5M
     public String codeqlScarModel;
     public String javaModel;
+    
+    // Needed for IC7M
+    public String correspondencesCodeqlScar;
 	
     public SystemConfig(String root, SystemUnderEval sue) {
         this.basePath = root + "/" + sue.folder;
@@ -44,6 +47,8 @@ public class SystemConfig {
         
         this.codeqlScarModel = sue.codeqlScarModel;
         this.javaModel = sue.javaModelFile;
+        
+        this.correspondencesCodeqlScar = sue.correspondencesCodeqlScar;
     }
     
     public SystemConfig overrideCodeqlScarModel(String codeqlScarModel) {
