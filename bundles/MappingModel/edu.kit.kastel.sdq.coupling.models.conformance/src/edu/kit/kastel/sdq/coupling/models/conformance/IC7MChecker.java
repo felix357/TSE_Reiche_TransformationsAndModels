@@ -27,12 +27,10 @@ public class IC7MChecker implements IChecker {
 	private final String scarPath;
 	private final Set<String> foundCfgR = new HashSet<>();
 
-	public IC7MChecker(SystemConfig cfg, IC2MChecker ic2IChecker) {
-		this.ic2 = ic2IChecker;
+	public IC7MChecker(SystemConfig cfg, IC2MChecker ic2MChecker) {
+		this.ic2 = ic2MChecker;
 
 		this.correspondencesPath = cfg.basePath + File.separator + cfg.correspondencesCodeqlScar;
-
-//		this.codeqlConfigRepresentationPath = cfg.basePath + File.separator + cfg.codeqlConfigurationRepresentation;
 
 		this.scarPath = cfg.basePath + File.separator + cfg.codeqlScarModel;
 	}
