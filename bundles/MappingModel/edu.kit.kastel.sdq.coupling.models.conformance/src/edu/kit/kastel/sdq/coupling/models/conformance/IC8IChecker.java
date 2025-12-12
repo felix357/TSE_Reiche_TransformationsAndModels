@@ -66,8 +66,8 @@ public class IC8IChecker implements IChecker {
             for (int i = 0; i < rivNodes.getLength(); i++) {
                 Element riv = (Element) rivNodes.item(i);
 
-                String sysElemInstance = riv.getAttribute("parameter");  // e.g., //@systemElementIdentifications.X
-                String cfgInstance = riv.getAttribute("ruleId");         // e.g., //@configurations.0
+                String sysElemInstance = riv.getAttribute("parameter");
+                String cfgInstance = riv.getAttribute("ruleId");
 
                 // IC8.3(C)(I): Match system element fragment to valid system elements
                 boolean systemElementValid = validSystemElementInstances.stream()
