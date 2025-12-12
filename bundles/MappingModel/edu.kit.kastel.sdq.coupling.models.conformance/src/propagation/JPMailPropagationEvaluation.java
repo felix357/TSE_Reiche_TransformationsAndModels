@@ -406,7 +406,7 @@ public class JPMailPropagationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -689,7 +689,7 @@ public class JPMailPropagationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -783,7 +783,101 @@ public class JPMailPropagationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise");
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 1 for (IC9) uncertainty propagation evaluation:
+	// (IC9) Uncertainty if mappings of security characteristics in RIVs are missing
+	// or inconsistent.
+	@Test
+	public void graphWithIC9ValidInputDataTest() throws Exception {
+		// first case -> Uncertainty Scenario: correct input data
+
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for (IC9) uncertainty propagation evaluation:
+	// (IC9) Uncertainty if mappings of security characteristics in RIVs are missing
+	// or inconsistent.
+	@Test
+	public void graphWithIC9InValidInputDataTest() throws Exception {
+		// second case -> Uncertainty Scenario: Non-conformance to input interface
+
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_sec_level_that_is_not_in_ic1");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 3 for (IC9) uncertainty propagation evaluation:
+	// (IC9) Uncertainty if mappings of security characteristics in RIVs are missing
+	// or inconsistent.
+	@Test
+	public void graphWithIC9ImpreciseInputDataTest() throws Exception {
+		// third case -> Uncertainty Scenario: Imprecise input data
+
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);

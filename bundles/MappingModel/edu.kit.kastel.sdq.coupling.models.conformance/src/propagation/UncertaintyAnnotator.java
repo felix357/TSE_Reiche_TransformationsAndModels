@@ -19,6 +19,8 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC7IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC7MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC8IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC8MChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC9IChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC9MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig;
 import uncertainty.SeverityOfImpact;
 import uncertainty.UncertaintyFactory;
@@ -42,6 +44,8 @@ public class UncertaintyAnnotator {
 	private final IC7IChecker iC7IChecker;
 	private final IC8MChecker ic8MChecker;
 	private final IC8IChecker ic8IChecker;
+	private final IC9MChecker ic9MChecker;
+	private final IC9IChecker ic9IChecker;
 	private boolean inputReferenceConforms = true;
 	private boolean outputReferenceConforms = true;
 
@@ -49,7 +53,8 @@ public class UncertaintyAnnotator {
 			IC2IChecker ic2InstanceChecker, IC3MChecker ic3ModelChecker, IC3IChecker ic3InstanceChecker,
 			IC4MChecker ic4ModelChecker, IC4IChecker ic4InstanceChecker, IC5IandMChecker iC5IandMChecker,
 			IC6IandMChecker ic6IandMChecker, IC7MChecker iC7MChecker, IC7IChecker iC7IChecker, IC8MChecker ic8MChecker,
-			IC8IChecker ic8IChecker, boolean inputReferenceConforms, boolean outputReferenceConforms) {
+			IC8IChecker ic8IChecker, IC9MChecker ic9MChecker, IC9IChecker ic9IChecker, boolean inputReferenceConforms,
+			boolean outputReferenceConforms) {
 		this.ic1ModelChecker = modelChecker;
 		this.ic1InstanceChecker = instanceChecker;
 		this.ic2ModelChecker = ic2ModelChecker;
@@ -64,6 +69,8 @@ public class UncertaintyAnnotator {
 		this.iC7IChecker = iC7IChecker;
 		this.ic8MChecker = ic8MChecker;
 		this.ic8IChecker = ic8IChecker;
+		this.ic9MChecker = ic9MChecker;
+		this.ic9IChecker = ic9IChecker;
 		this.inputReferenceConforms = inputReferenceConforms;
 		this.outputReferenceConforms = outputReferenceConforms;
 	}
@@ -97,11 +104,14 @@ public class UncertaintyAnnotator {
 
 		this.iC7MChecker = new IC7MChecker(cfg, ic2ModelChecker);
 		this.iC7IChecker = new IC7IChecker(cfg, ic2InstanceChecker);
-		
+
 		this.iC7MChecker.runCheck();
 
 		this.ic8MChecker = new IC8MChecker(cfg, iC5IandMChecker, iC7MChecker);
 		this.ic8IChecker = new IC8IChecker(cfg, iC5IandMChecker, iC7IChecker);
+
+		this.ic9MChecker = new IC9MChecker(cfg, ic1ModelChecker);
+		this.ic9IChecker = new IC9IChecker(cfg, ic1InstanceChecker);
 	}
 
 	public void annotateAnalysisComponent(AnalysisComponent analysisComponent, UncertaintySource uncertaitySource) {
@@ -151,8 +161,14 @@ public class UncertaintyAnnotator {
 			ic8Result &= ic8IChecker.runCheck();
 		}
 
+		// IC9
+		boolean ic9Result = ic9MChecker == null || ic9MChecker.runCheck();
+		if (ic9IChecker != null) {
+			ic9Result &= ic9IChecker.runCheck();
+		}
+
 		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result, ic5Result, ic6Result, ic7Result,
-				ic8Result, outputReferenceConforms && inputReferenceConforms);
+				ic8Result, ic9Result, outputReferenceConforms && inputReferenceConforms);
 	}
 
 	public void annotateInterfaceWithUncertaintyAnnoation(RequiredInterface req, UncertaintySource uncertaitySource) {
@@ -174,12 +190,12 @@ public class UncertaintyAnnotator {
 	 */
 	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean ic3Result,
 			boolean ic4Result, boolean ic5Result, boolean ic6Result, boolean ic7Result, boolean ic8Result,
-			boolean referenceMetamodelConformance) {
+			boolean ic9Result, boolean referenceMetamodelConformance) {
 		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
 
 		if (!ic1Result || !ic2Result || !ic3Result || !ic4Result || !ic5Result || !ic6Result || !ic7Result || !ic8Result
-				|| !referenceMetamodelConformance) {
+				|| !ic9Result || !referenceMetamodelConformance) {
 			// At least one checker failed → Non-conformance to input interface
 			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
 			label.setSeverity(SeverityOfImpact.HIGH);

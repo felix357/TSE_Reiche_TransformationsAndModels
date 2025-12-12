@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlresultingvalues:ResolvedImplementationValues xmlns:codeqlresultingvalues="http://www.example.org/codeqlresultingvalues">
+  <!-- Imprecision: wrong systemElement -->
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.1" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.1" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.2" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.3" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.4" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.5" ruleId="//@configurations.0"/>
+  <securityLevel id="_3wDFMHiTEe-RYawRRhYWUA" name="high"/>
+  <systemElements ParameterName="header" parameterType="EMailHeader" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.MailReceivingFacade"/>
+  <systemElements ParameterName="body" parameterType="EMailBody" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.MailReceivingFacade"/>
+  <systemElements ParameterName="header" parameterType="EMailHeader" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.POP3"/>
+  <systemElements ParameterName="body" parameterType="EMailBody" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.POP3"/>
+  <systemElements ParameterName="header" parameterType="EMailHeader" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.SMTP"/>
+  <systemElements ParameterName="body" parameterType="EMailBody" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.SMTP"/>
+  <configurations id="_hkea4HiTEe-RYawRRhYWUA"/>
+</codeqlresultingvalues:ResolvedImplementationValues>

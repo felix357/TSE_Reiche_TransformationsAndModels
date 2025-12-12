@@ -14,6 +14,8 @@ import edu.kit.kastel.sdq.coupling.models.conformance.IC7IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC7MChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC8IChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.IC8MChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC9IChecker;
+import edu.kit.kastel.sdq.coupling.models.conformance.IC9MChecker;
 
 public class UncertaintyAnnotatorBuilder {
 
@@ -31,6 +33,8 @@ public class UncertaintyAnnotatorBuilder {
 	private IC7IChecker iC7IChecker;
 	private IC8MChecker iC8MChecker;
 	private IC8IChecker iC8IChecker;
+	private IC9MChecker iC9MChecker;
+	private IC9IChecker iC9IChecker;
 	private boolean inputReferenceConforms;
 	private boolean outputReferenceConforms;
 
@@ -90,7 +94,7 @@ public class UncertaintyAnnotatorBuilder {
 	public UncertaintyAnnotator build() {
 		return new UncertaintyAnnotator(ic1ModelChecker, ic1InstanceChecker, ic2ModelChecker, ic2InstanceChecker,
 				ic3ModelChecker, ic3InstanceChecker, ic4ModelChecker, ic4InstanceChecker, iC5IandMChecker,
-				iC6IandMChecker, iC7MChecker, iC7IChecker, iC8MChecker, iC8IChecker, inputReferenceConforms,
+				iC6IandMChecker, iC7MChecker, iC7IChecker, iC8MChecker, iC8IChecker, iC9MChecker, iC9IChecker, inputReferenceConforms,
 				outputReferenceConforms);
 	}
 }
