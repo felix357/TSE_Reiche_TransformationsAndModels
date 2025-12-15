@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlresultingvalues:ResolvedImplementationValues xmlns:codeqlresultingvalues="http://www.example.org/codeqlresultingvalues">
+  <!-- Imprecision: wrong systemElement -->
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.1" ruleId="//@configurations.0"/>
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.1" ruleId="//@configurations.0"/>
+  <securityLevel id="_hBdigPUYEe-xz_jKIkr2Qg" name="Bank;Customer"/>
+  <systemElements ParameterName="cardNumber" parameterType="int" methodName="printPaymentCard" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.Printer"/>
+  <systemElements ParameterName="number" parameterType="int" methodName="readCardNumber" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.CashDesk"/>
+  <configurations id="_kPtSEvUWEe-xz_jKIkr2Qg"/>
+</codeqlresultingvalues:ResolvedImplementationValues>

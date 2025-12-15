@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlscar:SourceCodeAnalysisResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:codeqlscar="http://www.example.org/codeqlscar">
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="challengeResponse" parameterType="String\[\]\[\]" methodName="setupRecovery" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.PasswordManagement"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="value" parameterType="String" methodName="internalPut" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <securityLevels id="_ICJowB06EfCn6vGa4mnYTA" name="high"/>
+  <securityLevels id="_ICJowR06EfCn6vGa4mnYTA" name="low"/>
+  <!-- Imprecision: extra security level that does not exist in the annotated code -->
+  <securityLevels id="_fakeSec" name="Custom"/>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.1" securityLevel="//@securityLevels.2"/>
+  </resultEntries>
+  <ruleIds id="_mhVkgB05EfCn6vGa4mnYTA"/>
+</codeqlscar:SourceCodeAnalysisResult>

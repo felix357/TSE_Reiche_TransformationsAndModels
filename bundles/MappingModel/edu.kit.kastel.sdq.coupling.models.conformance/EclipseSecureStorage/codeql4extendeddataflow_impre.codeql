@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tainttracking:TainttrackingRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tainttracking="http://www.example.org/codeql/tainttracking">
+  <queries id="_mhVkgB05EfCn6vGa4mnYTA">
+    <appliedSecurityLevel id="_mhXZsB05EfCn6vGa4mnYTA" name="high"/>
+    <appliedSecurityLevel id="_mhYn0B05EfCn6vGa4mnYTA" name="low"/>
+    <!-- IMPRECISE INPUT DATA: Some appliedSecurityLevels intentionally swapped -->
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhc5QB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhc5QR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhdgUB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mheHYB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mheHYR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mheucB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.0">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mheucR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhfVgB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhfVgR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhf8kB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.2/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhf8kR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.7/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhgjoB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.8/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhgjoR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhhKsB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhhKsR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhhxwB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.13/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhhxwR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhiY0B05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhiY0R05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.14/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhi_4B05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhi_4R05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhjm8B05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhjm8R05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.15/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhkOAB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhkOAR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhk1EB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.16/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhk1ER05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhlcIB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhlcIR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhmDMB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.17/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhmDMR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhmqQB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhnRUB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.18/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhnRUR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhn4YB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhn4YR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhofcB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.19/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhofcR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhpGgB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhpGgR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.20/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhptkB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhptkR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhqUoB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhqUoR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.21/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhq7sB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhq7sR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhriwB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.22/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhsJ0B05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhsJ0R05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhsw4B05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhsw4R05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.23/@parameter.3"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhtX8B05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhtX8R05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24/@parameter.1"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mht_AB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.24/@parameter.2"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mht_AR05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.25/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhumEB05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.26/@parameter.0"/>
+    </securityLevelAnnotations>
+    <securityLevelAnnotations xsi:type="tainttracking:ParameterAnnotation" id="_mhumER05EfCn6vGa4mnYTA" securityLevel="//@queries.0/@appliedSecurityLevel.1">
+      <parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.26/@parameter.1"/>
+    </securityLevelAnnotations>
+    <allowedFlows>
+      <allowedFlows from="//@queries.0/@appliedSecurityLevel.1" to="//@queries.0/@appliedSecurityLevel.0"/>
+    </allowedFlows>
+  </queries>
+</tainttracking:TainttrackingRoot>

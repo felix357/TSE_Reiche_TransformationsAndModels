@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlresultingvalues:ResolvedImplementationValues xmlns:codeqlresultingvalues="http://www.example.org/codeqlresultingvalues">
+  <!-- Imprecision: wrong systemElement -->
+  <resultingValues resultingSecurityLevel="//@securityLevel.0" parameter="//@systemElements.0" ruleId="//@configurations.0"/>
+  <securityLevel id="_ICJowh06EfCn6vGa4mnYTA" name="high"/>
+  <systemElements ParameterName="value" parameterType="String" methodName="internalPut" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements ParameterName="value" parameterType="String" methodName="somemethod" fullyQualifiedClassName="SomeOtherClass"/>
+  <configurations id="_mhVkgB05EfCn6vGa4mnYTA"/>
+</codeqlresultingvalues:ResolvedImplementationValues>
