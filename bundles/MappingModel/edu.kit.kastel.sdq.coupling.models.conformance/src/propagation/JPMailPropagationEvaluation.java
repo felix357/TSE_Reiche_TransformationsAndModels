@@ -32,7 +32,7 @@ import uncertainty.UncertaintySource;
 
 /**
  * Evaluates the accuracy of uncertainty propagation in coupled model-based
- * analyses. Specifically, it assesses whether the computed impact set
+ * analyses for the JPMAIL System. Specifically, it assesses whether the computed impact set
  * accurately reflects the uncertainties present in the affected set, measuring
  * both the precision and recall of the propagation results.
  * 
@@ -878,6 +878,97 @@ public class JPMailPropagationEvaluation {
 				SystemUnderEval.JPMAIL);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 1 for (IC10) uncertainty propagation evaluation:
+	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	@Test
+	public void graphWithIC10ValidInputDataTest() throws Exception {
+		// first case -> Uncertainty Scenario: correct input data
+
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 2 for (IC10) uncertainty propagation evaluation:
+	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	@Test
+	public void graphWithIC10InValidInputDataTest() throws Exception {
+		// second case -> Uncertainty Scenario: Non-conformance to input interface
+
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		annotator.annotateInterface(edfaReq);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+	
+	// Tests Case 3 for (IC10) uncertainty propagation evaluation:
+	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	@Test
+	public void graphWithIC10ImpreciseInputDataTest() throws Exception {
+		// third case -> Uncertainty Scenario: Imprecise to input data
+
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL);
+		
+		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_ambiguity");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlresultingvaluescorrespondences:Correspondences_ResolvedImplementationValues xmlns:codeqlresultingvaluescorrespondences="http://www.example.org/codeqlresultingvaluescorrespondences">
+  <securityLevelCorrespondences>
+    <securityLevel_CodeQL href="codeql4extendeddataflow.codeql#//@queries.0/@appliedSecurityLevel.0"/>
+    <securityLevel_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@securityLevel.0"/>
+  </securityLevelCorrespondences>
+  <configurationCorrespondences>
+    <configuration_SCAR href="scar.codeqlscar#//@ruleIds.999"/> <!-- invalid -->
+    <configuration_ResultingValues href="resultingvalues.codeqlresultingvalues#//@configurations.0"/>
+  </configurationCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.1"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@systemElements.0"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.3"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@systemElements.1"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.4"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@systemElements.2"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.5"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@systemElements.3"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.6"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@systemElements.4"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.codeqlscar#//@systemElementIdentifications.7"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.codeqlresultingvalues#//@systemElements.5"/>
+  </parameterCorrespondences>
+</codeqlresultingvaluescorrespondences:Correspondences_ResolvedImplementationValues>
