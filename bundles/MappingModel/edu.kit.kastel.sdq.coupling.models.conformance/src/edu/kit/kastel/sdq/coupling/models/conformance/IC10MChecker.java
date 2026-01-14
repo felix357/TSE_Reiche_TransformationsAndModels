@@ -44,7 +44,7 @@ public class IC10MChecker implements IChecker {
 	public IC10MChecker(SystemConfig cfg, IC8MChecker ic8Checker, IC9MChecker ic9Checker) {
 		this.rivPath = cfg.basePath + File.separator + cfg.riv;
 		this.correspondencesPath = cfg.basePath + File.separator + cfg.rivCorrespondence;
-		this.codeqlPath = cfg.basePath + File.separator + cfg.codeql;
+		this.codeqlPath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
 		this.scarPath = cfg.basePath + File.separator + "scar.codeqlscar";
 
 		this.ic8Checker = ic8Checker;

@@ -6,13 +6,15 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 public class IC10ICheckerTest {
 
 	@Test
 	public void testJPMail() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
@@ -49,7 +51,7 @@ public class IC10ICheckerTest {
 	public void testCoCoMe() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
@@ -86,7 +88,7 @@ public class IC10ICheckerTest {
 	public void testEclipseSecureStorage() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE);
+				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
 
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();
@@ -123,7 +125,7 @@ public class IC10ICheckerTest {
 	public void testTravelPlanner() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.TRAVEL_PLANNER);
+				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();

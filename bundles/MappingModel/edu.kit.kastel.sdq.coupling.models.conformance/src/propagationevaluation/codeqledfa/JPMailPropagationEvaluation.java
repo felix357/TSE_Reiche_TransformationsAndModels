@@ -1,4 +1,4 @@
-package propagationevaluation;
+package propagationevaluation.codeqledfa;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,6 +25,7 @@ import analysiscouplinggraph.ProvidedInterface;
 import analysiscouplinggraph.RequiredInterface;
 import edu.kit.kastel.sdq.coupling.models.conformance.ReferenceMetaModelConformanceChecker;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig;
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemUnderEval;
 import mapping.MappingDefinition;
 import mapping.MappingPackage;
@@ -36,15 +37,15 @@ import uncertainty.UncertaintySource;
 
 /**
  * Evaluates the accuracy of uncertainty propagation in coupled model-based
- * analyses for the CoCoMe System. Specifically, it assesses whether the computed impact set
+ * analyses for the JPMAIL System. Specifically, it assesses whether the computed impact set
  * accurately reflects the uncertainties present in the affected set, measuring
  * both the precision and recall of the propagation results.
  * 
  * The evaluation is based on representative example uncertainties identified
- * for the CoCoMe system, as documented in the results of the uncertainty
+ * for the JPMail system, as documented in the results of the uncertainty
  * propagation evaluation.
  */
-public class CoCoMePropagationEvaluation {
+public class JPMailPropagationEvaluation {
 
 	@Test
 	public void graphWithNoUncertaintiesTest() throws Exception {
@@ -65,7 +66,7 @@ public class CoCoMePropagationEvaluation {
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -95,7 +96,7 @@ public class CoCoMePropagationEvaluation {
 		// interface
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
 
@@ -126,7 +127,7 @@ public class CoCoMePropagationEvaluation {
 		// Scenario: imprecise input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
 
@@ -157,7 +158,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -188,7 +189,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -221,7 +222,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideEdfaCodeqlCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
 
@@ -254,7 +255,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
@@ -282,7 +283,7 @@ public class CoCoMePropagationEvaluation {
 		// Non-conformance to input interface
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -312,7 +313,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -343,7 +344,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -375,7 +376,7 @@ public class CoCoMePropagationEvaluation {
 		// (LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValid)
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
 
@@ -408,7 +409,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
@@ -440,7 +441,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -471,7 +472,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		cfg.overrideCodeqlScarModel("scar.codeqlscar_wrong_security_level");
@@ -503,7 +504,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
@@ -534,7 +535,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -566,7 +567,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		cfg.overrideCodeqlScarModel("scar.codeqlscar_removed_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -598,7 +599,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -629,7 +630,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -659,7 +660,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_wrong_ruleid");
 
@@ -691,7 +692,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
@@ -723,7 +724,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -753,7 +754,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_unknown_systemelement");
 
@@ -785,7 +786,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
@@ -817,7 +818,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -847,7 +848,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_sec_level_that_is_not_in_ic1");
 
@@ -879,7 +880,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
@@ -910,7 +911,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
@@ -939,7 +940,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
 
@@ -970,7 +971,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_ambiguity");
 
@@ -1005,7 +1006,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1041,7 +1042,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1077,7 +1078,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1113,7 +1114,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1149,7 +1150,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1185,7 +1186,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1222,7 +1223,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1260,7 +1261,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1297,7 +1298,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1330,7 +1331,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1363,7 +1364,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1396,7 +1397,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1431,7 +1432,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1465,7 +1466,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1498,7 +1499,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1532,7 +1533,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1565,7 +1566,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
@@ -1599,7 +1600,7 @@ public class CoCoMePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.COCOME);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);

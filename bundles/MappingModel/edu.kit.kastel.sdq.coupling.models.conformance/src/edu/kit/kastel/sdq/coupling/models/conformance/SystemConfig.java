@@ -5,7 +5,7 @@ public class SystemConfig {
 	public final String basePath;
 	public String pddc;
 	public String modelCorrespondence;
-	public String codeql;
+	public String sourceCodeAnalysis;
 	public String rivCorrespondence;
 	public String riv;
 	
@@ -26,13 +26,25 @@ public class SystemConfig {
     
     // Needed for IC7M
     public String correspondencesCodeqlScar;
+    
+    public AnalysisCouplingType analysisCouplingType;
+    
+    // defines the analyses that are coupled
+    public enum AnalysisCouplingType { CODEQLEDFA, JOANAEDFA }
 	
-    public SystemConfig(String root, SystemUnderEval sue) {
+    public SystemConfig(String root, SystemUnderEval sue, AnalysisCouplingType couplingType) {
         this.basePath = root + "/" + sue.folder;
         
+        this.analysisCouplingType = couplingType;
+      
+        if (couplingType.equals(AnalysisCouplingType.CODEQLEDFA)) {
+        	this.modelCorrespondence = sue.modelCorrespondence;
+            this.sourceCodeAnalysis = sue.codeql;
+        } else {
+        	this.modelCorrespondence = "correspondences.edfajoanacorrespondences";
+        	this.sourceCodeAnalysis = "joana4extendeddataflowanalysis.joana";
+        }
         this.pddc = sue.pddc;
-        this.modelCorrespondence = sue.modelCorrespondence;
-        this.codeql = sue.codeql;
         this.rivCorrespondence = sue.rivCorrespondence;
         this.riv = sue.riv;
 
@@ -87,7 +99,7 @@ public class SystemConfig {
 	}
 
 	public SystemConfig overrideCodeQL(String newName) {
-		this.codeql = newName;
+		this.sourceCodeAnalysis = newName;
 		return this;
 	}
 }

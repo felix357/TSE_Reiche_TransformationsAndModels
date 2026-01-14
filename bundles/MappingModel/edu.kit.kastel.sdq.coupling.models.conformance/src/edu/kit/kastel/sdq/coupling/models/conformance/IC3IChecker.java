@@ -33,8 +33,8 @@ public class IC3IChecker implements IChecker {
             Set<String> configurations) {
 
         this.basePath = cfg.basePath;
-        this.codeqlFilePathName = cfg.codeql;
-        this.codeqlFilePath = cfg.basePath + File.separator + cfg.codeql;
+        this.codeqlFilePathName = cfg.sourceCodeAnalysis;
+        this.codeqlFilePath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
 
         this.codeqlRivMap = codeqlRivMap;
         this.systemElements = systemElements;

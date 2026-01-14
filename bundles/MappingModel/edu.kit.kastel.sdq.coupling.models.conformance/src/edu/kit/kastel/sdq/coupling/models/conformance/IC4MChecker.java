@@ -47,7 +47,7 @@ public class IC4MChecker implements IChecker {
     public IC4MChecker(SystemConfig cfg) {
         this.architecturalModelPath = cfg.basePath + File.separator + cfg.pddc;
         this.correspondencePath = cfg.basePath + File.separator + cfg.modelCorrespondence;
-        this.sourceCodeAnalysisPath = cfg.basePath + File.separator + cfg.codeql;
+        this.sourceCodeAnalysisPath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
         this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.codeqlConfigurationRepresentation;
     }
 

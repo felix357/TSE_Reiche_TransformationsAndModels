@@ -41,7 +41,7 @@ public class IC3MChecker implements IChecker {
 	public IC3MChecker(SystemConfig cfg, Set<String> securityLiterals, Set<String> systemElementsFromIC2,
 			Set<String> configurationsFromIC2) {
 		this.basePath = cfg.basePath;
-		this.codeqlFilePath = cfg.basePath + File.separator + cfg.codeql;
+		this.codeqlFilePath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
 		this.securityLiterals = securityLiterals;
 		this.systemElementsFromIC2 = systemElementsFromIC2;
 		this.configurationsFromIC2 = configurationsFromIC2;
