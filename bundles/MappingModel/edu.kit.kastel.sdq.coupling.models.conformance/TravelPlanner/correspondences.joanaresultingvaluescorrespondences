@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanaresultingvaluescorrespondences:Correspondences_ResolvedImplementationValues xmlns:joanaresultingvaluescorrespondences="http://www.example.org/joanaresultingvaluescorrespondences">
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.12"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.8"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.2"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.1"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.14"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.2"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.5"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.3"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.5"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.5"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.5"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.11"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.12"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.8"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.3"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.6"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.14"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.14"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.11"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.6"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.10"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.13"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.3"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.9"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.3"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.4"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.3"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.2"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.3"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.7"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.2"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.4"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.2"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.0"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.2"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.13"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.3"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.0"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.2"/>
+  </levelCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.8"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.0"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.2"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.1"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.10"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.2"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.1"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.3"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.11"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.4"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.13"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.5"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.6"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.6"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.0"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.7"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.4"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.8"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.12"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.9"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.5"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.10"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.3"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.11"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.14"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.12"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.7"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.13"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.9"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.14"/>
+  </entryPointCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.6"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.0"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.3"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.1"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.2"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.2"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.5"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.3"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.4"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.4"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.9"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.5"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.1"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.6"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.10"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.7"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.8"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.8"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.13"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.9"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.11"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.10"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.18"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.11"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.12"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.12"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.16"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.13"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.15"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.14"/>
+  </parameterCorrespondences>
+</joanaresultingvaluescorrespondences:Correspondences_ResolvedImplementationValues>

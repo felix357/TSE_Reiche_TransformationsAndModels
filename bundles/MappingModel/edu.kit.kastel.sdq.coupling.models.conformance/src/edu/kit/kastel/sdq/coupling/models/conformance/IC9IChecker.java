@@ -75,7 +75,7 @@ public class IC9IChecker implements IChecker {
 				for (String level : levels) {
 					level = level.trim();
 					// Check correspondence to IC1 mappings
-					boolean hasMapping = ic1Checker.getCodeqlRivMap().values().stream()
+					boolean hasMapping = ic1Checker.getSourceRivMap().values().stream()
 							.anyMatch(rivHref -> rivHref.endsWith(rivSecLevelRef));
 					System.out.println(ic1Checker.getRivValuesMap().values());
 					if (hasMapping && (ic1Checker.getRivValuesMap().containsValue(level)

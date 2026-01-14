@@ -40,13 +40,15 @@ public class SystemConfig {
         if (couplingType.equals(AnalysisCouplingType.CODEQLEDFA)) {
         	this.modelCorrespondence = sue.modelCorrespondence;
             this.sourceCodeAnalysis = sue.codeql;
+            this.riv = sue.riv;
+            this.rivCorrespondence = sue.rivCorrespondence;
         } else {
         	this.modelCorrespondence = "correspondences.edfajoanacorrespondences";
         	this.sourceCodeAnalysis = "joana4extendeddataflowanalysis.joana";
+            this.riv = "resultingvalues.joanaresultingvalues";
+            this.rivCorrespondence = "correspondences.joanaresultingvaluescorrespondences";
         }
         this.pddc = sue.pddc;
-        this.rivCorrespondence = sue.rivCorrespondence;
-        this.riv = sue.riv;
 
         this.systemName                 = sue.systemName;
         this.parameterAnnotationFile    = sue.parameterAnnotationFile;

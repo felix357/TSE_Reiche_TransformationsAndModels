@@ -20,7 +20,7 @@ public class IC3ICheckerTest {
 		IC1IChecker c1 = new IC1IChecker(cfg);
 
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 
 		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
@@ -40,7 +40,7 @@ public class IC3ICheckerTest {
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 
 		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
@@ -61,7 +61,7 @@ public class IC3ICheckerTest {
 		IC1IChecker c1 = new IC1IChecker(cfg);
 
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 
 		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());
@@ -82,7 +82,7 @@ public class IC3ICheckerTest {
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 
 		IC2IChecker c2 = new IC2IChecker(cfg);
 		assertTrue(c2.runCheck());

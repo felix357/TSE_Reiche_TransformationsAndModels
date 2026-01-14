@@ -95,7 +95,7 @@ public class UncertaintyAnnotator {
 		this.ic3ModelChecker = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
 
 		ic1InstanceChecker.runCheck();
-		Map<String, String> codeqlRivMap = ic1InstanceChecker.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = ic1InstanceChecker.getSourceRivMap();
 		ic2InstanceChecker.runCheck();
 		Set<String> sysElements = ic2InstanceChecker.getSystemElementsFromIC2();
 		Set<String> configs = ic2InstanceChecker.getConfigurationsFromIC2();

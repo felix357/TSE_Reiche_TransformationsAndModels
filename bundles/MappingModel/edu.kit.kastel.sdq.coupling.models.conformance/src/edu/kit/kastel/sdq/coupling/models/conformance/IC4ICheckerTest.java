@@ -19,7 +19,7 @@ public class IC4ICheckerTest {
 		IC1IChecker c1 = new IC1IChecker(cfg);
 
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
 		IC4IChecker checker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
@@ -35,7 +35,7 @@ public class IC4ICheckerTest {
 
 		IC1IChecker c1 = new IC1IChecker(cfg);
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
 		IC4IChecker checker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
@@ -52,7 +52,7 @@ public class IC4ICheckerTest {
 		IC1IChecker c1 = new IC1IChecker(cfg);
 
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
 		IC4IChecker checker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
@@ -69,7 +69,7 @@ public class IC4ICheckerTest {
 		IC1IChecker c1 = new IC1IChecker(cfg);
 
 		c1.runCheck();
-		Map<String, String> codeqlRivMap = c1.getCodeqlRivMap();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
 		Map<String, String> rivValuesMap = c1.getRivValuesMap();
 
 		IC4IChecker checker = new IC4IChecker(cfg, codeqlRivMap, rivValuesMap);
