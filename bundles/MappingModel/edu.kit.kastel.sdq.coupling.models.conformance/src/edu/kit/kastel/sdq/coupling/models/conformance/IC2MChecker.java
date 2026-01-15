@@ -117,7 +117,6 @@ public class IC2MChecker implements IChecker {
 		Document doc = parse(new File(filePath));
 		NodeList configs = doc.getElementsByTagName("configurations");
 
-		// Index aus dem href extrahieren
 		int idx = Integer.parseInt(codeHref.substring(codeHref.lastIndexOf('.') + 1));
 		if (idx >= configs.getLength())
 			return null;

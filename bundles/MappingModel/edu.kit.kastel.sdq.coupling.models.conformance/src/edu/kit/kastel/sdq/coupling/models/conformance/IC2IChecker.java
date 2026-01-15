@@ -7,166 +7,184 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * Checker for IC2(T)(I): Ensures that the sets of security-relevant system
  * elements and configurations on the code side are not empty.
  */
 public class IC2IChecker implements IChecker {
-	private final String annotationPath;
-	private String systemName;
-	private final String parameterAnnotationFile;
-	private final String pcmJavaCorrPath;
-	private final String edfaCodeqlCorrPath;
-	private final String edfaConfigPath;
+    private final String annotationPath;
+    private final String systemName;
+    private final String parameterAnnotationFile;
+    private final String pcmJavaCorrPath;
+    private final String edfaCodeqlCorrPath;
+    private final String edfaConfigPath;
+    private final AnalysisCouplingType analysisType;
 
-	// Sets to store all relevant system elements and configurations for IC3
-	private final Set<String> systemElementsFromIC2 = new HashSet<>();
-	private final Set<String> configurationsFromIC2 = new HashSet<>();
+    // Sets to store all relevant system elements and configurations
+    private final Set<String> systemElementsFromIC2 = new HashSet<>();
+    private final Set<String> configurationsFromIC2 = new HashSet<>();
 
-	public IC2IChecker(SystemConfig cfg) {
-		this.systemName = cfg.systemName;
-		this.parameterAnnotationFile = cfg.parameterAnnotationFile;
-		this.annotationPath = cfg.basePath + "/" + cfg.parameterAnnotationFile;
-		this.pcmJavaCorrPath = cfg.basePath + "/" + cfg.pcmJavaCorrespondence;
-		this.edfaCodeqlCorrPath = cfg.basePath + "/" + cfg.edfascCorrespondence;
-		this.edfaConfigPath = cfg.basePath + "/" + cfg.edfaConfiguration;
-	}
+    public IC2IChecker(SystemConfig cfg) {
+        this.systemName = cfg.systemName;
+        this.parameterAnnotationFile = cfg.parameterAnnotationFile;
+        this.annotationPath = cfg.basePath + "/" + cfg.parameterAnnotationFile;
+        this.pcmJavaCorrPath = cfg.basePath + "/" + cfg.pcmJavaCorrespondence;
+        this.edfaCodeqlCorrPath = cfg.basePath + "/" + cfg.edfascCorrespondence;
+        this.edfaConfigPath = cfg.basePath + "/" + cfg.edfaConfiguration;
+        this.analysisType = cfg.analysisCouplingType;
+    }
 
-	@Override
-	public boolean runCheck() {
-		try {
-			Set<String> annotatedPcmElements = getAnnotatedPcmElements();
+    @Override
+    public boolean runCheck() {
+        try {
+            // 1. Collect annotated PCM elements
+            Set<String> annotatedPcmElements = getAnnotatedPcmElements();
 
-			boolean deltaCsCNonEmpty = isSystemElementSetNonEmpty(annotatedPcmElements);
-			boolean cfgCsCNonEmpty = isConfigurationSetNonEmpty();
+            // 2. Check system elements
+            boolean deltaCsCNonEmpty = isSystemElementSetNonEmpty(annotatedPcmElements);
 
-			System.out.println("IC2(T)(I) Check:");
-			System.out.println("  Delta_cs^C (Systemelemente) ≠ ∅: " + (deltaCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
-			System.out.println("  CFG_cs^C (Konfigurationen) ≠ ∅: " + (cfgCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
+            // 3. Check configuration elements based on analysisType
+            boolean cfgCsCNonEmpty;
+            switch (analysisType) {
+                case CODEQLEDFA:
+                    cfgCsCNonEmpty = isConfigurationSetNonEmpty(edfaCodeqlCorrPath, "configuration_CodeQL");
+                    break;
+                case JOANAEDFA:
+                    cfgCsCNonEmpty = isConfigurationSetNonEmpty(edfaCodeqlCorrPath, "configuration_JOANA");
+                    break;
+                default:
+                    throw new IllegalStateException("Unsupported analysis type: " + analysisType);
+            }
 
-			boolean result = deltaCsCNonEmpty && cfgCsCNonEmpty;
+            System.out.println("IC2(T)(I) Check (" + analysisType + "):");
+            System.out.println("  Delta_cs^C (Systemelemente) ≠ ∅: " + (deltaCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
+            System.out.println("  CFG_cs^C (Konfigurationen) ≠ ∅: " + (cfgCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
 
-			if (result) {
-				System.out.println("Die Bedingung IC2(T)(I) ist ERFÜLLT. (Robustheit des Mappings ist nachgewiesen)");
-			} else {
-				System.out.println("Die Bedingung IC2(T)(I) ist NICHT ERFÜLLT.");
-			}
-			return result;
+            boolean result = deltaCsCNonEmpty && cfgCsCNonEmpty;
 
-		} catch (Exception e) {
-			System.err.println("Fehler während der Prüfung:");
-			e.printStackTrace();
-			return false;
-		}
-	}
+            if (result) {
+                System.out.println("Die Bedingung IC2(T)(I) ist ERFÜLLT. (Robustheit des Mappings ist nachgewiesen)");
+            } else {
+                System.out.println("Die Bedingung IC2(T)(I) ist NICHT ERFÜLLT.");
+            }
+            return result;
 
-	private Set<String> getAnnotatedPcmElements() throws Exception {
-		Set<String> annotatedPcmElements = new HashSet<>();
-		Document doc = ConformanceUtils.parseXmlFile(annotationPath);
-		NodeList annotations = doc.getElementsByTagName("annotations");
+        } catch (Exception e) {
+            System.err.println("Fehler während der Prüfung:");
+            e.printStackTrace();
+            return false;
+        }
+    }
 
-		for (int i = 0; i < annotations.getLength(); i++) {
-			Element annotation = (Element) annotations.item(i);
-			Element paramId = (Element) annotation.getElementsByTagName("parameterIdentification").item(0);
-			if (paramId != null) {
-				Element parameter = (Element) paramId.getElementsByTagName("parameter").item(0);
-				String paramHref = (parameter != null) ? parameter.getAttribute("href") : null;
-				if (paramHref != null) {
-					annotatedPcmElements.add(paramHref);
-				}
-			}
-		}
-		return annotatedPcmElements;
-	}
+    private Set<String> getAnnotatedPcmElements() throws Exception {
+        Set<String> annotatedPcmElements = new HashSet<>();
+        Document doc = ConformanceUtils.parseXmlFile(annotationPath);
+        NodeList annotations = doc.getElementsByTagName("annotations");
 
-	private boolean isSystemElementSetNonEmpty(Set<String> annotatedPcmElements) throws Exception {
-		if (annotatedPcmElements.isEmpty()) {
-			return false;
-		}
+        for (int i = 0; i < annotations.getLength(); i++) {
+            Element annotation = (Element) annotations.item(i);
+            Element paramId = (Element) annotation.getElementsByTagName("parameterIdentification").item(0);
+            if (paramId != null) {
+                Element parameter = (Element) paramId.getElementsByTagName("parameter").item(0);
+                String paramHref = (parameter != null) ? parameter.getAttribute("href") : null;
+                if (paramHref != null) {
+                    annotatedPcmElements.add(paramHref);
+                }
+            }
+        }
+        return annotatedPcmElements;
+    }
 
-		Document doc = ConformanceUtils.parseXmlFile(pcmJavaCorrPath);
-		NodeList paramCorrs = doc.getElementsByTagName("pcmparameter2javaparameter");
+    private boolean isSystemElementSetNonEmpty(Set<String> annotatedPcmElements) throws Exception {
+        if (annotatedPcmElements.isEmpty()) {
+            return false;
+        }
 
-		boolean found = false;
+        Document doc = ConformanceUtils.parseXmlFile(pcmJavaCorrPath);
+        NodeList paramCorrs = doc.getElementsByTagName("pcmparameter2javaparameter");
 
-		for (int i = 0; i < paramCorrs.getLength(); i++) {
-			Element corr = (Element) paramCorrs.item(i);
-			Element pcmId = (Element) corr.getElementsByTagName("pcmParameterIdentification").item(0);
+        boolean found = false;
 
-			if (pcmId != null) {
-				Element pcmElement = (Element) pcmId.getElementsByTagName("parameter").item(0);
-				String pcmHref = (pcmElement != null) ? pcmElement.getAttribute("href") : null;
+        for (int i = 0; i < paramCorrs.getLength(); i++) {
+            Element corr = (Element) paramCorrs.item(i);
+            Element pcmId = (Element) corr.getElementsByTagName("pcmParameterIdentification").item(0);
 
-				String startMarker = this.systemName + ".repository#//";
+            if (pcmId != null) {
+                Element pcmElement = (Element) pcmId.getElementsByTagName("parameter").item(0);
+                String pcmHref = (pcmElement != null) ? pcmElement.getAttribute("href") : null;
 
-				if (pcmHref != null) {
-					int startIndex = pcmHref.indexOf(startMarker);
-					if (startIndex != -1) {
-						pcmHref = pcmHref.substring(startIndex);
-					}
-				}
+                String startMarker = this.systemName + ".repository#//";
 
-				if (pcmHref != null && annotatedPcmElements.contains(pcmHref)) {
-					systemElementsFromIC2.add(pcmHref); // collect all matches
-					found = true;
-				}
-			}
-		}
+                if (pcmHref != null) {
+                    int startIndex = pcmHref.indexOf(startMarker);
+                    if (startIndex != -1) {
+                        pcmHref = pcmHref.substring(startIndex);
+                    }
+                }
 
-		return found;
-	}
+                if (pcmHref != null && annotatedPcmElements.contains(pcmHref)) {
+                    systemElementsFromIC2.add(pcmHref);
+                    found = true;
+                }
+            }
+        }
 
-	private boolean isConfigurationSetNonEmpty() throws Exception {
-		String relevantConfigUriSuffix = getRelevantArchitecturalConfigUriSuffix();
+        return found;
+    }
 
-		if (relevantConfigUriSuffix == null) {
-			System.out.println(
-					"  [Detail] Keine Architektur-Konfiguration (cfg^A) gefunden, die die Annotation-Datei verwendet.");
-			return false;
-		}
+    private boolean isConfigurationSetNonEmpty(String corrPath, String targetTag) throws Exception {
+        String relevantConfigUriSuffix = getRelevantArchitecturalConfigUriSuffix();
 
-		Document doc = ConformanceUtils.parseXmlFile(edfaCodeqlCorrPath);
-		NodeList correspondences = doc.getElementsByTagName("configurationCorrespondences");
+        if (relevantConfigUriSuffix == null) {
+            System.out.println(
+                    "  [Detail] Keine Architektur-Konfiguration (cfg^A) gefunden, die die Annotation-Datei verwendet.");
+            return false;
+        }
 
-		boolean found = false;
+        Document doc = ConformanceUtils.parseXmlFile(corrPath);
+        NodeList correspondences = doc.getElementsByTagName("configurationCorrespondences");
 
-		for (int i = 0; i < correspondences.getLength(); i++) {
-			Element corr = (Element) correspondences.item(i);
-			String cfgEdfaHref = ConformanceUtils.getAttributeFromElement(corr, "configuration_EDFA", "href");
+        boolean found = false;
 
-			if (cfgEdfaHref != null && cfgEdfaHref.endsWith(relevantConfigUriSuffix)) {
-				configurationsFromIC2.add(cfgEdfaHref); // collect all matches
-				found = true;
-			}
-		}
+        for (int i = 0; i < correspondences.getLength(); i++) {
+            Element corr = (Element) correspondences.item(i);
+            String cfgHref = ConformanceUtils.getAttributeFromElement(corr, targetTag, "href");
 
-		return found;
-	}
+            if (cfgHref != null && cfgHref.endsWith(relevantConfigUriSuffix)) {
+                configurationsFromIC2.add(cfgHref);
+                found = true;
+            }
+        }
 
-	private String getRelevantArchitecturalConfigUriSuffix() throws Exception {
-		Document doc = ConformanceUtils.parseXmlFile(edfaConfigPath);
-		NodeList configs = doc.getElementsByTagName("configurations");
+        return found;
+    }
 
-		for (int i = 0; i < configs.getLength(); i++) {
-			Element config = (Element) configs.item(i);
-			NodeList inputs = config.getElementsByTagName("inputs");
+    private String getRelevantArchitecturalConfigUriSuffix() throws Exception {
+        Document doc = ConformanceUtils.parseXmlFile(edfaConfigPath);
+        NodeList configs = doc.getElementsByTagName("configurations");
 
-			for (int j = 0; j < inputs.getLength(); j++) {
-				String inputHref = ((Element) inputs.item(j)).getAttribute("href");
+        for (int i = 0; i < configs.getLength(); i++) {
+            Element config = (Element) configs.item(i);
+            NodeList inputs = config.getElementsByTagName("inputs");
 
-				if (inputHref != null && inputHref.contains(this.parameterAnnotationFile)) {
-					return "#//@configurations." + i;
-				}
-			}
-		}
-		return null;
-	}
+            for (int j = 0; j < inputs.getLength(); j++) {
+                String inputHref = ((Element) inputs.item(j)).getAttribute("href");
 
-	public Set<String> getSystemElementsFromIC2() {
-		return systemElementsFromIC2;
-	}
+                if (inputHref != null && inputHref.contains(this.parameterAnnotationFile)) {
+                    return "#//@configurations." + i;
+                }
+            }
+        }
+        return null;
+    }
 
-	public Set<String> getConfigurationsFromIC2() {
-		return configurationsFromIC2;
-	}
+    public Set<String> getSystemElementsFromIC2() {
+        return systemElementsFromIC2;
+    }
+
+    public Set<String> getConfigurationsFromIC2() {
+        return configurationsFromIC2;
+    }
 }
