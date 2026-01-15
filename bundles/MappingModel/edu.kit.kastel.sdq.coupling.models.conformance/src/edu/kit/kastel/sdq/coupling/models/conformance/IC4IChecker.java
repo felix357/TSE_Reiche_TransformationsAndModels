@@ -23,7 +23,7 @@ public class IC4IChecker implements IChecker {
 
 	public IC4IChecker(SystemConfig cfg, Map<String, String> codeqlRivMap, Map<String, String> rivValuesMap) {
 		this.basePath = cfg.basePath;
-		this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.codeqlConfigurationRepresentation;
+		this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.scConfigurationRepresentation;
 		this.codeqlRivMap = codeqlRivMap;
 		this.rivValuesMap = rivValuesMap;
 	}

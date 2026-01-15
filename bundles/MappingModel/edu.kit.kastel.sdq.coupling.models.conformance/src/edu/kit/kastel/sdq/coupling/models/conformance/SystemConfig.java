@@ -13,11 +13,11 @@ public class SystemConfig {
     public String systemName;
     public String parameterAnnotationFile;
     public String pcmJavaCorrespondence;
-    public String edfaCodeqlCorrespondence;
+    public String edfascCorrespondence;
     public String edfaConfiguration;
     
     // Needed for IC2M
-    public String codeqlConfigurationRepresentation;
+    public String scConfigurationRepresentation;
     public String edfaConfigurationRepresentation;
     
     // Needed for IC5M
@@ -42,21 +42,23 @@ public class SystemConfig {
             this.sourceCodeAnalysis = sue.codeql;
             this.riv = sue.riv;
             this.rivCorrespondence = sue.rivCorrespondence;
+            this.edfascCorrespondence   = sue.edfaCodeqlCorrespondence;
+            this.scConfigurationRepresentation = sue.codeqlConfigurationRepresentation;
         } else {
         	this.modelCorrespondence = "correspondences.edfajoanacorrespondences";
         	this.sourceCodeAnalysis = "joana4extendeddataflowanalysis.joana";
             this.riv = "resultingvalues.joanaresultingvalues";
             this.rivCorrespondence = "correspondences.joanaresultingvaluescorrespondences";
+            this.edfascCorrespondence   = "correspondences.edfajoanacorrespondences";
+            this.scConfigurationRepresentation = "joana4extendeddataflowanalysis.configurationrepresentation";
         }
         this.pddc = sue.pddc;
 
         this.systemName                 = sue.systemName;
         this.parameterAnnotationFile    = sue.parameterAnnotationFile;
         this.pcmJavaCorrespondence      = sue.pcmJavaCorrespondence;
-        this.edfaCodeqlCorrespondence   = sue.edfaCodeqlCorrespondence;
         this.edfaConfiguration          = sue.edfaConfiguration;
         
-        this.codeqlConfigurationRepresentation = sue.codeqlConfigurationRepresentation;
         this.edfaConfigurationRepresentation = sue.edfaConfigurationRepresentation;
         
         this.codeqlScarModel = sue.codeqlScarModel;
@@ -71,7 +73,7 @@ public class SystemConfig {
 	}
     
     public SystemConfig overrideEdfaCodeqlCorrespondence(String edfaCodeqlCorrespondence) {
-		this.edfaCodeqlCorrespondence = edfaCodeqlCorrespondence;
+		this.edfascCorrespondence = edfaCodeqlCorrespondence;
 		return this;
 	}
     

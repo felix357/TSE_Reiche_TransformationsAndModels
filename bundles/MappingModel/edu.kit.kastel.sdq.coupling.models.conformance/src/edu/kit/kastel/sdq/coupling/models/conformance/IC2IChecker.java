@@ -28,7 +28,7 @@ public class IC2IChecker implements IChecker {
 		this.parameterAnnotationFile = cfg.parameterAnnotationFile;
 		this.annotationPath = cfg.basePath + "/" + cfg.parameterAnnotationFile;
 		this.pcmJavaCorrPath = cfg.basePath + "/" + cfg.pcmJavaCorrespondence;
-		this.edfaCodeqlCorrPath = cfg.basePath + "/" + cfg.edfaCodeqlCorrespondence;
+		this.edfaCodeqlCorrPath = cfg.basePath + "/" + cfg.edfascCorrespondence;
 		this.edfaConfigPath = cfg.basePath + "/" + cfg.edfaConfiguration;
 	}
 

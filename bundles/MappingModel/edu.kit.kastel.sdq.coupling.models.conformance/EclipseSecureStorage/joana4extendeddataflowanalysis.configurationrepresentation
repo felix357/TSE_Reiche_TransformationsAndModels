@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="ASCII"?>
+<configurationrepresentation:Configurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configurationrepresentation="http://www.example.org/configurationrepresentation">
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wq-6YB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.0"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrAvkB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.1"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrB9sB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.2"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrDL0B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.3"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrFBAB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.4"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrG2MB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.5"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrJScB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.6"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrKgkB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.7"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrMVwB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.8"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrNj4B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.9"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrPZEB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.10"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrQnMB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.11"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrR1UB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.12"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrTqgB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.13"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrU4oB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.14"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrWGwB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.15"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrXU4B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.16"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrYjAB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.17"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrZxIB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.18"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wra_QB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.19"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wrc0cB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.20"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrdbgB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.21"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrepoB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.22"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wrf3wB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.23"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrhF4B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.24"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WriUAB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.25"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrjiIB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.26"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrkJMB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.27"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrlXUB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.28"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrmlcB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.29"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrnzkB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.30"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrpBsB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.31"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrpowB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.32"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wrq24B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.33"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrsFAB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.34"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrtTIB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.35"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wrt6MB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.36"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrvIUB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.37"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrwWcB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.38"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wrw9gB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.39"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WryLoB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.40"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WrzZwB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.41"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr0n4B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.42"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr1O8B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.43"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr2dEB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.44"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr3rMB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.45"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr45UB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.46"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr6HcB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.47"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr6ugB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.48"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr78oB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.49"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr9KwB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.50"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr-Y4B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.51"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_Wr-_8B06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.52"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WsAOEB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.53"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WsBcMB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.54"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WsCDQB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.55"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WsDRYB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.56"/>
+  </configurations>
+  <configurations xsi:type="configurationrepresentation:HybridConfiguration" id="_WsEfgB06EfCn6vGa4mnYTA">
+    <additionalInputs href="java4extendeddataflow.java#/"/>
+    <mainConfigurationElement href="joana4extendeddataflowanalysis.joana#//@entrypoint.57"/>
+  </configurations>
+</configurationrepresentation:Configurations>

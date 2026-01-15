@@ -48,7 +48,7 @@ public class IC4MChecker implements IChecker {
         this.architecturalModelPath = cfg.basePath + File.separator + cfg.pddc;
         this.correspondencePath = cfg.basePath + File.separator + cfg.modelCorrespondence;
         this.sourceCodeAnalysisPath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
-        this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.codeqlConfigurationRepresentation;
+        this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.scConfigurationRepresentation;
     }
 
     private Set<String> getAllCodeqlLevels(String filePath) throws Exception {

@@ -16,6 +16,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * Checker for IC2(T)(M): Ensures that correspondences exist between -
  * Configurations cfgA (architecture) and cfgC (code), - SystemElements δA (PCM)
@@ -23,25 +25,28 @@ import org.xml.sax.InputSource;
  */
 public class IC2MChecker implements IChecker {
 
+	private final AnalysisCouplingType analysisType;
+
 	private final String correspondencePath;
-	private final String codeqlConfigRepresentationPath;
+	private final String codeConfigRepresentationPath;
 	private final String edfaConfigRepresentationPath;
 	private final String pcmJavaPath;
 
 	private final Set<String> configsA = new HashSet<>();
 	private final Set<String> configsC = new HashSet<>();
 	private final Set<String> configsRefsC = new HashSet<>();
-	private final Map<String, String> configCorr = new HashMap<>();
+	private final Map<String, Set<String>> configCorr = new HashMap<>();
 
 	private final Set<String> systemElemsA = new HashSet<>();
 	private final Set<String> systemElemsC = new HashSet<>();
 	private final Map<String, Set<String>> systemElemCorr = new HashMap<>();
-	
+
 	public IC2MChecker(SystemConfig config) {
-	    this.correspondencePath = config.basePath + File.separator + config.edfaCodeqlCorrespondence;
-	    this.codeqlConfigRepresentationPath = config.basePath + File.separator + config.codeqlConfigurationRepresentation;
-	    this.edfaConfigRepresentationPath = config.basePath + File.separator + config.edfaConfigurationRepresentation;
-	    this.pcmJavaPath = config.basePath + File.separator + config.pcmJavaCorrespondence;
+		this.correspondencePath = config.basePath + File.separator + config.edfascCorrespondence;
+		this.codeConfigRepresentationPath = config.basePath + File.separator + config.scConfigurationRepresentation;
+		this.edfaConfigRepresentationPath = config.basePath + File.separator + config.edfaConfigurationRepresentation;
+		this.pcmJavaPath = config.basePath + File.separator + config.pcmJavaCorrespondence;
+		this.analysisType = config.analysisCouplingType;
 	}
 
 	/**
@@ -76,28 +81,89 @@ public class IC2MChecker implements IChecker {
 			throw new IllegalStateException("Correspondence-Datei nicht gefunden: " + correspondencePath);
 		}
 
-		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-		dbf.setNamespaceAware(true);
-		DocumentBuilder db = dbf.newDocumentBuilder();
-		Document doc = db.parse(new InputSource(new FileInputStream(file)));
+		Document doc = parse(file);
 
 		NodeList cfgNodes = doc.getElementsByTagName("configurationCorrespondences");
 		for (int i = 0; i < cfgNodes.getLength(); i++) {
 			Element corr = (Element) cfgNodes.item(i);
-			String codeqlHref = getHref(corr, "configuration_CodeQL");
+
 			String edfaHref = getHref(corr, "configuration_EDFA");
-			String codeqlValue = resolveCodeqlReference(codeqlHref,
-					"codeql4extendeddataflow.configurationrepresentation", codeqlConfigRepresentationPath);
-			String edfaValue = resolveCodeqlReference(edfaHref, "extendeddataflow.configurationrepresentation",
+			String codeHref = (analysisType == AnalysisCouplingType.CODEQLEDFA) ? getHref(corr, "configuration_CodeQL")
+					: getHref(corr, "configuration_JOANA");
+
+			if (edfaHref == null || codeHref == null) {
+				continue;
+			}
+
+			String edfaValue = resolveConfiguration(edfaHref, "extendeddataflow.configurationrepresentation",
 					edfaConfigRepresentationPath);
 
-			if (edfaValue != null && codeqlValue != null) {
-				configCorr.put(edfaValue, codeqlValue);
+			String codeValue = (analysisType == AnalysisCouplingType.CODEQLEDFA)
+					? resolveConfiguration(codeHref, "codeql4extendeddataflow.configurationrepresentation",
+							codeConfigRepresentationPath)
+					: resolveJoanaConfigurationFromFile(codeHref, codeConfigRepresentationPath);
+
+			if (edfaValue != null && codeValue != null) {
+				configCorr.computeIfAbsent(edfaValue, k -> new HashSet<>()).add(codeValue);
+
 				configsA.add(edfaValue);
-				configsC.add(codeqlValue);
-				configsRefsC.add(codeqlHref);
+				configsC.add(codeValue);
+				configsRefsC.add(codeHref);
 			}
 		}
+	}
+
+	private String resolveJoanaConfigurationFromFile(String codeHref, String filePath) throws Exception {
+		Document doc = parse(new File(filePath));
+		NodeList configs = doc.getElementsByTagName("configurations");
+
+		// Index aus dem href extrahieren
+		int idx = Integer.parseInt(codeHref.substring(codeHref.lastIndexOf('.') + 1));
+		if (idx >= configs.getLength())
+			return null;
+
+		Element cfg = (Element) configs.item(idx);
+		return cfg.getAttribute("id");
+	}
+
+	private String resolveConfiguration(String href, String fileName, String filePath) throws Exception {
+		String marker = fileName + "#";
+		int idx = href.indexOf(marker);
+		if (idx == -1)
+			return null;
+
+		String path = href.substring(idx + marker.length());
+		String[] parts = path.split("/");
+
+		Document doc = parse(new File(filePath));
+		Node current = doc.getDocumentElement();
+
+		for (String part : parts) {
+			if (part.startsWith("@")) {
+				String[] tokens = part.substring(1).split("\\.");
+				String tagName = tokens[0];
+				int index = Integer.parseInt(tokens[1]);
+
+				NodeList nodes = ((Element) current).getElementsByTagName(tagName);
+				if (index < nodes.getLength()) {
+					current = nodes.item(index);
+				} else {
+					return null;
+				}
+			}
+		}
+
+		if (current instanceof Element elem && elem.hasAttribute("id")) {
+			return elem.getAttribute("id");
+		}
+		return null;
+	}
+
+	private Document parse(File file) throws Exception {
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		return db.parse(new InputSource(new FileInputStream(file)));
 	}
 
 	// PCM-Java system element correspondences
@@ -242,7 +308,7 @@ public class IC2MChecker implements IChecker {
 		return systemElemCorr;
 	}
 
-	public Map<String, String> getConfigCorr() {
+	public Map<String, Set<String>> getConfigCorr() {
 		return configCorr;
 	}
 
