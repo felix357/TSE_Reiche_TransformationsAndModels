@@ -71,7 +71,7 @@ public class JPMailPropagationEvaluation {
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> result = controller.propagateWithComponentInfo();
@@ -104,7 +104,7 @@ public class JPMailPropagationEvaluation {
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -134,7 +134,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -163,7 +163,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -197,7 +197,7 @@ public class JPMailPropagationEvaluation {
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -229,7 +229,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -259,7 +259,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -288,7 +288,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -319,7 +319,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -349,7 +349,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -383,7 +383,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -416,7 +416,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -446,7 +446,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -478,7 +478,7 @@ public class JPMailPropagationEvaluation {
 		cfg.overrideCodeqlScarModel("scar.codeqlscar_wrong_security_level");
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -510,7 +510,7 @@ public class JPMailPropagationEvaluation {
 		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -540,7 +540,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -573,7 +573,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -605,7 +605,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -635,7 +635,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -667,7 +667,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -699,7 +699,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -729,7 +729,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -761,7 +761,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -793,7 +793,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -823,7 +823,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -855,7 +855,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -887,7 +887,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -916,7 +916,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -947,7 +947,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -978,7 +978,7 @@ public class JPMailPropagationEvaluation {
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -1663,11 +1663,11 @@ public class JPMailPropagationEvaluation {
 				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
 				.build();
 
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
 				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq);
+		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1729,11 +1729,11 @@ public class JPMailPropagationEvaluation {
 				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
 				.build();
 
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
 				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq);
+		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1800,11 +1800,11 @@ public class JPMailPropagationEvaluation {
 				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
 				.build();
 
-		annotator.annotateInterface(edfaReq);
+		annotator.annotateInterface(edfaReq, true);
 
 		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
 				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq);
+		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 

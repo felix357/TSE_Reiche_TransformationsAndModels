@@ -127,7 +127,7 @@ public class UncertaintyAnnotator {
 		assignUncertaintyLabel(analysisComponent, uncertaitySource);
 	}
 
-	public void annotateInterface(RequiredInterface req) throws Exception {
+	public void annotateInterface(RequiredInterface req, boolean addImpreciseLabel) throws Exception {
 		// IC1
 		boolean ic1Result = ic1ModelChecker == null || ic1ModelChecker.runCheck();
 		if (ic1InstanceChecker != null) {
@@ -183,7 +183,7 @@ public class UncertaintyAnnotator {
 		}
 
 		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result, ic5Result, ic6Result, ic7Result,
-				ic8Result, ic9Result, ic10Result, outputReferenceConforms && inputReferenceConforms);
+				ic8Result, ic9Result, ic10Result, outputReferenceConforms && inputReferenceConforms, addImpreciseLabel);
 	}
 
 	public void annotateInterfaceWithUncertaintyAnnoation(RequiredInterface req, UncertaintySource uncertaitySource) {
@@ -205,7 +205,7 @@ public class UncertaintyAnnotator {
 	 */
 	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean ic3Result,
 			boolean ic4Result, boolean ic5Result, boolean ic6Result, boolean ic7Result, boolean ic8Result,
-			boolean ic9Result, boolean ic10Result, boolean referenceMetamodelConformance) {
+			boolean ic9Result, boolean ic10Result, boolean referenceMetamodelConformance, boolean addImpreciseLabel) {
 		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
 		label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
 
@@ -221,12 +221,14 @@ public class UncertaintyAnnotator {
 			label.setSeverity(SeverityOfImpact.NONE);
 		}
 
-		// Uncertainty scenarios that we cannot eliminate
-		UncertaintyLabel impreciseLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
-		impreciseLabel.setSource(UncertaintySource.INPUT_DATA_INDUCED);
-		impreciseLabel.setUncertaintyScenario(UncertaintyScenario.IMPRECISE_INPUT_DATA);
-		impreciseLabel.setSeverity(SeverityOfImpact.LOW);
-		req.getUncertaintyLabel().add(impreciseLabel);
+		if (addImpreciseLabel) {			
+			// Uncertainty scenarios that we cannot eliminate
+			UncertaintyLabel impreciseLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+			impreciseLabel.setSource(UncertaintySource.INPUT_DATA_INDUCED);
+			impreciseLabel.setUncertaintyScenario(UncertaintyScenario.IMPRECISE_INPUT_DATA);
+			impreciseLabel.setSeverity(SeverityOfImpact.LOW);
+			req.getUncertaintyLabel().add(impreciseLabel);
+		}
 
 		req.getUncertaintyLabel().add(label);
 	}

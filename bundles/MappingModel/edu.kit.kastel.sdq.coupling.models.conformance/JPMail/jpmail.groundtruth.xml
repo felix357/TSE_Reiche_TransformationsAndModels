@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groundTruth system="JPMail">
+
+  <!-- Data definitions -->
+  <data id="EMailHeader" initialLevel="high"/>
+  <data id="EMailBody"   initialLevel="high"/>
+
+  <!-- HEADER FLOWS (end-to-end) -->
+
+  <!-- Full flow from MailSendingFacade to MailReceivingFacade -->
+  <allowedFlow
+      data="EMailHeader"
+      fromComponent="MailSendingFacade"
+      fromMethod="sendMail"
+      fromLevel="high"
+      toComponent="MailReceivingFacade"
+      toMethod="dispatchMail"
+      toLevel="low"
+      reason="declassification"/>
+
+  <!-- Optional additional end-to-end flow via SMTP -->
+  <allowedFlow
+      data="EMailHeader"
+      fromComponent="MailSendingFacade"
+      fromMethod="sendMail"
+      fromLevel="high"
+      toComponent="SMTP"
+      toMethod="dispatchMail"
+      toLevel="low"
+      reason="declassification"/>
+
+  <!-- Optional additional end-to-end flow via POP3 -->
+  <allowedFlow
+      data="EMailHeader"
+      fromComponent="MailSendingFacade"
+      fromMethod="sendMail"
+      fromLevel="high"
+      toComponent="POP3"
+      toMethod="dispatchMail"
+      toLevel="low"/>
+
+  <!-- BODY FLOWS (end-to-end) -->
+
+  <!-- Full flow from MailSendingFacade to MailReceivingFacade -->
+  <allowedFlow
+      data="EMailBody"
+      fromComponent="MailSendingFacade"
+      fromMethod="sendMail"
+      fromLevel="high"
+      toComponent="MailReceivingFacade"
+      toMethod="dispatchMail"
+      toLevel="low"
+      reason="encryption/decryption"/>
+
+  <!-- Optional additional end-to-end flow via SMTP -->
+  <allowedFlow
+      data="EMailBody"
+      fromComponent="MailSendingFacade"
+      fromMethod="sendMail"
+      fromLevel="high"
+      toComponent="SMTP"
+      toMethod="dispatchMail"
+      toLevel="low"
+      reason="encryption"/>
+
+  <!-- Optional additional end-to-end flow via POP3 -->
+  <allowedFlow
+      data="EMailBody"
+      fromComponent="MailSendingFacade"
+      fromMethod="sendMail"
+      fromLevel="high"
+      toComponent="POP3"
+      toMethod="dispatchMail"
+      toLevel="low"/>
+
+</groundTruth>
