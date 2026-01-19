@@ -1,0 +1,15 @@
+<groundTruth system="JPMail">
+
+  <data id="String\[\]\[\]" initialLevel="high"/>
+
+  <allowedFlow
+      data="String\[\]\[\]"
+      fromComponent="PasswordManagement"
+      fromMethod="setupRecovery"
+      fromLevel="high"
+      toComponent="SecurePreferences"
+      toMethod="internalPut"
+      toLevel="low"
+      reason="observed"/>
+
+</groundTruth>

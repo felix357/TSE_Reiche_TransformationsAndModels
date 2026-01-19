@@ -1,0 +1,85 @@
+<groundTruth system="TravelPlanner">
+
+  <!-- Data definitions -->
+  <data id="CreditCardDetails" initialLevel="Airline;User"/>
+  <data id="DiscountDetails" initialLevel="Airline;TravelAgency"/>
+
+  <!-- User → Airline -->
+  <allowedFlow data=""
+               fromComponent="CreditCardCenter"
+               fromMethod=""
+               fromLevel="User"
+               toComponent="Airline"
+               toMethod="bookFlightOffer"
+               toLevel="Airline;User"/>
+
+  <allowedFlow data=""
+               fromComponent="TravelPlanner"
+               fromMethod=""
+               fromLevel="User"
+               toComponent="Airline"
+               toMethod="bookFlightOffer"
+               toLevel="Airline;User"/>
+
+  <!-- Airline → Logger -->
+  <allowedFlow data="CreditCardDetails"
+               fromComponent="Airline"
+               fromMethod="bookFlightOffer"
+               fromLevel="Airline;User"
+               toComponent="AirlineLogger"
+               toMethod="log"
+               toLevel="Airline;Support"/>
+
+  <allowedFlow data="DiscountDetails"
+               fromComponent="Airline"
+               fromMethod="getFlightOffers"
+               fromLevel="Airline;TravelAgency"
+               toComponent="AirlineLogger"
+               toMethod="log"
+               toLevel="Airline;Support"/>
+
+  <!-- User → Logger -->
+  <allowedFlow data=""
+               fromComponent="CreditCardCenter"
+               fromMethod=""
+               fromLevel="User"
+               toComponent="AirlineLogger"
+               toMethod="log"
+               toLevel="Airline;Support"/>
+
+  <!-- User → Storage -->
+  <allowedFlow data=""
+               fromComponent="TravelPlanner"
+               fromMethod=""
+               fromLevel="User"
+               toComponent="FlightStorage"
+               toMethod="addToFlight"
+               toLevel="Airline"/>
+
+  <!-- Airline → DB -->
+  <allowedFlow data="CreditCardDetails"
+               fromComponent="Airline"
+               fromMethod="bookFlightOffer"
+               fromLevel="Airline;User"
+               toComponent="LoggingDB"
+               toMethod="storeLog"
+               toLevel="Support"/>
+
+  <allowedFlow data="DiscountDetails"
+               fromComponent="Airline"
+               fromMethod="getFlightOffers"
+               fromLevel="Airline;TravelAgency"
+               toComponent="LoggingDB"
+               toMethod="storeLog"
+               toLevel="Support"/>
+
+  <!-- User → DB -->
+  <allowedFlow data=""
+               fromComponent="CreditCardCenter"
+               fromMethod=""
+               fromLevel="User"
+               toComponent="LoggingDB"
+               toMethod="storeLog"
+               toLevel="Support"/>
+
+</groundTruth>

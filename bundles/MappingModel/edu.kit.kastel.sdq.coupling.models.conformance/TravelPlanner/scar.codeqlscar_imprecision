@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ASCII"?>
+<codeqlscar:SourceCodeAnalysisResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:codeqlscar="http://www.example.org/codeqlscar">
+  <systemElementIdentifications xsi:type="codeqlscar:Field_SCAR" fieldName="ccd" type="CreditCardDetails" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.CreditCardCenter"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="ccd_decl" parameterType="CreditCardDetails" methodName="bookFlightOffer" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.Airline"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Field_SCAR" fieldName="passengerdetails" type="PassengerDetails" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.TravelPlanner"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="passengerDetails" parameterType="PassengerDetails" methodName="bookFlightOffer" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.Airline"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="entry" parameterType="Object" methodName="log" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.AirlineLogger"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="discount" parameterType="DiscountDetails" methodName="getFlightOffers" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.Airline"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="details" parameterType="PassengerDetails" methodName="addToFlight" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.FlightStorage"/>
+  <systemElementIdentifications xsi:type="codeqlscar:Parameter_SCAR" parameterName="entry" parameterType="Object" methodName="storeLog" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.travelplanner.components.LoggingDB"/>
+  <securityLevels id="_o5a5IHpJEe-_NMpWHQ7pqQ" name="User"/>
+  <securityLevels id="_o5a5IXpJEe-_NMpWHQ7pqQ" name="Airline;User"/>
+  <securityLevels id="_o6JR4HpJEe-_NMpWHQ7pqQ" name="Airline;Support"/>
+  <securityLevels id="_ptpLYHpJEe-_NMpWHQ7pqQ" name="Airline;TravelAgency"/>
+  <securityLevels id="_pt8GUHpJEe-_NMpWHQ7pqQ" name="Airline"/>
+  <securityLevels id="_puHsgHpJEe-_NMpWHQ7pqQ" name="Support"/>
+  <!-- Imprecision: inverted some security levels -->
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.1" securityLevel="//@securityLevels.0"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.1" securityLevel="//@securityLevels.0"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.2" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.3" securityLevel="//@securityLevels.0"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.2" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.3" securityLevel="//@securityLevels.0"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.2" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.3" securityLevel="//@securityLevels.0"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.1" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.4" securityLevel="//@securityLevels.2"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.5" securityLevel="//@securityLevels.3"/>
+    <sink systemElement="//@systemElementIdentifications.4" securityLevel="//@securityLevels.2"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.4" securityLevel="//@securityLevels.2"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.4" securityLevel="//@securityLevels.2"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.2" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.6" securityLevel="//@securityLevels.4"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.2" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.6" securityLevel="//@securityLevels.4"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.2" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.6" securityLevel="//@securityLevels.4"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.1" securityLevel="//@securityLevels.1"/>
+    <sink systemElement="//@systemElementIdentifications.7" securityLevel="//@securityLevels.5"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.5" securityLevel="//@securityLevels.3"/>
+    <sink systemElement="//@systemElementIdentifications.7" securityLevel="//@securityLevels.5"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.7" securityLevel="//@securityLevels.5"/>
+  </resultEntries>
+  <resultEntries ruleId="//@ruleIds.0">
+    <source systemElement="//@systemElementIdentifications.0" securityLevel="//@securityLevels.0"/>
+    <sink systemElement="//@systemElementIdentifications.7" securityLevel="//@securityLevels.5"/>
+  </resultEntries>
+  <ruleIds id="_AsMkEHpFEe-t65qwUtSHiQ"/>
+</codeqlscar:SourceCodeAnalysisResult>

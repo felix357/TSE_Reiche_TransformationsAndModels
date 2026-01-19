@@ -11,13 +11,13 @@ public class PrecisionCheckRunner {
 		// 1. Paths to your input files
 
 		Path scarFile = Paths.get(
-				"C:\\Users\\felix\\Git\\TSE_Reiche_TransformationsAndModels_Fork\\bundles\\MappingModel\\edu.kit.kastel.sdq.coupling.models.conformance\\CoCoMe\\scar.codeqlscar");
+				"C:\\Users\\felix\\Git\\TSE_Reiche_TransformationsAndModels_Fork\\bundles\\MappingModel\\edu.kit.kastel.sdq.coupling.models.conformance\\TravelPlanner\\scar.codeqlscar");
 
 //		Path gtFile = Paths.get(
 //				"C:\\Users\\felix\\Git\\TSE_Reiche_TransformationsAndModels_Fork\\bundles\\MappingModel\\edu.kit.kastel.sdq.coupling.models.conformance\\JPMail\\jpmail.groundTruth.xml");
 
 		Path gtFile = Paths.get(
-				"C:\\Users\\felix\\Git\\TSE_Reiche_TransformationsAndModels_Fork\\bundles\\MappingModel\\edu.kit.kastel.sdq.coupling.models.conformance\\CoCoMe\\cocome.groundTruth.xml");
+				"C:\\Users\\felix\\Git\\TSE_Reiche_TransformationsAndModels_Fork\\bundles\\MappingModel\\edu.kit.kastel.sdq.coupling.models.conformance\\TravelPlanner\\travelplanner.groundTruth.xml");
 
 		
 		// 2. Parse the observed flows from the CodeQL SCAR file
