@@ -11,7 +11,7 @@ import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCoupl
 public class IC3MCheckerTest {
 
 	@Test
-	public void testJpmail() throws Exception {
+	public void testJpmailCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
@@ -30,9 +30,30 @@ public class IC3MCheckerTest {
 
 		assertTrue(checker3.runCheck());
 	}
+	
+	@Test
+	public void testJpmailJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+		checker1.runCheck();
+
+		IC2MChecker checker2 = new IC2MChecker(cfg);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker checker3 = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		assertTrue(checker3.runCheck());
+	}
 
 	@Test
-	public void testTravelPlanner() throws Exception {
+	public void testTravelPlannerCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
@@ -51,9 +72,30 @@ public class IC3MCheckerTest {
 
 		assertTrue(checker3.runCheck());
 	}
+	
+	@Test
+	public void testTravelPlannerJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.JOANAEDFA);
+
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+		checker1.runCheck();
+
+		IC2MChecker checker2 = new IC2MChecker(cfg);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker checker3 = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		assertTrue(checker3.runCheck());
+	}
 
 	@Test
-	public void testEclipseSecureStorage() throws Exception {
+	public void testEclipseSecureStorageCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
@@ -72,12 +114,54 @@ public class IC3MCheckerTest {
 
 		assertTrue(checker3.runCheck());
 	}
+	
+	@Test
+	public void testEclipseSecureStorageJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.JOANAEDFA);
+
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+		checker1.runCheck();
+
+		IC2MChecker checker2 = new IC2MChecker(cfg);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker checker3 = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		assertTrue(checker3.runCheck());
+	}
 
 	@Test
-	public void testCoCoMe() throws Exception {
+	public void testCoCoMeCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+
+		IC1MChecker checker1 = new IC1MChecker(cfg);
+		checker1.runCheck();
+
+		IC2MChecker checker2 = new IC2MChecker(cfg);
+		checker2.runCheck();
+
+		Set<String> secLiterals = checker1.getAllSecurityLiterals();
+		Set<String> systemElementsFromIC2 = checker2.getSystemElemsC();
+		Set<String> configurationsFromIC2 = checker2.getConfigsRefsC();
+
+		IC3MChecker checker3 = new IC3MChecker(cfg, secLiterals, systemElementsFromIC2, configurationsFromIC2);
+
+		assertTrue(checker3.runCheck());
+	}
+	
+	@Test
+	public void testCoCoMeJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
 		IC1MChecker checker1 = new IC1MChecker(cfg);
 		checker1.runCheck();

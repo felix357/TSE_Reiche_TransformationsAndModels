@@ -12,7 +12,7 @@ import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCoupl
 public class IC3ICheckerTest {
 
 	@Test
-	public void testJpmail() throws Exception {
+	public void testJpmailCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
@@ -31,9 +31,30 @@ public class IC3ICheckerTest {
 		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 		assertTrue(checker.runCheck());
 	}
+	
+	@Test
+	public void testJpmailJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+
+		IC1IChecker c1 = new IC1IChecker(cfg);
+
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(cfg);
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
+		assertTrue(checker.runCheck());
+	}
 
 	@Test
-	public void testCoCoMe() throws Exception {
+	public void testCoCoMeCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
@@ -51,9 +72,29 @@ public class IC3ICheckerTest {
 		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
 		assertTrue(checker.runCheck());
 	}
+	
+	@Test
+	public void testCoCoMeJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
+
+		IC1IChecker c1 = new IC1IChecker(cfg);
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(cfg);
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements, configs);
+		assertTrue(checker.runCheck());
+	}
 
 	@Test
-	public void testTravelPlanner() throws Exception {
+	public void testTravelPlannerCodeQlEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
@@ -73,9 +114,52 @@ public class IC3ICheckerTest {
 				configs);
 		assertTrue(checker.runCheck());
 	}
+	
+	@Test
+	public void testTravelPlannerJoanaEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.JOANAEDFA);
+
+		IC1IChecker c1 = new IC1IChecker(cfg);
+
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(cfg);
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements,
+				configs);
+		assertTrue(checker.runCheck());
+	}
 
 	@Test
-	public void testEclipseSecureStorage() throws Exception {
+	public void testEclipseSecureStorageCodeQlEDFA() throws Exception {
+		SystemConfig cfg = new SystemConfig(
+				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
+				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+
+		IC1IChecker c1 = new IC1IChecker(cfg);
+		c1.runCheck();
+		Map<String, String> codeqlRivMap = c1.getSourceRivMap();
+
+		IC2IChecker c2 = new IC2IChecker(cfg);
+		assertTrue(c2.runCheck());
+
+		Set<String> sysElements = c2.getSystemElementsFromIC2();
+		Set<String> configs = c2.getConfigurationsFromIC2();
+
+		IC3IChecker checker = new IC3IChecker(cfg, codeqlRivMap, sysElements,
+				configs);
+		assertTrue(checker.runCheck());
+	}
+	
+	@Test
+	public void testEclipseSecureStorageJoanaEDFA() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);

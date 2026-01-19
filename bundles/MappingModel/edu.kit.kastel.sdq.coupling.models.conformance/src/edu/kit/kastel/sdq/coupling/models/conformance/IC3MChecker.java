@@ -15,6 +15,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * Checks the IC3(C)(M) conformance rule for model coupling consistency.
  * <p>
@@ -24,6 +26,8 @@ import org.xml.sax.InputSource;
  * </p>
  */
 public class IC3MChecker implements IChecker {
+
+	private final AnalysisCouplingType analysisType;
 
 	private final String basePath;
 	private final String codeqlFilePath;
@@ -45,25 +49,19 @@ public class IC3MChecker implements IChecker {
 		this.securityLiterals = securityLiterals;
 		this.systemElementsFromIC2 = systemElementsFromIC2;
 		this.configurationsFromIC2 = configurationsFromIC2;
+		this.analysisType = cfg.analysisCouplingType;
 	}
 
-	/**
-	 * Executes the IC3(C)(M) check.
-	 * <p>
-	 * Steps:
-	 * <ol>
-	 * <li>Parse applied security levels and annotations from the CodeQL file.</li>
-	 * <li>Resolve references between annotations and their applied levels.</li>
-	 * <li>Resolve configurations and map them to applied security levels.</li>
-	 * <li>Verify that at least one annotation connects a valid level, system
-	 * element, and configuration.</li>
-	 * </ol>
-	 *
-	 * @return {@code true} if the IC3(C)(M) rule is satisfied, {@code false}
-	 *         otherwise
-	 */
 	@Override
 	public boolean runCheck() {
+		return switch (analysisType) {
+		case CODEQLEDFA -> runCodeQLCheck();
+		case JOANAEDFA -> runJoanaCheck();
+		};
+	}
+
+	// CodeQL–EDFA implementation
+	private boolean runCodeQLCheck() {
 		try {
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			dbf.setNamespaceAware(true);
@@ -118,11 +116,11 @@ public class IC3MChecker implements IChecker {
 				if (cfgsForLevel == null || cfgsForLevel.isEmpty())
 					continue;
 
-				System.out.println("IC3(C)(M) erfüllt");
+				System.out.println("IC3(C)(M) erfüllt (CODEQL–EDFA)");
 				return true;
 			}
 
-			System.out.println("IC3(C)(M) NICHT erfüllt.");
+			System.out.println("IC3(C)(M) NICHT erfüllt (CODEQL–EDFA)");
 			return false;
 
 		} catch (Exception e) {
@@ -131,13 +129,87 @@ public class IC3MChecker implements IChecker {
 		}
 	}
 
-	/**
-	 * Resolves a reference to a security level within the given document.
-	 *
-	 * @param ref the reference string (e.g., "codeql#//@appliedSecurityLevel.0")
-	 * @param doc the XML document to resolve the reference in
-	 * @return the ID of the referenced security level, or {@code null} if not found
-	 */
+	// Joana-EDFA implementation
+	private boolean runJoanaCheck() {
+		try {
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+			dbf.setNamespaceAware(true);
+			DocumentBuilder db = dbf.newDocumentBuilder();
+			Document doc = db.parse(new InputSource(new FileInputStream(new File(codeqlFilePath))));
+
+			NodeList entrypoints = doc.getElementsByTagName("entrypoint");
+
+			for (int e = 0; e < entrypoints.getLength(); e++) {
+				Element entrypoint = (Element) entrypoints.item(e);
+				String entrypointId = entrypoint.getAttribute("id");
+
+				boolean configMatches = false;
+				for (String cfgRef : configurationsFromIC2) {
+
+					String[] parts = cfgRef.split("\\.");
+					String cfgIndex = parts[parts.length - 1];
+					if (cfgIndex.equals(entrypointId)) {
+						configMatches = true;
+						break;
+					}
+				}
+				if (!configMatches)
+					continue;
+
+				// Build levelRef → levelName map
+				Map<String, String> levelRefToName = new HashMap<>();
+				NodeList levels = entrypoint.getElementsByTagName("level");
+				for (int i = 0; i < levels.getLength(); i++) {
+					Element level = (Element) levels.item(i);
+					String ref = "//@entrypoint." + e + "/@level." + i;
+					levelRefToName.put(ref, level.getAttribute("name"));
+				}
+
+				NodeList annotations = entrypoint.getElementsByTagName("annotation");
+
+				for (int i = 0; i < annotations.getLength(); i++) {
+					Element annotation = (Element) annotations.item(i);
+
+					String levelRef = annotation.getAttribute("level");
+					String levelName = levelRefToName.get(levelRef);
+					if (!securityLiterals.contains(levelName))
+						continue;
+
+					NodeList params = annotation.getElementsByTagName("Parameter");
+					boolean affectsSystemElement = false;
+
+					for (int p = 0; p < params.getLength(); p++) {
+						Element param = (Element) params.item(p);
+						String href = param.getAttribute("href");
+
+						for (String systemElem : systemElementsFromIC2) {
+							if (href.startsWith(systemElem)) {
+								affectsSystemElement = true;
+								break;
+							}
+						}
+						if (affectsSystemElement)
+							break;
+					}
+
+					if (!affectsSystemElement)
+						continue;
+
+					System.out.println("IC3(C)(M) erfüllt (JOANA–EDFA)");
+					return true;
+				}
+			}
+
+			System.out.println("IC3(C)(M) NICHT erfüllt (JOANA–EDFA)");
+			return false;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	// Helpers for CodeQL logic
 	private String resolveSecurityLevelId(String ref, Document doc) {
 		try {
 			String[] parts = ref.split("/@");
@@ -159,14 +231,6 @@ public class IC3MChecker implements IChecker {
 		}
 	}
 
-	/**
-	 * Resolves a configuration reference and collects all applied security level
-	 * IDs linked to that configuration.
-	 *
-	 * @param configRefC reference to a configuration element
-	 * @param dbf        document builder factory
-	 * @return a set of applied security level IDs found for the configuration
-	 */
 	private Set<String> resolveRefForConfig(String configRefC, DocumentBuilderFactory dbf) {
 		Set<String> levelIds = new HashSet<>();
 		try {
@@ -212,16 +276,6 @@ public class IC3MChecker implements IChecker {
 		return levelIds;
 	}
 
-	/**
-	 * Determines whether a given annotation affects any system element identified
-	 * by IC2.
-	 *
-	 * @param annotationId          the ID of the security annotation
-	 * @param systemElementsFromIC2 set of system element references from IC2
-	 * @param doc                   the parsed CodeQL document
-	 * @return {@code true} if the annotation affects a known system element,
-	 *         {@code false} otherwise
-	 */
 	private boolean affectsSystemElement(String annotationId, Set<String> systemElementsFromIC2, Document doc) {
 		try {
 			NodeList annotations = doc.getElementsByTagName("securityLevelAnnotations");

@@ -35,9 +35,12 @@ import propagation.UncertaintyAnnotator;
 import propagation.UncertaintyAnnotatorBuilder;
 import uncertainty.UncertaintySource;
 
-/**
+/** 
  * Evaluates the accuracy of uncertainty propagation in coupled model-based
- * analyses for the EclipseSecureStorage System. Specifically, it assesses whether the computed impact set
+ * analyses for the EclipseSecureStorage System with a particular focus on the
+ * coupling between CodeQL and EDFA.
+ * 
+ * Specifically, it assesses whether the computed impact set
  * accurately reflects the uncertainties present in the affected set, measuring
  * both the precision and recall of the propagation results.
  * 
