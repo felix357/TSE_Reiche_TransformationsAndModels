@@ -2,6 +2,7 @@ package propagation;
 
 public enum AnalysisType {
     CODEQL("codeqlInputMapping.xmi", "codeqlOutputMapping.xmi"),
+    JOANA("joanaInputMapping.xmi", "joanaOutputMapping.xmi"),
     EDFA("EDFAInputMappingTest.xmi", "edfaOutputMapping.xmi");
 
     private static final String BASE_PATH = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/";

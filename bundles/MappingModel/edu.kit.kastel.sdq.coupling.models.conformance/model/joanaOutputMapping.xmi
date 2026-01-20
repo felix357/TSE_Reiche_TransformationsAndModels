@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ASCII"?>
+<map:MappingDefinition xmi:version="2.0"
+                       xmlns:xmi="http://www.omg.org/XMI"
+                       xmlns:map="http://www.example.org/mapping">
+
+  <!-- Joana Level -> SecurityCharacteristic -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//Level_SCAR"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//SecurityCharacteristic"/>
+  </classMappings>
+
+  <!-- Joana Parameter -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//Parameter_SCAR"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//JavaSystemElement"/>
+  </classMappings>
+
+  <!-- Joana Field -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//Field_SCAR"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//JavaSystemElement"/>
+  </classMappings>
+
+  <!-- Joana SystemElement -> JavaSystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//SystemElement_SCAR"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//JavaSystemElement"/>
+  </classMappings>
+
+  <!-- Joana EntryPoint -> Configuration -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//EntryPoint_SCAR"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//Configuration"/>
+  </classMappings>
+   
+  <!-- SourceCodeAnalysisResult -> ResultEntry -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//SourceCodeAnalysisResult"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//ResultEntry"/>
+  </classMappings>
+  
+  <!-- Joana Flow -> ResultEntryElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanascar.ecore#//Flow"/>
+    <targetClass href="file:/C:/Users/felix/git-projekte/CouplingPatternSearchBasedSourceCodeAnalyses/bundles/metamodels/edu.kit.kastel.sdq.coupling.models.couplinggraph/model/OutputReferenzMetamodel.ecore#//ResultEntryElement"/>
+  </classMappings>
+  
+</map:MappingDefinition>

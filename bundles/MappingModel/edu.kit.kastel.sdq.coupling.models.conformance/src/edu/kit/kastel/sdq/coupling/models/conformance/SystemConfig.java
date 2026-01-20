@@ -44,6 +44,7 @@ public class SystemConfig {
             this.rivCorrespondence = sue.rivCorrespondence;
             this.edfascCorrespondence   = sue.edfaCodeqlCorrespondence;
             this.scConfigurationRepresentation = sue.codeqlConfigurationRepresentation;
+            this.codeqlScarModel = sue.codeqlScarModel;
         } else {
         	this.modelCorrespondence = "correspondences.edfajoanacorrespondences";
         	this.sourceCodeAnalysis = "joana4extendeddataflowanalysis.joana";
@@ -51,6 +52,7 @@ public class SystemConfig {
             this.rivCorrespondence = "correspondences.joanaresultingvaluescorrespondences";
             this.edfascCorrespondence   = "correspondences.edfajoanacorrespondences";
             this.scConfigurationRepresentation = "joana4extendeddataflowanalysis.configurationrepresentation";
+            this.codeqlScarModel = "scar.joanascar";
         }
         this.pddc = sue.pddc;
 
@@ -61,7 +63,6 @@ public class SystemConfig {
         
         this.edfaConfigurationRepresentation = sue.edfaConfigurationRepresentation;
         
-        this.codeqlScarModel = sue.codeqlScarModel;
         this.javaModel = sue.javaModelFile;
         
         this.correspondencesCodeqlScar = sue.correspondencesCodeqlScar;

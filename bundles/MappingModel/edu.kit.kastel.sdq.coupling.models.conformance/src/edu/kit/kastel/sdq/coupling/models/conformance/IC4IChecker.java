@@ -22,7 +22,7 @@ public class IC4IChecker implements IChecker {
     private final String configurationRepresentationPath;
     private final AnalysisCouplingType analysisType;
 
-    private final Map<String, String> rivMap;   // CodeQL or JOANA RIV map
+    private final Map<String, String> rivMap;
     private final Map<String, String> rivValuesMap;
 
     public IC4IChecker(SystemConfig cfg, Map<String, String> rivMap, Map<String, String> rivValuesMap) {

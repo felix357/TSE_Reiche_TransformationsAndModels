@@ -39,7 +39,6 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		String edfaInputMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/EDFAInputMappingTest.xmi";
 		MappingDefinition edfaInputMapping = loadMapping(resSet, edfaInputMappingPath);
 
-		// Resolve proxies
 		EcoreUtil.resolveAll(resSet);
 
 		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
@@ -53,6 +52,41 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 
 		assertTrue(codeqlInputConforms);
 		assertTrue(codeqlOutputConforms);
+		assertTrue(edfaInputConforms);
+	}
+	
+	@Test
+	public void testValidMappingConformsJoanaEDFA() throws Exception {
+		ResourceSet resSet = createResourceSet();
+
+		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
+
+		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
+
+		String joanaMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping.xmi";
+		MappingDefinition joanaInputMapping = loadMapping(resSet, joanaMappingPath);
+
+		String joanaOutputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaOutputMapping.xmi";
+		MappingDefinition joanaOutputMapping = loadMapping(resSet, joanaOutputMappingPath);
+
+		String edfaInputMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/EDFAInputMappingTest.xmi";
+		MappingDefinition edfaInputMapping = loadMapping(resSet, edfaInputMappingPath);
+
+		EcoreUtil.resolveAll(resSet);
+
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
+
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
+
+		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
+				inputRefMeta);
+
+		assertTrue(joanaInputConforms);
+		assertTrue(joanaOutputConforms);
 		assertTrue(edfaInputConforms);
 	}
 
@@ -104,13 +138,19 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		MappingPackage.eINSTANCE.eClass();
 		resSet.getPackageRegistry().put(MappingPackage.eNS_URI, MappingPackage.eINSTANCE);
 
-		// Load relevant EPackages
-		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore"));
+		// Load relevant EPackages		
+		registerEPackageRecursively(resSet, loadAndRegisterEPackage(
+			    resSet,
+			    "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/" +
+			    "bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore"
+			));
+		
+		registerEPackageRecursively(resSet, loadAndRegisterEPackage(
+			    resSet,
+			    "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.java/model/java.ecore"
+			));
 
-		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.java/model/java.ecore"));
-
+		
 		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/DataDictionaryCharacterized.ecore"));
 

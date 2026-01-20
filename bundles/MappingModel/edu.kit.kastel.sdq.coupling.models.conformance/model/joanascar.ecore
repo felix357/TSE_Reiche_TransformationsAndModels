@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="joanascar" nsURI="http://www.example.org/joanascar" nsPrefix="joanascar">
+  <eClassifiers xsi:type="ecore:EClass" name="SourceCodeAnalysisResult">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemElements" upperBound="-1"
+        eType="#//SystemElement_SCAR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entryPoints" upperBound="-1"
+        eType="#//EntryPoint_SCAR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="levels" upperBound="-1"
+        eType="#//Level_SCAR" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flows" upperBound="-1"
+        eType="#//Flow" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemElement_SCAR" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter_SCAR" eSuperTypes="#//SystemElement_SCAR">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterIndex" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameterType" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="methodName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullyQualifiedClassName"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field_SCAR" eSuperTypes="#//SystemElement_SCAR">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fullyQualifiedClassName"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Level_SCAR" eSuperTypes="../../edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryPoint_SCAR">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tag" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entryPoint" lowerBound="1"
+        eType="#//EntryPoint_SCAR"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        containment="true">
+      <eGenericType eClassifier="#//Source">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1" containment="true">
+      <eGenericType eClassifier="#//Sink">
+        <eTypeArguments/>
+      </eGenericType>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Source">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//SystemElement_SCAR"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemElement" lowerBound="1">
+      <eGenericType eTypeParameter="#//Source/T"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceLevel" lowerBound="1"
+        eType="#//Level_SCAR"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sink">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="#//SystemElement_SCAR"/>
+    </eTypeParameters>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sinkLevel" lowerBound="1"
+        eType="#//Level_SCAR"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemElement" lowerBound="1">
+      <eGenericType eTypeParameter="#//Sink/T"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

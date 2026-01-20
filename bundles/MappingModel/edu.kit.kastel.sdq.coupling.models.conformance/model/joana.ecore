@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="joana" nsURI="http://www.example.org/joana" nsPrefix="joana">
+  <eClassifiers xsi:type="ecore:EClass" name="JOANARoot">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entrypoint" lowerBound="1"
+        upperBound="-1" eType="#//EntryPoint" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InformationFlowAnnotation" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level" lowerBound="1" eType="#//Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemElementIdentification"
+        lowerBound="1" eType="#//SystemElementIdentifying" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntryPoint" eSuperTypes="../../edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="level" upperBound="-1"
+        eType="#//Level" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotation" upperBound="-1"
+        eType="#//InformationFlowAnnotation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lattice" lowerBound="1"
+        eType="#//Lattice" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodIdentification" lowerBound="1"
+        eType="#//MethodIdentifying" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Source" eSuperTypes="#//InformationFlowAnnotation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sink" eSuperTypes="#//InformationFlowAnnotation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Level" eSuperTypes="../../edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore#//Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MayFlow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Level"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//Level"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lattice">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mayFlow" upperBound="-1"
+        eType="#//MayFlow" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemElementIdentifying" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParametertIdentifying" eSuperTypes="#//SystemElementIdentifying">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Parameter" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.java/model/java.ecore#//members/Parameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodIdentifying" eSuperTypes="#//SystemElementIdentifying">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.java/model/java.ecore#//members/Method"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldIdentifying" eSuperTypes="#//SystemElementIdentifying">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.java/model/java.ecore#//members/Field"/>
+  </eClassifiers>
+</ecore:EPackage>

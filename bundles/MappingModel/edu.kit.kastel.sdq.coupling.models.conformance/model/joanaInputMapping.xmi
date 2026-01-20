@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<map:MappingDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"
+                       xmlns:map="http://www.example.org/mapping">
+
+  <!-- Joana Level -> SecurityCharacteristic -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//Level"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//SecurityCharacteristic"/>
+  </classMappings>
+
+  <!-- Joana Source -> Annotation -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//Source"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- Joana Sink -> Annotation -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//Sink"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//Annotation"/>
+  </classMappings>
+
+  <!-- Joana ParametertIdentifying -> SystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//ParametertIdentifying"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//SystemElement"/>
+  </classMappings>
+
+  <!-- Joana FieldIdentifying -> SystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//FieldIdentifying"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//SystemElement"/>
+  </classMappings>
+
+  <!-- Joana MethodIdentifying -> SystemElement -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//MethodIdentifying"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//SystemElement"/>
+  </classMappings>
+
+  <!-- Joana EntryPoint -> Configuration -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//EntryPoint"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//Configuration"/>
+  </classMappings>
+
+  <!-- Joana Root -> Configuration -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//JOANARoot"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//Configuration"/>
+  </classMappings>
+
+  <!-- Optional: Joana Lattice -> SecurityPolicy -->
+  <classMappings>
+    <sourceClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//Lattice"/>
+    <targetClass href="file:/C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//SecurityPolicy"/>
+  </classMappings>
+
+</map:MappingDefinition>
