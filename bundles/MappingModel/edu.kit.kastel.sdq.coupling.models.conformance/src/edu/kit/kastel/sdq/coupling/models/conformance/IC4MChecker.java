@@ -17,220 +17,314 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
- * Checker for IC4(C)(M): ensures that all applied security policies from
- * source code are mapped to architectural security characteristics affected by IC1,
- * checking the implication for every relevant configuration (cfg_C).
+ * Checker for IC4(C)(M): checks if all applied security policies from source
+ * code analysis are mapped to architectural security characteristics affected
+ * by IC1, for every relevant configuration (cfg_C).
  */
 public class IC4MChecker implements IChecker {
 
-    private final String architecturalModelPath;
-    private final String correspondencePath;
-    private final String sourceCodeAnalysisPath;
-    private final String configurationRepresentationPath;
+	private final String architecturalModelPath;
+	private final String correspondencePath;
+	private final String sourceCodeAnalysisPath;
+	private final String configurationRepresentationPath;
+	private final AnalysisCouplingType analysisType;
 
-    private final Set<String> allSecurityLiterals = new HashSet<>();
-    private final List<Mapping> globalMappings = new ArrayList<>();
+	private final Set<String> allSecurityLiterals = new HashSet<>();
+	private final List<Mapping> globalMappings = new ArrayList<>();
 
-    private static class Mapping {
-        String codeqlValue;
-        String scsValue;
+	private static class Mapping {
+		String policyValue;
+		String scsValue;
 
-        Mapping(String codeql, String scs) {
-            this.codeqlValue = codeql;
-            this.scsValue = scs;
-        }
+		Mapping(String policyValue, String scsValue) {
+			this.policyValue = policyValue;
+			this.scsValue = scsValue;
+		}
 
-        String getCodeqlValue() { return codeqlValue; }
-    }
-    
-    public IC4MChecker(SystemConfig cfg) {
-        this.architecturalModelPath = cfg.basePath + File.separator + cfg.pddc;
-        this.correspondencePath = cfg.basePath + File.separator + cfg.modelCorrespondence;
-        this.sourceCodeAnalysisPath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
-        this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.scConfigurationRepresentation;
-    }
+		String getPolicyValue() {
+			return policyValue;
+		}
+	}
 
-    private Set<String> getAllCodeqlLevels(String filePath) throws Exception {
-        // ... (Parsing logic from IC1MChecker remains the same) ...
-        Set<String> levels = new HashSet<>();
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        dbf.setNamespaceAware(true);
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc = db.parse(new InputSource(new FileInputStream(new File(filePath))));
-        NodeList levelNodes = doc.getElementsByTagName("appliedSecurityLevel");
-        for (int i = 0; i < levelNodes.getLength(); i++) {
-            levels.add(((Element) levelNodes.item(i)).getAttribute("name"));
-        }
-        return levels;
-    }
+	public IC4MChecker(SystemConfig cfg) {
+		this.architecturalModelPath = cfg.basePath + File.separator + cfg.pddc;
+		this.correspondencePath = cfg.basePath + File.separator + cfg.modelCorrespondence;
+		this.sourceCodeAnalysisPath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
+		this.configurationRepresentationPath = cfg.basePath + File.separator + cfg.scConfigurationRepresentation;
+		this.analysisType = cfg.analysisCouplingType;
+	}
 
-    private String resolveCodeqlReference(String href) throws Exception {
-        // ... (Reference resolution logic from IC1MChecker remains the same) ...
-        String path = href.substring(
-                href.indexOf("codeql4extendeddataflow.codeql#") + "codeql4extendeddataflow.codeql#".length());
-        String[] parts = path.split("/");
+	private Set<String> getAllPolicies(String filePath) throws Exception {
+		switch (analysisType) {
+		case CODEQLEDFA:
+			return getAllCodeqlLevels(filePath);
+		case JOANAEDFA:
+			return getAllJoanaLevels(filePath);
+		default:
+			throw new IllegalStateException("Unsupported analysis type: " + analysisType);
+		}
+	}
 
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        dbf.setNamespaceAware(true);
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc = db.parse(new InputSource(new FileInputStream(new File(sourceCodeAnalysisPath))));
+	private Set<String> getAllCodeqlLevels(String filePath) throws Exception {
+		Set<String> levels = new HashSet<>();
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(new InputSource(new FileInputStream(new File(filePath))));
 
-        org.w3c.dom.Node current = doc.getDocumentElement();
-        for (String part : parts) {
-            if (part.startsWith("@")) {
-                String[] tokens = part.substring(1).split("\\.");
-                String tagName = tokens[0];
-                int index = Integer.parseInt(tokens[1]);
-                NodeList nodes = ((Element) current).getElementsByTagName(tagName);
-                if (index < nodes.getLength()) {
-                    current = nodes.item(index);
-                } else {
-                    return null;
-                }
-            }
-        }
-        if (current != null && current.getNodeType() == org.w3c.dom.Node.ELEMENT_NODE) {
-            return ((Element) current).getAttribute("name");
-        }
-        return null;
-    }
+		NodeList levelNodes = doc.getElementsByTagName("appliedSecurityLevel");
+		for (int i = 0; i < levelNodes.getLength(); i++) {
+			levels.add(((Element) levelNodes.item(i)).getAttribute("name"));
+		}
+		return levels;
+	}
 
-    /**
-     * Parses the configuration representation file to get the IDs of all configurations (cfg_C).
-     */
-    private List<String> getAllConfigurationIDs(String filePath) throws Exception {
-        List<String> cfgIDs = new ArrayList<>();
-        File cfgFile = new File(filePath);
-        if (!cfgFile.exists()) {
-             System.err.println("Configuration file not found: " + filePath);
-             return Collections.emptyList();
-        }
+	private Set<String> getAllJoanaLevels(String filePath) throws Exception {
+		Set<String> levels = new HashSet<>();
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(new InputSource(new FileInputStream(new File(filePath))));
 
-        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        dbf.setNamespaceAware(true);
-        DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc = db.parse(new InputSource(new FileInputStream(cfgFile)));
-        
-        NodeList cfgNodes = doc.getElementsByTagName("configurations"); 
-        for (int i = 0; i < cfgNodes.getLength(); i++) {
-            Element cfgElement = (Element) cfgNodes.item(i);
-            String id = cfgElement.getAttribute("id");
-            if (!id.isEmpty()) {
-                cfgIDs.add(id);
-            }
-        }
-        return cfgIDs;
-    }
-    
-    /**
-     * STUB: Determines the set of Security Policies (pol_C) used by a specific configuration (LHS: <cfg_C, pol_C>).
-     * In the provided file structure, this is often the global set, but this method allows for future refinement.
-     */
-    private Set<String> getPoliciesUsedByConfiguration(String cfgID, Set<String> globalPolicies) {
-        // For the simple CodeQL structure, we assume all global policies are used by the single configuration.
-        return globalPolicies; 
-    }
-    
-    /**
-     * STUB: Determines the set of Security Characteristics (scs_C) affected by a specific configuration (LHS: <cfg_C, scs_C>).
-     * This requires cross-referencing the configuration model (cfg_C) with the architectural model (scs_C).
-     */
-    private Set<String> getCharacteristicsAffectedByConfiguration(String cfgID, Set<String> globalCharacteristics) {
-        return globalCharacteristics; 
-    }
+		NodeList levelNodes = doc.getElementsByTagName("level");
+		for (int i = 0; i < levelNodes.getLength(); i++) {
+			String name = ((Element) levelNodes.item(i)).getAttribute("name");
+			if (!name.isEmpty()) {
+				levels.add(name);
+			}
+		}
+		return levels;
+	}
 
+	private String resolvePolicyReference(String href) throws Exception {
+		switch (analysisType) {
+		case CODEQLEDFA:
+			return resolveCodeqlReference(href);
+		case JOANAEDFA:
+			return resolveJoanaReference(href);
+		default:
+			throw new IllegalStateException("Unsupported analysis type: " + analysisType);
+		}
+	}
 
-    @Override
-    public boolean runCheck() {
-        try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            dbf.setNamespaceAware(true);
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            boolean overallIC4Fulfilled = true;
+	private String resolveCodeqlReference(String href) throws Exception {
+		String path = href.substring(
+				href.indexOf("codeql4extendeddataflow.codeql#") + "codeql4extendeddataflow.codeql#".length());
+		String[] parts = path.split("/");
 
-            // Step 1: Load architectural security literals (Global Scs_C)
-            this.allSecurityLiterals.addAll(ConformanceUtils.getSecurityCharacteristicLiterals(architecturalModelPath));
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(new InputSource(new FileInputStream(new File(sourceCodeAnalysisPath))));
 
-            // Step 2: Load all applied CodeQL levels (Global Pol_C)
-            Set<String> allCodeqlLevels = getAllCodeqlLevels(sourceCodeAnalysisPath);
-            
-            // Step 3: Parse global <pol_C, scs_C> correspondence (The RHS of the implication)
-            File correspondenceFile = new File(correspondencePath);
-            if (!correspondenceFile.exists()) {
-                System.out.println("Error: Correspondence file not found at path: " + correspondencePath);
-                return false;
-            }
+		org.w3c.dom.Node current = doc.getDocumentElement();
+		for (String part : parts) {
+			if (part.startsWith("@")) {
+				String[] tokens = part.substring(1).split("\\.");
+				String tagName = tokens[0];
+				int index = Integer.parseInt(tokens[1]);
+				NodeList nodes = ((Element) current).getElementsByTagName(tagName);
+				if (index >= nodes.getLength()) {
+					return null;
+				}
+				current = nodes.item(index);
+			}
+		}
+		return (current instanceof Element) ? ((Element) current).getAttribute("name") : null;
+	}
 
-            Document doc = db.parse(new InputSource(new FileInputStream(correspondenceFile)));
-            NodeList literalCorrespondences = doc.getElementsByTagName("literalSecurityLevelCorrespondences");
+	private String resolveJoanaReference(String href) throws Exception {
+		String path = href.substring(href.indexOf("#//") + 3);
+		String[] parts = path.split("/");
 
-            for (int i = 0; i < literalCorrespondences.getLength(); i++) {
-                Element correspondence = (Element) literalCorrespondences.item(i);
-                Element securityLevelCodeQL = (Element) correspondence.getElementsByTagName("securityLevel_CodeQL").item(0);
-                Element literalsEDFA = (Element) correspondence.getElementsByTagName("literals_EDFA").item(0);
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(new InputSource(new FileInputStream(new File(sourceCodeAnalysisPath))));
 
-                String codeqlHref = securityLevelCodeQL.getAttribute("href");
-                String edfaHref = literalsEDFA.getAttribute("href");
+		org.w3c.dom.Node current = doc.getDocumentElement();
+		for (String part : parts) {
+			if (part.startsWith("@")) {
+				String[] tokens = part.substring(1).split("\\.");
+				String tagName = tokens[0];
+				int index = Integer.parseInt(tokens[1]);
+				NodeList nodes = ((Element) current).getElementsByTagName(tagName);
+				if (index >= nodes.getLength()) {
+					return null;
+				}
+				current = nodes.item(index);
+			}
+		}
+		return (current instanceof Element) ? ((Element) current).getAttribute("name") : null;
+	}
 
-                String edfaValue = ConformanceUtils.resolvePddcReference(edfaHref, architecturalModelPath);
-                String codeqlValue = resolveCodeqlReference(codeqlHref);
+	private List<String> getAllConfigurationIDs(String filePath) throws Exception {
+		List<String> cfgIDs = new ArrayList<>();
+		File cfgFile = new File(filePath);
+		if (!cfgFile.exists()) {
+			return Collections.emptyList();
+		}
 
-                if (edfaValue != null && codeqlValue != null && allSecurityLiterals.contains(edfaValue)) {
-                    globalMappings.add(new Mapping(codeqlValue, edfaValue));
-                }
-            }
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(new InputSource(new FileInputStream(cfgFile)));
 
-            Set<String> mappedCodeqlLevels = globalMappings.stream()
-                .map(Mapping::getCodeqlValue)
-                .collect(Collectors.toSet());
+		NodeList cfgNodes = doc.getElementsByTagName("configurations");
+		for (int i = 0; i < cfgNodes.getLength(); i++) {
+			String id = ((Element) cfgNodes.item(i)).getAttribute("id");
+			if (!id.isEmpty()) {
+				cfgIDs.add(id);
+			}
+		}
+		return cfgIDs;
+	}
 
-            // Step 4: Check IC4(C)(M) per configuration
+	private Set<String> getPoliciesUsedByConfiguration(String cfgID, Set<String> globalPolicies) {
+		return globalPolicies; // Stub
+	}
 
-            // Identify all configurations (CFG_C)
-            List<String> configurationIDs = getAllConfigurationIDs(configurationRepresentationPath);
-            System.out.println("\nChecking IC4(C)(M) across " + configurationIDs.size() + " configurations.");
+	private Set<String> getCharacteristicsAffectedByConfiguration(String cfgID, Set<String> globalCharacteristics) {
+		return globalCharacteristics; // Stub
+	}
 
-            if (configurationIDs.isEmpty()) {
-                System.out.println("No configurations (cfg_C) found. The check is vacuously FULFILLED. ✅");
-                return true;
-            }
+	@Override
+	public boolean runCheck() {
+	    try {
+	        boolean overallFulfilled = true;
 
-            for (String cfgID : configurationIDs) {
-                System.out.println("\n--- Checking Configuration: " + cfgID + " ---");
-                
-                Set<String> policiesForCfg = getPoliciesUsedByConfiguration(cfgID, allCodeqlLevels);
-                Set<String> characteristicsForCfg = getCharacteristicsAffectedByConfiguration(cfgID, allSecurityLiterals);
+	        System.out.println("=== Running IC4(C)(M) Check ===");
+	        System.out.println("Analysis type: " + analysisType);
 
-                if (policiesForCfg.isEmpty() || characteristicsForCfg.isEmpty()) {
-                    System.out.println("Configuration " + cfgID + " is irrelevant (LHS of implication is false). Check fulfilled for this config.");
-                    continue;
-                }
-                
-                boolean cfgCheckFulfilled = mappedCodeqlLevels.containsAll(policiesForCfg);
+	        // Load architectural security characteristics (Scs_C)
+	        allSecurityLiterals.addAll(
+	                ConformanceUtils.getSecurityCharacteristicLiterals(architecturalModelPath));
+	        System.out.println("Loaded architectural security characteristics: " + allSecurityLiterals);
 
-                if (cfgCheckFulfilled) {
-                    System.out.println("IC4(C)(M) for cfg " + cfgID + " is FULFILLED. ✅");
-                } else {
-                    Set<String> unmapped = new HashSet<>(policiesForCfg);
-                    unmapped.removeAll(mappedCodeqlLevels);
-                    System.out.println("IC4(C)(M) for cfg " + cfgID + " is NOT FULFILLED. ❌");
-                    System.out.println("Violation: Used policies missing mapping: " + unmapped);
-                    overallIC4Fulfilled = false;
-                }
-            }
-            
-            if (overallIC4Fulfilled) {
-                System.out.println("\nOVERALL IC4(C)(M) FULFILLED across all configurations. ✅");
-            } else {
-                System.out.println("\nOVERALL IC4(C)(M) FAILED. ❌");
-            }
-            
-            return overallIC4Fulfilled;
+	        // Load policies from source code analysis (Pol_C)
+	        Set<String> allPolicies = getAllPolicies(sourceCodeAnalysisPath);
+	        System.out.println("Loaded security policies from source code analysis: " + allPolicies);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
+	        File correspondenceFile = new File(correspondencePath);
+	        if (!correspondenceFile.exists()) {
+	            System.err.println("❌ Correspondence file not found: " + correspondencePath);
+	            return false;
+	        }
+
+	        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+	        dbf.setNamespaceAware(true);
+	        DocumentBuilder db = dbf.newDocumentBuilder();
+	        Document doc = db.parse(new InputSource(new FileInputStream(correspondenceFile)));
+
+	        // Load <policy, scs> mappings
+	        loadGlobalMappings(doc);
+
+	        Set<String> mappedPolicies = globalMappings.stream()
+	                .map(Mapping::getPolicyValue)
+	                .collect(Collectors.toSet());
+
+	        System.out.println("Loaded policy-to-SCS mappings:");
+	        for (Mapping m : globalMappings) {
+	            System.out.println("  " + m.policyValue + " -> " + m.scsValue);
+	        }
+
+	        // Load configurations (CFG_C)
+	        List<String> cfgIDs = getAllConfigurationIDs(configurationRepresentationPath);
+	        System.out.println("\nChecking IC4(C)(M) for " + cfgIDs.size() + " configuration(s).");
+
+	        if (cfgIDs.isEmpty()) {
+	            System.out.println("No configurations found. Check is vacuously fulfilled. ✅");
+	            return true;
+	        }
+
+	        // Per-configuration check
+	        for (String cfgID : cfgIDs) {
+	            System.out.println("\n--- Configuration: " + cfgID + " ---");
+
+	            Set<String> polCfg = getPoliciesUsedByConfiguration(cfgID, allPolicies);
+	            Set<String> scsCfg = getCharacteristicsAffectedByConfiguration(cfgID, allSecurityLiterals);
+
+	            System.out.println("Policies used in cfg: " + polCfg);
+	            System.out.println("Security characteristics affected in cfg: " + scsCfg);
+
+	            if (polCfg.isEmpty() || scsCfg.isEmpty()) {
+	                System.out.println("Configuration is irrelevant (LHS of implication is false). ✅");
+	                continue;
+	            }
+
+	            if (!mappedPolicies.containsAll(polCfg)) {
+	                Set<String> missing = new HashSet<>(polCfg);
+	                missing.removeAll(mappedPolicies);
+
+	                System.out.println("❌ IC4(C)(M) VIOLATION");
+	                System.out.println("Missing mappings for policies: " + missing);
+
+	                overallFulfilled = false;
+	            } else {
+	                System.out.println("IC4(C)(M) fulfilled for this configuration. ✅");
+	            }
+	        }
+
+	        System.out.println("\n=== IC4(C)(M) RESULT ===");
+	        if (overallFulfilled) {
+	            System.out.println("OVERALL RESULT: FULFILLED ✅");
+	        } else {
+	            System.out.println("OVERALL RESULT: FAILED ❌");
+	        }
+
+	        return overallFulfilled;
+
+	    } catch (Exception e) {
+	        System.err.println("❌ Exception during IC4(C)(M) check:");
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+
+	private void loadGlobalMappings(Document doc) throws Exception {
+		if (analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			loadCodeqlMappings(doc);
+		} else {
+			loadJoanaMappings(doc);
+		}
+	}
+
+	private void loadCodeqlMappings(Document doc) throws Exception {
+		NodeList correspondences = doc.getElementsByTagName("literalSecurityLevelCorrespondences");
+
+		for (int i = 0; i < correspondences.getLength(); i++) {
+			Element corr = (Element) correspondences.item(i);
+
+			Element pol = (Element) corr.getElementsByTagName("securityLevel_CodeQL").item(0);
+			Element edfa = (Element) corr.getElementsByTagName("literals_EDFA").item(0);
+
+			String polValue = resolvePolicyReference(pol.getAttribute("href"));
+			String scsValue = ConformanceUtils.resolvePddcReference(edfa.getAttribute("href"), architecturalModelPath);
+
+			if (polValue != null && scsValue != null && allSecurityLiterals.contains(scsValue)) {
+				globalMappings.add(new Mapping(polValue, scsValue));
+			}
+		}
+	}
+
+	private void loadJoanaMappings(Document doc) throws Exception {
+		NodeList correspondences = doc.getElementsByTagName("literalLevelCorrespondences");
+
+		for (int i = 0; i < correspondences.getLength(); i++) {
+			Element corr = (Element) correspondences.item(i);
+
+			Element pol = (Element) corr.getElementsByTagName("level_JOANA").item(0);
+			Element edfa = (Element) corr.getElementsByTagName("literals_EDFA").item(0);
+
+			String polValue = resolvePolicyReference(pol.getAttribute("href"));
+			String scsValue = ConformanceUtils.resolvePddcReference(edfa.getAttribute("href"), architecturalModelPath);
+
+			if (polValue != null && scsValue != null && allSecurityLiterals.contains(scsValue)) {
+				globalMappings.add(new Mapping(polValue, scsValue));
+			}
+		}
+	}
 }
