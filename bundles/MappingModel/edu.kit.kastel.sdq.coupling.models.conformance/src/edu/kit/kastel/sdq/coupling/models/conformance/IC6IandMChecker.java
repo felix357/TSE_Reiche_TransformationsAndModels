@@ -30,7 +30,7 @@ public class IC6IandMChecker implements IChecker {
 	private Document rDoc;
 
 	public IC6IandMChecker(SystemConfig cfg, IC5IandMChecker ic5) {
-		this.scarFilePath = cfg.basePath + "/" + cfg.codeqlScarModel;
+		this.scarFilePath = cfg.basePath + "/" + cfg.scScarModel;
 		this.rFilePath = cfg.basePath + "/" + cfg.riv;
 
 		this.mappedSystemElementsR = ic5.getMappedSystemElementsR();

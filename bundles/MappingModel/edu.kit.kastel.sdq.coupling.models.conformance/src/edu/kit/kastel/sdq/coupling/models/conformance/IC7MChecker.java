@@ -32,7 +32,7 @@ public class IC7MChecker implements IChecker {
 
 		this.correspondencesPath = cfg.basePath + File.separator + cfg.correspondencesCodeqlScar;
 
-		this.scarPath = cfg.basePath + File.separator + cfg.codeqlScarModel;
+		this.scarPath = cfg.basePath + File.separator + cfg.scScarModel;
 	}
 
 	@Override

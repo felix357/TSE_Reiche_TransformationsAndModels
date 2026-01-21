@@ -13,6 +13,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * Checker for IC5(T)(M) and IC5(T)(I): Checks if there exist Security
  * Characteristics and System Elements in the Source Code Analysis Result
@@ -20,6 +22,8 @@ import org.xml.sax.InputSource;
  * Annotated Source Code 𝐶 that are affected by IC1 and IC2.
  */
 public class IC5IandMChecker implements IChecker {
+
+	private final AnalysisCouplingType analysisType;
 
 	private final String resolvedValuesCorrespondencePath;
 	private final Set<String> securityCharacteristicsC;
@@ -35,8 +39,13 @@ public class IC5IandMChecker implements IChecker {
 		this.resolvedValuesCorrespondencePath = cfg.basePath + "/" + cfg.rivCorrespondence;
 		this.securityCharacteristicsC = securityCharacteristicsC;
 		this.systemElementsC = systemElementsC;
-		this.scarCodeQlScar = cfg.basePath + "/" + cfg.codeqlScarModel;
-		this.codeQlFilePath = cfg.basePath + "/codeql4extendeddataflow.codeql";
+		this.scarCodeQlScar = cfg.basePath + "/" + cfg.scScarModel;
+		this.analysisType = cfg.analysisCouplingType;
+		if (analysisType == AnalysisCouplingType.JOANAEDFA) {
+			this.codeQlFilePath = cfg.basePath + "/joana4extendeddataflowanalysis.joana";
+		} else {
+			this.codeQlFilePath = cfg.basePath + "/codeql4extendeddataflow.codeql";
+		}
 		this.systemName = cfg.systemName;
 	}
 
@@ -136,9 +145,24 @@ public class IC5IandMChecker implements IChecker {
 
 			CodeQLSystemElement scarElem = parseSCARReference(hrefC);
 
-			String descriptiveId = scarElem.fullyQualifiedClassName + "." + scarElem.methodName + "."
-					+ scarElem.parameterName;
-			if (authorizedIds.contains(descriptiveId)) {
+			String baseId = scarElem.fullyQualifiedClassName + "." + scarElem.methodName;
+			boolean matchFound = false;
+
+			if (scarElem.parameterName != null) {
+				String descriptiveIdFull = baseId + "." + scarElem.parameterName;
+				if (authorizedIds.contains(descriptiveIdFull)) {
+					matchFound = true;
+				}
+			} else {
+				for (String authId : authorizedIds) {
+					if (authId.startsWith(baseId + ".")) {
+						matchFound = true;
+						break;
+					}
+				}
+			}
+
+			if (matchFound) {
 				mappedSystemElementsR.add(hrefR);
 			}
 		}
@@ -148,101 +172,113 @@ public class IC5IandMChecker implements IChecker {
 		try {
 			String[] nodes = xpath.split("/");
 			NodeList classNodes = doc.getElementsByTagName("classorinterface");
-			String lastNode = nodes[nodes.length - 1]; // e.g., classorinterface.0
+			String lastNode = nodes[nodes.length - 1];
 			int index = Integer.parseInt(lastNode.split("\\.")[1]);
 			if (index < classNodes.getLength())
 				return (Element) classNodes.item(index);
 		} catch (Exception e) {
-			/* ignore invalid paths */ }
+		}
 		return null;
 	}
 
-	private void loadSecurityCorrespondences(
-	        Document correspondenceDoc, 
-	        String codeQlFilePath, 
-	        String scarFilePath) throws Exception {
+	private void loadSecurityCorrespondences(Document correspondenceDoc, String codeQlFilePath, String scarFilePath)
+			throws Exception {
 
-	    NodeList nodes = correspondenceDoc.getElementsByTagName("securityLevelCorrespondences");
+		String levelLabel;
+		String securityLevelCorrespondence;
+		String rivLabel;
+		if (this.analysisType == AnalysisCouplingType.JOANAEDFA) {
+			levelLabel = "levelCorrespondences";
+			securityLevelCorrespondence = "level_JOANA";
+			rivLabel = "level_ResolvedImplementationValues";
+		} else {
+			levelLabel = "securityLevelCorrespondences";
+			securityLevelCorrespondence = "securityLevel_CodeQL";
+			rivLabel = "securityLevel_ResolvedImplementationValues";
+		}
 
-	    // Parse CodeQL XML (appliedSecurityLevel)
-	    DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-	    dbf.setNamespaceAware(true);
-	    DocumentBuilder db = dbf.newDocumentBuilder();
-	    Document codeQlDoc = db.parse(new File(codeQlFilePath));
+		NodeList nodes = correspondenceDoc.getElementsByTagName(levelLabel);
 
-	    // Parse SCAR XML (resolved securityLevels)
-	    Document scarDoc = db.parse(new File(scarFilePath));
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		dbf.setNamespaceAware(true);
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document codeQlDoc = db.parse(new File(codeQlFilePath));
 
-	    for (int i = 0; i < nodes.getLength(); i++) {
-	        Element elem = (Element) nodes.item(i);
+		Document scarDoc = db.parse(new File(scarFilePath));
 
-	        String hrefC = elem.getElementsByTagName("securityLevel_CodeQL")
-	                .item(0).getAttributes().getNamedItem("href").getNodeValue();
-	        String hrefR = elem.getElementsByTagName("securityLevel_ResolvedImplementationValues")
-	                .item(0).getAttributes().getNamedItem("href").getNodeValue();
+		for (int i = 0; i < nodes.getLength(); i++) {
+			Element elem = (Element) nodes.item(i);
 
-	        // Step 1 — resolve applied level from CodeQL
-	        String appliedLevelName = resolveAppliedSecurityLevelName(hrefC, codeQlDoc);
-	        if (appliedLevelName == null)
-	            continue;
+			String hrefC = elem.getElementsByTagName(securityLevelCorrespondence).item(0).getAttributes()
+					.getNamedItem("href").getNodeValue();
+			String hrefR = elem.getElementsByTagName(rivLabel).item(0).getAttributes().getNamedItem("href")
+					.getNodeValue();
 
-	        // Step 2 — resolve resolved level from SCAR
-	        String resolvedLevelName = resolveResolvedSecurityLevelName(hrefR, scarDoc);
-	        if (resolvedLevelName == null)
-	            continue;
+			String appliedLevelName = resolveAppliedSecurityLevelName(hrefC, codeQlDoc);
+			if (appliedLevelName == null)
+				continue;
 
-	        // ---------------------------
-	        // NEW LOGIC FOR SEMICOLONS
-	        // ---------------------------
-	        Set<String> appliedParts = new HashSet<>();
-	        Set<String> resolvedParts = new HashSet<>();
+			String resolvedLevelName = resolveResolvedSecurityLevelName(hrefR, scarDoc);
+			if (resolvedLevelName == null)
+				continue;
 
-	        // If there's a semicolon → split
-	        if (appliedLevelName.contains(";")) {
-	            for (String p : appliedLevelName.split("\\s*;\\s*"))
-	                appliedParts.add(p);
-	        } else {
-	            appliedParts.add(appliedLevelName);
-	        }
+			Set<String> appliedParts = new HashSet<>();
+			Set<String> resolvedParts = new HashSet<>();
 
-	        if (resolvedLevelName.contains(";")) {
-	            for (String p : resolvedLevelName.split("\\s*;\\s*"))
-	                resolvedParts.add(p);
-	        } else {
-	            resolvedParts.add(resolvedLevelName);
-	        }
+			if (appliedLevelName.contains(";")) {
+				for (String p : appliedLevelName.split("\\s*;\\s*"))
+					appliedParts.add(p);
+			} else {
+				appliedParts.add(appliedLevelName);
+			}
 
-	        // Check if ANY matching term is in BOTH sets and in securityCharacteristicsC
-	        boolean matchFound = false;
-	        for (String a : appliedParts) {
-	            if (resolvedParts.contains(a) && securityCharacteristicsC.contains(a)) {
-	                matchFound = true;
-	                break;
-	            }
-	        }
+			if (resolvedLevelName.contains(";")) {
+				for (String p : resolvedLevelName.split("\\s*;\\s*"))
+					resolvedParts.add(p);
+			} else {
+				resolvedParts.add(resolvedLevelName);
+			}
 
-	        if (matchFound) {
-	            mappedSecurityCharacteristicsR.add(hrefR);
-	        }
-	    }
+			boolean matchFound = false;
+			for (String a : appliedParts) {
+				if (resolvedParts.contains(a) && securityCharacteristicsC.contains(a)) {
+					matchFound = true;
+					break;
+				}
+			}
+
+			if (matchFound) {
+				mappedSecurityCharacteristicsR.add(hrefR);
+			}
+		}
 	}
-
 
 	/**
 	 * Resolve CodeQL appliedSecurityLevel name from href.
 	 */
 	private String resolveAppliedSecurityLevelName(String href, Document codeQlDoc) {
 		try {
-			if (!href.contains("@appliedSecurityLevel."))
+
+			String labelSecLevel;
+			String labelsec;
+			if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+				labelSecLevel = "@appliedSecurityLevel.";
+				labelsec = "appliedSecurityLevel";
+			} else {
+				labelSecLevel = "@level.";
+				labelsec = "level";
+			}
+
+			if (!href.contains(labelSecLevel))
 				return null;
-			int index = Integer.parseInt(href.split("@appliedSecurityLevel\\.")[1]);
-			NodeList appliedLevels = codeQlDoc.getElementsByTagName("appliedSecurityLevel");
+			int index = Integer.parseInt(href.split(labelSecLevel)[1]);
+			NodeList appliedLevels = codeQlDoc.getElementsByTagName(labelsec);
 			if (index < appliedLevels.getLength()) {
 				Element levelElem = (Element) appliedLevels.item(index);
 				return levelElem.getAttribute("name");
 			}
 		} catch (Exception e) {
-			/* ignore */ }
+		}
 		return null;
 	}
 
@@ -251,16 +287,25 @@ public class IC5IandMChecker implements IChecker {
 	 */
 	private String resolveResolvedSecurityLevelName(String href, Document scarDoc) {
 		try {
-			if (!href.contains("@securityLevel."))
+			String secLevel;
+			String lvl;
+			if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+				secLevel = "@securityLevel.";
+				lvl = "securityLevels";
+			} else {
+				secLevel = "@levels.";
+				lvl = "levels";
+			}
+			if (!href.contains(secLevel))
 				return null;
-			int index = Integer.parseInt(href.split("@securityLevel\\.")[1]);
-			NodeList levels = scarDoc.getElementsByTagName("securityLevels");
+			int index = Integer.parseInt(href.split(secLevel)[1]);
+			NodeList levels = scarDoc.getElementsByTagName(lvl);
 			if (index < levels.getLength()) {
 				Element levelElem = (Element) levels.item(index);
 				return levelElem.getAttribute("name");
 			}
 		} catch (Exception e) {
-			/* ignore */ }
+		}
 		return null;
 	}
 
@@ -273,8 +318,7 @@ public class IC5IandMChecker implements IChecker {
 	private CodeQLSystemElement parseSCARReference(String hrefC) throws Exception {
 		String[] parts = hrefC.split("#");
 		String filePath = parts[0];
-		if (filePath.equals("scar.codeqlscar"))
-			filePath = this.scarCodeQlScar;
+		filePath = this.scarCodeQlScar;
 
 		String xpathRef = parts[1];
 
@@ -283,15 +327,36 @@ public class IC5IandMChecker implements IChecker {
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document doc = db.parse(new File(filePath));
 
-		NodeList nodes = doc.getElementsByTagName("systemElementIdentifications");
-		int index = Integer.parseInt(xpathRef.replace("//@systemElementIdentifications.", ""));
-		Element elem = (Element) nodes.item(index);
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			NodeList nodes = doc.getElementsByTagName("systemElementIdentifications");
+			int index = Integer.parseInt(xpathRef.replace("//@systemElementIdentifications.", ""));
 
-		CodeQLSystemElement cse = new CodeQLSystemElement();
-		cse.fullyQualifiedClassName = elem.getAttribute("fullyQualifiedClassName");
-		cse.methodName = elem.getAttribute("methodName");
-		cse.parameterName = elem.getAttribute("parameterName");
-		return cse;
+			Element elem = (Element) nodes.item(index);
+			CodeQLSystemElement cse = new CodeQLSystemElement();
+
+			cse.fullyQualifiedClassName = elem.getAttribute("fullyQualifiedClassName");
+			cse.methodName = elem.getAttribute("methodName");
+			cse.parameterName = elem.getAttribute("parameterName");
+			return cse;
+
+		} else {
+			NodeList nodes = doc.getElementsByTagName("systemElements");
+			int index = Integer.parseInt(xpathRef.replace("//@systemElements.", ""));
+
+			Element elem = (Element) nodes.item(index);
+			CodeQLSystemElement cse = new CodeQLSystemElement();
+
+			cse.fullyQualifiedClassName = elem.getAttribute("fullyQualifiedClassName");
+			cse.methodName = elem.getAttribute("methodName");
+			String parameterName = elem.getAttribute("parameterType");
+
+			if (parameterName.endsWith("Header")) {
+				cse.parameterName = "header";
+			} else if (parameterName.endsWith("Body")) {
+				cse.parameterName = "body";
+			}
+			return cse;
+		}
 	}
 
 	private String getFullyQualifiedClassName(Element cls) {
@@ -302,11 +367,11 @@ public class IC5IandMChecker implements IChecker {
 		}
 		return name;
 	}
-	
+
 	public Set<String> getMappedSystemElementsR() {
 		return mappedSystemElementsR;
 	}
-	
+
 	public Set<String> getMappedSecurityCharacteristicsR() {
 		return mappedSecurityCharacteristicsR;
 	}

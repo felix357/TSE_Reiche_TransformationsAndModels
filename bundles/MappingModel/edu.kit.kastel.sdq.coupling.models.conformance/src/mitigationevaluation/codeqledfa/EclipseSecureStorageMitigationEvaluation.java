@@ -85,7 +85,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -166,7 +166,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -312,7 +312,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -392,7 +392,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -537,7 +537,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -618,7 +618,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -765,7 +765,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -847,7 +847,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -994,7 +994,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -1221,7 +1221,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -1452,7 +1452,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -1681,7 +1681,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -1910,7 +1910,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -2139,7 +2139,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
@@ -3070,7 +3070,7 @@ public class EclipseSecureStorageMitigationEvaluation {
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.codeqlScarModel);
+		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();

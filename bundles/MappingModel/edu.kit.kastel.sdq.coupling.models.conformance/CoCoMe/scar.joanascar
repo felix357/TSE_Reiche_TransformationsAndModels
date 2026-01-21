@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanascar:SourceCodeAnalysisResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:joanascar="http://www.example.org/joanascar">
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="int" methodName="readCardNumber" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.Billing"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="int" methodName="printPaymentCard" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.Printer"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="int" methodName="readCardNumber" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.CashDesk"/>
+  <entryPoints tag="2"/>
+  <levels id="_UDNnUPWwEe-Rfc0DQim1oQ" name="Bank;Customer"/>
+  <levels id="_UDO1cPWwEe-Rfc0DQim1oQ" name="ByStander;Cashier;Customer;StoreManager"/>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.1" systemElement="//@systemElements.2"/>
+  </flows>
+</joanascar:SourceCodeAnalysisResult>
