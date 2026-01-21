@@ -11,6 +11,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * This class checks IC6(C)(M) and IC6(C)(I).
  * 
@@ -19,6 +21,8 @@ import org.w3c.dom.NodeList;
  * where both elements are affected by IC5.
  */
 public class IC6IandMChecker implements IChecker {
+
+	private final AnalysisCouplingType analysisType;
 
 	private final String scarFilePath;
 	private final String rFilePath;
@@ -35,6 +39,8 @@ public class IC6IandMChecker implements IChecker {
 
 		this.mappedSystemElementsR = ic5.getMappedSystemElementsR();
 		this.mappedSecurityCharacteristicsR = ic5.getMappedSecurityCharacteristicsR();
+
+		this.analysisType = cfg.analysisCouplingType;
 	}
 
 	@Override
@@ -51,13 +57,20 @@ public class IC6IandMChecker implements IChecker {
 			loadScar();
 			loadRModel();
 
-			NodeList resultEntries = scarDoc.getElementsByTagName("resultEntries");
+			String dataFlows;
+
+			if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+				dataFlows = "resultEntries";
+			} else {
+				dataFlows = "flows";
+			}
+
+			NodeList resultEntries = scarDoc.getElementsByTagName(dataFlows);
 
 			for (int i = 0; i < resultEntries.getLength(); i++) {
 
 				Element re = (Element) resultEntries.item(i);
 
-				// Collect resolved semantic system elements inside this REE
 				Set<Sem> sysInEntry = new HashSet<>();
 				Set<String> secInEntry = new HashSet<>();
 
@@ -68,7 +81,7 @@ public class IC6IandMChecker implements IChecker {
 				boolean hasSecurity = intersectsSecurity(secInEntry);
 
 				if (hasSystem && hasSecurity) {
-					System.out.println("IC6 fulfilled (REE index: " + i + ") ✓");
+					System.out.println("IC6 fulfilled (REE index: " + i + ")");
 					return true;
 				}
 			}
@@ -100,8 +113,18 @@ public class IC6IandMChecker implements IChecker {
 		for (int i = 0; i < list.getLength(); i++) {
 			Element e = (Element) list.item(i);
 
-			if (e.hasAttribute("securityLevel")) {
-				secElems.add(e.getAttribute("securityLevel"));
+			if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+
+				if (e.hasAttribute("securityLevel")) {
+					secElems.add(e.getAttribute("securityLevel"));
+				}
+			} else {
+				if (e.hasAttribute("sourceLevel")) {
+					secElems.add(e.getAttribute("sourceLevel"));
+				}
+				if (e.hasAttribute("sinkLevel")) {
+					secElems.add(e.getAttribute("sinkLevel"));
+				}
 			}
 
 			if (e.hasAttribute("systemElement")) {
@@ -116,27 +139,42 @@ public class IC6IandMChecker implements IChecker {
 	private Sem resolveSystemElement(String href) {
 
 		try {
-			// CASE 1: SCAR
-			if (href.startsWith("//@systemElementIdentifications")) {
+			
+			String sysElementId;
+			String param;
+			if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+				sysElementId = "systemElementIdentifications";
+				param = "parameterName";
+			} else {
+				sysElementId = "systemElements";
+				param = "parameterType";
+			}
+			
+			if (href.startsWith("//@" + sysElementId)) {
 				int idx = Integer.parseInt(href.replaceAll("\\D+", ""));
-				NodeList list = scarDoc.getElementsByTagName("systemElementIdentifications");
+				NodeList list = scarDoc.getElementsByTagName(sysElementId);
 				if (idx >= list.getLength())
 					return null;
 				Element e = (Element) list.item(idx);
 				return new Sem(e.getAttribute("fullyQualifiedClassName"), e.getAttribute("methodName"),
-						e.getAttribute("parameterName"));
+						e.getAttribute(param));
 			}
 
-			// CASE 2: R-model (IC5 output)
 			if (href.contains("#//@systemElements")) {
 				int idx = Integer.parseInt(href.replaceAll("\\D+", ""));
 				NodeList list = rDoc.getElementsByTagName("systemElements");
 				if (idx >= list.getLength())
 					return null;
 				Element e = (Element) list.item(idx);
+				String p = e.getAttribute("ParameterName");
+				if (this.analysisType == AnalysisCouplingType.JOANAEDFA) {
+					p = e.getAttribute(param);
+				}
 				return new Sem(e.getAttribute("fullyQualifiedClassName"), e.getAttribute("methodName"),
-						e.getAttribute("ParameterName"));
+						p);
 			}
+			
+			
 
 		} catch (Exception ignored) {
 		}
@@ -167,14 +205,24 @@ public class IC6IandMChecker implements IChecker {
 		try {
 			Set<String> entryNames = new HashSet<>();
 			for (String href : secInEntry) {
-				String name = resolveSecurityLevelName(href, scarDoc);
+				String name;
+				if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+					name = resolveSecurityLevelNameCodeQl(href, scarDoc);
+				} else {
+					name = resolveSecurityLevelNameJoana(href, scarDoc);
+				}
 				if (name != null)
 					entryNames.add(name);
 			}
 
 			Set<String> mappedNames = new HashSet<>();
 			for (String href : mappedSecurityCharacteristicsR) {
-				String name = resolveSecurityLevelName(href, scarDoc);
+				String name;
+				if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+					name = resolveSecurityLevelNameCodeQl(href, scarDoc);
+				} else {
+					name = resolveSecurityLevelNameJoana(href, scarDoc);
+				}
 				if (name != null)
 					mappedNames.add(name);
 			}
@@ -189,7 +237,7 @@ public class IC6IandMChecker implements IChecker {
 		return false;
 	}
 
-	private String resolveSecurityLevelName(String href, Document doc) {
+	private String resolveSecurityLevelNameCodeQl(String href, Document doc) {
 		try {
 			if (href.contains("@securityLevels")) {
 				int idx = Integer.parseInt(href.split("@securityLevels\\.")[1]);
@@ -197,7 +245,7 @@ public class IC6IandMChecker implements IChecker {
 				if (idx < list.getLength()) {
 					return ((Element) list.item(idx)).getAttribute("name");
 				}
-			} else if (href.contains("@securityLevel")) { // CodeQL output
+			} else if (href.contains("@securityLevel")) {
 				int idx = Integer.parseInt(href.split("@securityLevel\\.")[1]);
 				NodeList list = doc.getElementsByTagName("securityLevels");
 				if (idx < list.getLength()) {
@@ -208,6 +256,21 @@ public class IC6IandMChecker implements IChecker {
 		}
 		return null;
 	}
+	
+	private String resolveSecurityLevelNameJoana(String href, Document doc) {
+	    try {
+	        if (href.contains("@levels")) {
+	            int idx = Integer.parseInt(href.split("@levels\\.")[1]);
+	            NodeList list = doc.getElementsByTagName("levels");
+	            if (idx < list.getLength()) {
+	                return ((Element) list.item(idx)).getAttribute("name");
+	            }
+	        }
+	    } catch (Exception ignored) {
+	    }
+	    return null;
+	}
+
 
 	/**
 	 * Represents a semantic triple consisting of a fully qualified class name
