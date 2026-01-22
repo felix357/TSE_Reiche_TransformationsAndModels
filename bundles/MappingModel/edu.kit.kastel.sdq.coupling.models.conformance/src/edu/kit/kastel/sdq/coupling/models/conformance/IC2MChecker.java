@@ -206,7 +206,7 @@ public class IC2MChecker implements IChecker {
 		return null;
 	}
 
-	String resolveCodeqlReference(String href, String fileName, String filePath) throws Exception {
+	String resolveSCReference(String href, String fileName, String filePath) throws Exception {
 		String marker = fileName + "#";
 		int idx = href.indexOf(marker);
 		if (idx == -1) {
@@ -236,11 +236,18 @@ public class IC2MChecker implements IChecker {
 				}
 			}
 		}
+		
+		String attribute;
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			attribute = "id";
+		} else {
+			attribute = "tag";
+		}
 
 		if (current != null && current.getNodeType() == Node.ELEMENT_NODE) {
 			Element elem = (Element) current;
-			if (elem.hasAttribute("id")) {
-				return elem.getAttribute("id");
+			if (elem.hasAttribute(attribute)) {
+				return elem.getAttribute(attribute);
 			} else if (elem.hasAttribute("xsi:type")) {
 				return elem.getAttribute("xsi:type");
 			}

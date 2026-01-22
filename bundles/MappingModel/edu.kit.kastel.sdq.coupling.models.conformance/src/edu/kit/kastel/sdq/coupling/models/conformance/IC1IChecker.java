@@ -71,7 +71,7 @@ public class IC1IChecker implements IChecker {
             if (analysisType == AnalysisCouplingType.CODEQLEDFA) {
                 sourceHref = ConformanceUtils.getAttributeFromElement(corr, "securityLevel_CodeQL", "href");
                 rivHref = ConformanceUtils.getAttributeFromElement(corr, "securityLevel_ResolvedImplementationValues", "href");
-            } else { // JOANAEDFA
+            } else {
                 sourceHref = ConformanceUtils.getAttributeFromElement(corr, "level_JOANA", "href");
                 rivHref = ConformanceUtils.getAttributeFromElement(corr, "level_ResolvedImplementationValues", "href");
             }

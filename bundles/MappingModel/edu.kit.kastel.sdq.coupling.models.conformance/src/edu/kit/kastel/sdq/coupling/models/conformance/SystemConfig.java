@@ -25,7 +25,7 @@ public class SystemConfig {
     public String javaModel;
     
     // Needed for IC7M
-    public String correspondencesCodeqlScar;
+    public String correspondencesSCScar;
     
     public AnalysisCouplingType analysisCouplingType;
     
@@ -45,6 +45,7 @@ public class SystemConfig {
             this.edfascCorrespondence   = sue.edfaCodeqlCorrespondence;
             this.scConfigurationRepresentation = sue.codeqlConfigurationRepresentation;
             this.scScarModel = sue.codeqlScarModel;
+            this.correspondencesSCScar = sue.correspondencesCodeqlScar;
         } else {
         	this.modelCorrespondence = "correspondences.edfajoanacorrespondences";
         	this.sourceCodeAnalysis = "joana4extendeddataflowanalysis.joana";
@@ -53,6 +54,7 @@ public class SystemConfig {
             this.edfascCorrespondence   = "correspondences.edfajoanacorrespondences";
             this.scConfigurationRepresentation = "joana4extendeddataflowanalysis.configurationrepresentation";
             this.scScarModel = "scar.joanascar";
+            this.correspondencesSCScar = "correspondences.joanascarcorrespondences";
         }
         this.pddc = sue.pddc;
 
@@ -64,8 +66,6 @@ public class SystemConfig {
         this.edfaConfigurationRepresentation = sue.edfaConfigurationRepresentation;
         
         this.javaModel = sue.javaModelFile;
-        
-        this.correspondencesCodeqlScar = sue.correspondencesCodeqlScar;
     }
     
     public SystemConfig overrideCodeqlScarModel(String codeqlScarModel) {

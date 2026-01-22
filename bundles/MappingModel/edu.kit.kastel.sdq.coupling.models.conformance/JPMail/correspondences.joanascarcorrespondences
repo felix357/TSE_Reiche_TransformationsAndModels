@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanascarcorrespondences:JOANASCARCorrespondences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:joanascarcorrespondences="http://www.example.org/joanascarcorrespondences">
+  <entryPointCorrespondences>
+    <entryPoint_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.0"/>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.0"/>
+  </entryPointCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.1"/>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.1"/>
+  </entryPointCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.0"/>
+    <level_SCAR href="scar.joanascar#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.1"/>
+    <level_SCAR href="scar.joanascar#//@levels.1"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.0"/>
+    <level_SCAR href="scar.joanascar#//@levels.0"/>
+  </levelCorrespondences>
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.1"/>
+    <level_SCAR href="scar.joanascar#//@levels.1"/>
+  </levelCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.0"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.1"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.1"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.2"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.2/@parameter.0"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.3"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.1"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.4"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.2/@parameter.1"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.5"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.6"/>
+  </systemElementCorrespondences>
+  <systemElementCorrespondences xsi:type="joanascarcorrespondences:ParameterCorrespondence">
+    <parameter_JAVA href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.7"/>
+  </systemElementCorrespondences>
+</joanascarcorrespondences:JOANASCARCorrespondences>

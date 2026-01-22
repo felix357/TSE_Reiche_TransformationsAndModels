@@ -15,6 +15,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * IC7(T)(M) checker checks if Configurations exist in the Source Code Analysis
  * Result corresponding to Configurations of the Annotated Source Code affected
@@ -22,6 +24,8 @@ import org.xml.sax.InputSource;
  */
 public class IC7MChecker implements IChecker {
 
+	private final AnalysisCouplingType analysisType;
+	
 	private final IC2MChecker ic2;
 	private final String correspondencesPath;
 	private final String scarPath;
@@ -30,9 +34,11 @@ public class IC7MChecker implements IChecker {
 	public IC7MChecker(SystemConfig cfg, IC2MChecker ic2MChecker) {
 		this.ic2 = ic2MChecker;
 
-		this.correspondencesPath = cfg.basePath + File.separator + cfg.correspondencesCodeqlScar;
+		this.correspondencesPath = cfg.basePath + File.separator + cfg.correspondencesSCScar;
 
 		this.scarPath = cfg.basePath + File.separator + cfg.scScarModel;
+		
+		this.analysisType = cfg.analysisCouplingType;
 	}
 
 	@Override
@@ -45,39 +51,44 @@ public class IC7MChecker implements IChecker {
 				return false;
 			}
 
-			Map<String, String> codeqlToScar = loadConfigurationCorrespondences();
-			if (codeqlToScar.isEmpty()) {
+			Map<String, String> scToScar = loadConfigurationCorrespondences();
+			if (scToScar.isEmpty()) {
 				System.out.println("IC7: Keine <configurationCorrespondences> in der Correspondence-Datei gefunden.");
 				return false;
 			}
 
 			boolean anyFound = false;
 
-			for (String codeqlHref : cfgCsC) {
-				if (codeqlHref == null || codeqlHref.trim().isEmpty()) {
+			for (String scHref : cfgCsC) {
+				if (scHref == null || scHref.trim().isEmpty()) {
 					System.out.println("IC7: Ignoriere leere CodeQL-Konfigurationsreferenz.");
 					continue;
 				}
 
-				// Find SCAR href via correspondences
-				if (!codeqlToScar.containsKey(codeqlHref)) {
+				if (!scToScar.containsKey(scHref)) {
 					System.out.println(
-							"IC7 Warnung: Keine SCAR-Korrespondenz für CodeQL-Konfiguration gefunden: " + codeqlHref);
+							"IC7 Warnung: Keine SCAR-Korrespondenz für CodeQL-Konfiguration gefunden: " + scHref);
 					continue;
 				}
 
-				String scarHref = codeqlToScar.get(codeqlHref);
+				String scarHref = scToScar.get(scHref);
 				if (scarHref == null || scarHref.trim().isEmpty()) {
-					System.out.println("IC7 Warnung: SCAR href leer für codeql href: " + codeqlHref);
+					System.out.println("IC7 Warnung: SCAR href leer für codeql href: " + scHref);
 					continue;
 				}
 
 				// Resolve SCAR href in scar.file
-				String scarResolvedId = ic2.resolveCodeqlReference(scarHref, "scar.codeqlscar", scarPath);
+				String scarResolvedId;
+				if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {					
+					scarResolvedId = ic2.resolveSCReference(scarHref, "scar.codeqlscar", scarPath);
+				} else {
+					scarResolvedId = ic2.resolveSCReference(scarHref, "scar.joanascar", scarPath);
+				}
+				
 				if (scarResolvedId != null) {
 					anyFound = true;
 					foundCfgR.add(scarResolvedId);
-					System.out.println("IC7 Mapping gefunden: CodeQL href = '" + codeqlHref + "' ↔ SCAR id = '"
+					System.out.println("IC7 Mapping gefunden: CodeQL href = '" + scHref + "' ↔ SCAR id = '"
 							+ scarResolvedId + "'");
 				} else {
 					System.out.println("IC7 Fehler: SCAR-Konfiguration '" + scarHref + "' konnte in '" + scarPath
@@ -115,12 +126,25 @@ public class IC7MChecker implements IChecker {
 		dbf.setNamespaceAware(true);
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document doc = db.parse(new InputSource(new FileInputStream(f)));
+		
+		String configCorrespondence = "entryPointCorrespondences";
+		String scConfig;
+		String scarConfig;
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			configCorrespondence = "configurationCorrespondences";
+			scConfig = "configuration_CodeQL";
+			scarConfig = "configuration_SCAR";
+		} else {
+			configCorrespondence = "entryPointCorrespondences";
+			scConfig = "entryPoint_JOANA";
+			scarConfig = "entryPoint_SCAR";
+		}
 
-		NodeList cfgNodes = doc.getElementsByTagName("configurationCorrespondences");
+		NodeList cfgNodes = doc.getElementsByTagName(configCorrespondence);
 		for (int i = 0; i < cfgNodes.getLength(); i++) {
 			Element corr = (Element) cfgNodes.item(i);
-			String codeqlHref = getHref(corr, "configuration_CodeQL");
-			String scarHref = getHref(corr, "configuration_SCAR");
+			String codeqlHref = getHref(corr, scConfig);
+			String scarHref = getHref(corr, scarConfig);
 			if (codeqlHref != null && scarHref != null) {
 				map.put(codeqlHref, scarHref);
 			}
