@@ -11,6 +11,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * Checker for IC9(T)(I): Check if all RIV instances reference security
  * characteristics that have a valid correspondence to source code security
@@ -18,6 +20,8 @@ import org.xml.sax.InputSource;
  */
 public class IC9IChecker implements IChecker {
 
+	private final AnalysisCouplingType analysisType;
+	
 	private final String rivModelPath;
 	private final IC1IChecker ic1Checker;
 	private final Set<String> invalidRIVs = new HashSet<>();
@@ -25,6 +29,7 @@ public class IC9IChecker implements IChecker {
 	public IC9IChecker(SystemConfig cfg, IC1IChecker ic1Checker) {
 		this.rivModelPath = cfg.basePath + "/" + cfg.riv;
 		this.ic1Checker = ic1Checker;
+		this.analysisType = cfg.analysisCouplingType;
 	}
 
 	@Override
@@ -43,24 +48,32 @@ public class IC9IChecker implements IChecker {
 			dbf.setNamespaceAware(true);
 			DocumentBuilder db = dbf.newDocumentBuilder();
 			Document doc = db.parse(new InputSource(new FileInputStream(file)));
+			
+			String secLevel;
+			String resLevel;
+			if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+				secLevel = "securityLevel";
+				resLevel = "resultingSecurityLevel";
+			} else {
+				secLevel = "levels";
+				resLevel = "level";
+			}
 
-			// Map RIV security level IDs to names
 			Map<String, String> rivSecIdToName = new HashMap<>();
-			NodeList secNodes = doc.getElementsByTagName("securityLevel");
+			NodeList secNodes = doc.getElementsByTagName(secLevel);
 			for (int i = 0; i < secNodes.getLength(); i++) {
 				Element sec = (Element) secNodes.item(i);
-				String id = "//@securityLevel." + i;
+				String id = "//@" + secLevel + "." + i;
 				String name = sec.getAttribute("name");
 				rivSecIdToName.put(id, name);
 			}
 
-			// Iterate over RIV entries
 			NodeList rivNodes = doc.getElementsByTagName("resultingValues");
 			Set<String> mappedSecurityLevels = new HashSet<>();
 
 			for (int i = 0; i < rivNodes.getLength(); i++) {
 				Element riv = (Element) rivNodes.item(i);
-				String rivSecLevelRef = riv.getAttribute("resultingSecurityLevel"); // e.g., //@securityLevel.0
+				String rivSecLevelRef = riv.getAttribute(resLevel);
 				String secLevelName = rivSecIdToName.get(rivSecLevelRef);
 
 				if (secLevelName == null) {
@@ -74,7 +87,6 @@ public class IC9IChecker implements IChecker {
 
 				for (String level : levels) {
 					level = level.trim();
-					// Check correspondence to IC1 mappings
 					boolean hasMapping = ic1Checker.getSourceRivMap().values().stream()
 							.anyMatch(rivHref -> rivHref.endsWith(rivSecLevelRef));
 					System.out.println(ic1Checker.getRivValuesMap().values());
@@ -90,21 +102,19 @@ public class IC9IChecker implements IChecker {
 					invalidRIVs.add("RIV index " + i + " contains security levels with no valid correspondence: "
 							+ secLevelName);
 				} else {
-					anyMapped = true; // At least one RIV security level mapped => IC9.1
+					anyMapped = true;
 				}
 			}
 
-			// IC9.1(T)(I) check
 			if (!anyMapped) {
 				allValid = false;
 				System.out.println("IC9.1(T)(I) violated: No RIV references a valid security characteristic.");
 			}
 
-			// Output results
 			if (allValid) {
-				System.out.println("IC9(T)(I) satisfied ✅ — all RIVs reference valid security characteristics.");
+				System.out.println("IC9(T)(I) satisfied. All RIVs reference valid security characteristics.");
 			} else {
-				System.out.println("IC9(T)(I) NOT satisfied ❌ — invalid RIVs found:");
+				System.out.println("IC9(T)(I) NOT satisfied. Invalid RIVs found:");
 				invalidRIVs.forEach(System.out::println);
 			}
 
