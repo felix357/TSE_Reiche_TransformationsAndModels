@@ -13,6 +13,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * IC8(C)(I) Checker:
  * Checks if all instances of ResolvedImplementationValues (RIVs) in the
@@ -21,6 +23,8 @@ import org.xml.sax.InputSource;
  */
 public class IC8IChecker implements IChecker {
 
+	private final AnalysisCouplingType analysisCouplingType;
+	
     private final String rivModelPath;
     private final IC5IandMChecker ic5Checker;
     private final IC7IChecker ic7Checker;
@@ -31,6 +35,7 @@ public class IC8IChecker implements IChecker {
         this.rivModelPath = cfg.basePath + File.separator + cfg.riv;
         this.ic5Checker = ic5Checker;
         this.ic7Checker = ic7Checker;
+        this.analysisCouplingType = cfg.analysisCouplingType;
     }
 
     @Override
@@ -51,11 +56,9 @@ public class IC8IChecker implements IChecker {
 
             boolean allValid = true;
 
-            // Retrieve valid instance sets from IC5 and IC7
             Set<String> validSystemElementInstances = ic5Checker.getMappedSystemElementsR();
             Set<String> validConfigurationInstances = ic7Checker.getFoundResultingValueInstances();
 
-            // IC8.1(T)(I) & IC8.2(T)(I) existential checks
             if (validSystemElementInstances.isEmpty()) {
                 System.out.println("IC8.1(T)(I) violated: No valid system element instances found.");
             }
@@ -65,16 +68,24 @@ public class IC8IChecker implements IChecker {
 
             for (int i = 0; i < rivNodes.getLength(); i++) {
                 Element riv = (Element) rivNodes.item(i);
+                
+				String sysElem;
+				String cfg;
+				if (this.analysisCouplingType == AnalysisCouplingType.CODEQLEDFA) {
+					sysElem = "parameter";
+					cfg = "ruleId";
+				} else {
+					sysElem = "systemElement";
+					cfg = "configuration";
+				}
 
-                String sysElemInstance = riv.getAttribute("parameter");
-                String cfgInstance = riv.getAttribute("ruleId");
+                String sysElemInstance = riv.getAttribute(sysElem);
+                String cfgInstance = riv.getAttribute(cfg);
 
-                // IC8.3(C)(I): Match system element fragment to valid system elements
                 boolean systemElementValid = validSystemElementInstances.stream()
                         .anyMatch(fullHref -> fullHref.endsWith(
                                 sysElemInstance.replace("@systemElementIdentifications", "@systemElements")));
 
-                // Configuration validity
                 boolean configurationValid = validConfigurationInstances.contains(cfgInstance);
 
                 if (!systemElementValid || !configurationValid) {
@@ -87,10 +98,10 @@ public class IC8IChecker implements IChecker {
             }
 
             if (allValid) {
-                System.out.println("IC8(C)(I) satisfied ✅ — all RIVs reference valid system element and configuration instances.");
+                System.out.println("IC8(C)(I) satisfied. All RIVs reference valid system element and configuration instances.");
                 return true;
             } else {
-                System.out.println("IC8(C)(I) NOT satisfied ❌ — invalid RIVs found:");
+                System.out.println("IC8(C)(I) NOT satisfied. Invalid RIVs found:");
                 invalidRIVs.forEach(System.out::println);
                 return false;
             }

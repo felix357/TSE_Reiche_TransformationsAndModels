@@ -155,8 +155,6 @@ public class IC2IChecker implements IChecker {
 
 			String cfgEDFAHref = ConformanceUtils.getAttributeFromElement(corr, "configuration_EDFA", "href");
 
-			System.out.println(cfgEDFAHref);
-
 			if (cfgHref != null && cfgEDFAHref.endsWith(relevantConfigUriSuffix)) {
 				configurationsFromIC2.add(cfgHref);
 				found = true;
