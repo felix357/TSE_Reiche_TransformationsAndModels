@@ -15,6 +15,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
+import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
+
 /**
  * IC10IChecker checks if security characteristics in Resolved Implementation
  * Values (RIVs) are correctly referenced in corresponding configurations in the
@@ -26,14 +28,14 @@ public class IC10IChecker implements IChecker {
 	private final String correspondencesPath;
 	private final String codeqlPath;
 	private final String scarPath;
-	
+
 	private final IC8IChecker ic8Checker;
 	private final IC9IChecker ic9Checker;
 
 	private final Set<String> invalidRIVs = new HashSet<>();
 
-	private Map<String, String> rivSecToCodeqlSec = new HashMap<>();
-	private Map<String, String> rivParamToCodeqlParam = new HashMap<>(); // Beibehalten für Initial Mapping Check
+	private Map<String, Set<String>> rivSecToCodeqlSec = new HashMap<>();
+	private Map<String, String> rivParamToCodeqlParam = new HashMap<>();
 	private Map<String, String> rivCfgToScarCfg = new HashMap<>();
 	private Map<String, String> scarCfgToCodeqlCfg = new HashMap<>();
 
@@ -41,14 +43,23 @@ public class IC10IChecker implements IChecker {
 	private Document rDoc;
 	private Document codeqlDoc;
 
+	private final AnalysisCouplingType analysisType;
+
 	public IC10IChecker(SystemConfig cfg, IC8IChecker ic8Checker, IC9IChecker ic9Checker) {
 		this.rivPath = cfg.basePath + File.separator + cfg.riv;
 		this.correspondencesPath = cfg.basePath + File.separator + cfg.rivCorrespondence;
 		this.codeqlPath = cfg.basePath + File.separator + cfg.sourceCodeAnalysis;
-		this.scarPath = cfg.basePath + File.separator + "scar.codeqlscar";
 
 		this.ic8Checker = ic8Checker;
 		this.ic9Checker = ic9Checker;
+
+		this.analysisType = cfg.analysisCouplingType;
+		
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			this.scarPath = cfg.basePath + File.separator + "scar.codeqlscar";
+		} else {
+			this.scarPath = cfg.basePath + File.separator + "scar.joanascar";
+		}
 	}
 
 	@Override
@@ -72,39 +83,69 @@ public class IC10IChecker implements IChecker {
 						|| ic9Checker.getInvalidRIVs().contains("RIV index " + i)) {
 					continue;
 				}
+				
+				String resLVL;
+				String cfg;
+				String sysElem;
+				if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+					resLVL = "resultingSecurityLevel";
+					cfg = "ruleId";
+					sysElem = "parameter";
+				} else {
+					resLVL = "level";
+					cfg = "configuration";
+					sysElem = "systemElement";
+				}
 
 				Element riv = (Element) rivNodes.item(i);
-				String secRef = riv.getAttribute("resultingSecurityLevel");
-				String cfgRef = riv.getAttribute("ruleId");
-				String paramRef = riv.getAttribute("parameter");
+				String secRef = riv.getAttribute(resLVL);
+				String cfgRef = riv.getAttribute(cfg);
+				String paramRef = riv.getAttribute(sysElem);
 
-				String mappedCodeqlSec = rivSecToCodeqlSec.get(secRef);
+				Set<String> mappedCodeqlSecs = rivSecToCodeqlSec.get(secRef);
 				String scarCfgFrag = rivCfgToScarCfg.get(cfgRef);
 				String mappedCodeqlCfg = scarCfgToCodeqlCfg.get(scarCfgFrag);
 				String mappedCodeqlParam = rivParamToCodeqlParam.get(paramRef);
 
-				if (mappedCodeqlSec == null || mappedCodeqlCfg == null || mappedCodeqlParam == null) {
+				if (mappedCodeqlSecs == null || mappedCodeqlCfg == null || mappedCodeqlParam == null) {
 					allValid = false;
-					invalidRIVs.add("RIV index " + i + " mapping missing: cfg=" + cfgRef + ", sec=" + secRef
-							+ ", param=" + paramRef);
+					invalidRIVs.add(
+						"RIV index " + i + " mapping missing: cfg=" + cfgRef +
+						", sec=" + secRef + ", param=" + paramRef
+					);
 					continue;
 				}
 
 				boolean found = false;
+				
+				String queries;
+				String annotation;
+				String lvl;
 
-				NodeList queryNodes = codeqlDoc.getElementsByTagName("queries");
+				if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+					queries = "queries";
+					annotation = "securityLevelAnnotations";
+					lvl = "securityLevel";
+				} else {
+					queries = "entrypoint";
+					annotation = "annotation";
+					lvl = "level";
+				}
+
+				NodeList queryNodes = codeqlDoc.getElementsByTagName(queries);
 				for (int q = 0; q < queryNodes.getLength(); q++) {
 					Element query = (Element) queryNodes.item(q);
 					String queryId = query.getAttribute("id");
+
 					if (!mappedCodeqlCfg.equals(queryId))
 						continue;
 
-					NodeList annotations = query.getElementsByTagName("securityLevelAnnotations");
+					NodeList annotations = query.getElementsByTagName(annotation);
 					for (int j = 0; j < annotations.getLength(); j++) {
 						Element ann = (Element) annotations.item(j);
-						String annSec = ann.getAttribute("securityLevel");
+						String annSec = ann.getAttribute(lvl);
 
-						if (!mappedCodeqlSec.equals(annSec))
+						if (!mappedCodeqlSecs.contains(annSec))
 							continue;
 
 						found = true;
@@ -116,16 +157,19 @@ public class IC10IChecker implements IChecker {
 
 				if (!found) {
 					allValid = false;
-					invalidRIVs.add("RIV index " + i + " violates IC10(C)(I): security characteristic " + secRef
-							+ " not referenced in configuration " + cfgRef);
+					invalidRIVs.add(
+						"RIV index " + i + " violates IC10(C)(I): security characteristic " +
+						secRef + " not referenced in configuration " + cfgRef
+					);
 				}
 			}
 
 			if (allValid) {
 				System.out.println(
-						"IC10(C)(I) satisfied ✅ — all RIVs reference security characteristics inside correct configurations.");
+					"IC10(C)(I) satisfied. All RIVs reference security characteristics inside correct configurations."
+				);
 			} else {
-				System.out.println("IC10(C)(I) NOT satisfied ❌ — violations found:");
+				System.out.println("IC10(C)(I) NOT satisfied. Violations found:");
 				invalidRIVs.forEach(System.out::println);
 			}
 
@@ -138,15 +182,37 @@ public class IC10IChecker implements IChecker {
 	}
 
 	private void loadSecurityLevelCorrespondences(Document corrDoc) {
-		NodeList nodes = corrDoc.getElementsByTagName("securityLevelCorrespondences");
+		
+		String levelCorr;
+		String lRiv;
+		String secLvl;
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			levelCorr = "securityLevelCorrespondences";
+			lRiv = "securityLevel_ResolvedImplementationValues";
+			secLvl = "securityLevel_CodeQL";
+		} else {
+			levelCorr = "levelCorrespondences";
+			lRiv = "level_ResolvedImplementationValues";
+			secLvl = "level_JOANA";
+		}
+		
+		NodeList nodes = corrDoc.getElementsByTagName(levelCorr);
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Element corr = (Element) nodes.item(i);
-			String rivHref = ((Element) corr.getElementsByTagName("securityLevel_ResolvedImplementationValues").item(0))
+
+			String rivHref =
+				((Element) corr.getElementsByTagName(lRiv).item(0))
 					.getAttribute("href");
-			String codeqlHref = ((Element) corr.getElementsByTagName("securityLevel_CodeQL").item(0))
+			String codeqlHref =
+				((Element) corr.getElementsByTagName(secLvl).item(0))
 					.getAttribute("href");
-			rivSecToCodeqlSec.put(rivHref.substring(rivHref.indexOf("#") + 1),
-					codeqlHref.substring(codeqlHref.indexOf("#") + 1));
+
+			String rivKey = rivHref.substring(rivHref.indexOf("#") + 1);
+			String codeqlVal = codeqlHref.substring(codeqlHref.indexOf("#") + 1);
+
+			rivSecToCodeqlSec
+				.computeIfAbsent(rivKey, k -> new HashSet<>())
+				.add(codeqlVal);
 		}
 	}
 
@@ -154,21 +220,43 @@ public class IC10IChecker implements IChecker {
 		NodeList nodes = corrDoc.getElementsByTagName("parameterCorrespondences");
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Element corr = (Element) nodes.item(i);
-			String rivParam = ((Element) corr.getElementsByTagName("parameter_ResolvedImplementationValues").item(0))
+			String rivParam =
+				((Element) corr.getElementsByTagName("parameter_ResolvedImplementationValues").item(0))
 					.getAttribute("href");
-			String codeqlParam = ((Element) corr.getElementsByTagName("parameter_SCAR").item(0)).getAttribute("href");
-			rivParamToCodeqlParam.put(rivParam.substring(rivParam.indexOf("#") + 1),
-					codeqlParam.substring(codeqlParam.indexOf("#") + 1));
+			String codeqlParam =
+				((Element) corr.getElementsByTagName("parameter_SCAR").item(0))
+					.getAttribute("href");
+
+			rivParamToCodeqlParam.put(
+				rivParam.substring(rivParam.indexOf("#") + 1),
+				codeqlParam.substring(codeqlParam.indexOf("#") + 1)
+			);
 		}
 	}
 
 	private void loadConfigurationCorrespondences(Document corrDoc, Document scarDoc) {
-		NodeList nodes = corrDoc.getElementsByTagName("configurationCorrespondences");
+		
+		String cfgCorr;
+		String cfgRiv;
+		String cfgScar;
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			cfgCorr = "configurationCorrespondences";
+			cfgRiv = "configuration_ResultingValues";
+			cfgScar = "configuration_SCAR";
+		} else {
+			cfgCorr = "entryPointCorrespondences";
+			cfgRiv = "entryPoint_ResolvedImplementationValues";
+			cfgScar = "entryPoint_SCAR";
+		}
+		
+		NodeList nodes = corrDoc.getElementsByTagName(cfgCorr);
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Element corr = (Element) nodes.item(i);
-			String rivCfgHref = ((Element) corr.getElementsByTagName("configuration_ResultingValues").item(0))
+			String rivCfgHref =
+				((Element) corr.getElementsByTagName(cfgRiv).item(0))
 					.getAttribute("href");
-			String scarCfgHref = ((Element) corr.getElementsByTagName("configuration_SCAR").item(0))
+			String scarCfgHref =
+				((Element) corr.getElementsByTagName(cfgScar).item(0))
 					.getAttribute("href");
 
 			String rivCfgFrag = rivCfgHref.substring(rivCfgHref.indexOf("#") + 1);
@@ -182,10 +270,21 @@ public class IC10IChecker implements IChecker {
 	}
 
 	private String findCodeqlIdInScar(Document scarDoc, String scarFrag) {
-		if (!scarFrag.startsWith("//@ruleIds"))
+		
+		String rules;
+		String id;
+		if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {
+			rules = "ruleIds";
+			id = "id";
+		} else {
+			rules = "entryPoints";
+			id = "tag";
+		}
+		
+		if (!scarFrag.startsWith("//@" + rules))
 			return null;
 
-		int idx = 0;
+		int idx;
 		try {
 			String idxStr = scarFrag.substring(scarFrag.lastIndexOf('.') + 1);
 			idx = Integer.parseInt(idxStr);
@@ -193,12 +292,12 @@ public class IC10IChecker implements IChecker {
 			return null;
 		}
 
-		NodeList ruleIds = scarDoc.getElementsByTagName("ruleIds");
+		NodeList ruleIds = scarDoc.getElementsByTagName(rules);
 		if (idx < 0 || idx >= ruleIds.getLength())
 			return null;
 
 		Element rule = (Element) ruleIds.item(idx);
-		return rule.getAttribute("id");
+		return rule.getAttribute(id);
 	}
 
 	private Document parse(String path) throws Exception {
