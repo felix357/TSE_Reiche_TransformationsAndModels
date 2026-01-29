@@ -1008,6 +1008,134 @@ public class JPMailJOANAEDFAPropagationEvaluation {
 		assertNotEquals(affectedSet, impactSet);
 	}
 
+	// Tests Case 1 for ReferenceMetamodelMapping uncertainty propagation
+	// evaluation:
+	// Incomplete Reference-Class Mapping
+	@Test
+	public void graphWithCompleteReferenceMetamodelMappingTest() throws Exception {
+		// Case 1: All Reference-Class Mappings valid (edfaInputConforms,
+		// joanaInputConforms and joanaOutputConforms are true)
+		// first case mapping valid -> Uncertainty Scenario: correct input data
+		ResourceSet resSet = createResourceSet();
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
+		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
+		MappingDefinition joanaInputMapping = joanaReq.getMappingModel();
+
+		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
+
+		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
+
+		EcoreUtil.resolveAll(resSet);
+
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
+
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
+
+		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
+				inputRefMeta);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
+				.build();
+
+		annotator.annotateInterface(edfaReq, true);
+
+		UncertaintyAnnotator annotatorJoanaInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoanaInput.annotateInterface(joanaReq, true);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		List<String> expectedImpactSet = List.of("JOANA: IMPRECISE_INPUT_DATA", "JOANA: CORRECT_INPUT_DATA",
+				"JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("JOANA: CORRECT_INPUT_DATA", "JOANA: OUTPUT_CORRECT",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for ReferenceMetamodelMapping uncertainty propagation
+	// evaluation:
+	// Incomplete Reference-Class Mapping
+	@Test
+	public void graphWithIncompleteReferenceMetamodelMappingJoanaOutputMapping() throws Exception {
+		// Case 2: Joana input incomplete mapping to reference metamodel.
+		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
+		// interface
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
+		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
+
+		ResourceSet resSet = createResourceSet();
+
+		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
+
+		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
+
+		String joanaMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping_incomplete.xmi";
+		MappingDefinition joanaInputMapping = loadMapping(resSet, joanaMappingPath);
+
+		EcoreUtil.resolveAll(resSet);
+
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
+
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
+
+		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
+				inputRefMeta);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
+				.build();
+
+		annotator.annotateInterface(edfaReq, true);
+
+		UncertaintyAnnotator annotatorJoanaInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoanaInput.annotateInterface(joanaReq, true);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("JOANA: IMPRECISE_INPUT_DATA",
+				"JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_ERROR",
+				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_ERROR",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
 	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
 	// methodology-induced uncertainty in Source Code Analysis
 	@Test
@@ -1632,134 +1760,6 @@ public class JPMailJOANAEDFAPropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
 				"EDFA output: ORCHESTRATION_NOT_FINAL");
 		assertEquals(affectedSet, impactSet);
-	}
-
-	// Tests Case 1 for ReferenceMetamodelMapping uncertainty propagation
-	// evaluation:
-	// Incomplete Reference-Class Mapping
-	@Test
-	public void graphWithCompleteReferenceMetamodelMappingTest() throws Exception {
-		// Case 1: All Reference-Class Mappings valid (edfaInputConforms,
-		// joanaInputConforms and joanaOutputConforms are true)
-		// first case mapping valid -> Uncertainty Scenario: correct input data
-		ResourceSet resSet = createResourceSet();
-
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
-		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
-		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
-		MappingDefinition joanaInputMapping = joanaReq.getMappingModel();
-
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-
-		EcoreUtil.resolveAll(resSet);
-
-		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
-
-		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
-
-		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
-				inputRefMeta);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
-				.build();
-
-		annotator.annotateInterface(edfaReq, true);
-
-		UncertaintyAnnotator annotatorJoanaInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
-		annotatorJoanaInput.annotateInterface(joanaReq, true);
-
-		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
-
-		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
-				.toList();
-		List<String> expectedImpactSet = List.of("JOANA: IMPRECISE_INPUT_DATA", "JOANA: CORRECT_INPUT_DATA",
-				"JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
-
-		assertEquals(expectedImpactSet, impactSet);
-
-		List<String> affectedSet = List.of("JOANA: CORRECT_INPUT_DATA", "JOANA: OUTPUT_CORRECT",
-				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
-		assertNotEquals(affectedSet, impactSet);
-	}
-
-	// Tests Case 2 for ReferenceMetamodelMapping uncertainty propagation
-	// evaluation:
-	// Incomplete Reference-Class Mapping
-	@Test
-	public void graphWithIncompleteReferenceMetamodelMappingJoanaOutputMapping() throws Exception {
-		// Case 2: Joana input incomplete mapping to reference metamodel.
-		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
-		// interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
-		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
-		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
-
-		ResourceSet resSet = createResourceSet();
-
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-
-		String joanaMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping_incomplete.xmi";
-		MappingDefinition joanaInputMapping = loadMapping(resSet, joanaMappingPath);
-
-		EcoreUtil.resolveAll(resSet);
-
-		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
-
-		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
-
-		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
-				inputRefMeta);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
-				.build();
-
-		annotator.annotateInterface(edfaReq, true);
-
-		UncertaintyAnnotator annotatorJoanaInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
-		annotatorJoanaInput.annotateInterface(joanaReq, true);
-
-		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
-
-		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
-				.toList();
-
-		List<String> expectedImpactSet = List.of("JOANA: IMPRECISE_INPUT_DATA",
-				"JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_ERROR",
-				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
-				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
-
-		assertEquals(expectedImpactSet, impactSet);
-
-		List<String> affectedSet = List.of("JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_ERROR",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
-		assertNotEquals(affectedSet, impactSet);
 	}
 
 	public AnalysisGraph buildAnalysisGraph(AnalysisType sourceCodeAnalysis, AnalysisType architecturalAnalysis)

@@ -287,6 +287,49 @@ public class UncertaintyAnnotator {
 
 		req.getUncertaintyLabel().add(label);
 	}
+	
+//	/**
+//	 * Assigns an uncertainty label based on IC1 check results.
+//	 */
+//	private void assignUncertaintyLabel(RequiredInterface req, boolean ic1Result, boolean ic2Result, boolean ic3Result,
+//			boolean ic4Result, boolean ic5Result, boolean ic6Result, boolean ic7Result, boolean ic8Result,
+//			boolean ic9Result, boolean ic10Result, boolean referenceMetamodelConformance, boolean addImpreciseLabel) {
+//		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+//		label.setSource(UncertaintySource.INPUT_DATA_INDUCED);
+//
+//		if (!ic1Result || !ic2Result || !ic3Result || !ic4Result || !ic5Result || !ic6Result || !ic7Result || !ic8Result
+//				|| !ic9Result || !referenceMetamodelConformance) {
+//			// At least one checker failed → Non-conformance to input interface
+//			label.setUncertaintyScenario(UncertaintyScenario.NON_CONFORMANCE_TO_INPUT_INTERFACE);
+//			label.setSeverity(SeverityOfImpact.HIGH);
+//
+//			UncertaintyLabel label2 = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+//			label2.setSource(UncertaintySource.INPUT_DATA_INDUCED);
+//			label2.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_NOT_FINAL);
+//			req.getUncertaintyLabel().add(label2);
+//			
+//		} else {
+//			// All checks succeeded → correct input data
+//			label.setUncertaintyScenario(UncertaintyScenario.CORRECT_INPUT_DATA);
+//			label.setSeverity(SeverityOfImpact.NONE);
+//			
+//			UncertaintyLabel label2 = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+//			label2.setSource(UncertaintySource.INPUT_DATA_INDUCED);
+//			label2.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_FINAL);
+//			req.getUncertaintyLabel().add(label2);
+//		}
+//
+//		if (addImpreciseLabel) {			
+//			// Uncertainty scenarios that we cannot eliminate
+//			UncertaintyLabel impreciseLabel = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+//			impreciseLabel.setSource(UncertaintySource.INPUT_DATA_INDUCED);
+//			impreciseLabel.setUncertaintyScenario(UncertaintyScenario.IMPRECISE_INPUT_DATA);
+//			impreciseLabel.setSeverity(SeverityOfImpact.LOW);
+//			req.getUncertaintyLabel().add(impreciseLabel);
+//		}
+//
+//		req.getUncertaintyLabel().add(label);
+//	}
 
 	private void assignUncertaintyLabel(AnalysisComponent analysisComponent, UncertaintySource uncertaitySource) {
 		// since we can not reduce the uncertainty scenarios we have to apply all

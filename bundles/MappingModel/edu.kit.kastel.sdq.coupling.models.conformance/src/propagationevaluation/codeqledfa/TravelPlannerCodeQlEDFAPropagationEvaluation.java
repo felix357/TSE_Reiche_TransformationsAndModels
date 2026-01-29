@@ -37,12 +37,12 @@ import uncertainty.UncertaintySource;
 
 /**
  * Evaluates the accuracy of uncertainty propagation in coupled model-based
- * analyses for the TravelPlanner System with a particular focus on the
- * coupling between CodeQL and EDFA.
+ * analyses for the TravelPlanner System with a particular focus on the coupling
+ * between CodeQL and EDFA.
  * 
- * Specifically, it assesses whether the computed impact set
- * accurately reflects the uncertainties present in the affected set, measuring
- * both the precision and recall of the propagation results.
+ * Specifically, it assesses whether the computed impact set accurately reflects
+ * the uncertainties present in the affected set, measuring both the precision
+ * and recall of the propagation results.
  * 
  * The evaluation is based on representative example uncertainties identified
  * for the TravelPlanner system, as documented in the results of the uncertainty
@@ -905,9 +905,10 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 1 for (IC10) uncertainty propagation evaluation:
-	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	// (IC10) Uncertainty if links between security characteristics and
+	// configurations are missing or inconsistent.
 	@Test
 	public void graphWithIC10ValidInputDataTest() throws Exception {
 		// first case -> Uncertainty Scenario: correct input data
@@ -934,9 +935,10 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 2 for (IC10) uncertainty propagation evaluation:
-	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	// (IC10) Uncertainty if links between security characteristics and
+	// configurations are missing or inconsistent.
 	@Test
 	public void graphWithIC10InValidInputDataTest() throws Exception {
 		// second case -> Uncertainty Scenario: Non-conformance to input interface
@@ -944,7 +946,7 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
-		
+
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -965,9 +967,10 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 3 for (IC10) uncertainty propagation evaluation:
-	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	// (IC10) Uncertainty if links between security characteristics and
+	// configurations are missing or inconsistent.
 	@Test
 	public void graphWithIC10ImpreciseInputDataTest() throws Exception {
 		// third case -> Uncertainty Scenario: Imprecise to input data
@@ -975,7 +978,7 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
-		
+
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_ambiguity");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -994,6 +997,204 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 1 for ReferenceMetamodelMapping uncertainty propagation
+	// evaluation:
+	// Incomplete Reference-Class Mapping
+	@Test
+	public void graphWithCompleteReferenceMetamodelMappingTest() throws Exception {
+		// Case 1: All Reference-Class Mappings valid (edfaInputConforms,
+		// codeqlInputConforms and codeqlOutputConforms are true)
+		// first case mapping valid -> Uncertainty Scenario: correct input data
+		ResourceSet resSet = createResourceSet();
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
+		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
+
+		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
+
+		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
+
+		// Resolve proxies
+		EcoreUtil.resolveAll(resSet);
+
+		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+
+		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+
+		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
+				inputRefMeta);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.build();
+
+		annotator.annotateInterface(edfaReq, true);
+
+		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
+		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+		List<String> expectedImpactSet = List.of("CODEQL: IMPRECISE_INPUT_DATA", "CODEQL: CORRECT_INPUT_DATA",
+				"CODEQL: OUTPUT_IMPRECISION", "CODEQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 2 for ReferenceMetamodelMapping uncertainty propagation
+	// evaluation:
+	// Incomplete Reference-Class Mapping
+	@Test
+	public void graphWithIncompleteReferenceMetamodelMappingCodeQlInputTest() throws Exception {
+		// Case 2: CodeQL input incomplete mapping to reference metamodel.
+		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
+		// interface
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
+		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+
+		ResourceSet resSet = createResourceSet();
+
+		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
+
+		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
+
+		// Load mapping
+		String codeqlMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping_incomplete.xmi";
+		MappingDefinition codeqlInputMapping = loadMapping(resSet, codeqlMappingPath);
+
+		// Resolve proxies
+		EcoreUtil.resolveAll(resSet);
+
+		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+
+		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+
+		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
+				inputRefMeta);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.build();
+
+		annotator.annotateInterface(edfaReq, true);
+
+		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
+		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> expectedImpactSet = List.of("CODEQL: IMPRECISE_INPUT_DATA",
+				"CODEQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CODEQL: OUTPUT_IMPRECISION", "CODEQL: OUTPUT_ERROR",
+				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
+
+		assertEquals(expectedImpactSet, impactSet);
+
+		List<String> affectedSet = List.of("CodeQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CodeQL: OUTPUT_ERROR",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertNotEquals(affectedSet, impactSet);
+	}
+
+	// Tests Case 3 for ReferenceMetamodelMapping uncertainty propagation
+	// evaluation:
+	// Incomplete Reference-Class Mapping
+	@Test
+	public void graphWithIncompleteReferenceMetamodelMappingCodeQlOutputandEDFAInputTest() throws Exception {
+		// Case 3: CodeQL output and EDFA input have incomplete mapping to reference
+		// metamodel.
+		// third case mapping incomplete -> Uncertainty Scenario: Non-conformance to
+		// input interface
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
+		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
+
+		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
+
+		ResourceSet resSet = createResourceSet();
+
+		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
+
+		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
+
+		// Load changed mappings..
+		String codeqlOutputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlOutputMapping_Incomplete.xmi";
+		MappingDefinition codeqlOutputMapping = loadMapping(resSet, codeqlOutputMappingPath);
+
+		String edfaInputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/EDFAInputMapping_Incomplete.xmi";
+		MappingDefinition edfaInputMapping = loadMapping(resSet, edfaInputMappingPath);
+
+		// Resolve proxies
+		EcoreUtil.resolveAll(resSet);
+
+		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+
+		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+
+		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
+				inputRefMeta);
+
+		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.build();
+
+		annotator.annotateInterface(edfaReq, true);
+
+		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
+		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
+
+		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
+
+		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
+
+		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
+				.toList();
+
+		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
+				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
+		assertTrue(codeqlInputConforms);
+		assertFalse(codeqlOutputConforms);
+		assertFalse(edfaInputConforms);
 		assertNotEquals(affectedSet, impactSet);
 	}
 
@@ -1572,7 +1773,7 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+		annotator.annotateInterfaceWithOrchestrationUncertaitny(eDFAReq);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1581,14 +1782,12 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
-				"EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL",
-				"EDFA output: ORCHESTRATION_FINAL");
+		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_FINAL");
 
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_FINAL");
-		assertNotEquals(affectedSet, impactSet);
+		assertEquals(affectedSet, impactSet);
 	}
 
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
@@ -1604,9 +1803,12 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
+
+		cfg.overrideScScarModel("scar.codeqlscar_wrong_security_level");
+
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+		annotator.annotateInterfaceWithOrchestrationUncertaitny(eDFAReq);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1616,212 +1818,13 @@ public class TravelPlannerCodeQlEDFAPropagationEvaluation {
 				.toList();
 
 		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
-				"EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL",
-				"EDFA output: ORCHESTRATION_FINAL");
+				"EDFA output: ORCHESTRATION_NOT_FINAL");
 
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
 				"EDFA output: ORCHESTRATION_NOT_FINAL");
-		assertNotEquals(affectedSet, impactSet);
-	}
-
-	// Tests Case 1 for ReferenceMetamodelMapping uncertainty propagation
-	// evaluation:
-	// Incomplete Reference-Class Mapping
-	@Test
-	public void graphWithCompleteReferenceMetamodelMappingTest() throws Exception {
-		// Case 1: All Reference-Class Mappings valid (edfaInputConforms,
-		// codeqlInputConforms and codeqlOutputConforms are true)
-		// first case mapping valid -> Uncertainty Scenario: correct input data
-		ResourceSet resSet = createResourceSet();
-
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
-		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
-
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-
-		// Resolve proxies
-		EcoreUtil.resolveAll(resSet);
-
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
-
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
-
-		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
-				inputRefMeta);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
-				.build();
-
-		annotator.annotateInterface(edfaReq, true);
-
-		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
-
-		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
-
-		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
-				.toList();
-		List<String> expectedImpactSet = List.of("CODEQL: IMPRECISE_INPUT_DATA", "CODEQL: CORRECT_INPUT_DATA",
-				"CODEQL: OUTPUT_IMPRECISION", "CODEQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
-
-		assertEquals(expectedImpactSet, impactSet);
-
-		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
-				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
-		assertNotEquals(affectedSet, impactSet);
-	}
-
-	// Tests Case 2 for ReferenceMetamodelMapping uncertainty propagation
-	// evaluation:
-	// Incomplete Reference-Class Mapping
-	@Test
-	public void graphWithIncompleteReferenceMetamodelMappingCodeQlInputTest() throws Exception {
-		// Case 2: CodeQL input incomplete mapping to reference metamodel.
-		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
-		// interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
-		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
-
-		ResourceSet resSet = createResourceSet();
-
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-
-		// Load mapping
-		String codeqlMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping_incomplete.xmi";
-		MappingDefinition codeqlInputMapping = loadMapping(resSet, codeqlMappingPath);
-
-		// Resolve proxies
-		EcoreUtil.resolveAll(resSet);
-
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
-
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
-
-		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
-				inputRefMeta);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
-				.build();
-
-		annotator.annotateInterface(edfaReq, true);
-
-		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
-
-		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
-
-		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
-				.toList();
-
-		List<String> expectedImpactSet = List.of("CODEQL: IMPRECISE_INPUT_DATA",
-				"CODEQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CODEQL: OUTPUT_IMPRECISION", "CODEQL: OUTPUT_ERROR",
-				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
-				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
-
-		assertEquals(expectedImpactSet, impactSet);
-
-		List<String> affectedSet = List.of("CodeQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CodeQL: OUTPUT_ERROR",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
-		assertNotEquals(affectedSet, impactSet);
-	}
-
-	// Tests Case 3 for ReferenceMetamodelMapping uncertainty propagation
-	// evaluation:
-	// Incomplete Reference-Class Mapping
-	@Test
-	public void graphWithIncompleteReferenceMetamodelMappingCodeQlOutputandEDFAInputTest() throws Exception {
-		// Case 3: CodeQL output and EDFA input have incomplete mapping to reference
-		// metamodel.
-		// third case mapping incomplete -> Uncertainty Scenario: Non-conformance to
-		// input interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
-
-		ResourceSet resSet = createResourceSet();
-
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-
-		// Load changed mappings..
-		String codeqlOutputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlOutputMapping_Incomplete.xmi";
-		MappingDefinition codeqlOutputMapping = loadMapping(resSet, codeqlOutputMappingPath);
-
-		String edfaInputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/EDFAInputMapping_Incomplete.xmi";
-		MappingDefinition edfaInputMapping = loadMapping(resSet, edfaInputMappingPath);
-
-		// Resolve proxies
-		EcoreUtil.resolveAll(resSet);
-
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
-
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
-
-		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
-				inputRefMeta);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
-				.build();
-
-		annotator.annotateInterface(edfaReq, true);
-
-		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
-
-		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
-
-		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
-				.toList();
-
-		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
-		assertTrue(codeqlInputConforms);
-		assertFalse(codeqlOutputConforms);
-		assertFalse(edfaInputConforms);
-		assertNotEquals(affectedSet, impactSet);
+		assertEquals(affectedSet, impactSet);
 	}
 
 	public AnalysisGraph buildAnalysisGraph(AnalysisType sourceCodeAnalysis, AnalysisType architecturalAnalysis)
