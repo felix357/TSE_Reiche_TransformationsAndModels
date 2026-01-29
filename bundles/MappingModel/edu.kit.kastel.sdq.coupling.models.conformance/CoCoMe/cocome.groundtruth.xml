@@ -6,40 +6,23 @@
 
   <!-- TRUE POSITIVE FLOWS -->
 
-  <allowedFlow
-      data="int"
-      fromComponent="Billing"
-      fromMethod="readCardNumber"
-      fromLevel="Bank;Customer"
-      toComponent="CashDesk"
-      toMethod="readCardNumber"
-      toLevel="ByStander;Cashier;Customer;StoreManager"/>
+<allowedFlow
+    data="int"
+    fromComponent="Billing"
+    fromMethod="readCardNumber"
+    fromLevel="Bank;Customer"
+    toComponent="CashDesk"
+    toMethod="readCardNumber"
+    toLevel="ByStander;Cashier;Customer;StoreManager"/>
 
-  <allowedFlow
-      data="int"
-      fromComponent="CardReader"
-      fromMethod="readCardNumber"
-      fromLevel="Bank;Customer"
-      toComponent="CashDesk"
-      toMethod="readCardNumber"
-      toLevel="ByStander;Cashier;Customer;StoreManager"/>
+<allowedFlow
+    data="int"
+    fromComponent="Billing"
+    fromMethod="readCardNumber"
+    fromLevel="Bank;Customer"
+    toComponent="Printer"
+    toMethod="printPaymentCard"
+    toLevel="ByStander;Cashier;Customer;StoreManager"/>
 
-  <allowedFlow
-      data="int"
-      fromComponent="Billing"
-      fromMethod="readCardNumber"
-      fromLevel="Bank;Customer"
-      toComponent="Printer"
-      toMethod="printPaymentCard"
-      toLevel="ByStander;Cashier;Customer;StoreManager"/>
-
-  <allowedFlow
-      data="int"
-      fromComponent="CardReader"
-      fromMethod="readCardNumber"
-      fromLevel="Bank;Customer"
-      toComponent="Printer"
-      toMethod="printPaymentCard"
-      toLevel="ByStander;Cashier;Customer;StoreManager"/>
 
 </groundTruth>

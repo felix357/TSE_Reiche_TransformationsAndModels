@@ -21,7 +21,7 @@ public class PrecisionCheckRunner {
 
 		
 		// 2. Parse the observed flows from the CodeQL SCAR file
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		// 3. Parse the ground truth flows

@@ -35,7 +35,7 @@ import propagation.AnalysisType;
 import propagation.RoundRobinUncertaintyController;
 import propagation.UncertaintyAnnotator;
 import propagation.UncertaintyAnnotatorBuilder;
-import sourcecodeanalysis.precision.evaluation.CodeQLScarParser;
+import sourcecodeanalysis.precision.evaluation.ScScarParser;
 import sourcecodeanalysis.precision.evaluation.GroundTruthFlow;
 import sourcecodeanalysis.precision.evaluation.GroundTruthParser;
 import sourcecodeanalysis.precision.evaluation.ObservedFlow;
@@ -88,7 +88,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -169,7 +169,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -250,7 +250,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -315,7 +315,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -395,7 +395,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -474,7 +474,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -540,7 +540,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -621,7 +621,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -701,7 +701,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -768,7 +768,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -850,7 +850,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -931,7 +931,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -997,7 +997,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1078,7 +1078,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1158,7 +1158,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1224,7 +1224,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1306,7 +1306,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1389,7 +1389,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1455,7 +1455,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1536,7 +1536,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1618,7 +1618,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1684,7 +1684,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1765,7 +1765,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1847,7 +1847,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1913,7 +1913,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -1994,7 +1994,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -2076,7 +2076,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -2142,7 +2142,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -2223,7 +2223,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -2303,7 +2303,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -2606,7 +2606,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/scar.codeqlscar_imprecision");
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();
@@ -3073,7 +3073,7 @@ public class CoCoMeCodeQlEDFAMitigationEvaluation {
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
 		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
-		CodeQLScarParser scarParser = new CodeQLScarParser();
+		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
 
 		GroundTruthParser gtParser = new GroundTruthParser();

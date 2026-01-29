@@ -1,4 +1,4 @@
-package mitigationevaluation.codeqledfa;
+package mitigationevaluation.joanaedfa;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -44,24 +44,24 @@ import uncertainty.UncertaintySource;
 
 /**
  * Evaluates the difference in uncertainty before and after mitigation in
- * coupled model-based analyses for the EclipseSecureStorage system, specifically for the
- * CODEQL–EDFA coupling.
+ * coupled model-based analyses for the JPMAIL system, specifically for
+ * the Joana–EDFA coupling.
  * 
  * This evaluation assesses the extent to which the set of accuracy-impacting
  * uncertainties after mitigation is reduced compared to the corresponding set
  * before mitigation.
  * 
  * The evaluation is based on representative example uncertainties for the
- * EclipseSecureStorage system, as documented in the results XML file of the uncertainty
- * mitigation assessment.
+ * JPMAIL system, as documented in the results XML file of the
+ * uncertainty mitigation assessment.
  */
-public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
+public class JPMAILJoanaEDFAMitigationEvaluation {
 
 	/**
 	 * Test Case 1 for (IC1) uncertainty mitigation evaluation.
 	 * 
 	 * (IC1) Concerns uncertainty in mapping security instances from source code
-	 * analysis (CODEQL) to RIV and architectural EDFA analysis.
+	 * analysis (Joana) to RIV and architectural EDFA analysis.
 	 * 
 	 * <p>
 	 * Scenario assumptions:
@@ -81,12 +81,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC1MappingValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -140,7 +140,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	 * Test Case 2 for (IC1) uncertainty mitigation evaluation.
 	 * 
 	 * (IC1) Concerns uncertainty in mapping security instances from source code
-	 * analysis (CODEQL) to RIV and architectural EDFA analysis.
+	 * analysis (Joana) to RIV and architectural EDFA analysis.
 	 * 
 	 * <p>
 	 * Scenario assumptions:
@@ -160,14 +160,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC1MappingInValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
+		cfg.overrideModelCorrespondence("correspondences.edfajoanacorrespondences_invalid_structure");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -222,7 +222,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	 * Test Case 3 for (IC1) uncertainty mitigation evaluation.
 	 * 
 	 * (IC1) Concerns uncertainty in mapping security instances from source code
-	 * analysis (CODEQL) to RIV and architectural EDFA analysis.
+	 * analysis (Joana) to RIV and architectural EDFA analysis.
 	 * 
 	 * <p>
 	 * Scenario assumptions:
@@ -243,12 +243,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithSourceCodeAnalysisImprecisionTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -274,7 +274,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -308,12 +308,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC2CodeArchcorrespondencesValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -386,14 +386,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC2CodeArchcorrespondencesInValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -467,12 +467,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC2CodeArchcorrespondencesImPreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -498,7 +498,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -533,12 +533,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC3SecurityAnnoationsConsistetInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -612,14 +612,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC3SecurityAnnoationsInConsistetInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideSc("codeql4extendeddataflow_invalidSecurityLevels.codeql");
+		cfg.overrideSc("joana4extendeddataflow_invalidSecurityLevels.joana");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -694,12 +694,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC3SecurityAnnoationsimpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -725,7 +725,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -761,12 +761,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -841,14 +841,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_incorrect");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -924,12 +924,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -955,7 +955,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -990,12 +990,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC5CorrBetweenSourceCodeAndAnalysisresultValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1069,14 +1069,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC5CorrBetweenSourceCodeAndAnalysisresultInValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideScScarModel("scar.codeqlscar_wrong_security_level");
+		cfg.overrideScScarModel("scar.joanascar_wrong_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1151,12 +1151,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC5CorrBetweenSourceCodeAndAnalysisresultImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1182,7 +1182,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -1217,12 +1217,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC6ResultEntriesLinkingSysElementsAndSecCharacteristicsValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1297,14 +1297,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideScScarModel("scar.codeqlscar_removed_security_level");
+		cfg.overrideScScarModel("scar.joanascar_removed_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1380,14 +1380,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.joanascar_imprecise_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1413,7 +1413,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -1448,12 +1448,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC7CorrespondencesBetweenAnalysisAndSourceModelValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1527,14 +1527,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC7CorrespondencesBetweenAnalysisAndSourceModelInValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_wrong_ruleid");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_wrong_ruleid");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1609,14 +1609,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC7CorrespondencesBetweenAnalysisAndSourceModelImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.joanascar_imprecise_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1642,7 +1642,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -1677,12 +1677,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC8ValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1756,14 +1756,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC8InValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_unknown_systemelement");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_unknown_systemelement");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1838,14 +1838,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC8ImpreciseValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.joanascar_imprecise_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1871,7 +1871,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -1906,12 +1906,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC9ValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1985,14 +1985,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC9InValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_sec_level_that_is_not_in_ic1");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_sec_level_that_is_not_in_ic1");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2067,14 +2067,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC9ImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.joanascar_imprecise_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2100,7 +2100,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -2135,12 +2135,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC10ValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2214,14 +2214,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC10InValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
+		cfg.overrideRivCorrespondence("correspondences.joanaresultingvaluescorrespondences_break_config_mapping");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2296,12 +2296,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithIC10ImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2327,7 +2327,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// After detection, the human-in-the-loop can mitigate the imprecision by
 		// replacing the source code analysis with a correct source code analysis (e.g.,
-		// standard CodeQL), so no accuracy-impacting uncertainty remains.
+		// standard Joana), so no accuracy-impacting uncertainty remains.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -2363,17 +2363,17 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public void graphWithCompleteReferenceMetamodelMappingTest() throws Exception {
 
 		ResourceSet resSet = createResourceSet();
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition joanaInputMapping = joanaReq.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
 
-		// --- Load reference metamodels ---
+		// Load reference metamodels
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
 
@@ -2382,25 +2382,25 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		EcoreUtil.resolveAll(resSet);
 
-		// --- Conformance checks (analogous to scaIsPrecise) ---
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		// Conformance checks (analogous to scaIsPrecise)
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
 		// All mappings are conformant → no uncertainty is annotated
 		UncertaintyAnnotator annotatorEDFA = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
 				.build();
 		annotatorEDFA.annotateInterface(edfaReq, false);
 
-		UncertaintyAnnotator annotatorCodeQL = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQL.annotateInterface(codeQlReq, false);
+		UncertaintyAnnotator annotatorJoana = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoana.annotateInterface(joanaReq, false);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -2408,7 +2408,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: CORRECT_INPUT_DATA", "CODEQL: OUTPUT_CORRECT",
+		List<String> expectedImpactSet = List.of("JOANA: CORRECT_INPUT_DATA", "JOANA: OUTPUT_CORRECT",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 
 		assertEquals(expectedImpactSet, impactSet);
@@ -2439,14 +2439,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	 * Scenario assumptions:
 	 * </p>
 	 * <ul>
-	 * <li>"What-if" scenario: non-conformance to CodeQL input interface.</li>
-	 * <li>CodeQL input mapping initially does not conform to the input reference
+	 * <li>"What-if" scenario: non-conformance to Joana input interface.</li>
+	 * <li>Joana input mapping initially does not conform to the input reference
 	 * metamodel.</li>
 	 * <li>This induces input data uncertainty that propagates over the coupling
 	 * graph.</li>
 	 * <li>A human-in-the-loop resolves the issue by correcting the mapping.</li>
-	 * <li>Accuracy-impacting uncertainties before mitigation (U_before): {CODEQL:
-	 * NON_CONFORMANCE_TO_INPUT_INTERFACE, CODEQL: OUTPUT_ERROR, EDFA:
+	 * <li>Accuracy-impacting uncertainties before mitigation (U_before): {JOANA:
+	 * NON_CONFORMANCE_TO_INPUT_INTERFACE, JOANA: OUTPUT_ERROR, EDFA:
 	 * NON_CONFORMANCE_TO_INPUT_INTERFACE, EDFA: OUTPUT_ERROR}</li>
 	 * <li>Accuracy-impacting uncertainties after mitigation (U_after): empty
 	 * set.</li>
@@ -2454,19 +2454,19 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	 * </ul>
 	 */
 	@Test
-	public void graphWithIncompleteReferenceMetamodelMappingCodeQlInputTest() throws Exception {
+	public void graphWithIncompleteReferenceMetamodelMappingJoanaInputTest() throws Exception {
 
 		// Before mitigation
 
 		ResourceSet resSet = createResourceSet();
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
 
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
@@ -2474,27 +2474,26 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
 
-		MappingDefinition codeqlInputMapping = loadMapping(resSet,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/"
-						+ "edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping_incomplete.xmi");
+		MappingDefinition joanaInputMapping = loadMapping(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping_incomplete.xmi");
 
 		EcoreUtil.resolveAll(resSet);
 
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		// Annotate uncertainties caused by input non-conformance
 		new UncertaintyAnnotatorBuilder().withInputReferenceConformance(edfaInputConforms)
-				.withOutputReferenceConformance(codeqlOutputConforms).build().annotateInterface(edfaReq, false);
+				.withOutputReferenceConformance(joanaOutputConforms).build().annotateInterface(edfaReq, false);
 
-		new UncertaintyAnnotatorBuilder().withInputReferenceConformance(codeqlInputConforms)
-				.withOutputReferenceConformance(true).build().annotateInterface(codeQlReq, false);
+		new UncertaintyAnnotatorBuilder().withInputReferenceConformance(joanaInputConforms)
+				.withOutputReferenceConformance(true).build().annotateInterface(joanaReq, false);
 
 		List<String> impactSetBefore = new RoundRobinUncertaintyController(graph).propagateWithComponentInfo().stream()
 				.map(RoundRobinUncertaintyController.ScenarioWithComponent::toString).toList();
@@ -2502,28 +2501,27 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		List<String> U_before = impactSetBefore.stream()
 				.filter(s -> s.contains("NON_CONFORMANCE") || s.contains("OUTPUT_ERROR")).toList();
 
-		assertEquals(U_before, List.of("CODEQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CODEQL: OUTPUT_ERROR",
+		assertEquals(U_before, List.of("JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_ERROR",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR"));
 
-		// Human-in-the-loop mitigation of CodeQl input interface
+		// Human-in-the-loop mitigation of Joana input interface
 
-		AnalysisGraph mitigatedGraph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph mitigatedGraph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReqMit = mitigatedGraph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReqMit = mitigatedGraph.getComponents().get(0).getInputs().get(0);
+		RequiredInterface joanaReqMit = mitigatedGraph.getComponents().get(0).getInputs().get(0);
 
-		MappingDefinition correctedCodeqlInputMapping = loadMapping(resSet,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/"
-						+ "edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping.xmi");
+		MappingDefinition correctedJoanaInputMapping = loadMapping(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping.xmi");
 
-		boolean codeqlInputConformsAfter = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(correctedCodeqlInputMapping, inputRefMeta);
+		boolean joanaInputConformsAfter = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(correctedJoanaInputMapping, inputRefMeta);
 
 		new UncertaintyAnnotatorBuilder().withInputReferenceConformance(edfaInputConforms)
-				.withOutputReferenceConformance(codeqlOutputConforms).build().annotateInterface(edfaReqMit, false);
+				.withOutputReferenceConformance(joanaOutputConforms).build().annotateInterface(edfaReqMit, false);
 
-		new UncertaintyAnnotatorBuilder().withInputReferenceConformance(codeqlInputConformsAfter)
-				.withOutputReferenceConformance(true).build().annotateInterface(codeQlReqMit, false);
+		new UncertaintyAnnotatorBuilder().withInputReferenceConformance(joanaInputConformsAfter)
+				.withOutputReferenceConformance(true).build().annotateInterface(joanaReqMit, false);
 
 		List<String> impactSetAfter = new RoundRobinUncertaintyController(mitigatedGraph).propagateWithComponentInfo()
 				.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString).toList();
@@ -2546,7 +2544,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	 * Scenario assumptions:
 	 * </p>
 	 * <ul>
-	 * <li>"What-if" scenario: non-conformance to CodeQL input interface.</li>
+	 * <li>"What-if" scenario: non-conformance to Joana input interface.</li>
 	 * <li>All input and output reference mappings conform to their reference
 	 * metamodels.</li>
 	 * <li>Source code analysis results are imprecise.</li>
@@ -2565,20 +2563,20 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		// --- System and graph setup ---
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
 		ResourceSet resSet = createResourceSet();
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition joanaInputMapping = joanaReq.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
 
-		// --- Load reference metamodels ---
+		// Load reference metamodels
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
 
@@ -2587,24 +2585,24 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		EcoreUtil.resolveAll(resSet);
 
-		// --- Reference metamodel conformance (baseline correctness) ---
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		// Reference metamodel conformance (baseline correctness)
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
 		// Sanity check: mapping is not the uncertainty source
-		assertTrue(codeqlInputConforms);
-		assertTrue(codeqlOutputConforms);
+		assertTrue(joanaInputConforms);
+		assertTrue(joanaOutputConforms);
 		assertTrue(edfaInputConforms);
 
 		// --- Detect imprecision in source code analysis ---
-		Path scarFile = Paths.get(cfg.basePath + "/scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path scarFile = Paths.get(cfg.basePath + "/scar.joanascar_imprecision");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2622,9 +2620,9 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		UncertaintyAnnotator annotatorEDFA = new UncertaintyAnnotator(cfg);
 		annotatorEDFA.annotateInterface(edfaReq, true);
 
-		UncertaintyAnnotator annotatorCodeQL = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQL.annotateInterface(codeQlReq, false);
+		UncertaintyAnnotator annotatorJoana = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoana.annotateInterface(joanaReq, false);
 
 		// Propagate uncertainty
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
@@ -2642,7 +2640,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// Human-in-the-loop mitigation
 		// The faulty source code analysis is replaced by a precise one
-		// e.g. standard, uncorrupted CodeQL as shown to be precise by Reiche et al.
+		// e.g. standard, uncorrupted Joana as shown to be precise by Reiche et al.
 		List<String> U_after = getImpactSetForMitigatedCouplingGraph().stream().filter(s -> s.contains("IMPRECISE"))
 				.toList();
 
@@ -2677,17 +2675,17 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	@Test
 	public void graphWithNoLossOfAccuracyDueToOrchestrationTest() throws Exception {
 		ResourceSet resSet = createResourceSet();
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition joanaInputMapping = joanaReq.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
 
-		// Load reference metamodels ---
+		// Load reference metamodels
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
 
@@ -2696,25 +2694,25 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		EcoreUtil.resolveAll(resSet);
 
-		// Conformance checks (analogous to scaIsPrecise) ---
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		// Conformance checks (analogous to scaIsPrecise)
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
 		// All mappings are conformant → no uncertainty is annotated
 		UncertaintyAnnotator annotatorEDFA = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
 				.build();
 		annotatorEDFA.annotateInterface(edfaReq, false);
 
-		UncertaintyAnnotator annotatorCodeQL = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQL.annotateInterface(codeQlReq, false);
+		UncertaintyAnnotator annotatorJoana = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoana.annotateInterface(joanaReq, false);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
@@ -2722,7 +2720,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: CORRECT_INPUT_DATA", "CODEQL: OUTPUT_CORRECT",
+		List<String> expectedImpactSet = List.of("JOANA: CORRECT_INPUT_DATA", "JOANA: OUTPUT_CORRECT",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 
 		assertEquals(expectedImpactSet, impactSet);
@@ -2753,8 +2751,7 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	 * <ul>
 	 * <li>"What-if" scenario: Orchestration decision under invalid interface
 	 * configuration.</li>
-	 * <li>CodeQL input reference mapping initially violates conformance
-	 * checks.</li>
+	 * <li>Joana input reference mapping initially violates conformance checks.</li>
 	 * <li>This violation induces orchestration-decision uncertainty that impacts
 	 * analysis accuracy.</li>
 	 * <li>Accuracy-impacting uncertainties before mitigation (U_before): non-empty
@@ -2770,14 +2767,14 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 
 		// Initial orchestration with failing check
 		ResourceSet resSet = createResourceSet();
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
 
 		// Load reference metamodels
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
@@ -2786,36 +2783,35 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
 
-		// Load intentionally incomplete CodeQL input mapping
-		String incompleteMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/"
-				+ "edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping_incomplete.xmi";
+		// Load intentionally incomplete Joana input mapping
+		String incompleteMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping_incomplete.xmi";
 
-		MappingDefinition codeqlInputMapping = loadMapping(resSet, incompleteMappingPath);
+		MappingDefinition joanaInputMapping = loadMapping(resSet, incompleteMappingPath);
 
 		EcoreUtil.resolveAll(resSet);
 
 		// Conformance checks
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
 		// Annotate uncertainties (orchestration uncertainty introduced here)
 		UncertaintyAnnotator annotatorEDFA = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
 				.build();
 		annotatorEDFA.annotateInterface(edfaReq, false);
 
-		UncertaintyAnnotator annotatorCodeQL = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQL.annotateInterface(codeQlReq, false);
+		UncertaintyAnnotator annotatorJoana = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoana.annotateInterface(joanaReq, false);
 
-		if (!codeqlInputConforms) {
-			annotatorCodeQL.annotateInterfaceWithUncertaintyAnnoation(codeQlReq,
+		if (!joanaInputConforms) {
+			annotatorJoana.annotateInterfaceWithUncertaintyAnnoation(joanaReq,
 					UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
 		}
 
@@ -2828,40 +2824,39 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 				|| s.contains("NON_CONFORMANCE") || s.contains("OUTPUT_ERROR")).toList();
 
 		assertEquals(U_before,
-				List.of("CODEQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CODEQL input: ORCHESTRATION_NOT_FINAL",
-						"CODEQL: OUTPUT_ERROR", "CODEQL output: ORCHESTRATION_NOT_FINAL",
+				List.of("JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA input: ORCHESTRATION_NOT_FINAL",
+						"JOANA: OUTPUT_ERROR", "JOANA output: ORCHESTRATION_NOT_FINAL",
 						"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA input: ORCHESTRATION_NOT_FINAL",
 						"EDFA output: ORCHESTRATION_NOT_FINAL", "EDFA: OUTPUT_ERROR"));
 
 		// Human-in-the-loop mitigation
 
 		// Load corrected (conformant) mapping
-		String resolvedMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/"
-				+ "edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping.xmi";
+		String resolvedMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping.xmi";
 
-		MappingDefinition codeqlInputMappingResolved = loadMapping(resSet, resolvedMappingPath);
+		MappingDefinition joanaInputMappingResolved = loadMapping(resSet, resolvedMappingPath);
 
-		boolean codeqlInputConformsAfterMitigation = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMappingResolved, inputRefMeta);
+		boolean joanaInputConformsAfterMitigation = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMappingResolved, inputRefMeta);
 
 		// Rebuild graph to reflect updated orchestration decision
-		AnalysisGraph mitigatedGraph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph mitigatedGraph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface edfaReqNew = mitigatedGraph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReqNew = mitigatedGraph.getComponents().get(0).getInputs().get(0);
+		RequiredInterface joanaReqNew = mitigatedGraph.getComponents().get(0).getInputs().get(0);
 
 		UncertaintyAnnotator mitigatedAnnotatorEDFA = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
 				.build();
 		mitigatedAnnotatorEDFA.annotateInterface(edfaReqNew, false);
 
-		UncertaintyAnnotator mitigatedAnnotatorCodeQL = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConformsAfterMitigation).withOutputReferenceConformance(true)
+		UncertaintyAnnotator mitigatedAnnotatorJoana = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConformsAfterMitigation).withOutputReferenceConformance(true)
 				.build();
-		mitigatedAnnotatorCodeQL.annotateInterface(codeQlReqNew, false);
+		mitigatedAnnotatorJoana.annotateInterface(joanaReqNew, false);
 
-		if (!codeqlInputConformsAfterMitigation) {
-			annotatorCodeQL.annotateInterfaceWithUncertaintyAnnoation(codeQlReqNew,
+		if (!joanaInputConformsAfterMitigation) {
+			annotatorJoana.annotateInterfaceWithUncertaintyAnnoation(joanaReqNew,
 					UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
 		}
 
@@ -2885,22 +2880,16 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			throws Exception {
 		AnalysiscouplinggraphFactory graphFactory = AnalysiscouplinggraphFactory.eINSTANCE;
 
-		// ---------------------------
 		// ResourceSet erstellen
-		// ---------------------------
 		ResourceSet resSet = new ResourceSetImpl();
 		resSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
 		resSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl());
 
-		// ---------------------------
 		// MappingPackage registrieren
-		// ---------------------------
 		MappingPackage.eINSTANCE.eClass();
 		resSet.getPackageRegistry().put(MappingPackage.eNS_URI, MappingPackage.eINSTANCE);
 
-		// ---------------------------
 		// Relevante EPackages laden
-		// ---------------------------
 		List<String> ecorePaths = List.of(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore",
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.java/model/java.ecore",
@@ -2915,22 +2904,15 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 			registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet, path));
 		}
 
-		// ---------------------------
 		// Mapping laden basierend auf Enum
-		// ---------------------------
 		MappingDefinition sourceCodeInputMapping = loadMapping(resSet, sourceCodeAnalysis.getInputMappingPath());
 		MappingDefinition sourceCodeOutputMapping = loadMapping(resSet, sourceCodeAnalysis.getOutputMappingPath());
 
 		MappingDefinition architecturalMapping = loadMapping(resSet, architecturalAnalysis.getInputMappingPath());
 
-		// ---------------------------
-		// Proxies auflösen
-		// ---------------------------
 		EcoreUtil.resolveAll(resSet);
 
-		// ---------------------------
 		// AnalysisGraph bauen
-		// ---------------------------
 		AnalysisGraph graph = graphFactory.createAnalysisGraph();
 
 		// Source code analysis component
@@ -3066,12 +3048,12 @@ public class EclipseSecureStorageCodeQlEDFAMitigationEvaluation {
 	public List<String> getImpactSetForMitigatedCouplingGraph() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/eclipsesecurestorage.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
 
 		ScScarParser scarParser = new ScScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);

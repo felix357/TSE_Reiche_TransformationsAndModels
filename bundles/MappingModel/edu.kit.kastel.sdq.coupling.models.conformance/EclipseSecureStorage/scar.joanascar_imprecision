@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanascar:SourceCodeAnalysisResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:joanascar="http://www.example.org/joanascar">
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="java.lang.String[][]" methodName="setupRecovery" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.PasswordManagement"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterIndex="1" parameterType="java.lang.String" methodName="internalPut" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="java.lang.String" methodName="remove" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterIndex="2" parameterType="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.interal.storage.SecurePreferencesContainer" methodName="setupRecovery" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.PasswordManagement"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="java.lang.String" methodName="internalPut" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements xsi:type="joanascar:Parameter_SCAR" parameterType="java.lang.String" methodName="node" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <entryPoints tag="0"/>
+  <levels id="_zh7MUB1BEfCn6vGa4mnYTA" name="high"/>
+  <levels id="_zh8acB1BEfCn6vGa4mnYTA" name="low"/>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.3"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.4"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.3"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.2"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.5"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.5"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.4"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.4"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.1"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.3"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.4"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.5"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.5"/>
+  </flows>
+  <flows entryPoint="//@entryPoints.0">
+    <source systemElement="//@systemElements.0" sourceLevel="//@levels.0"/>
+    <sink sinkLevel="//@levels.0" systemElement="//@systemElements.3"/>
+  </flows>
+</joanascar:SourceCodeAnalysisResult>
