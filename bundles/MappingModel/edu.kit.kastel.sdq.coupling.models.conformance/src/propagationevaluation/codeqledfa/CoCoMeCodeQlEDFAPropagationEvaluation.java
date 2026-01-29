@@ -1,4 +1,4 @@
-package propagationevaluation.joanaedfa;
+package propagationevaluation.codeqledfa;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,22 +37,22 @@ import uncertainty.UncertaintySource;
 
 /**
  * Evaluates the accuracy of uncertainty propagation in coupled model-based
- * analyses for the JPMAIL System with a particular focus on the
- * coupling between JOANA and EDFA.
+ * analyses for the CoCoMe System with a particular focus on the
+ * coupling between CodeQL and EDFA.
  * 
  * Specifically, it assesses whether the computed impact set
  * accurately reflects the uncertainties present in the affected set, measuring
  * both the precision and recall of the propagation results.
  * 
  * The evaluation is based on representative example uncertainties identified
- * for the JPMail system, as documented in the results of the uncertainty
+ * for the CoCoMe system, as documented in the results of the uncertainty
  * propagation evaluation.
  */
-public class JPMailPropagationEvaluation {
+public class CoCoMeCodeQlEDFAPropagationEvaluation {
 
 	@Test
 	public void graphWithNoUncertaintiesTest() throws Exception {
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> uncertainties = controller
@@ -69,8 +69,8 @@ public class JPMailPropagationEvaluation {
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
@@ -99,11 +99,11 @@ public class JPMailPropagationEvaluation {
 		// interface
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
@@ -130,11 +130,11 @@ public class JPMailPropagationEvaluation {
 		// Scenario: imprecise input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
+		cfg.overrideSc("codeql4extendeddataflow_impre.codeql");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -161,9 +161,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -192,10 +192,10 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
@@ -225,11 +225,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideEdfaCodeqlCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
+		cfg.overrideEdfaScCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -258,8 +258,8 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -286,9 +286,9 @@ public class JPMailPropagationEvaluation {
 		// Non-conformance to input interface
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
-		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+		cfg.overrideSc("codeql4extendeddataflow_invalidSecurityLevels.codeql");
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -316,10 +316,10 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
-		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+		cfg.overrideSc("codeql4extendeddataflow_impre.codeql");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -347,9 +347,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -379,11 +379,11 @@ public class JPMailPropagationEvaluation {
 		// (LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValid)
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -412,11 +412,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -444,9 +444,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -475,10 +475,10 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_wrong_security_level");
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideScScarModel("scar.codeqlscar_wrong_security_level");
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -507,10 +507,10 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -538,9 +538,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -570,10 +570,10 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_removed_security_level");
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+		cfg.overrideScScarModel("scar.codeqlscar_removed_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -602,10 +602,10 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -633,9 +633,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -663,11 +663,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_wrong_ruleid");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -695,11 +695,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -727,9 +727,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -757,11 +757,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_unknown_systemelement");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -789,11 +789,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -821,9 +821,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -851,11 +851,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_sec_level_that_is_not_in_ic1");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -883,11 +883,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -914,9 +914,9 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -943,11 +943,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -974,11 +974,11 @@ public class JPMailPropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_ambiguity");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -1003,13 +1003,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToApproximationInCodeQlTest() throws Exception {
 		// first case -> Uncertainty Scenario: correct analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1039,13 +1039,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToApproximationInCodeQlTest() throws Exception {
 		// Second case -> Uncertainty Scenario: approximation in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1075,13 +1075,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToOverSimplificationInCodeQlTest() throws Exception {
 		// Third case -> Uncertainty Scenario: over simplification in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1111,13 +1111,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToScenarioInCodeQlTest() throws Exception {
 		// first case -> Uncertainty Scenario: Scenario definition of analysis correct
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1147,13 +1147,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToScenarioInCodeQlTest() throws Exception {
 		// second case -> Uncertainty Scenario: Scenario definition of analysis correct
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1183,13 +1183,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToModelingInCodeQlTest() throws Exception {
 		// first case -> Uncertainty Scenario: correct model
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1220,13 +1220,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToModelingInCodeQlTest() throws Exception {
 		// second case -> Uncertainty Scenario: model under specification
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1258,13 +1258,13 @@ public class JPMailPropagationEvaluation {
 		// third case -> Uncertainty Scenario: discrapencies between model and
 		// implementation
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1295,13 +1295,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToApproximationInEDFATest() throws Exception {
 		// first case -> Uncertainty Scenario: correct analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1328,13 +1328,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToApproximationInEDFATest() throws Exception {
 		// second case -> Uncertainty Scenario: approximation in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1361,13 +1361,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToOverSimplificationInEDFATest() throws Exception {
 		// third case -> Uncertainty Scenario: over simplification in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1394,13 +1394,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToScenarioInEDFATest() throws Exception {
 		// first case -> Uncertainty Scenario: Scenario definition of analysis correct
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1429,13 +1429,13 @@ public class JPMailPropagationEvaluation {
 		// second case -> Uncertainty Scenario: Scenario definition of analysis
 		// incorrect
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1463,13 +1463,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToModelingInEDFATest() throws Exception {
 		// first case -> Uncertainty Scenario: correct model
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1496,13 +1496,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToModelingUnderSpecInEDFATest() throws Exception {
 		// second case -> Uncertainty Scenario: model under specification
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1530,13 +1530,13 @@ public class JPMailPropagationEvaluation {
 		// third case -> Uncertainty Scenario: discrapencies between model and
 		// implementation
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1563,13 +1563,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToOrchestrationTest() throws Exception {
 		// first case -> Uncertainty scenario: final analysis orchestration
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
@@ -1597,13 +1597,13 @@ public class JPMailPropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToOrchestrationTest() throws Exception {
 		// second case -> Uncertainty scenario: Not final analysis orchestration
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.JOANAEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
@@ -1636,7 +1636,7 @@ public class JPMailPropagationEvaluation {
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		ResourceSet resSet = createResourceSet();
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
 		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
@@ -1697,7 +1697,7 @@ public class JPMailPropagationEvaluation {
 		// Case 2: CodeQL input incomplete mapping to reference metamodel.
 		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
 		// interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
 		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
@@ -1766,7 +1766,7 @@ public class JPMailPropagationEvaluation {
 		// metamodel.
 		// third case mapping incomplete -> Uncertainty Scenario: Non-conformance to
 		// input interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
 

@@ -55,7 +55,7 @@ import uncertainty.UncertaintySource;
  * TravelPlanner system, as documented in the results XML file of the uncertainty
  * mitigation assessment.
  */
-public class TravelPlannerMitigationEvaluation {
+public class TravelPlannerCodeQlEDFAMitigationEvaluation {
 
 	/**
 	 * Test Case 1 for (IC1) uncertainty mitigation evaluation.
@@ -614,7 +614,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
+		cfg.overrideSc("codeql4extendeddataflow_invalidSecurityLevels.codeql");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
@@ -1071,7 +1071,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_wrong_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_wrong_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
@@ -1299,7 +1299,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_removed_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_removed_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
@@ -1382,7 +1382,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
@@ -1611,7 +1611,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
@@ -1840,7 +1840,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
@@ -2069,7 +2069,7 @@ public class TravelPlannerMitigationEvaluation {
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
 				SystemUnderEval.TRAVEL_PLANNER, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 

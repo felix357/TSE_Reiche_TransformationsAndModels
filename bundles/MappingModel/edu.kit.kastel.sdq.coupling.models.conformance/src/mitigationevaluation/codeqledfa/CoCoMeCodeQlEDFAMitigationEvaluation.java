@@ -44,7 +44,7 @@ import uncertainty.UncertaintySource;
 
 /**
  * Evaluates the difference in uncertainty before and after mitigation in
- * coupled model-based analyses for the JPMail system, specifically for the
+ * coupled model-based analyses for the CoCoMe system, specifically for the
  * CODEQL–EDFA coupling.
  * 
  * This evaluation assesses the extent to which the set of accuracy-impacting
@@ -52,10 +52,10 @@ import uncertainty.UncertaintySource;
  * before mitigation.
  * 
  * The evaluation is based on representative example uncertainties for the
- * JPMail system, as documented in the results XML file of the uncertainty
+ * CoCoMe system, as documented in the results XML file of the uncertainty
  * mitigation assessment.
  */
-public class JPMailMitigationEvaluation {
+public class CoCoMeCodeQlEDFAMitigationEvaluation {
 
 	/**
 	 * Test Case 1 for (IC1) uncertainty mitigation evaluation.
@@ -81,12 +81,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC1MappingValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -160,14 +160,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC1MappingInValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -243,12 +243,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithSourceCodeAnalysisImprecisionTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -308,12 +308,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC2CodeArchcorrespondencesValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -386,14 +386,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC2CodeArchcorrespondencesInValidTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -467,12 +467,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC2CodeArchcorrespondencesImPreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -533,12 +533,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC3SecurityAnnoationsConsistetInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -612,14 +612,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC3SecurityAnnoationsInConsistetInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
+		cfg.overrideSc("codeql4extendeddataflow_invalidSecurityLevels.codeql");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -694,12 +694,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC3SecurityAnnoationsimpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -761,12 +761,12 @@ public class JPMailMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -841,14 +841,14 @@ public class JPMailMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -924,12 +924,12 @@ public class JPMailMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -990,12 +990,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC5CorrBetweenSourceCodeAndAnalysisresultValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1069,14 +1069,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC5CorrBetweenSourceCodeAndAnalysisresultInValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_wrong_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_wrong_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1151,12 +1151,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC5CorrBetweenSourceCodeAndAnalysisresultImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1217,12 +1217,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC6ResultEntriesLinkingSysElementsAndSecCharacteristicsValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1297,14 +1297,14 @@ public class JPMailMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_removed_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_removed_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1380,14 +1380,14 @@ public class JPMailMitigationEvaluation {
 			throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1448,12 +1448,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC7CorrespondencesBetweenAnalysisAndSourceModelValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1527,14 +1527,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC7CorrespondencesBetweenAnalysisAndSourceModelInValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_wrong_ruleid");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1609,14 +1609,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC7CorrespondencesBetweenAnalysisAndSourceModelImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1677,12 +1677,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC8ValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1756,14 +1756,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC8InValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_unknown_systemelement");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1838,14 +1838,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC8ImpreciseValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1906,12 +1906,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC9ValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -1985,14 +1985,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC9InValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_sec_level_that_is_not_in_ic1");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2067,14 +2067,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC9ImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		cfg.overrideScScarModel("scar.codeqlscar_imprecise_security_level");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2135,12 +2135,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC10ValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2214,14 +2214,14 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC10InValidInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2296,12 +2296,12 @@ public class JPMailMitigationEvaluation {
 	public void graphWithIC10ImpreciseInputDataTest() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + "scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -2565,7 +2565,7 @@ public class JPMailMitigationEvaluation {
 		// --- System and graph setup ---
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		ResourceSet resSet = createResourceSet();
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
@@ -2604,7 +2604,7 @@ public class JPMailMitigationEvaluation {
 
 		// --- Detect imprecision in source code analysis ---
 		Path scarFile = Paths.get(cfg.basePath + "/scar.codeqlscar_imprecision");
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);
@@ -3066,12 +3066,12 @@ public class JPMailMitigationEvaluation {
 	public List<String> getImpactSetForMitigatedCouplingGraph() throws Exception {
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.JPMAIL, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.CODEQLEDFA);
 
 		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
 
 		Path scarFile = Paths.get(cfg.basePath + "/" + cfg.scScarModel);
-		Path gtFile = Paths.get(cfg.basePath + "/jpmail.groundTruth.xml");
+		Path gtFile = Paths.get(cfg.basePath + "/cocome.groundTruth.xml");
 
 		CodeQLScarParser scarParser = new CodeQLScarParser();
 		List<ObservedFlow> observedFlows = scarParser.parse(scarFile);

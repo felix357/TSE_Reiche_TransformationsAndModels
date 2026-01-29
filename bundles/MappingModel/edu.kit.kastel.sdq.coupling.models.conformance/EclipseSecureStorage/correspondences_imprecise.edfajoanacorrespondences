@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edfajoanacorrespondences:Correspondences_EDFAJOANA xmlns:edfajoanacorrespondences="http://www.example.org/edfajoanacorrespondences">
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.0"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.1"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.2"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.3"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.4"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.5"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.6"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.7"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.8"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.9"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.10"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.11"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.12"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.13"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.14"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.15"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.16"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.17"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.18"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.19"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.20"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.21"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.22"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.23"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.24"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.25"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.26"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.27"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.28"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.29"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.30"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.31"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.32"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.33"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.34"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.35"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.36"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.37"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.38"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.39"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.40"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.41"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.42"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.43"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.44"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.45"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.46"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.47"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.48"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.49"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.50"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.51"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.52"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.53"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.54"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.55"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.56"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.57"/>
+  </configurationCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis_imprecise.joana#//@entrypoint.0/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.19/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.19/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.20/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.20/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.21/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.21/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.22/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.22/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.23/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.23/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.24/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.24/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.25/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.25/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.26/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.26/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.27/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.27/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.28/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.28/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.29/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.29/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.30/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.30/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.31/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.31/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.32/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.32/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.33/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.33/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.34/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.34/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.35/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.35/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.36/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.36/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.37/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.37/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.38/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.38/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.39/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.39/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.40/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.40/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.41/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.41/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.42/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.42/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.43/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.43/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.44/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.44/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.45/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.45/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.46/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.46/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.47/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.47/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.48/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.48/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.49/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.49/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.50/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.50/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.51/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.51/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.52/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.52/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.53/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.53/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.54/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.54/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.55/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.55/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.56/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.56/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.57/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.model.extendeddataflow.joana/models/eclipsesecurestorage.pddc#_SIw9sNGFEe6e8_rNGeIvbg-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.57/@level.1"/>
+  </literalLevelCorrespondences>
+</edfajoanacorrespondences:Correspondences_EDFAJOANA>

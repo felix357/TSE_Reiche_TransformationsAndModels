@@ -77,7 +77,6 @@ public class IC7MChecker implements IChecker {
 					continue;
 				}
 
-				// Resolve SCAR href in scar.file
 				String scarResolvedId;
 				if (this.analysisType == AnalysisCouplingType.CODEQLEDFA) {					
 					scarResolvedId = ic2.resolveSCReference(scarHref, "scar.codeqlscar", scarPath);
@@ -96,7 +95,6 @@ public class IC7MChecker implements IChecker {
 				}
 			}
 
-			// Final condition: CFG_cs_R != ∅
 			if (!anyFound) {
 				System.out.println("IC7(T)(M) NICHT erfüllt ❌ — kein cfg_R gefunden (CFG_cs_R ist leer).");
 				return false;

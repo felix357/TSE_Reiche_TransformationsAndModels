@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanaresultingvalues:ResolvedImplementationValues xmlns:joanaresultingvalues="http://www.example.org/joanaresultingvalues">
+  <systemElements parameterType="edu.kit.kastel.sdq.coupling.casestudy.jpmail.datatypes.EMailHeader" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.SMTP"/>
+  <systemElements parameterIndex="1" parameterType="edu.kit.kastel.sdq.coupling.casestudy.jpmail.datatypes.EMailBody" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.POP3"/>
+  <systemElements parameterType="edu.kit.kastel.sdq.coupling.casestudy.jpmail.datatypes.EMailHeader" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.MailReceivingFacade"/>
+  <systemElements parameterIndex="1" parameterType="edu.kit.kastel.sdq.coupling.casestudy.jpmail.datatypes.EMailBody" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.SMTP"/>
+  <systemElements parameterIndex="1" parameterType="edu.kit.kastel.sdq.coupling.casestudy.jpmail.datatypes.EMailBody" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.MailReceivingFacade"/>
+  <systemElements parameterType="edu.kit.kastel.sdq.coupling.casestudy.jpmail.datatypes.EMailHeader" methodName="dispatchMail" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.jpmail.components.POP3"/>
+  <levels id="_5VMdsHhJEe-jlsX_vm1RfA" name="high"/>
+  <entryPoints tag="0"/>
+  <entryPoints tag="1"/>
+  <!-- Unknown @systemElement-->
+  <resultingValues systemElement="//@systemElements.UNKNOWN" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.1" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.5" configuration="//@entryPoints.1" level="//@levels.0"/>
+</joanaresultingvalues:ResolvedImplementationValues>

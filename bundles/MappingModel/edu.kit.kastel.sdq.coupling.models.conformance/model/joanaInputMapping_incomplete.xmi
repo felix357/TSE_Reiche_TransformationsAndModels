@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <map:MappingDefinition xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:map="http://www.example.org/mapping">
 
-  <!-- Joana Level -> SecurityCharacteristic -->
-  <classMappings>
-    <sourceClass href="file:/C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//Level"/>
-    <targetClass href="file:/C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore#//SecurityCharacteristic"/>
-  </classMappings>
-
   <!-- Joana Source -> Annotation -->
   <classMappings>
     <sourceClass href="file:/C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore#//Source"/>

@@ -1,0 +1,2763 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joana:JOANARoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:joana="http://www.example.org/joana">
+  <entrypoint id="0">
+    <level id="_RfoYa3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfoYaXm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfoYcHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfoYbnm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfoYbXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfoYcXm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfoYcnm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfoYZHm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfoYZnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfoYb3m-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfoYbHm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfoYZXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfoYanm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfoYZ3m-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfoYaHm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <!-- IMPRECISE INPUT DATA:
+         Two distinct Joana levels but with identical meaning ("medium").
+         IC1 can match both to the architectural characteristic, but cannot decide which one is correct.
+         This creates ambiguity → imprecise input. -->
+    <level id="L1" name="medium"/>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.0/@level.15">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.0/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.0/@level.0" to="//@entrypoint.0/@level.2"/>
+      <mayFlow from="//@entrypoint.0/@level.0" to="//@entrypoint.0/@level.8"/>
+      <mayFlow from="//@entrypoint.0/@level.0" to="//@entrypoint.0/@level.11"/>
+      <mayFlow from="//@entrypoint.0/@level.0" to="//@entrypoint.0/@level.13"/>
+      <mayFlow from="//@entrypoint.0/@level.1" to="//@entrypoint.0/@level.4"/>
+      <mayFlow from="//@entrypoint.0/@level.1" to="//@entrypoint.0/@level.9"/>
+      <mayFlow from="//@entrypoint.0/@level.2" to="//@entrypoint.0/@level.1"/>
+      <mayFlow from="//@entrypoint.0/@level.2" to="//@entrypoint.0/@level.7"/>
+      <mayFlow from="//@entrypoint.0/@level.2" to="//@entrypoint.0/@level.12"/>
+      <mayFlow from="//@entrypoint.0/@level.5" to="//@entrypoint.0/@level.9"/>
+      <mayFlow from="//@entrypoint.0/@level.5" to="//@entrypoint.0/@level.14"/>
+      <mayFlow from="//@entrypoint.0/@level.6" to="//@entrypoint.0/@level.3"/>
+      <mayFlow from="//@entrypoint.0/@level.6" to="//@entrypoint.0/@level.14"/>
+      <mayFlow from="//@entrypoint.0/@level.7" to="//@entrypoint.0/@level.3"/>
+      <mayFlow from="//@entrypoint.0/@level.7" to="//@entrypoint.0/@level.9"/>
+      <mayFlow from="//@entrypoint.0/@level.8" to="//@entrypoint.0/@level.6"/>
+      <mayFlow from="//@entrypoint.0/@level.8" to="//@entrypoint.0/@level.10"/>
+      <mayFlow from="//@entrypoint.0/@level.8" to="//@entrypoint.0/@level.12"/>
+      <mayFlow from="//@entrypoint.0/@level.10" to="//@entrypoint.0/@level.4"/>
+      <mayFlow from="//@entrypoint.0/@level.10" to="//@entrypoint.0/@level.14"/>
+      <mayFlow from="//@entrypoint.0/@level.11" to="//@entrypoint.0/@level.1"/>
+      <mayFlow from="//@entrypoint.0/@level.11" to="//@entrypoint.0/@level.5"/>
+      <mayFlow from="//@entrypoint.0/@level.11" to="//@entrypoint.0/@level.10"/>
+      <mayFlow from="//@entrypoint.0/@level.12" to="//@entrypoint.0/@level.3"/>
+      <mayFlow from="//@entrypoint.0/@level.12" to="//@entrypoint.0/@level.4"/>
+      <mayFlow from="//@entrypoint.0/@level.13" to="//@entrypoint.0/@level.5"/>
+      <mayFlow from="//@entrypoint.0/@level.13" to="//@entrypoint.0/@level.6"/>
+      <mayFlow from="//@entrypoint.0/@level.13" to="//@entrypoint.0/@level.7"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="1">
+    <level id="_Rfrbwnm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rfrbt3m-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfrbuXm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rfrbunm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rfrbvnm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfrbvHm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rfrbtnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfrbwHm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rfrbw3m-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfrbvXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rfrbv3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfrbuHm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfrbwXm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfrbtXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rfrbu3m-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.1/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.1/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.1/@level.0" to="//@entrypoint.1/@level.3"/>
+      <mayFlow from="//@entrypoint.1/@level.0" to="//@entrypoint.1/@level.12"/>
+      <mayFlow from="//@entrypoint.1/@level.1" to="//@entrypoint.1/@level.2"/>
+      <mayFlow from="//@entrypoint.1/@level.1" to="//@entrypoint.1/@level.12"/>
+      <mayFlow from="//@entrypoint.1/@level.4" to="//@entrypoint.1/@level.2"/>
+      <mayFlow from="//@entrypoint.1/@level.4" to="//@entrypoint.1/@level.3"/>
+      <mayFlow from="//@entrypoint.1/@level.5" to="//@entrypoint.1/@level.9"/>
+      <mayFlow from="//@entrypoint.1/@level.5" to="//@entrypoint.1/@level.12"/>
+      <mayFlow from="//@entrypoint.1/@level.6" to="//@entrypoint.1/@level.4"/>
+      <mayFlow from="//@entrypoint.1/@level.6" to="//@entrypoint.1/@level.7"/>
+      <mayFlow from="//@entrypoint.1/@level.6" to="//@entrypoint.1/@level.11"/>
+      <mayFlow from="//@entrypoint.1/@level.7" to="//@entrypoint.1/@level.2"/>
+      <mayFlow from="//@entrypoint.1/@level.7" to="//@entrypoint.1/@level.9"/>
+      <mayFlow from="//@entrypoint.1/@level.8" to="//@entrypoint.1/@level.1"/>
+      <mayFlow from="//@entrypoint.1/@level.8" to="//@entrypoint.1/@level.5"/>
+      <mayFlow from="//@entrypoint.1/@level.8" to="//@entrypoint.1/@level.7"/>
+      <mayFlow from="//@entrypoint.1/@level.10" to="//@entrypoint.1/@level.6"/>
+      <mayFlow from="//@entrypoint.1/@level.10" to="//@entrypoint.1/@level.8"/>
+      <mayFlow from="//@entrypoint.1/@level.10" to="//@entrypoint.1/@level.13"/>
+      <mayFlow from="//@entrypoint.1/@level.10" to="//@entrypoint.1/@level.14"/>
+      <mayFlow from="//@entrypoint.1/@level.11" to="//@entrypoint.1/@level.3"/>
+      <mayFlow from="//@entrypoint.1/@level.11" to="//@entrypoint.1/@level.9"/>
+      <mayFlow from="//@entrypoint.1/@level.13" to="//@entrypoint.1/@level.0"/>
+      <mayFlow from="//@entrypoint.1/@level.13" to="//@entrypoint.1/@level.1"/>
+      <mayFlow from="//@entrypoint.1/@level.13" to="//@entrypoint.1/@level.4"/>
+      <mayFlow from="//@entrypoint.1/@level.14" to="//@entrypoint.1/@level.0"/>
+      <mayFlow from="//@entrypoint.1/@level.14" to="//@entrypoint.1/@level.5"/>
+      <mayFlow from="//@entrypoint.1/@level.14" to="//@entrypoint.1/@level.11"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="2">
+    <level id="_RfsCyHm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfsCzXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfsC03m-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfsCyXm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfsCxnm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfsCz3m-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_RfsCynm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfsC0nm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfsCzHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfsCxXm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfsCy3m-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfsC0Hm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfsCx3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfsC0Xm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfsCznm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.2/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.2/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.2/@level.0" to="//@entrypoint.2/@level.4"/>
+      <mayFlow from="//@entrypoint.2/@level.0" to="//@entrypoint.2/@level.7"/>
+      <mayFlow from="//@entrypoint.2/@level.0" to="//@entrypoint.2/@level.14"/>
+      <mayFlow from="//@entrypoint.2/@level.2" to="//@entrypoint.2/@level.6"/>
+      <mayFlow from="//@entrypoint.2/@level.2" to="//@entrypoint.2/@level.11"/>
+      <mayFlow from="//@entrypoint.2/@level.3" to="//@entrypoint.2/@level.2"/>
+      <mayFlow from="//@entrypoint.2/@level.3" to="//@entrypoint.2/@level.4"/>
+      <mayFlow from="//@entrypoint.2/@level.3" to="//@entrypoint.2/@level.9"/>
+      <mayFlow from="//@entrypoint.2/@level.4" to="//@entrypoint.2/@level.1"/>
+      <mayFlow from="//@entrypoint.2/@level.4" to="//@entrypoint.2/@level.11"/>
+      <mayFlow from="//@entrypoint.2/@level.7" to="//@entrypoint.2/@level.5"/>
+      <mayFlow from="//@entrypoint.2/@level.7" to="//@entrypoint.2/@level.11"/>
+      <mayFlow from="//@entrypoint.2/@level.8" to="//@entrypoint.2/@level.0"/>
+      <mayFlow from="//@entrypoint.2/@level.8" to="//@entrypoint.2/@level.3"/>
+      <mayFlow from="//@entrypoint.2/@level.8" to="//@entrypoint.2/@level.10"/>
+      <mayFlow from="//@entrypoint.2/@level.8" to="//@entrypoint.2/@level.12"/>
+      <mayFlow from="//@entrypoint.2/@level.9" to="//@entrypoint.2/@level.1"/>
+      <mayFlow from="//@entrypoint.2/@level.9" to="//@entrypoint.2/@level.6"/>
+      <mayFlow from="//@entrypoint.2/@level.10" to="//@entrypoint.2/@level.2"/>
+      <mayFlow from="//@entrypoint.2/@level.10" to="//@entrypoint.2/@level.7"/>
+      <mayFlow from="//@entrypoint.2/@level.10" to="//@entrypoint.2/@level.13"/>
+      <mayFlow from="//@entrypoint.2/@level.12" to="//@entrypoint.2/@level.9"/>
+      <mayFlow from="//@entrypoint.2/@level.12" to="//@entrypoint.2/@level.13"/>
+      <mayFlow from="//@entrypoint.2/@level.12" to="//@entrypoint.2/@level.14"/>
+      <mayFlow from="//@entrypoint.2/@level.13" to="//@entrypoint.2/@level.5"/>
+      <mayFlow from="//@entrypoint.2/@level.13" to="//@entrypoint.2/@level.6"/>
+      <mayFlow from="//@entrypoint.2/@level.14" to="//@entrypoint.2/@level.1"/>
+      <mayFlow from="//@entrypoint.2/@level.14" to="//@entrypoint.2/@level.5"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="3">
+    <level id="_Rfsp13m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RftQ43m-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rfsp2nm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RftQ5Hm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rfsp2Hm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RftQ4Xm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rfsp3Hm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rfsp1nm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rfsp23m-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RftQ4Hm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rfsp1Xm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rfsp2Xm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rfsp3Xm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RftQ4nm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rfsp3nm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.3/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.3/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.3/@level.0" to="//@entrypoint.3/@level.4"/>
+      <mayFlow from="//@entrypoint.3/@level.0" to="//@entrypoint.3/@level.6"/>
+      <mayFlow from="//@entrypoint.3/@level.0" to="//@entrypoint.3/@level.11"/>
+      <mayFlow from="//@entrypoint.3/@level.2" to="//@entrypoint.3/@level.5"/>
+      <mayFlow from="//@entrypoint.3/@level.2" to="//@entrypoint.3/@level.9"/>
+      <mayFlow from="//@entrypoint.3/@level.3" to="//@entrypoint.3/@level.0"/>
+      <mayFlow from="//@entrypoint.3/@level.3" to="//@entrypoint.3/@level.10"/>
+      <mayFlow from="//@entrypoint.3/@level.3" to="//@entrypoint.3/@level.13"/>
+      <mayFlow from="//@entrypoint.3/@level.3" to="//@entrypoint.3/@level.14"/>
+      <mayFlow from="//@entrypoint.3/@level.4" to="//@entrypoint.3/@level.1"/>
+      <mayFlow from="//@entrypoint.3/@level.4" to="//@entrypoint.3/@level.9"/>
+      <mayFlow from="//@entrypoint.3/@level.6" to="//@entrypoint.3/@level.1"/>
+      <mayFlow from="//@entrypoint.3/@level.6" to="//@entrypoint.3/@level.7"/>
+      <mayFlow from="//@entrypoint.3/@level.8" to="//@entrypoint.3/@level.1"/>
+      <mayFlow from="//@entrypoint.3/@level.8" to="//@entrypoint.3/@level.5"/>
+      <mayFlow from="//@entrypoint.3/@level.10" to="//@entrypoint.3/@level.2"/>
+      <mayFlow from="//@entrypoint.3/@level.10" to="//@entrypoint.3/@level.4"/>
+      <mayFlow from="//@entrypoint.3/@level.10" to="//@entrypoint.3/@level.8"/>
+      <mayFlow from="//@entrypoint.3/@level.11" to="//@entrypoint.3/@level.7"/>
+      <mayFlow from="//@entrypoint.3/@level.11" to="//@entrypoint.3/@level.9"/>
+      <mayFlow from="//@entrypoint.3/@level.12" to="//@entrypoint.3/@level.5"/>
+      <mayFlow from="//@entrypoint.3/@level.12" to="//@entrypoint.3/@level.7"/>
+      <mayFlow from="//@entrypoint.3/@level.13" to="//@entrypoint.3/@level.2"/>
+      <mayFlow from="//@entrypoint.3/@level.13" to="//@entrypoint.3/@level.11"/>
+      <mayFlow from="//@entrypoint.3/@level.13" to="//@entrypoint.3/@level.12"/>
+      <mayFlow from="//@entrypoint.3/@level.14" to="//@entrypoint.3/@level.6"/>
+      <mayFlow from="//@entrypoint.3/@level.14" to="//@entrypoint.3/@level.8"/>
+      <mayFlow from="//@entrypoint.3/@level.14" to="//@entrypoint.3/@level.12"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="4">
+    <level id="_Rft4Anm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rft39nm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rft4AHm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rft3-nm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rft3_Xm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rft3-Xm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rft3-Hm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rft3_nm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rft39Hm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rft4AXm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rft39Xm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rft393m-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rft3-3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rft3_Hm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rft3_3m-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.4/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.4/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.4/@level.0" to="//@entrypoint.4/@level.6"/>
+      <mayFlow from="//@entrypoint.4/@level.0" to="//@entrypoint.4/@level.8"/>
+      <mayFlow from="//@entrypoint.4/@level.1" to="//@entrypoint.4/@level.8"/>
+      <mayFlow from="//@entrypoint.4/@level.1" to="//@entrypoint.4/@level.10"/>
+      <mayFlow from="//@entrypoint.4/@level.2" to="//@entrypoint.4/@level.1"/>
+      <mayFlow from="//@entrypoint.4/@level.2" to="//@entrypoint.4/@level.5"/>
+      <mayFlow from="//@entrypoint.4/@level.2" to="//@entrypoint.4/@level.9"/>
+      <mayFlow from="//@entrypoint.4/@level.3" to="//@entrypoint.4/@level.2"/>
+      <mayFlow from="//@entrypoint.4/@level.3" to="//@entrypoint.4/@level.4"/>
+      <mayFlow from="//@entrypoint.4/@level.3" to="//@entrypoint.4/@level.7"/>
+      <mayFlow from="//@entrypoint.4/@level.3" to="//@entrypoint.4/@level.14"/>
+      <mayFlow from="//@entrypoint.4/@level.4" to="//@entrypoint.4/@level.5"/>
+      <mayFlow from="//@entrypoint.4/@level.4" to="//@entrypoint.4/@level.12"/>
+      <mayFlow from="//@entrypoint.4/@level.4" to="//@entrypoint.4/@level.13"/>
+      <mayFlow from="//@entrypoint.4/@level.5" to="//@entrypoint.4/@level.10"/>
+      <mayFlow from="//@entrypoint.4/@level.5" to="//@entrypoint.4/@level.11"/>
+      <mayFlow from="//@entrypoint.4/@level.7" to="//@entrypoint.4/@level.0"/>
+      <mayFlow from="//@entrypoint.4/@level.7" to="//@entrypoint.4/@level.9"/>
+      <mayFlow from="//@entrypoint.4/@level.7" to="//@entrypoint.4/@level.12"/>
+      <mayFlow from="//@entrypoint.4/@level.9" to="//@entrypoint.4/@level.8"/>
+      <mayFlow from="//@entrypoint.4/@level.9" to="//@entrypoint.4/@level.11"/>
+      <mayFlow from="//@entrypoint.4/@level.12" to="//@entrypoint.4/@level.6"/>
+      <mayFlow from="//@entrypoint.4/@level.12" to="//@entrypoint.4/@level.11"/>
+      <mayFlow from="//@entrypoint.4/@level.13" to="//@entrypoint.4/@level.6"/>
+      <mayFlow from="//@entrypoint.4/@level.13" to="//@entrypoint.4/@level.10"/>
+      <mayFlow from="//@entrypoint.4/@level.14" to="//@entrypoint.4/@level.0"/>
+      <mayFlow from="//@entrypoint.4/@level.14" to="//@entrypoint.4/@level.1"/>
+      <mayFlow from="//@entrypoint.4/@level.14" to="//@entrypoint.4/@level.13"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="5">
+    <level id="_RfufBnm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfufDXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfufEXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfufCHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfufBXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfufDHm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfufCXm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfufEHm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_RfufE3m-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfufC3m-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfufD3m-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfufB3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfufDnm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfufEnm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfufCnm-Ee-wsubUNQGQcA" name="User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.5/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.5/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.5/@level.0" to="//@entrypoint.5/@level.5"/>
+      <mayFlow from="//@entrypoint.5/@level.0" to="//@entrypoint.5/@level.14"/>
+      <mayFlow from="//@entrypoint.5/@level.1" to="//@entrypoint.5/@level.4"/>
+      <mayFlow from="//@entrypoint.5/@level.1" to="//@entrypoint.5/@level.7"/>
+      <mayFlow from="//@entrypoint.5/@level.2" to="//@entrypoint.5/@level.1"/>
+      <mayFlow from="//@entrypoint.5/@level.2" to="//@entrypoint.5/@level.9"/>
+      <mayFlow from="//@entrypoint.5/@level.2" to="//@entrypoint.5/@level.12"/>
+      <mayFlow from="//@entrypoint.5/@level.3" to="//@entrypoint.5/@level.2"/>
+      <mayFlow from="//@entrypoint.5/@level.3" to="//@entrypoint.5/@level.6"/>
+      <mayFlow from="//@entrypoint.5/@level.3" to="//@entrypoint.5/@level.8"/>
+      <mayFlow from="//@entrypoint.5/@level.3" to="//@entrypoint.5/@level.11"/>
+      <mayFlow from="//@entrypoint.5/@level.6" to="//@entrypoint.5/@level.0"/>
+      <mayFlow from="//@entrypoint.5/@level.6" to="//@entrypoint.5/@level.12"/>
+      <mayFlow from="//@entrypoint.5/@level.6" to="//@entrypoint.5/@level.13"/>
+      <mayFlow from="//@entrypoint.5/@level.8" to="//@entrypoint.5/@level.0"/>
+      <mayFlow from="//@entrypoint.5/@level.8" to="//@entrypoint.5/@level.9"/>
+      <mayFlow from="//@entrypoint.5/@level.8" to="//@entrypoint.5/@level.10"/>
+      <mayFlow from="//@entrypoint.5/@level.9" to="//@entrypoint.5/@level.4"/>
+      <mayFlow from="//@entrypoint.5/@level.9" to="//@entrypoint.5/@level.14"/>
+      <mayFlow from="//@entrypoint.5/@level.10" to="//@entrypoint.5/@level.4"/>
+      <mayFlow from="//@entrypoint.5/@level.10" to="//@entrypoint.5/@level.5"/>
+      <mayFlow from="//@entrypoint.5/@level.11" to="//@entrypoint.5/@level.1"/>
+      <mayFlow from="//@entrypoint.5/@level.11" to="//@entrypoint.5/@level.10"/>
+      <mayFlow from="//@entrypoint.5/@level.11" to="//@entrypoint.5/@level.13"/>
+      <mayFlow from="//@entrypoint.5/@level.12" to="//@entrypoint.5/@level.7"/>
+      <mayFlow from="//@entrypoint.5/@level.12" to="//@entrypoint.5/@level.14"/>
+      <mayFlow from="//@entrypoint.5/@level.13" to="//@entrypoint.5/@level.5"/>
+      <mayFlow from="//@entrypoint.5/@level.13" to="//@entrypoint.5/@level.7"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="6">
+    <level id="_RfvGFXm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfvGHXm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfvGGHm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfvGG3m-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfvGIHm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfvGF3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfvGH3m-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfvGIXm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfvGInm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfvGI3m-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfvGFnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfvGGnm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfvGHHm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfvGHnm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_RfvGGXm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.6/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.6/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.6/@level.0" to="//@entrypoint.6/@level.9"/>
+      <mayFlow from="//@entrypoint.6/@level.0" to="//@entrypoint.6/@level.12"/>
+      <mayFlow from="//@entrypoint.6/@level.1" to="//@entrypoint.6/@level.0"/>
+      <mayFlow from="//@entrypoint.6/@level.1" to="//@entrypoint.6/@level.3"/>
+      <mayFlow from="//@entrypoint.6/@level.1" to="//@entrypoint.6/@level.6"/>
+      <mayFlow from="//@entrypoint.6/@level.2" to="//@entrypoint.6/@level.3"/>
+      <mayFlow from="//@entrypoint.6/@level.2" to="//@entrypoint.6/@level.4"/>
+      <mayFlow from="//@entrypoint.6/@level.2" to="//@entrypoint.6/@level.11"/>
+      <mayFlow from="//@entrypoint.6/@level.3" to="//@entrypoint.6/@level.12"/>
+      <mayFlow from="//@entrypoint.6/@level.3" to="//@entrypoint.6/@level.13"/>
+      <mayFlow from="//@entrypoint.6/@level.4" to="//@entrypoint.6/@level.8"/>
+      <mayFlow from="//@entrypoint.6/@level.4" to="//@entrypoint.6/@level.13"/>
+      <mayFlow from="//@entrypoint.6/@level.5" to="//@entrypoint.6/@level.1"/>
+      <mayFlow from="//@entrypoint.6/@level.5" to="//@entrypoint.6/@level.2"/>
+      <mayFlow from="//@entrypoint.6/@level.5" to="//@entrypoint.6/@level.10"/>
+      <mayFlow from="//@entrypoint.6/@level.5" to="//@entrypoint.6/@level.14"/>
+      <mayFlow from="//@entrypoint.6/@level.6" to="//@entrypoint.6/@level.9"/>
+      <mayFlow from="//@entrypoint.6/@level.6" to="//@entrypoint.6/@level.13"/>
+      <mayFlow from="//@entrypoint.6/@level.7" to="//@entrypoint.6/@level.8"/>
+      <mayFlow from="//@entrypoint.6/@level.7" to="//@entrypoint.6/@level.9"/>
+      <mayFlow from="//@entrypoint.6/@level.10" to="//@entrypoint.6/@level.4"/>
+      <mayFlow from="//@entrypoint.6/@level.10" to="//@entrypoint.6/@level.6"/>
+      <mayFlow from="//@entrypoint.6/@level.10" to="//@entrypoint.6/@level.7"/>
+      <mayFlow from="//@entrypoint.6/@level.11" to="//@entrypoint.6/@level.8"/>
+      <mayFlow from="//@entrypoint.6/@level.11" to="//@entrypoint.6/@level.12"/>
+      <mayFlow from="//@entrypoint.6/@level.14" to="//@entrypoint.6/@level.0"/>
+      <mayFlow from="//@entrypoint.6/@level.14" to="//@entrypoint.6/@level.7"/>
+      <mayFlow from="//@entrypoint.6/@level.14" to="//@entrypoint.6/@level.11"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="7">
+    <level id="_RfvtJXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfvtKXm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfwUNnm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfwUM3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfvtKnm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfvtK3m-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfwUN3m-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfvtJnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfwUMnm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfvtKHm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfwUNHm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfvtJ3m-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_RfwUMHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfwUNXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfwUMXm-Ee-wsubUNQGQcA" name="User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.7/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.7/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.7/@level.0" to="//@entrypoint.7/@level.11"/>
+      <mayFlow from="//@entrypoint.7/@level.0" to="//@entrypoint.7/@level.13"/>
+      <mayFlow from="//@entrypoint.7/@level.1" to="//@entrypoint.7/@level.6"/>
+      <mayFlow from="//@entrypoint.7/@level.1" to="//@entrypoint.7/@level.11"/>
+      <mayFlow from="//@entrypoint.7/@level.2" to="//@entrypoint.7/@level.6"/>
+      <mayFlow from="//@entrypoint.7/@level.2" to="//@entrypoint.7/@level.14"/>
+      <mayFlow from="//@entrypoint.7/@level.3" to="//@entrypoint.7/@level.5"/>
+      <mayFlow from="//@entrypoint.7/@level.3" to="//@entrypoint.7/@level.7"/>
+      <mayFlow from="//@entrypoint.7/@level.3" to="//@entrypoint.7/@level.9"/>
+      <mayFlow from="//@entrypoint.7/@level.3" to="//@entrypoint.7/@level.12"/>
+      <mayFlow from="//@entrypoint.7/@level.4" to="//@entrypoint.7/@level.6"/>
+      <mayFlow from="//@entrypoint.7/@level.4" to="//@entrypoint.7/@level.13"/>
+      <mayFlow from="//@entrypoint.7/@level.5" to="//@entrypoint.7/@level.1"/>
+      <mayFlow from="//@entrypoint.7/@level.5" to="//@entrypoint.7/@level.2"/>
+      <mayFlow from="//@entrypoint.7/@level.5" to="//@entrypoint.7/@level.10"/>
+      <mayFlow from="//@entrypoint.7/@level.7" to="//@entrypoint.7/@level.0"/>
+      <mayFlow from="//@entrypoint.7/@level.7" to="//@entrypoint.7/@level.1"/>
+      <mayFlow from="//@entrypoint.7/@level.7" to="//@entrypoint.7/@level.4"/>
+      <mayFlow from="//@entrypoint.7/@level.8" to="//@entrypoint.7/@level.13"/>
+      <mayFlow from="//@entrypoint.7/@level.8" to="//@entrypoint.7/@level.14"/>
+      <mayFlow from="//@entrypoint.7/@level.9" to="//@entrypoint.7/@level.0"/>
+      <mayFlow from="//@entrypoint.7/@level.9" to="//@entrypoint.7/@level.8"/>
+      <mayFlow from="//@entrypoint.7/@level.9" to="//@entrypoint.7/@level.10"/>
+      <mayFlow from="//@entrypoint.7/@level.10" to="//@entrypoint.7/@level.11"/>
+      <mayFlow from="//@entrypoint.7/@level.10" to="//@entrypoint.7/@level.14"/>
+      <mayFlow from="//@entrypoint.7/@level.12" to="//@entrypoint.7/@level.2"/>
+      <mayFlow from="//@entrypoint.7/@level.12" to="//@entrypoint.7/@level.4"/>
+      <mayFlow from="//@entrypoint.7/@level.12" to="//@entrypoint.7/@level.8"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="8">
+    <level id="_Rfw7R3m-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rfw7UHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rfw7TXm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rfw7S3m-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rfw7THm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rfw7SHm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rfw7RXm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rfw7U3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rfw7Rnm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rfw7T3m-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rfw7Unm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rfw7SXm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rfw7Snm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rfw7UXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rfw7Tnm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.8/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.8/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.8/@level.0" to="//@entrypoint.8/@level.5"/>
+      <mayFlow from="//@entrypoint.8/@level.0" to="//@entrypoint.8/@level.14"/>
+      <mayFlow from="//@entrypoint.8/@level.1" to="//@entrypoint.8/@level.2"/>
+      <mayFlow from="//@entrypoint.8/@level.1" to="//@entrypoint.8/@level.3"/>
+      <mayFlow from="//@entrypoint.8/@level.1" to="//@entrypoint.8/@level.12"/>
+      <mayFlow from="//@entrypoint.8/@level.2" to="//@entrypoint.8/@level.8"/>
+      <mayFlow from="//@entrypoint.8/@level.2" to="//@entrypoint.8/@level.14"/>
+      <mayFlow from="//@entrypoint.8/@level.3" to="//@entrypoint.8/@level.8"/>
+      <mayFlow from="//@entrypoint.8/@level.3" to="//@entrypoint.8/@level.9"/>
+      <mayFlow from="//@entrypoint.8/@level.4" to="//@entrypoint.8/@level.0"/>
+      <mayFlow from="//@entrypoint.8/@level.4" to="//@entrypoint.8/@level.2"/>
+      <mayFlow from="//@entrypoint.8/@level.4" to="//@entrypoint.8/@level.6"/>
+      <mayFlow from="//@entrypoint.8/@level.6" to="//@entrypoint.8/@level.5"/>
+      <mayFlow from="//@entrypoint.8/@level.6" to="//@entrypoint.8/@level.8"/>
+      <mayFlow from="//@entrypoint.8/@level.7" to="//@entrypoint.8/@level.1"/>
+      <mayFlow from="//@entrypoint.8/@level.7" to="//@entrypoint.8/@level.4"/>
+      <mayFlow from="//@entrypoint.8/@level.7" to="//@entrypoint.8/@level.10"/>
+      <mayFlow from="//@entrypoint.8/@level.7" to="//@entrypoint.8/@level.13"/>
+      <mayFlow from="//@entrypoint.8/@level.10" to="//@entrypoint.8/@level.3"/>
+      <mayFlow from="//@entrypoint.8/@level.10" to="//@entrypoint.8/@level.6"/>
+      <mayFlow from="//@entrypoint.8/@level.10" to="//@entrypoint.8/@level.11"/>
+      <mayFlow from="//@entrypoint.8/@level.11" to="//@entrypoint.8/@level.5"/>
+      <mayFlow from="//@entrypoint.8/@level.11" to="//@entrypoint.8/@level.9"/>
+      <mayFlow from="//@entrypoint.8/@level.12" to="//@entrypoint.8/@level.9"/>
+      <mayFlow from="//@entrypoint.8/@level.12" to="//@entrypoint.8/@level.14"/>
+      <mayFlow from="//@entrypoint.8/@level.13" to="//@entrypoint.8/@level.0"/>
+      <mayFlow from="//@entrypoint.8/@level.13" to="//@entrypoint.8/@level.11"/>
+      <mayFlow from="//@entrypoint.8/@level.13" to="//@entrypoint.8/@level.12"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="9">
+    <level id="_RfxiYHm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfxiWnm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfxiXXm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfxiXnm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_RfxiV3m-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfxiYXm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfxiY3m-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfxiWXm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfxiVnm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfxiWHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfxiVXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfxiXHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfxiYnm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfxiX3m-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfxiW3m-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.9/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.9/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.9/@level.2" to="//@entrypoint.9/@level.0"/>
+      <mayFlow from="//@entrypoint.9/@level.2" to="//@entrypoint.9/@level.6"/>
+      <mayFlow from="//@entrypoint.9/@level.4" to="//@entrypoint.9/@level.3"/>
+      <mayFlow from="//@entrypoint.9/@level.4" to="//@entrypoint.9/@level.6"/>
+      <mayFlow from="//@entrypoint.9/@level.5" to="//@entrypoint.9/@level.0"/>
+      <mayFlow from="//@entrypoint.9/@level.5" to="//@entrypoint.9/@level.1"/>
+      <mayFlow from="//@entrypoint.9/@level.7" to="//@entrypoint.9/@level.8"/>
+      <mayFlow from="//@entrypoint.9/@level.7" to="//@entrypoint.9/@level.9"/>
+      <mayFlow from="//@entrypoint.9/@level.7" to="//@entrypoint.9/@level.10"/>
+      <mayFlow from="//@entrypoint.9/@level.7" to="//@entrypoint.9/@level.11"/>
+      <mayFlow from="//@entrypoint.9/@level.8" to="//@entrypoint.9/@level.2"/>
+      <mayFlow from="//@entrypoint.9/@level.8" to="//@entrypoint.9/@level.4"/>
+      <mayFlow from="//@entrypoint.9/@level.8" to="//@entrypoint.9/@level.14"/>
+      <mayFlow from="//@entrypoint.9/@level.9" to="//@entrypoint.9/@level.5"/>
+      <mayFlow from="//@entrypoint.9/@level.9" to="//@entrypoint.9/@level.12"/>
+      <mayFlow from="//@entrypoint.9/@level.9" to="//@entrypoint.9/@level.14"/>
+      <mayFlow from="//@entrypoint.9/@level.10" to="//@entrypoint.9/@level.4"/>
+      <mayFlow from="//@entrypoint.9/@level.10" to="//@entrypoint.9/@level.12"/>
+      <mayFlow from="//@entrypoint.9/@level.10" to="//@entrypoint.9/@level.13"/>
+      <mayFlow from="//@entrypoint.9/@level.11" to="//@entrypoint.9/@level.2"/>
+      <mayFlow from="//@entrypoint.9/@level.11" to="//@entrypoint.9/@level.5"/>
+      <mayFlow from="//@entrypoint.9/@level.11" to="//@entrypoint.9/@level.13"/>
+      <mayFlow from="//@entrypoint.9/@level.12" to="//@entrypoint.9/@level.1"/>
+      <mayFlow from="//@entrypoint.9/@level.12" to="//@entrypoint.9/@level.3"/>
+      <mayFlow from="//@entrypoint.9/@level.13" to="//@entrypoint.9/@level.1"/>
+      <mayFlow from="//@entrypoint.9/@level.13" to="//@entrypoint.9/@level.6"/>
+      <mayFlow from="//@entrypoint.9/@level.14" to="//@entrypoint.9/@level.0"/>
+      <mayFlow from="//@entrypoint.9/@level.14" to="//@entrypoint.9/@level.3"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="10">
+    <level id="_RfyJZnm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_RfyJaXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_RfyJbXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_RfyJZ3m-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_RfyJc3m-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_RfyJb3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfyJanm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfyJa3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfyJcXm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_RfyJbnm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfyJcHm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfyJcnm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfyJZXm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfyJaHm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfyJbHm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.10/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.10/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.10/@level.3" to="//@entrypoint.10/@level.6"/>
+      <mayFlow from="//@entrypoint.10/@level.3" to="//@entrypoint.10/@level.11"/>
+      <mayFlow from="//@entrypoint.10/@level.3" to="//@entrypoint.10/@level.14"/>
+      <mayFlow from="//@entrypoint.10/@level.4" to="//@entrypoint.10/@level.3"/>
+      <mayFlow from="//@entrypoint.10/@level.4" to="//@entrypoint.10/@level.5"/>
+      <mayFlow from="//@entrypoint.10/@level.4" to="//@entrypoint.10/@level.8"/>
+      <mayFlow from="//@entrypoint.10/@level.4" to="//@entrypoint.10/@level.9"/>
+      <mayFlow from="//@entrypoint.10/@level.5" to="//@entrypoint.10/@level.7"/>
+      <mayFlow from="//@entrypoint.10/@level.5" to="//@entrypoint.10/@level.13"/>
+      <mayFlow from="//@entrypoint.10/@level.5" to="//@entrypoint.10/@level.14"/>
+      <mayFlow from="//@entrypoint.10/@level.6" to="//@entrypoint.10/@level.2"/>
+      <mayFlow from="//@entrypoint.10/@level.6" to="//@entrypoint.10/@level.12"/>
+      <mayFlow from="//@entrypoint.10/@level.7" to="//@entrypoint.10/@level.0"/>
+      <mayFlow from="//@entrypoint.10/@level.7" to="//@entrypoint.10/@level.1"/>
+      <mayFlow from="//@entrypoint.10/@level.8" to="//@entrypoint.10/@level.7"/>
+      <mayFlow from="//@entrypoint.10/@level.8" to="//@entrypoint.10/@level.10"/>
+      <mayFlow from="//@entrypoint.10/@level.8" to="//@entrypoint.10/@level.11"/>
+      <mayFlow from="//@entrypoint.10/@level.9" to="//@entrypoint.10/@level.6"/>
+      <mayFlow from="//@entrypoint.10/@level.9" to="//@entrypoint.10/@level.10"/>
+      <mayFlow from="//@entrypoint.10/@level.9" to="//@entrypoint.10/@level.13"/>
+      <mayFlow from="//@entrypoint.10/@level.10" to="//@entrypoint.10/@level.1"/>
+      <mayFlow from="//@entrypoint.10/@level.10" to="//@entrypoint.10/@level.2"/>
+      <mayFlow from="//@entrypoint.10/@level.11" to="//@entrypoint.10/@level.0"/>
+      <mayFlow from="//@entrypoint.10/@level.11" to="//@entrypoint.10/@level.2"/>
+      <mayFlow from="//@entrypoint.10/@level.13" to="//@entrypoint.10/@level.1"/>
+      <mayFlow from="//@entrypoint.10/@level.13" to="//@entrypoint.10/@level.12"/>
+      <mayFlow from="//@entrypoint.10/@level.14" to="//@entrypoint.10/@level.0"/>
+      <mayFlow from="//@entrypoint.10/@level.14" to="//@entrypoint.10/@level.12"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="11">
+    <level id="_RfywfXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_RfzXhHm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfzXgXm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_RfzXg3m-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rfywd3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rfywf3m-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rfywdnm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rfywenm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_RfzXgHm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_RfywfHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rfywfnm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_RfyweXm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rfywe3m-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_RfzXgnm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_RfyweHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.11/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.11/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.11/@level.0" to="//@entrypoint.11/@level.1"/>
+      <mayFlow from="//@entrypoint.11/@level.0" to="//@entrypoint.11/@level.4"/>
+      <mayFlow from="//@entrypoint.11/@level.0" to="//@entrypoint.11/@level.7"/>
+      <mayFlow from="//@entrypoint.11/@level.1" to="//@entrypoint.11/@level.6"/>
+      <mayFlow from="//@entrypoint.11/@level.1" to="//@entrypoint.11/@level.10"/>
+      <mayFlow from="//@entrypoint.11/@level.2" to="//@entrypoint.11/@level.7"/>
+      <mayFlow from="//@entrypoint.11/@level.2" to="//@entrypoint.11/@level.8"/>
+      <mayFlow from="//@entrypoint.11/@level.2" to="//@entrypoint.11/@level.13"/>
+      <mayFlow from="//@entrypoint.11/@level.4" to="//@entrypoint.11/@level.5"/>
+      <mayFlow from="//@entrypoint.11/@level.4" to="//@entrypoint.11/@level.6"/>
+      <mayFlow from="//@entrypoint.11/@level.7" to="//@entrypoint.11/@level.5"/>
+      <mayFlow from="//@entrypoint.11/@level.7" to="//@entrypoint.11/@level.10"/>
+      <mayFlow from="//@entrypoint.11/@level.8" to="//@entrypoint.11/@level.3"/>
+      <mayFlow from="//@entrypoint.11/@level.8" to="//@entrypoint.11/@level.5"/>
+      <mayFlow from="//@entrypoint.11/@level.9" to="//@entrypoint.11/@level.4"/>
+      <mayFlow from="//@entrypoint.11/@level.9" to="//@entrypoint.11/@level.8"/>
+      <mayFlow from="//@entrypoint.11/@level.9" to="//@entrypoint.11/@level.12"/>
+      <mayFlow from="//@entrypoint.11/@level.11" to="//@entrypoint.11/@level.1"/>
+      <mayFlow from="//@entrypoint.11/@level.11" to="//@entrypoint.11/@level.12"/>
+      <mayFlow from="//@entrypoint.11/@level.11" to="//@entrypoint.11/@level.13"/>
+      <mayFlow from="//@entrypoint.11/@level.12" to="//@entrypoint.11/@level.3"/>
+      <mayFlow from="//@entrypoint.11/@level.12" to="//@entrypoint.11/@level.6"/>
+      <mayFlow from="//@entrypoint.11/@level.13" to="//@entrypoint.11/@level.3"/>
+      <mayFlow from="//@entrypoint.11/@level.13" to="//@entrypoint.11/@level.10"/>
+      <mayFlow from="//@entrypoint.11/@level.14" to="//@entrypoint.11/@level.0"/>
+      <mayFlow from="//@entrypoint.11/@level.14" to="//@entrypoint.11/@level.2"/>
+      <mayFlow from="//@entrypoint.11/@level.14" to="//@entrypoint.11/@level.9"/>
+      <mayFlow from="//@entrypoint.11/@level.14" to="//@entrypoint.11/@level.11"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="12">
+    <level id="_Rfz-kHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rfz-lnm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rfz-k3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_RfzXi3m-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rfz-mnm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rfz-lXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rfz-mHm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rfz-nHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rfz-knm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rfz-kXm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rfz-lHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rfz-mXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rfz-m3m-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rfz-l3m-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_RfzXjHm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.12/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.12/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.12/@level.0" to="//@entrypoint.12/@level.2"/>
+      <mayFlow from="//@entrypoint.12/@level.0" to="//@entrypoint.12/@level.9"/>
+      <mayFlow from="//@entrypoint.12/@level.0" to="//@entrypoint.12/@level.14"/>
+      <mayFlow from="//@entrypoint.12/@level.1" to="//@entrypoint.12/@level.3"/>
+      <mayFlow from="//@entrypoint.12/@level.1" to="//@entrypoint.12/@level.5"/>
+      <mayFlow from="//@entrypoint.12/@level.2" to="//@entrypoint.12/@level.5"/>
+      <mayFlow from="//@entrypoint.12/@level.2" to="//@entrypoint.12/@level.8"/>
+      <mayFlow from="//@entrypoint.12/@level.4" to="//@entrypoint.12/@level.1"/>
+      <mayFlow from="//@entrypoint.12/@level.4" to="//@entrypoint.12/@level.2"/>
+      <mayFlow from="//@entrypoint.12/@level.4" to="//@entrypoint.12/@level.13"/>
+      <mayFlow from="//@entrypoint.12/@level.6" to="//@entrypoint.12/@level.3"/>
+      <mayFlow from="//@entrypoint.12/@level.6" to="//@entrypoint.12/@level.11"/>
+      <mayFlow from="//@entrypoint.12/@level.7" to="//@entrypoint.12/@level.1"/>
+      <mayFlow from="//@entrypoint.12/@level.7" to="//@entrypoint.12/@level.6"/>
+      <mayFlow from="//@entrypoint.12/@level.7" to="//@entrypoint.12/@level.14"/>
+      <mayFlow from="//@entrypoint.12/@level.9" to="//@entrypoint.12/@level.8"/>
+      <mayFlow from="//@entrypoint.12/@level.9" to="//@entrypoint.12/@level.11"/>
+      <mayFlow from="//@entrypoint.12/@level.10" to="//@entrypoint.12/@level.0"/>
+      <mayFlow from="//@entrypoint.12/@level.10" to="//@entrypoint.12/@level.4"/>
+      <mayFlow from="//@entrypoint.12/@level.10" to="//@entrypoint.12/@level.7"/>
+      <mayFlow from="//@entrypoint.12/@level.10" to="//@entrypoint.12/@level.12"/>
+      <mayFlow from="//@entrypoint.12/@level.12" to="//@entrypoint.12/@level.6"/>
+      <mayFlow from="//@entrypoint.12/@level.12" to="//@entrypoint.12/@level.9"/>
+      <mayFlow from="//@entrypoint.12/@level.12" to="//@entrypoint.12/@level.13"/>
+      <mayFlow from="//@entrypoint.12/@level.13" to="//@entrypoint.12/@level.3"/>
+      <mayFlow from="//@entrypoint.12/@level.13" to="//@entrypoint.12/@level.8"/>
+      <mayFlow from="//@entrypoint.12/@level.14" to="//@entrypoint.12/@level.5"/>
+      <mayFlow from="//@entrypoint.12/@level.14" to="//@entrypoint.12/@level.11"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="13">
+    <level id="_Rf1Mu3m-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rf1MwHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rf1MwXm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rf1MvXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rf1MvHm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rf1Mwnm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rf1Munm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rf1Mvnm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rf1Mv3m-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rf1MuHm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rf1MuXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rf1Mtnm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rf1MtXm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rf1MtHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rf1Mt3m-Ee-wsubUNQGQcA" name="Airline"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.13/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.13/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.13/@level.0" to="//@entrypoint.13/@level.3"/>
+      <mayFlow from="//@entrypoint.13/@level.0" to="//@entrypoint.13/@level.9"/>
+      <mayFlow from="//@entrypoint.13/@level.1" to="//@entrypoint.13/@level.6"/>
+      <mayFlow from="//@entrypoint.13/@level.1" to="//@entrypoint.13/@level.11"/>
+      <mayFlow from="//@entrypoint.13/@level.1" to="//@entrypoint.13/@level.12"/>
+      <mayFlow from="//@entrypoint.13/@level.1" to="//@entrypoint.13/@level.13"/>
+      <mayFlow from="//@entrypoint.13/@level.4" to="//@entrypoint.13/@level.2"/>
+      <mayFlow from="//@entrypoint.13/@level.4" to="//@entrypoint.13/@level.9"/>
+      <mayFlow from="//@entrypoint.13/@level.5" to="//@entrypoint.13/@level.2"/>
+      <mayFlow from="//@entrypoint.13/@level.5" to="//@entrypoint.13/@level.14"/>
+      <mayFlow from="//@entrypoint.13/@level.6" to="//@entrypoint.13/@level.4"/>
+      <mayFlow from="//@entrypoint.13/@level.6" to="//@entrypoint.13/@level.5"/>
+      <mayFlow from="//@entrypoint.13/@level.6" to="//@entrypoint.13/@level.10"/>
+      <mayFlow from="//@entrypoint.13/@level.7" to="//@entrypoint.13/@level.3"/>
+      <mayFlow from="//@entrypoint.13/@level.7" to="//@entrypoint.13/@level.14"/>
+      <mayFlow from="//@entrypoint.13/@level.8" to="//@entrypoint.13/@level.2"/>
+      <mayFlow from="//@entrypoint.13/@level.8" to="//@entrypoint.13/@level.3"/>
+      <mayFlow from="//@entrypoint.13/@level.10" to="//@entrypoint.13/@level.9"/>
+      <mayFlow from="//@entrypoint.13/@level.10" to="//@entrypoint.13/@level.14"/>
+      <mayFlow from="//@entrypoint.13/@level.11" to="//@entrypoint.13/@level.0"/>
+      <mayFlow from="//@entrypoint.13/@level.11" to="//@entrypoint.13/@level.4"/>
+      <mayFlow from="//@entrypoint.13/@level.11" to="//@entrypoint.13/@level.8"/>
+      <mayFlow from="//@entrypoint.13/@level.12" to="//@entrypoint.13/@level.0"/>
+      <mayFlow from="//@entrypoint.13/@level.12" to="//@entrypoint.13/@level.7"/>
+      <mayFlow from="//@entrypoint.13/@level.12" to="//@entrypoint.13/@level.10"/>
+      <mayFlow from="//@entrypoint.13/@level.13" to="//@entrypoint.13/@level.5"/>
+      <mayFlow from="//@entrypoint.13/@level.13" to="//@entrypoint.13/@level.7"/>
+      <mayFlow from="//@entrypoint.13/@level.13" to="//@entrypoint.13/@level.8"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="14">
+    <level id="_Rf3B5nm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rf3B6nm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rf3B4Xm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rf3B63m-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rf3B4nm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rf2a1Xm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rf2a13m-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rf3B43m-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rf3B6Hm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rf3B4Hm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rf3B5Hm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rf3B6Xm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rf3B5Xm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rf3B53m-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rf2a1nm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.14/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.14/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.14/@level.1" to="//@entrypoint.14/@level.4"/>
+      <mayFlow from="//@entrypoint.14/@level.1" to="//@entrypoint.14/@level.11"/>
+      <mayFlow from="//@entrypoint.14/@level.1" to="//@entrypoint.14/@level.12"/>
+      <mayFlow from="//@entrypoint.14/@level.3" to="//@entrypoint.14/@level.2"/>
+      <mayFlow from="//@entrypoint.14/@level.3" to="//@entrypoint.14/@level.6"/>
+      <mayFlow from="//@entrypoint.14/@level.4" to="//@entrypoint.14/@level.2"/>
+      <mayFlow from="//@entrypoint.14/@level.4" to="//@entrypoint.14/@level.10"/>
+      <mayFlow from="//@entrypoint.14/@level.5" to="//@entrypoint.14/@level.3"/>
+      <mayFlow from="//@entrypoint.14/@level.5" to="//@entrypoint.14/@level.9"/>
+      <mayFlow from="//@entrypoint.14/@level.5" to="//@entrypoint.14/@level.12"/>
+      <mayFlow from="//@entrypoint.14/@level.7" to="//@entrypoint.14/@level.8"/>
+      <mayFlow from="//@entrypoint.14/@level.7" to="//@entrypoint.14/@level.9"/>
+      <mayFlow from="//@entrypoint.14/@level.7" to="//@entrypoint.14/@level.11"/>
+      <mayFlow from="//@entrypoint.14/@level.8" to="//@entrypoint.14/@level.6"/>
+      <mayFlow from="//@entrypoint.14/@level.8" to="//@entrypoint.14/@level.10"/>
+      <mayFlow from="//@entrypoint.14/@level.9" to="//@entrypoint.14/@level.0"/>
+      <mayFlow from="//@entrypoint.14/@level.9" to="//@entrypoint.14/@level.6"/>
+      <mayFlow from="//@entrypoint.14/@level.11" to="//@entrypoint.14/@level.0"/>
+      <mayFlow from="//@entrypoint.14/@level.11" to="//@entrypoint.14/@level.10"/>
+      <mayFlow from="//@entrypoint.14/@level.12" to="//@entrypoint.14/@level.0"/>
+      <mayFlow from="//@entrypoint.14/@level.12" to="//@entrypoint.14/@level.2"/>
+      <mayFlow from="//@entrypoint.14/@level.13" to="//@entrypoint.14/@level.3"/>
+      <mayFlow from="//@entrypoint.14/@level.13" to="//@entrypoint.14/@level.4"/>
+      <mayFlow from="//@entrypoint.14/@level.13" to="//@entrypoint.14/@level.8"/>
+      <mayFlow from="//@entrypoint.14/@level.14" to="//@entrypoint.14/@level.1"/>
+      <mayFlow from="//@entrypoint.14/@level.14" to="//@entrypoint.14/@level.5"/>
+      <mayFlow from="//@entrypoint.14/@level.14" to="//@entrypoint.14/@level.7"/>
+      <mayFlow from="//@entrypoint.14/@level.14" to="//@entrypoint.14/@level.13"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="15">
+    <level id="_Rf3o-Xm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rf4QAXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rf4QBHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rf3o9Xm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rf3o-3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rf4QAnm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rf4QA3m-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rf3o-nm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rf3o_Hm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rf3o_nm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rf3o-Hm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rf3o9nm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rf4QAHm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rf3o_Xm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rf3o93m-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.12">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.7">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.15/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.15/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.15/@level.0" to="//@entrypoint.15/@level.1"/>
+      <mayFlow from="//@entrypoint.15/@level.0" to="//@entrypoint.15/@level.5"/>
+      <mayFlow from="//@entrypoint.15/@level.2" to="//@entrypoint.15/@level.6"/>
+      <mayFlow from="//@entrypoint.15/@level.2" to="//@entrypoint.15/@level.7"/>
+      <mayFlow from="//@entrypoint.15/@level.2" to="//@entrypoint.15/@level.12"/>
+      <mayFlow from="//@entrypoint.15/@level.4" to="//@entrypoint.15/@level.7"/>
+      <mayFlow from="//@entrypoint.15/@level.4" to="//@entrypoint.15/@level.9"/>
+      <mayFlow from="//@entrypoint.15/@level.4" to="//@entrypoint.15/@level.10"/>
+      <mayFlow from="//@entrypoint.15/@level.6" to="//@entrypoint.15/@level.1"/>
+      <mayFlow from="//@entrypoint.15/@level.6" to="//@entrypoint.15/@level.14"/>
+      <mayFlow from="//@entrypoint.15/@level.7" to="//@entrypoint.15/@level.3"/>
+      <mayFlow from="//@entrypoint.15/@level.7" to="//@entrypoint.15/@level.14"/>
+      <mayFlow from="//@entrypoint.15/@level.8" to="//@entrypoint.15/@level.0"/>
+      <mayFlow from="//@entrypoint.15/@level.8" to="//@entrypoint.15/@level.6"/>
+      <mayFlow from="//@entrypoint.15/@level.8" to="//@entrypoint.15/@level.10"/>
+      <mayFlow from="//@entrypoint.15/@level.9" to="//@entrypoint.15/@level.3"/>
+      <mayFlow from="//@entrypoint.15/@level.9" to="//@entrypoint.15/@level.5"/>
+      <mayFlow from="//@entrypoint.15/@level.10" to="//@entrypoint.15/@level.5"/>
+      <mayFlow from="//@entrypoint.15/@level.10" to="//@entrypoint.15/@level.14"/>
+      <mayFlow from="//@entrypoint.15/@level.11" to="//@entrypoint.15/@level.0"/>
+      <mayFlow from="//@entrypoint.15/@level.11" to="//@entrypoint.15/@level.9"/>
+      <mayFlow from="//@entrypoint.15/@level.11" to="//@entrypoint.15/@level.12"/>
+      <mayFlow from="//@entrypoint.15/@level.12" to="//@entrypoint.15/@level.1"/>
+      <mayFlow from="//@entrypoint.15/@level.12" to="//@entrypoint.15/@level.3"/>
+      <mayFlow from="//@entrypoint.15/@level.13" to="//@entrypoint.15/@level.2"/>
+      <mayFlow from="//@entrypoint.15/@level.13" to="//@entrypoint.15/@level.4"/>
+      <mayFlow from="//@entrypoint.15/@level.13" to="//@entrypoint.15/@level.8"/>
+      <mayFlow from="//@entrypoint.15/@level.13" to="//@entrypoint.15/@level.11"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="16">
+    <level id="_Rf43G3m-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rf43Enm-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rf43FHm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rf43F3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rf43GXm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rf43HHm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rf43EXm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rf43Fnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rf43Gnm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rf43HXm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rf43E3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rf43FXm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rf43EHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rf43GHm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rf4QC3m-Ee-wsubUNQGQcA" name="Support;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.11">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.10">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.16/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.16/@level.6">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.16/@level.0" to="//@entrypoint.16/@level.1"/>
+      <mayFlow from="//@entrypoint.16/@level.0" to="//@entrypoint.16/@level.4"/>
+      <mayFlow from="//@entrypoint.16/@level.0" to="//@entrypoint.16/@level.14"/>
+      <mayFlow from="//@entrypoint.16/@level.1" to="//@entrypoint.16/@level.5"/>
+      <mayFlow from="//@entrypoint.16/@level.1" to="//@entrypoint.16/@level.6"/>
+      <mayFlow from="//@entrypoint.16/@level.2" to="//@entrypoint.16/@level.8"/>
+      <mayFlow from="//@entrypoint.16/@level.2" to="//@entrypoint.16/@level.9"/>
+      <mayFlow from="//@entrypoint.16/@level.2" to="//@entrypoint.16/@level.14"/>
+      <mayFlow from="//@entrypoint.16/@level.3" to="//@entrypoint.16/@level.4"/>
+      <mayFlow from="//@entrypoint.16/@level.3" to="//@entrypoint.16/@level.8"/>
+      <mayFlow from="//@entrypoint.16/@level.3" to="//@entrypoint.16/@level.10"/>
+      <mayFlow from="//@entrypoint.16/@level.4" to="//@entrypoint.16/@level.6"/>
+      <mayFlow from="//@entrypoint.16/@level.4" to="//@entrypoint.16/@level.11"/>
+      <mayFlow from="//@entrypoint.16/@level.7" to="//@entrypoint.16/@level.1"/>
+      <mayFlow from="//@entrypoint.16/@level.7" to="//@entrypoint.16/@level.9"/>
+      <mayFlow from="//@entrypoint.16/@level.7" to="//@entrypoint.16/@level.10"/>
+      <mayFlow from="//@entrypoint.16/@level.8" to="//@entrypoint.16/@level.11"/>
+      <mayFlow from="//@entrypoint.16/@level.8" to="//@entrypoint.16/@level.13"/>
+      <mayFlow from="//@entrypoint.16/@level.9" to="//@entrypoint.16/@level.5"/>
+      <mayFlow from="//@entrypoint.16/@level.9" to="//@entrypoint.16/@level.13"/>
+      <mayFlow from="//@entrypoint.16/@level.10" to="//@entrypoint.16/@level.6"/>
+      <mayFlow from="//@entrypoint.16/@level.10" to="//@entrypoint.16/@level.13"/>
+      <mayFlow from="//@entrypoint.16/@level.12" to="//@entrypoint.16/@level.0"/>
+      <mayFlow from="//@entrypoint.16/@level.12" to="//@entrypoint.16/@level.2"/>
+      <mayFlow from="//@entrypoint.16/@level.12" to="//@entrypoint.16/@level.3"/>
+      <mayFlow from="//@entrypoint.16/@level.12" to="//@entrypoint.16/@level.7"/>
+      <mayFlow from="//@entrypoint.16/@level.14" to="//@entrypoint.16/@level.5"/>
+      <mayFlow from="//@entrypoint.16/@level.14" to="//@entrypoint.16/@level.11"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="17">
+    <level id="_Rf5eK3m-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rf5eJnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rf5eJ3m-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <level id="_Rf5eKXm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rf5eMHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rf5eLXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rf5eLHm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rf5eKnm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rf5eJXm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rf5eKHm-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rf5eMnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rf5eMXm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rf5eLnm-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rf5eM3m-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rf5eL3m-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.0">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.13">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.17/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.17/@level.9">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.17/@level.1" to="//@entrypoint.17/@level.6"/>
+      <mayFlow from="//@entrypoint.17/@level.1" to="//@entrypoint.17/@level.8"/>
+      <mayFlow from="//@entrypoint.17/@level.1" to="//@entrypoint.17/@level.14"/>
+      <mayFlow from="//@entrypoint.17/@level.2" to="//@entrypoint.17/@level.0"/>
+      <mayFlow from="//@entrypoint.17/@level.2" to="//@entrypoint.17/@level.9"/>
+      <mayFlow from="//@entrypoint.17/@level.3" to="//@entrypoint.17/@level.6"/>
+      <mayFlow from="//@entrypoint.17/@level.3" to="//@entrypoint.17/@level.11"/>
+      <mayFlow from="//@entrypoint.17/@level.3" to="//@entrypoint.17/@level.12"/>
+      <mayFlow from="//@entrypoint.17/@level.4" to="//@entrypoint.17/@level.2"/>
+      <mayFlow from="//@entrypoint.17/@level.4" to="//@entrypoint.17/@level.12"/>
+      <mayFlow from="//@entrypoint.17/@level.4" to="//@entrypoint.17/@level.14"/>
+      <mayFlow from="//@entrypoint.17/@level.6" to="//@entrypoint.17/@level.5"/>
+      <mayFlow from="//@entrypoint.17/@level.6" to="//@entrypoint.17/@level.7"/>
+      <mayFlow from="//@entrypoint.17/@level.8" to="//@entrypoint.17/@level.7"/>
+      <mayFlow from="//@entrypoint.17/@level.8" to="//@entrypoint.17/@level.9"/>
+      <mayFlow from="//@entrypoint.17/@level.10" to="//@entrypoint.17/@level.1"/>
+      <mayFlow from="//@entrypoint.17/@level.10" to="//@entrypoint.17/@level.3"/>
+      <mayFlow from="//@entrypoint.17/@level.10" to="//@entrypoint.17/@level.4"/>
+      <mayFlow from="//@entrypoint.17/@level.10" to="//@entrypoint.17/@level.13"/>
+      <mayFlow from="//@entrypoint.17/@level.11" to="//@entrypoint.17/@level.0"/>
+      <mayFlow from="//@entrypoint.17/@level.11" to="//@entrypoint.17/@level.7"/>
+      <mayFlow from="//@entrypoint.17/@level.12" to="//@entrypoint.17/@level.0"/>
+      <mayFlow from="//@entrypoint.17/@level.12" to="//@entrypoint.17/@level.5"/>
+      <mayFlow from="//@entrypoint.17/@level.13" to="//@entrypoint.17/@level.2"/>
+      <mayFlow from="//@entrypoint.17/@level.13" to="//@entrypoint.17/@level.8"/>
+      <mayFlow from="//@entrypoint.17/@level.13" to="//@entrypoint.17/@level.11"/>
+      <mayFlow from="//@entrypoint.17/@level.14" to="//@entrypoint.17/@level.5"/>
+      <mayFlow from="//@entrypoint.17/@level.14" to="//@entrypoint.17/@level.9"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0"/>
+    </methodIdentification>
+  </entrypoint>
+  <entrypoint id="18">
+    <level id="_Rf6FPHm-Ee-wsubUNQGQcA" name="Airline;Support;User"/>
+    <level id="_Rf6FPnm-Ee-wsubUNQGQcA" name="Airline;TravelAgency"/>
+    <level id="_Rf6FOXm-Ee-wsubUNQGQcA" name="User"/>
+    <level id="_Rf6FO3m-Ee-wsubUNQGQcA" name="Airline"/>
+    <level id="_Rf6FNXm-Ee-wsubUNQGQcA" name="Support"/>
+    <level id="_Rf6FOnm-Ee-wsubUNQGQcA" name="Airline;TravelAgency;User"/>
+    <level id="_Rf6FOHm-Ee-wsubUNQGQcA" name="Support;TravelAgency"/>
+    <level id="_Rf6sQHm-Ee-wsubUNQGQcA" name="Support;TravelAgency;User"/>
+    <level id="_Rf6sQ3m-Ee-wsubUNQGQcA" name="Airline;Support"/>
+    <level id="_Rf6FN3m-Ee-wsubUNQGQcA" name="Support;User"/>
+    <level id="_Rf6sRHm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency"/>
+    <level id="_Rf6FNnm-Ee-wsubUNQGQcA" name="TravelAgency;User"/>
+    <level id="_Rf6sQnm-Ee-wsubUNQGQcA" name="Airline;Support;TravelAgency;User"/>
+    <level id="_Rf6FPXm-Ee-wsubUNQGQcA" name="TravelAgency"/>
+    <level id="_Rf6sQXm-Ee-wsubUNQGQcA" name="Airline;User"/>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.8">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.4/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.4">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.7/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.5/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.2/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.2">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.0/@parameter.2"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.5">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.1">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.0/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.1/@parameter.1"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.1/@method.1/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.14">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.3/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Sink" level="//@entrypoint.18/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.0/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <annotation xsi:type="joana:Source" level="//@entrypoint.18/@level.3">
+      <systemElementIdentification xsi:type="joana:ParametertIdentifying">
+        <Parameter href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2/@parameter.0"/>
+      </systemElementIdentification>
+    </annotation>
+    <lattice>
+      <mayFlow from="//@entrypoint.18/@level.0" to="//@entrypoint.18/@level.8"/>
+      <mayFlow from="//@entrypoint.18/@level.0" to="//@entrypoint.18/@level.9"/>
+      <mayFlow from="//@entrypoint.18/@level.0" to="//@entrypoint.18/@level.14"/>
+      <mayFlow from="//@entrypoint.18/@level.1" to="//@entrypoint.18/@level.3"/>
+      <mayFlow from="//@entrypoint.18/@level.1" to="//@entrypoint.18/@level.13"/>
+      <mayFlow from="//@entrypoint.18/@level.5" to="//@entrypoint.18/@level.1"/>
+      <mayFlow from="//@entrypoint.18/@level.5" to="//@entrypoint.18/@level.11"/>
+      <mayFlow from="//@entrypoint.18/@level.5" to="//@entrypoint.18/@level.14"/>
+      <mayFlow from="//@entrypoint.18/@level.6" to="//@entrypoint.18/@level.4"/>
+      <mayFlow from="//@entrypoint.18/@level.6" to="//@entrypoint.18/@level.13"/>
+      <mayFlow from="//@entrypoint.18/@level.7" to="//@entrypoint.18/@level.6"/>
+      <mayFlow from="//@entrypoint.18/@level.7" to="//@entrypoint.18/@level.9"/>
+      <mayFlow from="//@entrypoint.18/@level.7" to="//@entrypoint.18/@level.11"/>
+      <mayFlow from="//@entrypoint.18/@level.8" to="//@entrypoint.18/@level.3"/>
+      <mayFlow from="//@entrypoint.18/@level.8" to="//@entrypoint.18/@level.4"/>
+      <mayFlow from="//@entrypoint.18/@level.9" to="//@entrypoint.18/@level.2"/>
+      <mayFlow from="//@entrypoint.18/@level.9" to="//@entrypoint.18/@level.4"/>
+      <mayFlow from="//@entrypoint.18/@level.10" to="//@entrypoint.18/@level.1"/>
+      <mayFlow from="//@entrypoint.18/@level.10" to="//@entrypoint.18/@level.6"/>
+      <mayFlow from="//@entrypoint.18/@level.10" to="//@entrypoint.18/@level.8"/>
+      <mayFlow from="//@entrypoint.18/@level.11" to="//@entrypoint.18/@level.2"/>
+      <mayFlow from="//@entrypoint.18/@level.11" to="//@entrypoint.18/@level.13"/>
+      <mayFlow from="//@entrypoint.18/@level.12" to="//@entrypoint.18/@level.0"/>
+      <mayFlow from="//@entrypoint.18/@level.12" to="//@entrypoint.18/@level.5"/>
+      <mayFlow from="//@entrypoint.18/@level.12" to="//@entrypoint.18/@level.7"/>
+      <mayFlow from="//@entrypoint.18/@level.12" to="//@entrypoint.18/@level.10"/>
+      <mayFlow from="//@entrypoint.18/@level.14" to="//@entrypoint.18/@level.2"/>
+      <mayFlow from="//@entrypoint.18/@level.14" to="//@entrypoint.18/@level.3"/>
+    </lattice>
+    <methodIdentification>
+      <method href="java4extendeddataflow.java#//@package/@subpackage.0/@classorinterface.6/@method.2"/>
+    </methodIdentification>
+  </entrypoint>
+</joana:JOANARoot>

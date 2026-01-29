@@ -1,6 +1,5 @@
-package propagationevaluation.codeqledfa;
+package propagationevaluation.joanaedfa;
 
-import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -35,24 +34,24 @@ import propagation.UncertaintyAnnotator;
 import propagation.UncertaintyAnnotatorBuilder;
 import uncertainty.UncertaintySource;
 
-/** 
+/**
  * Evaluates the accuracy of uncertainty propagation in coupled model-based
- * analyses for the EclipseSecureStorage System with a particular focus on the
- * coupling between CodeQL and EDFA.
+ * analyses for the CoCoMe System with a particular focus on the coupling
+ * between JOANA and EDFA.
  * 
- * Specifically, it assesses whether the computed impact set
- * accurately reflects the uncertainties present in the affected set, measuring
- * both the precision and recall of the propagation results.
+ * Specifically, it assesses whether the computed impact set accurately reflects
+ * the uncertainties present in the affected set, measuring both the precision
+ * and recall of the propagation results.
  * 
  * The evaluation is based on representative example uncertainties identified
- * for the EclipseSecureStorage system, as documented in the results of the uncertainty
+ * for the CoCoMe system, as documented in the results of the uncertainty
  * propagation evaluation.
  */
-public class EclipseSecureStoragePropagationEvaluation {
+public class CoCoMeJOANAEDFAPropagationEvaluation {
 
 	@Test
 	public void graphWithNoUncertaintiesTest() throws Exception {
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 		List<RoundRobinUncertaintyController.ScenarioWithComponent> uncertainties = controller
@@ -62,15 +61,15 @@ public class EclipseSecureStoragePropagationEvaluation {
 	}
 
 	// Tests Case 1 for (IC1) uncertainty propagation evaluation:
-	// (IC1) Handling uncertainty in mapping CodeQL security instances to RIV and
+	// (IC1) Handling uncertainty in mapping Joana security instances to RIV and
 	// EDFA.
 	@Test
 	public void graphWithIC1MappingValidTest() throws Exception {
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
@@ -91,7 +90,7 @@ public class EclipseSecureStoragePropagationEvaluation {
 	}
 
 	// Tests Case 2 for (IC1) uncertainty propagation evaluation:
-	// (IC1) Handling uncertainty in mapping CodeQL security instances to RIV and
+	// (IC1) Handling uncertainty in mapping Joana security instances to RIV and
 	// EDFA.
 	@Test
 	public void graphWithIC1MappingInValidTest() throws Exception {
@@ -99,11 +98,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 		// interface
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideModelCorrespondence("correspondences.edfacodeqlcorrespondences_invalid_structure");
+		cfg.overrideModelCorrespondence("correspondences.edfajoanacorrespondences_invalid_structure");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
@@ -122,19 +121,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	}
 
 	// Tests Case 3 for (IC1) uncertainty propagation evaluation:
-	// (IC1) Handling uncertainty in mapping CodeQL security instances to RIV and
+	// (IC1) Handling uncertainty in mapping Joana security instances to RIV and
 	// EDFA.
 	@Test
 	public void graphWithIC1ImpreciseInputDataTest() throws Exception {
-		// third case imprecise input data represented in codeqlresults -> Uncertainty
+		// third case imprecise input data represented in joana results -> Uncertainty
 		// Scenario: imprecise input data
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
+		cfg.overrideSc("joana4extendeddataflowanalysis_impre.joana");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -161,9 +160,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -192,10 +191,10 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		cfg.overridePCMJavaCorrespondence("correspondences.pcmjavacorrespondence_invalid");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
@@ -225,11 +224,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideEdfaCodeqlCorrespondence("correspondences_imprecise.edfacodeqlcorrespondences");
+		cfg.overrideEdfaScCorrespondence("correspondences_imprecise.edfajoanacorrespondences");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -258,8 +257,8 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -286,9 +285,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 		// Non-conformance to input interface
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		cfg.overrideCodeQL("codeql4extendeddataflow_invalidSecurityLevels.codeql");
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
+
+		cfg.overrideSc("joana4extendeddataflowanalysis_invalidSecurityLevels.joana");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -316,10 +317,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		cfg.overrideCodeQL("codeql4extendeddataflow_impre.codeql");
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideSc("joana4extendeddataflowanalysis_impre.joana");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -347,9 +349,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -379,11 +381,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 		// (LinkagesBetweenSecurityPoliciesAndSecurityCharacteristicsInValid)
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_incorrect");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_incorrect");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -412,11 +414,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -444,9 +446,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -475,10 +477,12 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_wrong_security_level");
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+
+		cfg.overrideScScarModel("scar.joanascar_wrong_security_level");
+
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -507,10 +511,12 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
+
+		cfg.overrideScScarModel("scar.joanascar_imprecise_security_level");
+
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -538,9 +544,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -570,10 +576,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_removed_security_level");
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideScScarModel("scar.joanascar_removed_security_level");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -602,10 +609,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		cfg.overrideCodeqlScarModel("scar.codeqlscar_imprecise_security_level");
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideScScarModel("scar.joanascar_imprecise_security_level");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -633,9 +641,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -663,11 +671,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_wrong_ruleid");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_wrong_configid");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -695,11 +703,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -727,9 +735,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -757,11 +765,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_unknown_systemelement");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_unknown_systemelement");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -789,11 +797,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -821,9 +829,9 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -851,11 +859,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_sec_level_that_is_not_in_ic1");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_sec_level_that_is_not_in_ic1");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -883,11 +891,11 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		cfg.overrideRIV("resultingvalues.codeqlresultingvalues_imprecise_ic9");
+		cfg.overrideRIV("resultingvalues.joanaresultingvalues_imprecise_ic9");
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -905,18 +913,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 1 for (IC10) uncertainty propagation evaluation:
-	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	// (IC10) Uncertainty if links between security characteristics and
+	// configurations are missing or inconsistent.
 	@Test
 	public void graphWithIC10ValidInputDataTest() throws Exception {
 		// first case -> Uncertainty Scenario: correct input data
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -934,20 +943,21 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 2 for (IC10) uncertainty propagation evaluation:
-	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	// (IC10) Uncertainty if links between security characteristics and
+	// configurations are missing or inconsistent.
 	@Test
 	public void graphWithIC10InValidInputDataTest() throws Exception {
 		// second case -> Uncertainty Scenario: Non-conformance to input interface
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		
-		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_break_config_mapping");
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideRivCorrespondence("correspondences.joanaresultingvaluescorrespondences_break_config_mapping");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -965,20 +975,21 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> affectedSet = List.of("EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
-	
+
 	// Tests Case 3 for (IC10) uncertainty propagation evaluation:
-	// (IC10) Uncertainty if links between security characteristics and configurations are missing or inconsistent.
+	// (IC10) Uncertainty if links between security characteristics and
+	// configurations are missing or inconsistent.
 	@Test
 	public void graphWithIC10ImpreciseInputDataTest() throws Exception {
 		// third case -> Uncertainty Scenario: Imprecise to input data
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
-		
-		cfg.overrideRivCorrespondence("correspondences.codeqlresultingvaluescorrespondences_ambiguity");
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		cfg.overrideRivCorrespondence("correspondences.joanaresultingvaluescorrespondences_ambiguity");
+
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
 		annotator.annotateInterface(edfaReq, true);
@@ -1000,19 +1011,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
 	// methodology-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithNoLossOfAccuracyDueToApproximationInCodeQlTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToApproximationInJoanaTest() throws Exception {
 		// first case -> Uncertainty Scenario: correct analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1021,14 +1032,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: METHODOLOGY_APPROXIMATION",
-				"CODEQL: METHODOLOGY_OVER_SIMPLIFICATION", "CODEQL: METHODOLOGY_CORRECT", "CODEQL: OUTPUT_IMPRECISION",
-				"CODEQL: OUTPUT_ERROR", "CODEQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+		List<String> expectedImpactSet = List.of("JOANA: METHODOLOGY_APPROXIMATION",
+				"JOANA: METHODOLOGY_OVER_SIMPLIFICATION", "JOANA: METHODOLOGY_CORRECT", "JOANA: OUTPUT_IMPRECISION",
+				"JOANA: OUTPUT_ERROR", "JOANA: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION",
 				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_CORRECT", "CodeQL: OUTPUT_CORRECT",
+		List<String> affectedSet = List.of("JOANA: METHODOLOGY_CORRECT", "JOANA: OUTPUT_CORRECT",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1036,19 +1047,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
 	// methodology-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithLossOfAccuracyDueToApproximationInCodeQlTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToApproximationInJoanaTest() throws Exception {
 		// Second case -> Uncertainty Scenario: approximation in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1057,14 +1068,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: METHODOLOGY_APPROXIMATION",
-				"CODEQL: METHODOLOGY_OVER_SIMPLIFICATION", "CODEQL: METHODOLOGY_CORRECT", "CODEQL: OUTPUT_IMPRECISION",
-				"CODEQL: OUTPUT_ERROR", "CODEQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+		List<String> expectedImpactSet = List.of("JOANA: METHODOLOGY_APPROXIMATION",
+				"JOANA: METHODOLOGY_OVER_SIMPLIFICATION", "JOANA: METHODOLOGY_CORRECT", "JOANA: OUTPUT_IMPRECISION",
+				"JOANA: OUTPUT_ERROR", "JOANA: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION",
 				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_APPROXIMATION", "CodeQL: OUTPUT_IMPRECISION",
+		List<String> affectedSet = List.of("JOANA: METHODOLOGY_APPROXIMATION", "JOANA: OUTPUT_IMPRECISION",
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1072,19 +1083,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
 	// methodology-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithLossOfAccuracyDueToOverSimplificationInCodeQlTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToOverSimplificationInJoanaTest() throws Exception {
 		// Third case -> Uncertainty Scenario: over simplification in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1093,14 +1104,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: METHODOLOGY_APPROXIMATION",
-				"CODEQL: METHODOLOGY_OVER_SIMPLIFICATION", "CODEQL: METHODOLOGY_CORRECT", "CODEQL: OUTPUT_IMPRECISION",
-				"CODEQL: OUTPUT_ERROR", "CODEQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+		List<String> expectedImpactSet = List.of("JOANA: METHODOLOGY_APPROXIMATION",
+				"JOANA: METHODOLOGY_OVER_SIMPLIFICATION", "JOANA: METHODOLOGY_CORRECT", "JOANA: OUTPUT_IMPRECISION",
+				"JOANA: OUTPUT_ERROR", "JOANA: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION",
 				"EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_CORRECT");
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: METHODOLOGY_OVER_SIMPLIFICATION", "CodeQL: OUTPUT_ERROR",
+		List<String> affectedSet = List.of("JOANA: METHODOLOGY_OVER_SIMPLIFICATION", "JOANA: OUTPUT_ERROR",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1108,19 +1119,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
 	// Scenario-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithNoLossOfAccuracyDueToScenarioInCodeQlTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToScenarioInJoanaTest() throws Exception {
 		// first case -> Uncertainty Scenario: Scenario definition of analysis correct
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1129,14 +1140,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: SCENARIO_DEFINITION_CORRECT",
-				"CODEQL: SCENARIO_DEFINITION_INCORRECT", "CODEQL: OUTPUT_CORRECT", "CODEQL: OUTPUT_ERROR",
-				"CODEQL: OUTPUT_IMPRECISION", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+		List<String> expectedImpactSet = List.of("JOANA: SCENARIO_DEFINITION_CORRECT",
+				"JOANA: SCENARIO_DEFINITION_INCORRECT", "JOANA: OUTPUT_CORRECT", "JOANA: OUTPUT_ERROR",
+				"JOANA: OUTPUT_IMPRECISION", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: SCENARIO_DEFINITION_CORRECT", "CodeQL: OUTPUT_CORRECT",
+		List<String> affectedSet = List.of("JOANA: SCENARIO_DEFINITION_CORRECT", "JOANA: OUTPUT_CORRECT",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1144,19 +1155,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
 	// Scenario-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithLossOfAccuracyDueToScenarioInCodeQlTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToScenarioInJoanaTest() throws Exception {
 		// second case -> Uncertainty Scenario: Scenario definition of analysis correct
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1165,14 +1176,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: SCENARIO_DEFINITION_CORRECT",
-				"CODEQL: SCENARIO_DEFINITION_INCORRECT", "CODEQL: OUTPUT_CORRECT", "CODEQL: OUTPUT_ERROR",
-				"CODEQL: OUTPUT_IMPRECISION", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+		List<String> expectedImpactSet = List.of("JOANA: SCENARIO_DEFINITION_CORRECT",
+				"JOANA: SCENARIO_DEFINITION_INCORRECT", "JOANA: OUTPUT_CORRECT", "JOANA: OUTPUT_ERROR",
+				"JOANA: OUTPUT_IMPRECISION", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR", "EDFA: OUTPUT_IMPRECISION");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: SCENARIO_DEFINITION_INCORRECT", "CodeQL: OUTPUT_ERROR",
+		List<String> affectedSet = List.of("JOANA: SCENARIO_DEFINITION_INCORRECT", "JOANA: OUTPUT_ERROR",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1180,19 +1191,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 1 for Uncertainty if loss of accuracy occurs due to
 	// Modeling-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithNoLossOfAccuracyDueToModelingInCodeQlTest() throws Exception {
+	public void graphWithNoLossOfAccuracyDueToModelingInJoanaTest() throws Exception {
 		// first case -> Uncertainty Scenario: correct model
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.MODELING_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1201,35 +1212,34 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: MODEL_CORRECT", "CODEQL: MODEL_UNDER_SPECIFICATION",
-				"CODEQL: MODEL_DISCREPANCY", "CODEQL: OUTPUT_CORRECT", "CODEQL: OUTPUT_IMPRECISION",
-				"CODEQL: OUTPUT_ERROR", "EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION",
-				"EDFA: OUTPUT_ERROR");
+		List<String> expectedImpactSet = List.of("JOANA: MODEL_CORRECT", "JOANA: MODEL_UNDER_SPECIFICATION",
+				"JOANA: MODEL_DISCREPANCY", "JOANA: OUTPUT_CORRECT", "JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_ERROR",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: MODEL_CORRECT", "CodeQL: OUTPUT_CORRECT",
-				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
+		List<String> affectedSet = List.of("JOANA: MODEL_CORRECT", "JOANA: OUTPUT_CORRECT", "EDFA: CORRECT_INPUT_DATA",
+				"EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
 
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
 	// Modeling-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithLossOfAccuracyDueToModelingInCodeQlTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToModelingInJoanaTest() throws Exception {
 		// second case -> Uncertainty Scenario: model under specification
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.MODELING_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1238,15 +1248,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: MODEL_CORRECT", "CODEQL: MODEL_UNDER_SPECIFICATION",
-				"CODEQL: MODEL_DISCREPANCY", "CODEQL: OUTPUT_CORRECT", "CODEQL: OUTPUT_IMPRECISION",
-				"CODEQL: OUTPUT_ERROR", "EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION",
-				"EDFA: OUTPUT_ERROR");
+		List<String> expectedImpactSet = List.of("JOANA: MODEL_CORRECT", "JOANA: MODEL_UNDER_SPECIFICATION",
+				"JOANA: MODEL_DISCREPANCY", "JOANA: OUTPUT_CORRECT", "JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_ERROR",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: MODEL_UNDER_SPECIFICATION", "CodeQL: OUTPUT_IMPRECISION",
+		List<String> affectedSet = List.of("JOANA: MODEL_UNDER_SPECIFICATION", "JOANA: OUTPUT_IMPRECISION",
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1254,20 +1263,20 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// Tests Case 3 for Uncertainty if loss of accuracy occurs due to
 	// Modeling-induced uncertainty in Source Code Analysis
 	@Test
-	public void graphWithLossOfAccuracyDueToModelingDiscInCodeQlTest() throws Exception {
+	public void graphWithLossOfAccuracyDueToModelingDiscInJoanaTest() throws Exception {
 		// third case -> Uncertainty Scenario: discrapencies between model and
 		// implementation
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
-		AnalysisComponent codeQlAnalysis = graph.getComponents().get(0);
+		AnalysisComponent joanaAnalysis = graph.getComponents().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateAnalysisComponent(codeQlAnalysis, UncertaintySource.MODELING_INDUCED);
+		annotator.annotateAnalysisComponent(joanaAnalysis, UncertaintySource.MODELING_INDUCED);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1276,15 +1285,14 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: MODEL_CORRECT", "CODEQL: MODEL_UNDER_SPECIFICATION",
-				"CODEQL: MODEL_DISCREPANCY", "CODEQL: OUTPUT_CORRECT", "CODEQL: OUTPUT_IMPRECISION",
-				"CODEQL: OUTPUT_ERROR", "EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION",
-				"EDFA: OUTPUT_ERROR");
+		List<String> expectedImpactSet = List.of("JOANA: MODEL_CORRECT", "JOANA: MODEL_UNDER_SPECIFICATION",
+				"JOANA: MODEL_DISCREPANCY", "JOANA: OUTPUT_CORRECT", "JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_ERROR",
+				"EDFA: CORRECT_INPUT_DATA", "EDFA: IMPRECISE_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
+				"EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_ERROR");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: MODEL_DISCREPANCY", "CodeQL: OUTPUT_ERROR",
+		List<String> affectedSet = List.of("JOANA: MODEL_DISCREPANCY", "JOANA: OUTPUT_ERROR",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1295,13 +1303,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToApproximationInEDFATest() throws Exception {
 		// first case -> Uncertainty Scenario: correct analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1328,13 +1336,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToApproximationInEDFATest() throws Exception {
 		// second case -> Uncertainty Scenario: approximation in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1361,13 +1369,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToOverSimplificationInEDFATest() throws Exception {
 		// third case -> Uncertainty Scenario: over simplification in analysis
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.METHODOLOGY_INDUCED);
@@ -1394,13 +1402,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToScenarioInEDFATest() throws Exception {
 		// first case -> Uncertainty Scenario: Scenario definition of analysis correct
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1429,13 +1437,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 		// second case -> Uncertainty Scenario: Scenario definition of analysis
 		// incorrect
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.SCENARIO_ASSUMPTION_INDUCED);
@@ -1463,13 +1471,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToModelingInEDFATest() throws Exception {
 		// first case -> Uncertainty Scenario: correct model
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1496,13 +1504,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToModelingUnderSpecInEDFATest() throws Exception {
 		// second case -> Uncertainty Scenario: model under specification
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1530,13 +1538,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 		// third case -> Uncertainty Scenario: discrapencies between model and
 		// implementation
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		AnalysisComponent eDFAAnalysis = graph.getComponents().get(1);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
 		annotator.annotateAnalysisComponent(eDFAAnalysis, UncertaintySource.MODELING_INDUCED);
@@ -1563,16 +1571,16 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithNoLossOfAccuracyDueToOrchestrationTest() throws Exception {
 		// first case -> Uncertainty scenario: final analysis orchestration
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+		annotator.annotateInterfaceWithOrchestrationUncertaitny(eDFAReq);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1581,14 +1589,12 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
-				"EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL",
-				"EDFA output: ORCHESTRATION_FINAL");
+		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_FINAL");
 
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_FINAL");
-		assertNotEquals(affectedSet, impactSet);
+		assertEquals(affectedSet, impactSet);
 	}
 
 	// Tests Case 2 for Uncertainty if loss of accuracy occurs due to
@@ -1597,16 +1603,19 @@ public class EclipseSecureStoragePropagationEvaluation {
 	public void graphWithLossOfAccuracyDueToOrchestrationTest() throws Exception {
 		// second case -> Uncertainty scenario: Not final analysis orchestration
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 
 		RequiredInterface eDFAReq = graph.getComponents().get(1).getInputs().get(0);
 
 		SystemConfig cfg = new SystemConfig(
 				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance",
-				SystemUnderEval.ECLIPSE_SECURE_STORAGE, AnalysisCouplingType.CODEQLEDFA);
+				SystemUnderEval.COCOME, AnalysisCouplingType.JOANAEDFA);
+
+		cfg.overrideScScarModel("scar.joanascar_wrong_security_level");
+
 		UncertaintyAnnotator annotator = new UncertaintyAnnotator(cfg);
 
-		annotator.annotateInterfaceWithUncertaintyAnnoation(eDFAReq, UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+		annotator.annotateInterfaceWithOrchestrationUncertaitny(eDFAReq);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1616,14 +1625,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 				.toList();
 
 		List<String> expectedImpactSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
-				"EDFA input: ORCHESTRATION_FINAL", "EDFA output: ORCHESTRATION_NOT_FINAL",
-				"EDFA output: ORCHESTRATION_FINAL");
+				"EDFA output: ORCHESTRATION_NOT_FINAL");
 
 		assertEquals(expectedImpactSet, impactSet);
 
 		List<String> affectedSet = List.of("EDFA input: ORCHESTRATION_NOT_FINAL",
 				"EDFA output: ORCHESTRATION_NOT_FINAL");
-		assertNotEquals(affectedSet, impactSet);
+		assertEquals(affectedSet, impactSet);
 	}
 
 	// Tests Case 1 for ReferenceMetamodelMapping uncertainty propagation
@@ -1632,17 +1640,17 @@ public class EclipseSecureStoragePropagationEvaluation {
 	@Test
 	public void graphWithCompleteReferenceMetamodelMappingTest() throws Exception {
 		// Case 1: All Reference-Class Mappings valid (edfaInputConforms,
-		// codeqlInputConforms and codeqlOutputConforms are true)
+		// joanaInputConforms and joanaOutputConforms are true)
 		// first case mapping valid -> Uncertainty Scenario: correct input data
 		ResourceSet resSet = createResourceSet();
 
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
+		MappingDefinition joanaInputMapping = joanaReq.getMappingModel();
 
 		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
@@ -1650,27 +1658,26 @@ public class EclipseSecureStoragePropagationEvaluation {
 		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
 
-		// Resolve proxies
 		EcoreUtil.resolveAll(resSet);
 
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
 				.build();
 
 		annotator.annotateInterface(edfaReq, true);
 
-		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
+		UncertaintyAnnotator annotatorJoanaInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoanaInput.annotateInterface(joanaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1678,13 +1685,13 @@ public class EclipseSecureStoragePropagationEvaluation {
 
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
-		List<String> expectedImpactSet = List.of("CODEQL: IMPRECISE_INPUT_DATA", "CODEQL: CORRECT_INPUT_DATA",
-				"CODEQL: OUTPUT_IMPRECISION", "CODEQL: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
+		List<String> expectedImpactSet = List.of("JOANA: IMPRECISE_INPUT_DATA", "JOANA: CORRECT_INPUT_DATA",
+				"JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_CORRECT", "EDFA: IMPRECISE_INPUT_DATA",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
+		List<String> affectedSet = List.of("JOANA: CORRECT_INPUT_DATA", "JOANA: OUTPUT_CORRECT",
 				"EDFA: CORRECT_INPUT_DATA", "EDFA: OUTPUT_CORRECT");
 		assertNotEquals(affectedSet, impactSet);
 	}
@@ -1693,16 +1700,16 @@ public class EclipseSecureStoragePropagationEvaluation {
 	// evaluation:
 	// Incomplete Reference-Class Mapping
 	@Test
-	public void graphWithIncompleteReferenceMetamodelMappingCodeQlInputTest() throws Exception {
-		// Case 2: CodeQL input incomplete mapping to reference metamodel.
+	public void graphWithIncompleteReferenceMetamodelMappingJoanaOutputMapping() throws Exception {
+		// Case 2: Joana input incomplete mapping to reference metamodel.
 		// second case mapping invalid -> Uncertainty Scenario: Non-conformance to input
 		// interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
+		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.JOANA, AnalysisType.EDFA);
 		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-		ProvidedInterface codeQlProv = graph.getComponents().get(0).getOutputs().get(0);
+		RequiredInterface joanaReq = graph.getComponents().get(0).getInputs().get(0);
+		ProvidedInterface joanaProv = graph.getComponents().get(0).getOutputs().get(0);
 		MappingDefinition edfaInputMapping = edfaReq.getMappingModel();
-		MappingDefinition codeqlOutputMapping = codeQlProv.getMappingModel();
+		MappingDefinition joanaOutputMapping = joanaProv.getMappingModel();
 
 		ResourceSet resSet = createResourceSet();
 
@@ -1712,31 +1719,29 @@ public class EclipseSecureStoragePropagationEvaluation {
 		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
 
-		// Load mapping
-		String codeqlMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlInputMapping_incomplete.xmi";
-		MappingDefinition codeqlInputMapping = loadMapping(resSet, codeqlMappingPath);
+		String joanaMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping_incomplete.xmi";
+		MappingDefinition joanaInputMapping = loadMapping(resSet, joanaMappingPath);
 
-		// Resolve proxies
 		EcoreUtil.resolveAll(resSet);
 
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
+		boolean joanaInputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaInputMapping, inputRefMeta);
 
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
+		boolean joanaOutputConforms = ReferenceMetaModelConformanceChecker
+				.conformsToReferenceMetamodel(joanaOutputMapping, outputRefMeta);
 
 		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
 				inputRefMeta);
 
 		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
+				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(joanaOutputConforms)
 				.build();
 
 		annotator.annotateInterface(edfaReq, true);
 
-		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
+		UncertaintyAnnotator annotatorJoanaInput = new UncertaintyAnnotatorBuilder()
+				.withInputReferenceConformance(joanaInputConforms).withOutputReferenceConformance(true).build();
+		annotatorJoanaInput.annotateInterface(joanaReq, true);
 
 		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
 
@@ -1745,82 +1750,15 @@ public class EclipseSecureStoragePropagationEvaluation {
 		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
 				.toList();
 
-		List<String> expectedImpactSet = List.of("CODEQL: IMPRECISE_INPUT_DATA",
-				"CODEQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CODEQL: OUTPUT_IMPRECISION", "CODEQL: OUTPUT_ERROR",
+		List<String> expectedImpactSet = List.of("JOANA: IMPRECISE_INPUT_DATA",
+				"JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_IMPRECISION", "JOANA: OUTPUT_ERROR",
 				"EDFA: IMPRECISE_INPUT_DATA", "EDFA: CORRECT_INPUT_DATA", "EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE",
 				"EDFA: OUTPUT_IMPRECISION", "EDFA: OUTPUT_CORRECT", "EDFA: OUTPUT_ERROR");
 
 		assertEquals(expectedImpactSet, impactSet);
 
-		List<String> affectedSet = List.of("CodeQL: NON_CONFORMANCE_TO_INPUT_INTERFACE", "CodeQL: OUTPUT_ERROR",
+		List<String> affectedSet = List.of("JOANA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "JOANA: OUTPUT_ERROR",
 				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
-		assertNotEquals(affectedSet, impactSet);
-	}
-
-	// Tests Case 3 for ReferenceMetamodelMapping uncertainty propagation
-	// evaluation:
-	// Incomplete Reference-Class Mapping
-	@Test
-	public void graphWithIncompleteReferenceMetamodelMappingCodeQlOutputandEDFAInputTest() throws Exception {
-		// Case 3: CodeQL output and EDFA input have incomplete mapping to reference
-		// metamodel.
-		// third case mapping incomplete -> Uncertainty Scenario: Non-conformance to
-		// input interface
-		AnalysisGraph graph = buildAnalysisGraph(AnalysisType.CODEQL, AnalysisType.EDFA);
-		RequiredInterface edfaReq = graph.getComponents().get(1).getInputs().get(0);
-		RequiredInterface codeQlReq = graph.getComponents().get(0).getInputs().get(0);
-
-		MappingDefinition codeqlInputMapping = codeQlReq.getMappingModel();
-
-		ResourceSet resSet = createResourceSet();
-
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-
-		// Load changed mappings..
-		String codeqlOutputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/codeqlOutputMapping_Incomplete.xmi";
-		MappingDefinition codeqlOutputMapping = loadMapping(resSet, codeqlOutputMappingPath);
-
-		String edfaInputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/EDFAInputMapping_Incomplete.xmi";
-		MappingDefinition edfaInputMapping = loadMapping(resSet, edfaInputMappingPath);
-
-		// Resolve proxies
-		EcoreUtil.resolveAll(resSet);
-
-		boolean codeqlInputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlInputMapping, inputRefMeta);
-
-		boolean codeqlOutputConforms = ReferenceMetaModelConformanceChecker
-				.conformsToReferenceMetamodel(codeqlOutputMapping, outputRefMeta);
-
-		boolean edfaInputConforms = ReferenceMetaModelConformanceChecker.conformsToReferenceMetamodel(edfaInputMapping,
-				inputRefMeta);
-
-		UncertaintyAnnotator annotator = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(edfaInputConforms).withOutputReferenceConformance(codeqlOutputConforms)
-				.build();
-
-		annotator.annotateInterface(edfaReq, true);
-
-		UncertaintyAnnotator annotatorCodeQLInput = new UncertaintyAnnotatorBuilder()
-				.withInputReferenceConformance(codeqlInputConforms).withOutputReferenceConformance(true).build();
-		annotatorCodeQLInput.annotateInterface(codeQlReq, true);
-
-		RoundRobinUncertaintyController controller = new RoundRobinUncertaintyController(graph);
-
-		List<RoundRobinUncertaintyController.ScenarioWithComponent> results = controller.propagateWithComponentInfo();
-
-		List<String> impactSet = results.stream().map(RoundRobinUncertaintyController.ScenarioWithComponent::toString)
-				.toList();
-
-		List<String> affectedSet = List.of("CodeQL: CORRECT_INPUT_DATA", "CodeQL: OUTPUT_CORRECT",
-				"EDFA: NON_CONFORMANCE_TO_INPUT_INTERFACE", "EDFA: OUTPUT_ERROR");
-		assertTrue(codeqlInputConforms);
-		assertFalse(codeqlOutputConforms);
-		assertFalse(edfaInputConforms);
 		assertNotEquals(affectedSet, impactSet);
 	}
 

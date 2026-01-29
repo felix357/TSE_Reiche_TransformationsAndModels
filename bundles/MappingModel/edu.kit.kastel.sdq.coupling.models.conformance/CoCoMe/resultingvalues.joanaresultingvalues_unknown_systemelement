@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanaresultingvalues:ResolvedImplementationValues xmlns:joanaresultingvalues="http://www.example.org/joanaresultingvalues">
+  <systemElements parameterType="int" methodName="printPaymentCard" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.Printer"/>
+  <systemElements parameterType="int" methodName="readCardNumber" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.cocome.components.CashDesk"/>
+  <levels id="_UDy2IPWwEe-Rfc0DQim1oQ" name="Bank;Customer"/>
+  <entryPoints tag="2"/>
+  <!-- Unknown @systemElement-->
+  <resultingValues systemElement="//@systemElements.UNKNOWN" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+</joanaresultingvalues:ResolvedImplementationValues>

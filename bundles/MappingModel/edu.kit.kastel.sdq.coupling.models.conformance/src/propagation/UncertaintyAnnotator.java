@@ -185,6 +185,61 @@ public class UncertaintyAnnotator {
 		assignUncertaintyLabel(req, ic1Result, ic2Result, ic3Result, ic4Result, ic5Result, ic6Result, ic7Result,
 				ic8Result, ic9Result, ic10Result, outputReferenceConforms && inputReferenceConforms, addImpreciseLabel);
 	}
+	
+	public void annotateInterfaceWithOrchestrationUncertaitny(RequiredInterface req) {
+		UncertaintyLabel label = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();
+		label.setSource(UncertaintySource.ORCHESTRATION_DECISION_INDUCED);
+		
+		if (!checkAllInterfaceConstraints()) {
+			label.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_NOT_FINAL); 
+		} else {
+			label.setUncertaintyScenario(UncertaintyScenario.ORCHESTRATION_FINAL);
+		}
+		
+		req.getUncertaintyLabel().add(label);
+	}
+	
+	private boolean checkAllInterfaceConstraints() {
+	    boolean success = true;
+
+	    // IC1
+	    success &= (ic1ModelChecker == null || ic1ModelChecker.runCheck());
+	    if (ic1InstanceChecker != null) success &= ic1InstanceChecker.runCheck();
+
+	    // IC2
+	    success &= (ic2ModelChecker == null || ic2ModelChecker.runCheck());
+	    if (ic2InstanceChecker != null) success &= ic2InstanceChecker.runCheck();
+
+	    // IC3
+	    success &= (ic3ModelChecker == null || ic3ModelChecker.runCheck());
+	    if (ic3InstanceChecker != null) success &= ic3InstanceChecker.runCheck();
+
+	    // IC4
+	    success &= (ic4ModelChecker == null || ic4ModelChecker.runCheck());
+	    if (ic4InstanceChecker != null) success &= ic4InstanceChecker.runCheck();
+
+	    // IC5 & IC6
+	    success &= (iC5IandMChecker == null || iC5IandMChecker.runCheck());
+	    success &= (iC6IandMChecker == null || iC6IandMChecker.runCheck());
+
+	    // IC7
+	    success &= (iC7MChecker == null || iC7MChecker.runCheck());
+	    if (iC7IChecker != null) success &= iC7IChecker.runCheck();
+
+	    // IC8
+	    success &= (ic8MChecker == null || ic8MChecker.runCheck());
+	    if (ic8IChecker != null) success &= ic8IChecker.runCheck();
+
+	    // IC9
+	    success &= (ic9MChecker == null || ic9MChecker.runCheck());
+	    if (ic9IChecker != null) success &= ic9IChecker.runCheck();
+
+	    // IC10
+	    success &= (ic10MChecker == null || ic10MChecker.runCheck());
+	    if (ic10IChecker != null) success &= ic10IChecker.runCheck();
+
+	    return success;
+	}
 
 	public void annotateInterfaceWithUncertaintyAnnoation(RequiredInterface req, UncertaintySource uncertaitySource) {
 		UncertaintyLabel labelNotFinal = UncertaintyFactory.eINSTANCE.createUncertaintyLabel();

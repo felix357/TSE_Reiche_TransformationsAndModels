@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import mapping.MappingDefinition;
 
@@ -114,6 +115,16 @@ public class ReferenceMetaModelConformanceChecker {
 		}
 
 		// 3. Check if all subtypes have a valid mapping
+		System.out.println(target.getEPackage());
+		if (target.getEPackage() == null) {
+			System.out.println("null");
+		}
+		
+		if (target != null && target.eIsProxy()) {
+		    target = (EClass) EcoreUtil.resolve(target, mappingRef.eResource().getResourceSet());
+		}
+
+		
 		Set<EClass> subTypes = getAllSubTypes(target.getEPackage(), target);
 		if (!subTypes.isEmpty()) {
 			for (EClass subType : subTypes) {
@@ -145,6 +156,7 @@ public class ReferenceMetaModelConformanceChecker {
 	 */
 	private static Set<EClass> getAllSubTypes(EPackage rootPackage, EClass superClass) {
 		Set<EClass> result = new HashSet<>();
+		
 		for (var classifier : rootPackage.getEClassifiers()) {
 			if (classifier instanceof EClass ec) {
 				if (ec.getEAllSuperTypes().contains(superClass)) {

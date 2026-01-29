@@ -68,12 +68,12 @@ public class SystemConfig {
         this.javaModel = sue.javaModelFile;
     }
     
-    public SystemConfig overrideCodeqlScarModel(String codeqlScarModel) {
+    public SystemConfig overrideScScarModel(String codeqlScarModel) {
 		this.scScarModel = codeqlScarModel;
 		return this;
 	}
     
-    public SystemConfig overrideEdfaCodeqlCorrespondence(String edfaCodeqlCorrespondence) {
+    public SystemConfig overrideEdfaScCorrespondence(String edfaCodeqlCorrespondence) {
 		this.edfascCorrespondence = edfaCodeqlCorrespondence;
 		return this;
 	}
@@ -103,7 +103,7 @@ public class SystemConfig {
 		return this;
 	}
 
-	public SystemConfig overrideCodeQL(String newName) {
+	public SystemConfig overrideSc(String newName) {
 		this.sourceCodeAnalysis = newName;
 		return this;
 	}

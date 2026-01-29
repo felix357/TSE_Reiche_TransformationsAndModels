@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="ASCII"?>
+<edfajoanacorrespondences:Correspondences_EDFAJOANA xmlns:edfajoanacorrespondences="http://www.example.org/edfajoanacorrespondences">
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.0"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.1"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.2"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.3"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.4"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.5"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.6"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.7"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.8"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.9"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.10"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.11"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.12"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.13"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.14"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.15"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.16"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.17"/>
+  </configurationCorrespondences>
+  <configurationCorrespondences>
+    <configuration_EDFA href="extendeddataflow.configurationrepresentation#//@configurations.0"/>
+    <configuration_JOANA href="joana4extendeddataflowanalysis.configurationrepresentation#//@configurations.18"/>
+  </configurationCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href=""/>  <!-- Invalid reference -->
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.0/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.1/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.3/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.4/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.5/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.6/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.7/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.8/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.9/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.10/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.11/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.12/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.13/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.14/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.15/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.16/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.10"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.17/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.4"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.11"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.9"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.6"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.2"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.5"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.3"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.0"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.13"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.1"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.7"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.14"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@0"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.12"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.8"/>
+  </literalLevelCorrespondences>
+  <literalLevelCorrespondences>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@3"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@2"/>
+    <literals_EDFA href="../edu.kit.kastel.sdq.coupling.casestudy.travelplanner.model.extendeddataflow.joana/models/travelplanner.pddc#_Nc31EPXDEeut8bxiE9EShA-characteristicEnumerations@0.literals@1"/>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.18/@level.10"/>
+  </literalLevelCorrespondences>
+</edfajoanacorrespondences:Correspondences_EDFAJOANA>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanaresultingvaluescorrespondences:Correspondences_ResolvedImplementationValues xmlns:joanaresultingvaluescorrespondences="http://www.example.org/joanaresultingvaluescorrespondences">
+  <levelCorrespondences>
+    <level_JOANA href="joana4extendeddataflowanalysis.joana#//@entrypoint.2/@level.12"/>
+    <level_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@levels.0"/>
+  </levelCorrespondences>
+  <entryPointCorrespondences>
+    <entryPoint_SCAR href="scar.joanascar#//@entryPoints.0"/>
+    <entryPoint_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@entryPoints.0"/>
+  </entryPointCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.1"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.0"/>
+  </parameterCorrespondences>
+  <!-- ambiguity -->
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.2"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.0"/>
+  </parameterCorrespondences>
+  <parameterCorrespondences>
+    <parameter_SCAR href="scar.joanascar#//@systemElements.2"/>
+    <parameter_ResolvedImplementationValues href="resultingvalues.joanaresultingvalues#//@systemElements.1"/>
+  </parameterCorrespondences>
+</joanaresultingvaluescorrespondences:Correspondences_ResolvedImplementationValues>

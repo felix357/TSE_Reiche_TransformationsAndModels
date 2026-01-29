@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <codeqlresultingvalues:ResolvedImplementationValues xmlns:codeqlresultingvalues="http://www.example.org/codeqlresultingvalues">
-    <!-- Use a resultingSecurityLevel that does not exist in IC1 -->
+  <!-- Use a resultingSecurityLevel that does not exist in IC1 -->
   <resultingValues resultingSecurityLevel="//@securityLevel.9" parameter="//@systemElements.0" ruleId="//@configurations.0"/>
   <resultingValues resultingSecurityLevel="//@securityLevel.9" parameter="//@systemElements.1" ruleId="//@configurations.0"/>
   <resultingValues resultingSecurityLevel="//@securityLevel.9" parameter="//@systemElements.2" ruleId="//@configurations.0"/>

@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.junit.jupiter.api.Test;
 
@@ -65,10 +66,10 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
 
-		String joanaMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping.xmi";
+		String joanaMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaInputMapping.xmi";
 		MappingDefinition joanaInputMapping = loadMapping(resSet, joanaMappingPath);
 
-		String joanaOutputMappingPath = "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaOutputMapping.xmi";
+		String joanaOutputMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joanaOutputMapping.xmi";
 		MappingDefinition joanaOutputMapping = loadMapping(resSet, joanaOutputMappingPath);
 
 		String edfaInputMappingPath = "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/EDFAInputMappingTest.xmi";
@@ -132,7 +133,7 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		// Create ResourceSet
 		ResourceSet resSet = new ResourceSetImpl();
 		resSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
-		resSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new XMIResourceFactoryImpl());
+		resSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("ecore", new EcoreResourceFactoryImpl());
 
 		// Register MappingPackage
 		MappingPackage.eINSTANCE.eClass();
@@ -141,13 +142,12 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		// Load relevant EPackages		
 		registerEPackageRecursively(resSet, loadAndRegisterEPackage(
 			    resSet,
-			    "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/" +
-			    "bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.identifier/model/identifier.ecore"
+			    "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/identifier.ecore"
 			));
 		
 		registerEPackageRecursively(resSet, loadAndRegisterEPackage(
 			    resSet,
-			    "C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels_Fork/bundles/MappingModel/edu.kit.kastel.sdq.coupling.models.java/model/java.ecore"
+			    "C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/java.ecore"
 			));
 
 		
@@ -157,21 +157,14 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
 				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/pcm.ecore"));
 
-		// Input-Referencemetamodell
-		EPackage inputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/InputReferenceMetamodel.ecore");
-		registerEPackageRecursively(resSet, inputRefMeta);
-
-		// Output-Referencemetamodell
-		EPackage outputRefMeta = loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/OutputReferenzMetamodel.ecore");
-		registerEPackageRecursively(resSet, outputRefMeta);
+		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/codeql.ecore"));
+		
+		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/joana.ecore"));
 
 		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.codeql/model/codeql.ecore"));
-
-		registerEPackageRecursively(resSet, loadAndRegisterEPackage(resSet,
-				"C:/Users/felix/Git/TSE_Reiche_TransformationsAndModels/bundles/Metamodels/edu.kit.kastel.sdq.coupling.models.extension.dataflowanalysis.parameterannotation/model/parameterannotation.ecore"));
+				"C:/Users/felix/sone-ws/edu.kit.kastel.sdq.coupling.models.conformance/model/parameterannotation.ecore"));
 		return resSet;
 	}
 
@@ -190,14 +183,26 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 		}
 	}
 
+//	private static void registerEPackageRecursively(ResourceSet resSet, EPackage pkg) {
+//		if (pkg == null)
+//			return;
+//		resSet.getPackageRegistry().put(pkg.getNsURI(), pkg);
+//		System.out.println("EPackage registriert: " + pkg.getName() + " (nsURI=" + pkg.getNsURI() + ")");
+//		for (EPackage subPkg : pkg.getESubpackages()) {
+//			registerEPackageRecursively(resSet, subPkg);
+//		}
+//	}
+	
 	private static void registerEPackageRecursively(ResourceSet resSet, EPackage pkg) {
-		if (pkg == null)
-			return;
-		resSet.getPackageRegistry().put(pkg.getNsURI(), pkg);
-		System.out.println("EPackage registriert: " + pkg.getName() + " (nsURI=" + pkg.getNsURI() + ")");
-		for (EPackage subPkg : pkg.getESubpackages()) {
-			registerEPackageRecursively(resSet, subPkg);
-		}
+	    if (pkg == null) return;
+	    
+	    // Registriere das aktuelle Paket
+	    resSet.getPackageRegistry().put(pkg.getNsURI(), pkg);
+	    
+	    // WICHTIG: Rekursion für alle Unterpakete (z.B. java -> members)
+	    for (EPackage subPkg : pkg.getESubpackages()) {
+	        registerEPackageRecursively(resSet, subPkg);
+	    }
 	}
 
 	private static MappingDefinition loadMapping(ResourceSet resSet, String mappingFilePath) {

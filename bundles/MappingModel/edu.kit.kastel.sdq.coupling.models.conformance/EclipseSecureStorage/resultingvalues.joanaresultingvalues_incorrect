@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<joanaresultingvalues:ResolvedImplementationValues xmlns:joanaresultingvalues="http://www.example.org/joanaresultingvalues">
+  <systemElements parameterIndex="1" parameterType="java.lang.String" methodName="internalPut" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements parameterType="java.lang.String" methodName="remove" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements parameterIndex="2" parameterType="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.interal.storage.SecurePreferencesContainer" methodName="setupRecovery" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.PasswordManagement"/>
+  <systemElements parameterType="java.lang.String" methodName="internalPut" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <systemElements parameterType="java.lang.String" methodName="node" fullyQualifiedClassName="edu.kit.kastel.sdq.coupling.casestudy.eclipsesecurestorage.components.SecurePreferences"/>
+  <!-- securityLevel 0 does not exist -->
+  <!-- <levels id="_ziRKkB1BEfCn6vGa4mnYTA" name="high"/> -->
+  <entryPoints tag="0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.1" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.0" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.3" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.4" configuration="//@entryPoints.0" level="//@levels.0"/>
+  <resultingValues systemElement="//@systemElements.2" configuration="//@entryPoints.0" level="//@levels.0"/>
+</joanaresultingvalues:ResolvedImplementationValues>

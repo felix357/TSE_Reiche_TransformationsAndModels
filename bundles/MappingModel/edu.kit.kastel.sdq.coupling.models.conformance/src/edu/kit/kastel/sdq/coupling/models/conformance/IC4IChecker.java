@@ -36,23 +36,19 @@ public class IC4IChecker implements IChecker {
     @Override
     public boolean runCheck() {
         try {
-            // Step 1: Load configuration
             Configuration cfg = loadConfigurationRepresentation();
 
-            // Step 2: Extract policies from the correct query type
             List<Policy> policies = extractPoliciesFromQuery(this.basePath + File.separator + cfg.getMainElementFile(),
                     cfg.getMainElementFragment());
 
-            boolean allOk = true; // assume everything is OK initially
+            boolean allOk = true;
 
-            // Step 3: Check each policy
             for (Policy policy : policies) {
                 String ref = policy.securityLevelRef;
                 if (!ref.startsWith(cfg.getMainElementFile() + "#")) {
                     ref = cfg.getMainElementFile() + "#" + ref;
                 }
 
-                // Check whether the policy has an applied security characteristic
                 if (!rivMap.containsKey(ref)) {
                     System.out.println(
                             "Policy " + policy.id + " has no applied security characteristic. Skipping check.");
@@ -61,7 +57,6 @@ public class IC4IChecker implements IChecker {
 
                 String rivId = rivMap.get(ref);
 
-                // Extract key after '#' for lookup in rivValuesMap
                 String resolvedKey = rivId.contains("#") ? rivId.substring(rivId.indexOf('#') + 1) : rivId;
 
                 String resolvedLevel = rivValuesMap.get(resolvedKey);
@@ -125,7 +120,6 @@ public class IC4IChecker implements IChecker {
         Document doc = ConformanceUtils.parseXmlFile(filePath);
 
         if (analysisType == AnalysisCouplingType.CODEQLEDFA) {
-            // CodeQL extraction
             NodeList queriesList = doc.getElementsByTagName("queries");
             int queryIndex = fragment.startsWith("//@queries.") ? Integer.parseInt(fragment.substring("//@queries.".length())) : 0;
             if (queryIndex >= queriesList.getLength()) {
@@ -149,15 +143,14 @@ public class IC4IChecker implements IChecker {
             }
 
         } else if (analysisType == AnalysisCouplingType.JOANAEDFA) {
-            // JOANA extraction
-            NodeList annotations = doc.getElementsByTagName("securityLevelAnnotation");
+            NodeList annotations = doc.getElementsByTagName("annotation");
             for (int i = 0; i < annotations.getLength(); i++) {
                 Element elem = (Element) annotations.item(i);
                 Policy p = new Policy();
                 p.id = elem.getAttribute("id");
-                p.securityLevelRef = elem.getAttribute("level"); // JOANA uses "level" attribute
+                p.securityLevelRef = elem.getAttribute("level");
 
-                Element paramElem = (Element) elem.getElementsByTagName("parameter").item(0);
+                Element paramElem = (Element) elem.getElementsByTagName("Parameter").item(0);
                 if (paramElem != null) {
                     p.parameterHref = paramElem.getAttribute("href");
                 }

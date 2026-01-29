@@ -34,13 +34,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="SystemElementIdentifying" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="ParametertIdentifying" eSuperTypes="#//SystemElementIdentifying">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Parameter" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.java/model/java.ecore#//members/Parameter"/>
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.conformance/model/java.ecore#//members/Parameter"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MethodIdentifying" eSuperTypes="#//SystemElementIdentifying">
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.java/model/java.ecore#//members/Method"/>
+        eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.conformance/model/java.ecore#//members/Method"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldIdentifying" eSuperTypes="#//SystemElementIdentifying">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.java/model/java.ecore#//members/Field"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" lowerBound="1" eType="ecore:EClass ../../edu.kit.kastel.sdq.coupling.models.conformance/model/java.ecore#//members/Field"/>
   </eClassifiers>
 </ecore:EPackage>
