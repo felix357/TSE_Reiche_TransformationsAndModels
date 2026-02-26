@@ -9,20 +9,17 @@ public class Configuration {
     private String mainElementFragment;
     private List<String> additionalInputs = new ArrayList<>();
 
-    // Constructor
     public Configuration(String id, String mainElementFile, String mainElementFragment) {
         this.id = id;
         this.mainElementFile = mainElementFile;
         this.mainElementFragment = mainElementFragment;
     }
 
-    // Getters
     public String getId() { return id; }
     public String getMainElementFile() { return mainElementFile; }
     public String getMainElementFragment() { return mainElementFragment; }
     public List<String> getAdditionalInputs() { return additionalInputs; }
 
-    // Add an additional input
     public void addAdditionalInput(String input) { this.additionalInputs.add(input); }
 
     @Override

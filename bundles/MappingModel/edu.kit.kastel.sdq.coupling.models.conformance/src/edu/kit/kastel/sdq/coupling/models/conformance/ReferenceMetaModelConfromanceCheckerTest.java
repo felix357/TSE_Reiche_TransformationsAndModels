@@ -182,24 +182,12 @@ public class ReferenceMetaModelConfromanceCheckerTest {
 			return null;
 		}
 	}
-
-//	private static void registerEPackageRecursively(ResourceSet resSet, EPackage pkg) {
-//		if (pkg == null)
-//			return;
-//		resSet.getPackageRegistry().put(pkg.getNsURI(), pkg);
-//		System.out.println("EPackage registriert: " + pkg.getName() + " (nsURI=" + pkg.getNsURI() + ")");
-//		for (EPackage subPkg : pkg.getESubpackages()) {
-//			registerEPackageRecursively(resSet, subPkg);
-//		}
-//	}
 	
 	private static void registerEPackageRecursively(ResourceSet resSet, EPackage pkg) {
 	    if (pkg == null) return;
 	    
-	    // Registriere das aktuelle Paket
 	    resSet.getPackageRegistry().put(pkg.getNsURI(), pkg);
 	    
-	    // WICHTIG: Rekursion für alle Unterpakete (z.B. java -> members)
 	    for (EPackage subPkg : pkg.getESubpackages()) {
 	        registerEPackageRecursively(resSet, subPkg);
 	    }

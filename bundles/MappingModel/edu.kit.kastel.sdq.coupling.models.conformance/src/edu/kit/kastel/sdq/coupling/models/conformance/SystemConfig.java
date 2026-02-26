@@ -9,7 +9,7 @@ public class SystemConfig {
 	public String rivCorrespondence;
 	public String riv;
 	
-    // Explicit IC2I required artifacts
+    // Needed for IC2I
     public String systemName;
     public String parameterAnnotationFile;
     public String pcmJavaCorrespondence;

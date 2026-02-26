@@ -23,11 +23,7 @@ public class ConformanceUtils {
 	private static final Pattern enumUsagePattern = Pattern
 			.compile("enumCharacteristicType\\s+(DataClassification|Role|AssignedRoles)\\s+using\\s+(\\w+)");
 
-	private ConformanceUtils() {
-		// private constructor to prevent instantiation
-	}
-
-	// --- XML Parsing ---
+	private ConformanceUtils() {}
 
 	public static Document parseXmlFile(String filePath)
 			throws ParserConfigurationException, IOException, org.xml.sax.SAXException {
@@ -76,8 +72,6 @@ public class ConformanceUtils {
 		}
 		return literals;
 	}
-
-	// --- Reference Resolution ---
 
 	public static String resolvePddcReference(String href, String architecturalModelPath) throws Exception {
 		String fileName = new File(architecturalModelPath).getName();

@@ -57,16 +57,16 @@ public class IC1MChecker implements IChecker {
 			dbf.setNamespaceAware(true);
 			DocumentBuilder db = dbf.newDocumentBuilder();
 
-			// Step 1: Load security literals from the architectural model
+			// Load security literals from the architectural model
 			allSecurityLiterals = ConformanceUtils.getSecurityCharacteristicLiterals(architecturalModelPath);
 			System.out.println("Sicherheitsrelevante Literale im architektonischen Modell: " + allSecurityLiterals);
 
-			// Step 2: Load all security levels from source code analysis
+			// Load all security levels from source code analysis
 			Document analysisDoc = db.parse(new InputSource(new FileInputStream(new File(sourceCodeAnalysisPath))));
 			allSourceCodeAnalysisLevels.addAll(extractAnalysisLevels(analysisDoc));
 			System.out.println("Alle SourceCodeaanalysis-Sicherheitslevels: " + allSourceCodeAnalysisLevels);
 
-			// Step 3: Load correspondence file and process mappings
+			// Load correspondence file and process mappings
 			File correspondenceFile = new File(correspondencePath);
 			if (!correspondenceFile.exists()) {
 				System.out.println("Fehler: Korrespondenz-Datei nicht gefunden unter dem Pfad: " + correspondencePath);
@@ -77,7 +77,7 @@ public class IC1MChecker implements IChecker {
 
 			processCorrespondences(doc, analysisDoc);
 
-			// Step 4: Validate IC1(M)
+			// Validate IC1(M)
 			return validateResults();
 
 		} catch (Exception e) {

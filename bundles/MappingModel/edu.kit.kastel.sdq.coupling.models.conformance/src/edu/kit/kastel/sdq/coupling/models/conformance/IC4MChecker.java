@@ -22,7 +22,7 @@ import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCoupl
 /**
  * Checker for IC4(C)(M): checks if all applied security policies from source
  * code analysis are mapped to architectural security characteristics affected
- * by IC1, for every relevant configuration (cfg_C).
+ * by IC1, for every relevant configuration.
  */
 public class IC4MChecker implements IChecker {
 
@@ -184,11 +184,11 @@ public class IC4MChecker implements IChecker {
 	}
 
 	private Set<String> getPoliciesUsedByConfiguration(String cfgID, Set<String> globalPolicies) {
-		return globalPolicies; // Stub
+		return globalPolicies;
 	}
 
 	private Set<String> getCharacteristicsAffectedByConfiguration(String cfgID, Set<String> globalCharacteristics) {
-		return globalCharacteristics; // Stub
+		return globalCharacteristics;
 	}
 
 	@Override

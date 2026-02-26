@@ -144,8 +144,6 @@ public class IC3IChecker implements IChecker {
                     if (!affectsSystemElementJOANA(annotation))
                         continue;
 
-                    // Configuration reference check (IC2) already handled above
-
                     System.out.println("IC3(C)(I) erfüllt (JOANA): " + annotation.getAttribute("id"));
                     return true;
                 }
@@ -160,7 +158,6 @@ public class IC3IChecker implements IChecker {
         }
     }
 
-    /** ===== Helpers ===== */
     private boolean levelNameIsValid(String levelName) {
         return levelName != null && !levelName.isEmpty();
     }
@@ -222,7 +219,7 @@ public class IC3IChecker implements IChecker {
     private boolean configurationMatches(String entrypointId) {
         for (String cfgRef : configurations) {
             String[] parts = cfgRef.split("\\.");
-            String cfgIndex = parts[parts.length - 1]; // numeric suffix
+            String cfgIndex = parts[parts.length - 1];
             if (cfgIndex.equals(entrypointId)) {
                 return true;
             }
@@ -230,12 +227,11 @@ public class IC3IChecker implements IChecker {
         return false;
     }
 
-    /** CodeQL IC2 config check */
     private boolean referencedByConfiguration(int queriesNodesLength) {
         return queriesNodesLength == 1;
     }
 
-    /** ===== Load PCM–Java correspondences ===== */
+    /** Load PCM–Java correspondences*/
     private void loadCorrespondences() {
         try {
             File corrFile = new File(basePath + "/correspondences.pcmjavacorrespondence");
@@ -248,7 +244,6 @@ public class IC3IChecker implements IChecker {
             Element root = doc.getDocumentElement();
             java.util.function.Function<Element, String> getHref = (elem) -> elem == null ? null : elem.getAttribute("href");
 
-            // ---- Process basiccomponent2class ----
             NodeList basicNodes = root.getElementsByTagName("basiccomponent2class");
             for (int i = 0; i < basicNodes.getLength(); i++) {
                 Element elem = (Element) basicNodes.item(i);
@@ -258,7 +253,6 @@ public class IC3IChecker implements IChecker {
                     pcmToJavaMap.put(pcm, java);
             }
 
-            // ---- Process operationInterface2interface ----
             NodeList opIntNodes = root.getElementsByTagName("operationInterface2interface");
             for (int i = 0; i < opIntNodes.getLength(); i++) {
                 Element elem = (Element) opIntNodes.item(i);
@@ -268,7 +262,6 @@ public class IC3IChecker implements IChecker {
                     pcmToJavaMap.put(pcm, java);
             }
 
-            // ---- Process providedoperationsignature2javamethod ----
             NodeList methodNodes = root.getElementsByTagName("providedoperationsignature2javamethod");
             for (int i = 0; i < methodNodes.getLength(); i++) {
                 Element elem = (Element) methodNodes.item(i);
@@ -284,7 +277,6 @@ public class IC3IChecker implements IChecker {
                 }
             }
 
-            // ---- Process pcmparameter2javaparameter ----
             NodeList paramNodes = root.getElementsByTagName("pcmparameter2javaparameter");
             for (int i = 0; i < paramNodes.getLength(); i++) {
                 Element elem = (Element) paramNodes.item(i);

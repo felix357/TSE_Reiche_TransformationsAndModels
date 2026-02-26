@@ -39,13 +39,13 @@ public class IC2IChecker implements IChecker {
 	@Override
 	public boolean runCheck() {
 		try {
-			// 1. Collect annotated PCM elements
+			// Collect annotated PCM elements
 			Set<String> annotatedPcmElements = getAnnotatedPcmElements();
 
-			// 2. Check system elements
+			// Check system elements
 			boolean deltaCsCNonEmpty = isSystemElementSetNonEmpty(annotatedPcmElements);
 
-			// 3. Check configuration elements based on analysisType
+			// Check configuration elements based on analysisType
 			boolean cfgCsCNonEmpty;
 			switch (analysisType) {
 			case CODEQLEDFA:
@@ -59,13 +59,13 @@ public class IC2IChecker implements IChecker {
 			}
 
 			System.out.println("IC2(T)(I) Check (" + analysisType + "):");
-			System.out.println("  Delta_cs^C (Systemelemente) ≠ ∅: " + (deltaCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
-			System.out.println("  CFG_cs^C (Konfigurationen) ≠ ∅: " + (cfgCsCNonEmpty ? "JA ✅" : "NEIN ❌"));
+			System.out.println("Systemelemente nicht leer " + (deltaCsCNonEmpty ? "JA" : "NEIN"));
+			System.out.println("Konfigurationen not leer: " + (cfgCsCNonEmpty ? "JA" : "NEIN"));
 
 			boolean result = deltaCsCNonEmpty && cfgCsCNonEmpty;
 
 			if (result) {
-				System.out.println("Die Bedingung IC2(T)(I) ist ERFÜLLT. (Robustheit des Mappings ist nachgewiesen)");
+				System.out.println("Die Bedingung IC2(T)(I) ist ERFÜLLT.");
 			} else {
 				System.out.println("Die Bedingung IC2(T)(I) ist NICHT ERFÜLLT.");
 			}
