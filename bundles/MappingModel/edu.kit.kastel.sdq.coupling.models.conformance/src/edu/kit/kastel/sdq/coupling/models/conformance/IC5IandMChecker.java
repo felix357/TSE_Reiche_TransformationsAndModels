@@ -76,13 +76,13 @@ public class IC5IandMChecker implements IChecker {
 			boolean scNotEmpty = !mappedSecurityCharacteristicsR.isEmpty();
 
 			if (deltaNotEmpty && scNotEmpty) {
-				System.out.println("IC5 is fulfilled. Δ_cs_R and S_cs_R are non-empty. ✅");
+				System.out.println("IC5 is fulfilled. mapped system elements and security characteristics are non-empty.");
 				System.out.println("Mapped security characteristics in R: " + mappedSecurityCharacteristicsR);
 				System.out.println("Mapped system elements in R: " + mappedSystemElementsR);
 				return true;
 			}
 
-			System.out.println("IC5 NOT fulfilled. ❌");
+			System.out.println("IC5 NOT fulfilled.");
 			if (!deltaNotEmpty)
 				System.out.println("No system element in C maps to a system element in R.");
 			if (!scNotEmpty)

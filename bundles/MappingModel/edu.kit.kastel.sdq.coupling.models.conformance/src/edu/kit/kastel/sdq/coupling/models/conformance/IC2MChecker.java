@@ -19,9 +19,9 @@ import org.xml.sax.InputSource;
 import edu.kit.kastel.sdq.coupling.models.conformance.SystemConfig.AnalysisCouplingType;
 
 /**
- * Checker for IC2(T)(M): Ensures that correspondences exist between -
- * Configurations cfgA (architecture) and cfgC (code), - SystemElements δA (PCM)
- * and δC (Java).
+ * Checker for IC2(T)(M): Ensures that correspondences exist between
+ * Configurations (architecture) and configurations (code), SystemElements (PCM)
+ * and SystemElements (Java).
  */
 public class IC2MChecker implements IChecker {
 
@@ -61,9 +61,9 @@ public class IC2MChecker implements IChecker {
 			boolean systemElemsOk = checkBidirectional("Systemelement", systemElemsA, systemElemsC, systemElemCorr);
 
 			if (configsOk && systemElemsOk) {
-				System.out.println("IC2(T)(M) vollständig erfüllt ✅");
+				System.out.println("IC2(T)(M) vollständig erfüllt");
 			} else {
-				System.out.println("IC2(T)(M) nicht erfüllt ❌");
+				System.out.println("IC2(T)(M) nicht erfüllt");
 			}
 
 			return configsOk && systemElemsOk;
@@ -177,7 +177,6 @@ public class IC2MChecker implements IChecker {
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document doc = db.parse(new InputSource(new FileInputStream(file)));
 
-		// Alle Typen laden
 		loadSysElements(doc, "basiccomponent2class", "component", "javaClass");
 		loadSysElements(doc, "operationInterface2interface", "pcmInterface", "javaInterface");
 		loadSysElements(doc, "compositedatatype2class", "CompositeDataType", "javaClass");

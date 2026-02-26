@@ -199,18 +199,18 @@ public class IC4MChecker implements IChecker {
 	        System.out.println("=== Running IC4(C)(M) Check ===");
 	        System.out.println("Analysis type: " + analysisType);
 
-	        // Load architectural security characteristics (Scs_C)
+	        // Load architectural security characteristics
 	        allSecurityLiterals.addAll(
 	                ConformanceUtils.getSecurityCharacteristicLiterals(architecturalModelPath));
 	        System.out.println("Loaded architectural security characteristics: " + allSecurityLiterals);
 
-	        // Load policies from source code analysis (Pol_C)
+	        // Load policies from source code analysis
 	        Set<String> allPolicies = getAllPolicies(sourceCodeAnalysisPath);
 	        System.out.println("Loaded security policies from source code analysis: " + allPolicies);
 
 	        File correspondenceFile = new File(correspondencePath);
 	        if (!correspondenceFile.exists()) {
-	            System.err.println("❌ Correspondence file not found: " + correspondencePath);
+	            System.err.println("Correspondence file not found: " + correspondencePath);
 	            return false;
 	        }
 
@@ -219,7 +219,6 @@ public class IC4MChecker implements IChecker {
 	        DocumentBuilder db = dbf.newDocumentBuilder();
 	        Document doc = db.parse(new InputSource(new FileInputStream(correspondenceFile)));
 
-	        // Load <policy, scs> mappings
 	        loadGlobalMappings(doc);
 
 	        Set<String> mappedPolicies = globalMappings.stream()
@@ -231,12 +230,12 @@ public class IC4MChecker implements IChecker {
 	            System.out.println("  " + m.policyValue + " -> " + m.scsValue);
 	        }
 
-	        // Load configurations (CFG_C)
+	        // Load configurations
 	        List<String> cfgIDs = getAllConfigurationIDs(configurationRepresentationPath);
 	        System.out.println("\nChecking IC4(C)(M) for " + cfgIDs.size() + " configuration(s).");
 
 	        if (cfgIDs.isEmpty()) {
-	            System.out.println("No configurations found. Check is vacuously fulfilled. ✅");
+	            System.out.println("No configurations found. Check is vacuously fulfilled.");
 	            return true;
 	        }
 
@@ -251,7 +250,7 @@ public class IC4MChecker implements IChecker {
 	            System.out.println("Security characteristics affected in cfg: " + scsCfg);
 
 	            if (polCfg.isEmpty() || scsCfg.isEmpty()) {
-	                System.out.println("Configuration is irrelevant (LHS of implication is false). ✅");
+	                System.out.println("Configuration is irrelevant (LHS of implication is false).");
 	                continue;
 	            }
 
@@ -259,26 +258,26 @@ public class IC4MChecker implements IChecker {
 	                Set<String> missing = new HashSet<>(polCfg);
 	                missing.removeAll(mappedPolicies);
 
-	                System.out.println("❌ IC4(C)(M) VIOLATION");
+	                System.out.println("IC4(C)(M) VIOLATION");
 	                System.out.println("Missing mappings for policies: " + missing);
 
 	                overallFulfilled = false;
 	            } else {
-	                System.out.println("IC4(C)(M) fulfilled for this configuration. ✅");
+	                System.out.println("IC4(C)(M) fulfilled for this configuration.");
 	            }
 	        }
 
 	        System.out.println("\n=== IC4(C)(M) RESULT ===");
 	        if (overallFulfilled) {
-	            System.out.println("OVERALL RESULT: FULFILLED ✅");
+	            System.out.println("OVERALL RESULT: FULFILLED");
 	        } else {
-	            System.out.println("OVERALL RESULT: FAILED ❌");
+	            System.out.println("OVERALL RESULT: FAILED");
 	        }
 
 	        return overallFulfilled;
 
 	    } catch (Exception e) {
-	        System.err.println("❌ Exception during IC4(C)(M) check:");
+	        System.err.println("Exception during IC4(C)(M) check:");
 	        e.printStackTrace();
 	        return false;
 	    }

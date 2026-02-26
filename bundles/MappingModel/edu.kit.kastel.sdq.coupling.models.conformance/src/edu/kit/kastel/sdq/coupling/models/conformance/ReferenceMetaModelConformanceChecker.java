@@ -37,7 +37,7 @@ public class ReferenceMetaModelConformanceChecker {
 				EClass referenceTargetClass = ref.getEReferenceType();
 				System.out.println(ref.getName() + " references class: " + referenceTargetClass.getName());
 
-				// 1. Find mapping classes that map to the reference target class
+				// Find mapping classes that map to the reference target class
 				Set<String> mappedTargetClasses = new HashSet<>();
 				for (var cm : mapping.getClassMappings()) {
 					EClass mappedClass = cm.getTargetClass();
@@ -50,15 +50,14 @@ public class ReferenceMetaModelConformanceChecker {
 				    }
 				}
 
-				// 2. Collect all EReferences of mappingClass and its super types
+				// Collect all EReferences of mappingClass and its super types
 				Set<EReference> allMappingRefs = new HashSet<>(mappingClass.getEReferences());
 
-				// only needed for input mapping of codeql (maybe remove in final version)
 				collectSuperTypeReferences(mappingClass, allMappingRefs);
 
 				boolean found = false;
 
-				// 3. Check if any reference points to a mapped target class
+				// Check if any reference points to a mapped target class
 				for (EReference mappingRef : allMappingRefs) {
 					if (referencesTargetClassRecursively(mappingRef, mappedTargetClasses, new HashSet<>())) {
 						found = true;
@@ -102,19 +101,19 @@ public class ReferenceMetaModelConformanceChecker {
 		}
 		visited.add(target);
 
-		// 1. Direct hit?
+		// Direct hit?
 		if (mappedTargetClasses.contains(target.getName())) {
 			return true;
 		}
 
-		// 2. Check if the target class itself is mapped
+		// Check if the target class itself is mapped
 		for (EReference subRef : target.getEReferences()) {
 			if (referencesTargetClassRecursively(subRef, mappedTargetClasses, visited)) {
 				return true;
 			}
 		}
 
-		// 3. Check if all subtypes have a valid mapping
+		// Check if all subtypes have a valid mapping
 		System.out.println(target.getEPackage());
 		if (target.getEPackage() == null) {
 			System.out.println("null");
@@ -135,12 +134,12 @@ public class ReferenceMetaModelConformanceChecker {
 						break;
 					}
 				}
-				// at least one subtype does not have a valid mapping → false
+
 				if (!allSubRefsValid) {
 					return false;
 				}
 			}
-			return true; // all subtypes have valid references
+			return true;
 		}
 
 		return false;

@@ -123,9 +123,9 @@ public class IC8MChecker implements IChecker {
 
 			if (allValid) {
 				System.out.println(
-						"IC8(T)(M) satisfied ✅ — all RIVs reference valid system elements and configurations.");
+						"IC8(T)(M) satisfied — all RIVs reference valid system elements and configurations.");
 			} else {
-				System.out.println("IC8(T)(M) NOT satisfied ❌ — invalid RIVs found:");
+				System.out.println("IC8(T)(M) NOT satisfied — invalid RIVs found:");
 				invalidRIVs.forEach(System.out::println);
 			}
 

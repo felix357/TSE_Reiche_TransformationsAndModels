@@ -47,7 +47,7 @@ public class IC7MChecker implements IChecker {
 			Set<String> cfgCsC = ic2.getConfigsRefsC();
 			if (cfgCsC == null || cfgCsC.isEmpty()) {
 				System.out.println(
-						"IC7: IC2 hat keine Code-Konfigurationen geliefert (CFG_cs_C ist leer). Prüfe IC2 zuerst.");
+						"IC7: IC2 hat keine Code-Konfigurationen geliefert. Prüfe IC2 zuerst.");
 				return false;
 			}
 
@@ -96,10 +96,10 @@ public class IC7MChecker implements IChecker {
 			}
 
 			if (!anyFound) {
-				System.out.println("IC7(T)(M) NICHT erfüllt ❌ — kein cfg_R gefunden (CFG_cs_R ist leer).");
+				System.out.println("IC7(T)(M) NICHT erfüllt — kein config gefunden.");
 				return false;
 			} else {
-				System.out.println("IC7(T)(M) erfüllt ✅ — Gefundene cfg_R: " + foundCfgR);
+				System.out.println("IC7(T)(M) erfüllt — Gefundene config: " + foundCfgR);
 				return true;
 			}
 

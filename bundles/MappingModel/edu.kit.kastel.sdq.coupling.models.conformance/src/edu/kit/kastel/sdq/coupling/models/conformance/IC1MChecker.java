@@ -246,12 +246,12 @@ public class IC1MChecker implements IChecker {
 		boolean success = allSecurityLiteralsMapped && analysisLevelsExist;
 
 		if (success) {
-			System.out.println("Die Bedingung IC1(T)(M) ist ERFÜLLT. ✅");
+			System.out.println("Die Bedingung IC1(T)(M) ist ERFÜLLT.");
 			System.out.println("Alle sicherheitsrelevanten Literale im architektonischen Modell "
 					+ "haben eine gültige Korrespondenz im Code.");
 			System.out.println("Die Menge der angewandten Sicherheitslevels im Code ist nicht leer.");
 		} else {
-			System.out.println("Die Bedingung IC1(T)(M) ist NICHT ERFÜLLT. ❌");
+			System.out.println("Die Bedingung IC1(T)(M) ist NICHT ERFÜLLT.");
 
 			if (!allSecurityLiteralsMapped) {
 				Set<String> unmapped = new HashSet<>(allSecurityLiterals);

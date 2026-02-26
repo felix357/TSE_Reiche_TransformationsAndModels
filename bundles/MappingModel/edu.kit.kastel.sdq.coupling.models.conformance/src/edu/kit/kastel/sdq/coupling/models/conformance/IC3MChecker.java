@@ -116,11 +116,11 @@ public class IC3MChecker implements IChecker {
 				if (cfgsForLevel == null || cfgsForLevel.isEmpty())
 					continue;
 
-				System.out.println("IC3(C)(M) erfüllt (CODEQL–EDFA)");
+				System.out.println("IC3(C)(M) erfüllt");
 				return true;
 			}
 
-			System.out.println("IC3(C)(M) NICHT erfüllt (CODEQL–EDFA)");
+			System.out.println("IC3(C)(M) NICHT erfüllt");
 			return false;
 
 		} catch (Exception e) {
@@ -156,7 +156,6 @@ public class IC3MChecker implements IChecker {
 				if (!configMatches)
 					continue;
 
-				// Build levelRef → levelName map
 				Map<String, String> levelRefToName = new HashMap<>();
 				NodeList levels = entrypoint.getElementsByTagName("level");
 				for (int i = 0; i < levels.getLength(); i++) {
@@ -209,7 +208,6 @@ public class IC3MChecker implements IChecker {
 		}
 	}
 
-	// Helpers for CodeQL logic
 	private String resolveSecurityLevelId(String ref, Document doc) {
 		try {
 			String[] parts = ref.split("/@");
