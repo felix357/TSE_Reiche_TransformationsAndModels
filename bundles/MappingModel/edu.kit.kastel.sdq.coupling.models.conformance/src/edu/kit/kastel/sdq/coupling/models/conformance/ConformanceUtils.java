@@ -17,13 +17,15 @@ import java.util.regex.Pattern;
 
 /**
  * Utility class for common XML parsing and PDDC/CodeQL reference resolution.
+ * This could be extended to hold more common parsing logic.
  */
 public class ConformanceUtils {
 
 	private static final Pattern enumUsagePattern = Pattern
 			.compile("enumCharacteristicType\\s+(DataClassification|Role|AssignedRoles)\\s+using\\s+(\\w+)");
 
-	private ConformanceUtils() {}
+	private ConformanceUtils() {
+	}
 
 	public static Document parseXmlFile(String filePath)
 			throws ParserConfigurationException, IOException, org.xml.sax.SAXException {
